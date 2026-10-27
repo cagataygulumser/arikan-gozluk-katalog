@@ -81,18 +81,13 @@
     root.addEventListener('click', function (e) { if (e.target === root) close(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && root.classList.contains('open')) close(); });
 
-    // sol alt başlatıcı
-    var launch = document.createElement('div'); launch.className = 'ast-launch'; launch.id = 'ast-launch';
-    launch.innerHTML = '<button class="ast-launch__x" aria-label="Küçült">&#10005;</button><div class="ast-launch__head">Gözlük Asistanı</div><div class="ast-launch__img" style="background-image:url(' + CDN + 'img/hero/' + AST.heroes[5] + ')"><span>Aradığın modeli<br>birlikte bulalım</span></div><button class="ast-launch__cta"><span class="ast-launch__cta-l">Başlamak için tıkla</span><span class="ast-launch__cta-s">Gözlük asistanı</span></button>';
-    var tab = document.createElement('button'); tab.className = 'ast-tab'; tab.innerHTML = '<span>Gözlük Asistanı</span>';
-    document.body.appendChild(launch); document.body.appendChild(tab);
-    var minimized = false; try { minimized = sessionStorage.getItem('ao_ast_min') === '1'; } catch (e) { }
-    function setMin(v) { minimized = v; launch.classList.toggle('min', v); tab.classList.toggle('show', v); try { sessionStorage.setItem('ao_ast_min', v ? '1' : '0'); } catch (e) { } }
-    setMin(minimized);
-    setTimeout(function () { launch.classList.add('in'); tab.classList.add('in'); }, 900);
-    $('.ast-launch__x', launch).addEventListener('click', function () { setMin(true); });
-    $('.ast-launch__cta', launch).addEventListener('click', function () { open(); });
-    tab.addEventListener('click', function () { open(); });
+    // sağ alt yuvarlak başlatıcı (WhatsApp düğmesinin üstünde)
+    var launch = document.createElement('button'); launch.className = 'ast-launch'; launch.id = 'ast-launch'; launch.type = 'button'; launch.setAttribute('aria-label', 'Gözlük asistanı');
+    launch.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12.2 4.4 6.4A2 2 0 0 1 6.3 5h1.2v2H6.6l-1.3 4h3.1c1.6 0 2.9.9 3.3 2.2h.6c.4-1.3 1.7-2.2 3.3-2.2h3.1l-1.3-4h-.9V5h1.2a2 2 0 0 1 1.9 1.4l1.9 5.8c.2.3.3.7.3 1.1v1.2c0 2.2-1.8 3.9-4 3.9h-.8c-2 0-3.7-1.5-3.9-3.5h-1.2c-.3 2-1.9 3.5-3.9 3.5h-.8c-2.2 0-4-1.7-4-3.9v-1.2c0-.4.1-.8.3-1.1zm1.7 1.3v1c0 1.1.9 2 2 2H7c1.1 0 2-.9 2-2v-1c0-.3-.3-.6-.6-.6H4.8c-.3 0-.6.3-.6.6zm10.8 0v1c0 1.1.9 2 2 2h.8c1.1 0 2-.9 2-2v-1c0-.3-.3-.6-.6-.6h-3.6c-.3 0-.6.3-.6.6z"/></svg><span class="ast-launch__tip">Gözlük asistanı</span>';
+    document.body.appendChild(launch);
+    function setMin(v) { launch.classList.toggle('min', v); }
+    setTimeout(function () { launch.classList.add('in'); }, 600);
+    launch.addEventListener('click', function () { open(); });
     $$('a[href="#asistan"],[data-asistan]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); open(); }); });
 
     function open(pre) {
@@ -102,7 +97,7 @@
       setMin(true);
       ready().then(function () { if (pre) finish(); else go('type'); });
     }
-    function close() { root.classList.remove('open'); root.setAttribute('aria-hidden', 'true'); BODY.classList.remove('ast-open'); if (location.hash.indexOf('#asistan') === 0) history.replaceState(null, '', location.pathname + location.search); }
+    function close() { root.classList.remove('open'); root.setAttribute('aria-hidden', 'true'); BODY.classList.remove('ast-open'); setMin(false); if (location.hash.indexOf('#asistan') === 0) history.replaceState(null, '', location.pathname + location.search); }
 
     var STEPS = ['type', 'face', 'shape', 'mat', 'colors', 'feat'];
     function stepsFor() { return STEPS.filter(function (s) { return s !== 'feat' || answers.type !== 'any'; }); }
