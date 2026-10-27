@@ -146,7 +146,7 @@ def post_html(m):
       <a class="btn btn--red" href="/p/yetkili-satis-noktalari.html">Yetkili satış noktası bul</a>
       <a class="btn btn--ghost" href="https://wa.me/905074904824?text={E('Merhaba, ' + brand + ' ' + code + ' modeli hakkında bilgi almak istiyorum.')}" rel="noopener" target="_blank">WhatsApp ile sor</a>
     </div>
-    <div class="share">Paylaş: <a href="#" data-share>Bağlantıyı kopyala</a> · <a href="https://wa.me/?text={E(brand + ' ' + code + ' gözlük modeli')}%20{SITE}" rel="noopener" target="_blank">WhatsApp</a></div>
+    <div class="share">Paylaş: <a href="#" data-share>Bağlantıyı kopyala</a> · <a href="https://wa.me/?text={E(brand + ' ' + code + ' gözlük modeli')}" rel="noopener" target="_blank">WhatsApp</a></div>
   </div>
 </div>
 <section class="variants">

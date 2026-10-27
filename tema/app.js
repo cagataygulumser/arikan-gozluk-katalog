@@ -403,6 +403,7 @@
     if (mainImg) { mainImg.parentNode.addEventListener('click', function () { $('img', lb).src = mainImg.src; lb.classList.add('open'); }); }
     lb.addEventListener('click', function () { lb.classList.remove('open'); });
     // paylaş
+    $$('a[href^="https://wa.me/?text="]').forEach(function (a) { a.href = 'https://wa.me/?text=' + encodeURIComponent(document.title.split(' – ')[0] + ' ' + location.href.split('#')[0]); });
     var sh = $('[data-share]'); if (sh) sh.addEventListener('click', function (e) { e.preventDefault(); if (navigator.share) navigator.share({ title: document.title, url: location.href }); else { navigator.clipboard && navigator.clipboard.writeText(location.href); sh.textContent = 'Bağlantı kopyalandı'; } });
     // ilgili modeller + breadcrumb
     ready().then(function () {
