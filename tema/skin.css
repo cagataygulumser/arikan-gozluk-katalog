@@ -276,7 +276,16 @@ p{margin:0 0 1em}
 .attrs dt{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
 .attrs dd{margin:0;font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px}
 .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-.share{margin-top:16px;font-size:12px;color:var(--muted);display:flex;gap:14px;align-items:center}
+.cta--grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+.cta--grid .btn{width:100%;padding:15px 12px;font-size:11px;letter-spacing:.14em;gap:9px;white-space:nowrap;margin:0}
+.cta--grid .btn svg{width:17px;height:17px;flex:none;fill:currentColor}
+.cta--grid .cta__main{grid-column:1/-1;padding:17px 20px;font-size:12px;letter-spacing:.2em}
+.cta--grid .btn--ghost{border-color:#D1D5DB;color:var(--ink)}
+.cta--grid .btn--ghost:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.cta--grid .fav--text{padding:15px 12px}.cta--grid .fav--text svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2}
+.cta--grid .fav--text.on{color:var(--red);border-color:var(--red)}.cta--grid .fav--text.on svg{fill:var(--red)}.cta--grid .fav--text.on:hover{background:var(--red);color:#fff}.cta--grid .fav--text.on:hover svg{fill:#fff}
+@media (max-width:640px){.cta--grid{grid-template-columns:1fr}}
+.share{margin-top:18px;font-size:12px;color:var(--muted);display:flex;gap:14px;align-items:center}
 .share a{color:var(--ink-2);text-decoration:underline;text-underline-offset:3px}
 .share a:hover{color:var(--red)}
 @media (max-width:960px){.model__top{grid-template-columns:1fr;gap:28px}.model__gallery{position:static}}

@@ -14,7 +14,7 @@
   function initOrderButton() {
     var art = $('.model'), cta = $('.model .cta'); if (!art || !cta) return;
     var code = art.getAttribute('data-code');
-    var b = document.createElement('button'); b.type = 'button'; b.className = 'btn btn--dark order-add'; b.innerHTML = '<span>Talep listesine ekle</span>';
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'btn btn--ghost order-add'; b.innerHTML = '<svg viewBox="0 0 24 24"><path d="M3 5h12v2H3zm0 6h12v2H3zm0 6h8v2H3zm15-5v-3h2v3h3v2h-3v3h-2v-3h-3v-2z"/></svg><span>Talep listesine ekle</span>';
     cta.appendChild(b);
     var note = document.createElement('div'); note.className = 'order-note'; cta.parentNode.insertBefore(note, cta.nextSibling);
     b.addEventListener('click', function () {
