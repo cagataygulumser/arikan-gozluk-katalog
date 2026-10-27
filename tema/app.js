@@ -249,6 +249,13 @@
         renderGrid(newGrid, news.slice(0, 8));
       }
       var hb = $('#home-blog'); if (hb) blogFeed().then(function (list) { renderBlog(hb, list.slice(0, 3)); }).catch(function () { hb.parentNode.parentNode.style.display = 'none'; });
+      var ig = $('#ig-grid');
+      if (ig) fetchJSON(dataUrl('instagram.json')).then(function (d) {
+        var posts = (d.posts || []).slice(0, 6); ig.classList.remove('skeleton');
+        if (!posts.length) { ig.parentNode.parentNode.style.display = 'none'; return; }
+        ig.innerHTML = posts.map(function (pp) { return '<a class="ig__item" href="' + esc(pp.url) + '" target="_blank" rel="noopener" aria-label="' + esc(pp.caption || 'Instagram gönderisi') + '"><img loading="lazy" src="' + esc(CDN + 'img/instagram/' + pp.image) + '" alt="' + esc(pp.caption || '') + '">' + (pp.video ? '<span class="ig__video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>' : '') + '<span class="ig__hover"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></span></a>'; }).join('');
+        $$('.ig__item', ig).forEach(function (a) { a.addEventListener('click', function () { track('instagram_tikla', { gonderi: a.href }); }); });
+      }).catch(function () { ig.parentNode.parentNode.style.display = 'none'; });
       var pick = $('#home-pick');
       if (pick) {
         // her markadan 2 model

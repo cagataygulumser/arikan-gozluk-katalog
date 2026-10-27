@@ -86,7 +86,7 @@ window.AO_CONFIG = {
             <b:if cond='data:image'>
               <img expr:alt='data:title' expr:src='data:image'/>
             <b:else/>
-              <img alt='Arıkan' class='logo__img' src='https://cdn.arikantime.com/BranchImages/logo.png'/>
+              <img alt='Arıkan' class='logo__img' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/arikan.png'/>
             </b:if>
           </a>
         </b:includable>
@@ -102,15 +102,16 @@ window.AO_CONFIG = {
           <a href='/search/label/Slazenger'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/slazenger.png'/>Slazenger <small data-brand-count='slazenger'></small></a>
           <a href='/search/label/Belmond'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/belmond.png'/>Belmond <small data-brand-count='belmond'></small></a>
           <div class='sep'></div>
+          <a href='/search/label/Optik'>Optik çerçeveler</a>
+          <a href='/search/label/Clip-On'>Clip-On modeller</a>
           <a href='/search'>Tüm modeller</a>
         </div>
       </details>
-      <a href='/search/label/Optik'>Optik</a>
-      <a href='/search/label/Clip-On'>Clip-On</a>
       <a href='/search/label/Yeni'>Yeni Gelenler</a>
       <a href='/p/ekartman-rehberi.html'>Ölçü Rehberi</a>
       <a href='/search/label/Blog'>Blog</a>
       <a href='/p/yetkili-satis-noktalari.html'>Satış Noktaları</a>
+      <a href='/p/sik-sorulan-sorular.html'>S.S.S.</a>
       <a href='/p/iletisim.html'>İletişim</a>
       <div class='search-wrap'>
         <form action='/search' class='search' method='get' role='search'>
@@ -284,6 +285,18 @@ window.AO_CONFIG = {
       <p style='text-align:center;margin-top:34px'><a class='btn btn--dark' href='/search'>Tüm modelleri gör</a></p>
     </div>
   </section>
+
+  <section class='section section--soft ig' id='home-ig'>
+    <div class='wrap'>
+      <div class='section__head'>
+        <p class='eyebrow'>Instagram'da Arıkan</p>
+        <h2 class='title-2'>Son paylaşımlar</h2>
+        <p class='lead'>Koleksiyonlardan kareler, yeni modeller ve kampanyalar.</p>
+      </div>
+      <div class='ig__grid skeleton' id='ig-grid'>Yükleniyor</div>
+      <p style='text-align:center;margin-top:30px'><a class='btn btn--ghost' href='https://www.instagram.com/arikan.group.tr/' rel='noopener' target='_blank'><svg aria-hidden='true' fill='none' height='18' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24' width='18'><rect height='18' rx='5' width='18' x='3' y='3'/><circle cx='12' cy='12' r='4'/><circle cx='17.5' cy='6.5' fill='currentColor' r='1' stroke='none'/></svg> @arikan.group.tr · Instagram'da takip et</a></p>
+    </div>
+  </section>
 </b:if>
 
 <!-- ================= BLOG WIDGET: koleksiyon / model / sayfa ================= -->
@@ -390,7 +403,7 @@ window.AO_CONFIG = {
 <footer class='site-footer'>
   <div class='wrap site-footer__in'>
     <div>
-      <a class='logo logo--footer' expr:href='data:blog.homepageUrl'><img alt='Arıkan' class='logo__img' src='https://cdn.arikantime.com/BranchImages/logo.png'/></a>
+      <a class='logo logo--footer' expr:href='data:blog.homepageUrl'><img alt='Arıkan' class='logo__img' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/arikan.png'/></a>
       <p>Lee Cooper, Quantum, Slazenger ve Belmond gözlük markalarının 2026 optik ve clip-on koleksiyonları.</p>
       <div class='social'>
         <a aria-label='Instagram' href='https://www.instagram.com/' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z'/></svg></a>

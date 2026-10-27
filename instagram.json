@@ -1,0 +1,56 @@
+{
+ "account": "arikan.group.tr",
+ "profile": "https://www.instagram.com/arikan.group.tr/",
+ "updated": "2026-10-27",
+ "note": "Elle güncellenen liste; Instagram API bağlanınca otomatik akışa çevrilebilir. image: img/instagram/ altındaki dosya adı.",
+ "posts": [
+  {
+   "code": "DejWpEXCt78",
+   "url": "https://www.instagram.com/arikan.group.tr/p/DejWpEXCt78/",
+   "image": "DejWpEXCt78.jpg",
+   "caption": "2026 Konya Bölgesel Toplantısı · 22-24 Ekim",
+   "video": false,
+   "date": "2026-10-16"
+  },
+  {
+   "code": "DeizdYDChCe",
+   "url": "https://www.instagram.com/arikan.group.tr/p/DeizdYDChCe/",
+   "image": "DeizdYDChCe.jpg",
+   "caption": "2026 Samsun Bölgesel Toplantısı · 20-21 Ekim",
+   "video": false,
+   "date": "2026-10-15"
+  },
+  {
+   "code": "DdTP07CiAg3",
+   "url": "https://www.instagram.com/arikan.group.tr/p/DdTP07CiAg3/",
+   "image": "DdTP07CiAg3.jpg",
+   "caption": "Eskişehir Bayi Toplantısı · 17-18 Eylül",
+   "video": false,
+   "date": "2026-09-15"
+  },
+  {
+   "code": "DdIyv1qCNQk",
+   "url": "https://www.instagram.com/arikan.group.tr/p/DdIyv1qCNQk/",
+   "image": "DdIyv1qCNQk.jpg",
+   "caption": "İstanbul Avrupa Yakası Bölgesel Bayi Toplantısı · 15-16 Eylül",
+   "video": false,
+   "date": "2026-09-10"
+  },
+  {
+   "code": "Db5c2dRJuMZ",
+   "url": "https://www.instagram.com/arikan.group.tr/reel/Db5c2dRJuMZ/",
+   "image": "Db5c2dRJuMZ.jpg",
+   "caption": "Slazenger · Boğaz turu",
+   "video": true,
+   "date": "2026-08-11"
+  },
+  {
+   "code": "DbXo4vsCMHF",
+   "url": "https://www.instagram.com/arikan.group.tr/p/DbXo4vsCMHF/",
+   "image": "DbXo4vsCMHF.jpg",
+   "caption": "Gözlük Zirvesi 2026 · Antalya",
+   "video": false,
+   "date": "2026-07-29"
+  }
+ ]
+}

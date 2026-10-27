@@ -56,6 +56,9 @@ Site **deneme-site-v3.blogspot.com** adresinde kuruldu ve çalışıyor: tema y�
 
 - **İngilizce sürüm:** header ve footer'daki TR | EN anahtarı (`?lang=en`; seçim tarayıcıda hatırlanır, `<html lang>` ve hreflang etiketleri ayarlanır). Çeviri tamamen tarayıcıda: `i18n/en.json` (GitHub) sözlüğü sayfadaki metinleri, nitelikleri (placeholder/alt/title) ve sayfa başlığını çevirir; sabit sayfaların (Ekartman Rehberi, SSS, Hakkımızda, İletişim) ve 4 blog yazısının İngilizce gövdeleri aynı dosyada. Renk/malzeme adları kelime sözlüğüyle çevrilir (Siyah→Black, Asetat→Acetate…). Sözlük kaynakları `tema/i18n_en.json` (arayüz) ve `tema/i18n_content_en.json` (gövdeler); `gen_i18n.py` ile `i18n/en.json` üretilir. Yeni bir metin eklenince karşılığı `i18n_en.json`'a yazılır; karşılığı olmayan metin Türkçe kalır. Not: Slazenger kataloğunda PDF'den okunan bazı renk adlarında 'i' harfi düşmüştü (Kr stal → Kristal); `models.json` düzeltildi, Blogger'daki yazı gövdeleri ise tarayıcıda (`TEXT_FIX`) düzeltiliyor — fırsat bulunca Slazenger yazıları yeniden içe aktarılabilir.
 
+- **Instagram bandı (ana sayfa):** `instagram.json` (GitHub) → son 6 gönderi: `url`, `image` (`img/instagram/` altındaki kare görsel), `caption`, `video`. Şimdilik elle güncellenir (gönderi görseli `instagram.com/p/KOD/media/?size=l` adresinden alınabilir); Arıkan Meta hesabını bağlarsa Instagram Graph API ile otomatikleştirilebilir.
+- **Logo:** `img/logo/arikan.png` (depoda; arikantime CDN'ine bağımlılık kalktı). Menü: Markalar (Optik/Clip-On bağlantıları bu menünün altında), Yeni Gelenler, Ölçü Rehberi, Blog, Satış Noktaları, S.S.S., İletişim, TR|EN.
+
 ## Veri ve görseller nasıl güncellenir?
 
 - Tema, `https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/models.json` dosyasını okur; görseller aynı depodaki `img/` klasöründen gelir. Depoya push edilen değişiklik CDN'e en geç 24 saatte yansır (anında yansıması için `@main` yerine bir sürüm etiketi, örn. `@v2`, kullanılabilir).
