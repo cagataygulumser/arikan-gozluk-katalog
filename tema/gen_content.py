@@ -247,19 +247,38 @@ PAGES['Hakkımızda'] = '''
 <p>Kurumsal bilgiler, kariyer ve iş ortaklığı için <a href="https://arikantime.com/tr/" rel="noopener" target="_blank">arikantime.com</a> adresini ziyaret edin.</p>
 '''
 PAGES['İletişim'] = '''
-<p>Modeller, satış noktaları ve bayilik hakkında sorularınız için bize ulaşın.</p>
-<ul class="dealers">
-<li><b>WhatsApp</b><a href="https://wa.me/905074904824" rel="noopener" target="_blank">0507 490 48 24</a></li>
-<li><b>E-posta</b><a href="mailto:info@example.com">info@example.com</a></li>
-<li><b>Telefon</b>+90 (212) 000 00 00</li>
-<li><b>Adres</b>[Şirket adresi]</li>
-</ul>
+<p class="lead-sm">Modeller, yetkili satış noktaları ve bayilik hakkında sorularınız için bize ulaşın; mesajlar en kısa sürede yanıtlanır.</p>
+<div class="contact">
+  <div class="contact__info">
+    <div class="contact__card"><span class="contact__ico"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.6 7-12a7 7 0 0 0-14 0c0 5.4 7 12 7 12zm0-9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><b>Merkez ofis</b><p>Huzur Mah. Azerbaycan Cad. Skyland İstanbul No:4<br>Skyflat A Blok Kat 7, Sarıyer / İstanbul</p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=41.1024001,28.9850088&amp;destination_place_id=ChIJ01o5b3qlyhQRZM-lJ9Er7cM" rel="noopener" target="_blank">Yol tarifi al</a></div>
+    <div class="contact__card"><span class="contact__ico"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></span><b>Telefon</b><a href="tel:+908504201414">0850 420 14 14</a><p>Pazartesi – Cuma 07:00 – 17:00</p></div>
+    <div class="contact__card"><span class="contact__ico contact__ico--wa"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm0-21.6A11.8 11.8 0 0 0 2 18.2L.3 24l6-1.6A11.8 11.8 0 1 0 12 .2z"/></svg></span><b>WhatsApp</b><a href="https://wa.me/905074904824" rel="noopener" target="_blank">0507 490 48 24</a><p>Model ve stok soruları için</p></div>
+    <div class="contact__card"><span class="contact__ico"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.6V17h16V7.6l-8 5.1-8-5.1zM4.6 7l7.4 4.7L19.4 7H4.6z"/></svg></span><b>E-posta</b><a href="mailto:info@arikantime.com">info@arikantime.com</a><p>Bayilik başvuruları ve kurumsal</p></div>
+  </div>
+  <div class="contact__map"><iframe src="https://maps.google.com/maps?q=41.1024001,28.9850088&amp;z=16&amp;hl=tr&amp;output=embed" loading="lazy" title="Arıkan Group merkez ofis haritası"></iframe></div>
+</div>
+<section class="contact__form" id="contact-form">
+  <p class="eyebrow">Mesaj gönderin</p>
+  <h2 class="title-2 contact__h2">Size nasıl yardımcı olabiliriz?</h2>
+  <form id="cform" novalidate>
+    <div class="cform__grid">
+      <label>Ad Soyad<input name="ad" required autocomplete="name"></label>
+      <label>E-posta<input name="eposta" type="email" required autocomplete="email"></label>
+      <label>Telefon<input name="telefon" type="tel" autocomplete="tel"></label>
+      <label>Konu<select name="konu"><option>Model ve stok bilgisi</option><option>Yetkili satış noktası</option><option>Bayilik başvurusu</option><option>Teknik servis / garanti</option><option>Diğer</option></select></label>
+      <label class="cform__full">Mesaj<textarea name="mesaj" rows="5" required></textarea></label>
+    </div>
+    <div class="cform__btns"><button class="btn btn--red" type="submit">Gönder</button><a class="btn btn--ghost" id="cform-wa" href="https://wa.me/905074904824" rel="noopener" target="_blank">WhatsApp ile gönder</a></div>
+    <p class="cform__msg" id="cform-msg"></p>
+    <p class="order__legal">Göndererek <a href="/p/gizlilik-ve-kvkk.html">Gizlilik ve KVKK metnini</a> kabul etmiş olursunuz.</p>
+  </form>
+</section>
 '''
 
 PAGES['Gizlilik ve KVKK'] = '''
 <p class="lead-sm">Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında, bu katalog sitesini ziyaret eden ve sitedeki araçları kullanan kişilerin hangi verilerinin, hangi amaçla ve nasıl işlendiğini açıklar. Son güncelleme: Ekim 2026.</p>
 <h2>1. Veri sorumlusu</h2>
-<p>Bu site, <b>Arıkan Optik</b> (Arıkan Group) tarafından yetkili satış noktaları ve son tüketiciler için hazırlanmış bir ürün kataloğudur. Veri sorumlusu Arıkan Optik'tir; iletişim bilgileri <a href="/p/iletisim.html">İletişim</a> sayfasında yer alır.</p>
+<p>Bu site, <b>Arıkan Optik</b> (Arıkan Group) tarafından yetkili satış noktaları ve son tüketiciler için hazırlanmış bir ürün kataloğudur. Veri sorumlusu: Arıkan Group, Huzur Mah. Azerbaycan Cad. Skyland İstanbul No:4 Skyflat A Blok Kat 7, Sarıyer / İstanbul · <a href="mailto:info@arikantime.com">info@arikantime.com</a> · 0850 420 14 14. Diğer iletişim kanalları <a href="/p/iletisim.html">İletişim</a> sayfasında yer alır.</p>
 <h2>2. Sitede üyelik ve satış yoktur</h2>
 <p>Siteyi kullanmak için hesap açmanız gerekmez; sitede ödeme alınmaz, sipariş oluşturulmaz. Beğendiğiniz modeller için yetkili satış noktalarına yönlendirilirsiniz.</p>
 <h2>3. Hangi veriler, hangi amaçla işlenir?</h2>

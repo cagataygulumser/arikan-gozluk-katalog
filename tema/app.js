@@ -187,6 +187,48 @@
     document.addEventListener('click', function (e) { if (!form.parentNode.contains(e.target)) box.classList.remove('open'); });
   }
 
+
+  /* ---------- iletişim formu ---------- */
+  function initContact() {
+    var OC = CFG.contact || {};
+    function vals(f) { var o = {}; ['ad', 'eposta', 'telefon', 'konu', 'mesaj'].forEach(function (k) { var el = f.elements[k]; o[k] = el ? String(el.value || '').trim() : ''; }); return o; }
+    function waText(v) { return 'Merhaba, ' + (v.ad || '') + (v.konu ? ' · ' + v.konu : '') + '\n' + (v.mesaj || '') + (v.telefon ? '\nTel: ' + v.telefon : '') + (v.eposta ? '\nE-posta: ' + v.eposta : ''); }
+    function waHref(v) { return 'https://wa.me/' + (CFG.whatsapp || '') + '?text=' + encodeURIComponent(waText(v)); }
+    document.addEventListener('input', function (e) { var f = e.target && e.target.form; if (!f || f.id !== 'cform') return; var wa = $('#cform-wa'); if (wa) wa.href = waHref(vals(f)); });
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('#cform-wa'); if (!a) return;
+      var f = $('#cform'); if (!f) return; var v = vals(f); a.href = waHref(v); track('iletisim_gonder', { kanal: 'whatsapp', konu: v.konu });
+    });
+    document.addEventListener('submit', function (e) {
+      var f = e.target; if (!f || f.id !== 'cform') return; e.preventDefault();
+      var v = vals(f), msg = $('#cform-msg'), btn = $('button[type=submit]', f);
+      if (!v.ad || !v.eposta || !v.mesaj) { msg.textContent = 'Lütfen zorunlu alanları doldurun.'; msg.className = 'cform__msg err'; return; }
+      if (!OC.form) { location.href = 'mailto:info@arikantime.com?subject=' + encodeURIComponent(v.konu || 'İletişim') + '&body=' + encodeURIComponent(waText(v)); return; }
+      var fd = new FormData(); Object.keys(OC.fields || {}).forEach(function (k) { fd.append(OC.fields[k], v[k] || ''); });
+      btn.disabled = true; msg.textContent = 'Gönderiliyor…'; msg.className = 'cform__msg';
+      fetch(OC.form, { method: 'POST', mode: 'no-cors', body: fd }).then(function () {
+        msg.textContent = 'Mesajınız alındı, teşekkürler. En kısa sürede dönüş yapacağız.'; msg.className = 'cform__msg ok'; f.reset(); btn.disabled = false;
+        track('iletisim_gonder', { kanal: 'form', konu: v.konu });
+      }).catch(function () { msg.textContent = 'Gönderilemedi; WhatsApp ile iletebilirsiniz.'; msg.className = 'cform__msg err'; btn.disabled = false; });
+    });
+  }
+
+  /* ---------- çerez tercihi ---------- */
+  function initCookie() {
+    var v = null; try { v = localStorage.getItem('ao_cookie'); } catch (e) { }
+    if (v === '1' || v === '0') return;
+    var bar = document.createElement('div'); bar.className = 'cookie'; bar.setAttribute('role', 'dialog'); bar.setAttribute('aria-label', 'Çerez tercihi');
+    bar.innerHTML = '<p>Siteyi geliştirmek için ölçüm çerezleri kullanıyoruz. <a href="/p/gizlilik-ve-kvkk.html">Ayrıntılar</a></p><div class="cookie__btns"><button type="button" class="btn btn--red" data-c="1">Kabul et</button><button type="button" class="btn btn--ghost" data-c="0">Reddet</button></div>';
+    document.body.appendChild(bar); BODY.classList.add('cookie-open'); fixPageLinks();
+    requestAnimationFrame(function () { bar.classList.add('in'); });
+    bar.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-c]'); if (!b) return; var c = b.getAttribute('data-c');
+      try { localStorage.setItem('ao_cookie', c); } catch (err) { }
+      if (c === '1' && window.gtag) gtag('consent', 'update', { analytics_storage: 'granted' });
+      bar.classList.remove('in'); BODY.classList.remove('cookie-open'); setTimeout(function () { bar.remove(); }, 400);
+    });
+  }
+
   /* ---------- sabit sayfa bağlantıları (Blogger'ın verdiği gerçek adreslere çevir) ---------- */
   var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/qr-etiketler.html': 'QR Etiketler', '/p/bayi-talep-formu.html': 'Bayi Talep Formu', '/p/gizlilik-ve-kvkk.html': 'Gizlilik ve KVKK' };
   function fixPageLinks() {
@@ -783,7 +825,7 @@
     initHeader();
     initCompare();
     initAssistant();
-    orderBadge(); favSync();
+    orderBadge(); favSync(); initCookie(); initContact();
     if (VIEW === 'home') initHome();
     else if (VIEW === 'collection') initCollection();
     else if (VIEW === 'post') { initModel(); initArticle(); initOrderButton(); initTryOn(); }

@@ -540,5 +540,12 @@
 "Gizlilik ve KVKK": "Privacy & Data Protection",
 "@Gizlilik ve KVKK": "Privacy & Data Protection",
 "@@Gizlilik ve KVKK · Arıkan Optik": "Privacy & Data Protection · Arıkan Optik",
-"Göndererek Gizlilik ve KVKK metnini kabul etmiş olursunuz.": "By sending you accept the Privacy & Data Protection notice."
+"Göndererek Gizlilik ve KVKK metnini kabul etmiş olursunuz.": "By sending you accept the Privacy & Data Protection notice.",
+"Mesajınız alındı, teşekkürler. En kısa sürede dönüş yapacağız.": "Thank you, your message has been received. We will get back to you shortly.",
+"Lütfen zorunlu alanları doldurun.": "Please fill in the required fields.",
+"Gönderilemedi; WhatsApp ile iletebilirsiniz.": "Could not be sent; you can send it via WhatsApp.",
+"Siteyi geliştirmek için ölçüm çerezleri kullanıyoruz.": "We use analytics cookies to improve the site.",
+"Kabul et": "Accept",
+"Reddet": "Decline",
+"Ayrıntılar": "Details"
 }
