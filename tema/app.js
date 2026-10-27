@@ -148,6 +148,8 @@
     for (var j = 0; j < m.variants.length; j++) if (m.variants[j].code.replace(/\./g, '').toUpperCase() === n) return '#' + m.variants[j].code.replace('.', '-');
     return '';
   }
+/* {{I18N}} */
+
 /* {{SEARCH}} */
   function bindSearch(form) {
     if (!form) return;
@@ -429,6 +431,9 @@
 
   /* ---------- blog ---------- */
   function blogFeed() {
+    return i18nReady().then(function () { return blogFeedRaw(); });
+  }
+  function blogFeedRaw() {
     try { var c = sessionStorage.getItem('ao_blog_v2'); if (c) return Promise.resolve(JSON.parse(c)); } catch (e) { }
     return fetchJSON('/feeds/posts/default/-/Blog?alt=json&max-results=50').then(function (d) {
       var list = ((d.feed && d.feed.entry) || []).map(function (e) {
@@ -447,8 +452,9 @@
     });
   }
   function bcard(p) {
+    var en = enArticle(p.title), title = en ? en.title : p.title, sum = en ? en.summary : p.sum;
     return '<a class="bcard" href="' + esc(p.url) + '">' + (p.img ? '<div class="bcard__img"><img loading="lazy" src="' + esc(p.img) + '" alt=""></div>' : '') +
-      '<div class="bcard__body"><div class="bcard__date">' + esc(p.date) + '</div><div class="bcard__title">' + esc(p.title) + '</div><div class="bcard__sum">' + esc(p.sum) + (p.sum.length >= 160 ? '…' : '') + '</div></div></a>';
+      '<div class="bcard__body"><div class="bcard__date">' + esc(p.date) + '</div><div class="bcard__title">' + esc(title) + '</div><div class="bcard__sum">' + esc(sum) + (!en && p.sum.length >= 160 ? '…' : '') + '</div></div></a>';
   }
   function renderBlog(el, list) { el.classList.remove('skeleton'); el.innerHTML = list.length ? '<div class="blog-grid">' + list.map(bcard).join('') + '</div>' : '<div class="empty"><b>Henüz yazı yok</b></div>'; }
   function initBlogList() {
@@ -513,7 +519,7 @@
           '<div class="dealer__row">' + esc(d.address || '') + '</div>' +
           (d.hours ? '<div class="dealer__row dealer__hours">' + esc(d.hours) + '</div>' : '') +
           (d.brands ? '<div class="dealer__brands">' + d.brands.map(function (b) { return '<span class="badge badge--line">' + esc(b) + '</span>'; }).join('') + '</div>' : '') +
-          '<div class="dealer__actions">' + (d.phone ? '<a class="btn btn--dark" href="tel:' + esc(d.phone.replace(/\s/g, '')) + '">Ara</a>' : '') +
+          '<div class="dealer__actions">' + (d.phone ? '<a class="btn btn--dark" href="tel:' + esc(d.phone.replace(/\s/g, '')) + '">Hemen ara</a>' : '') +
           (d.whatsapp ? '<a class="btn btn--ghost" href="https://wa.me/' + esc(d.whatsapp) + waText + '" target="_blank" rel="noopener">WhatsApp</a>' : '') +
           (dir ? '<a class="btn btn--ghost" href="' + dir + '" target="_blank" rel="noopener">Yol tarifi</a>' : '<a class="btn btn--ghost" href="' + (d.maps || 'https://www.google.com/maps/search/?api=1&query=' + q) + '" target="_blank" rel="noopener">Haritada aç</a>') +
           (d.lat ? '<button class="btn btn--ghost dealer__show" type="button" data-show="' + i + '">Haritada göster</button>' : '') + '</div></div>';
@@ -672,6 +678,7 @@
 
   /* ---------- başlat ---------- */
   document.addEventListener('DOMContentLoaded', function () {
+    initI18n();
     initHeader();
     initCompare();
     initAssistant();

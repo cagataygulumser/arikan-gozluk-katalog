@@ -652,3 +652,10 @@ body.ast-open{overflow:hidden}
 .dealers-demo:empty{display:none}
 @media (max-width:1000px){.dealers-body--map{grid-template-columns:1fr}.dealers-frame{position:static}.dealers-frame iframe{height:320px}.dealers-body--map .dealer-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.dealers-body--map .dealer-grid{grid-template-columns:1fr}.dealers-ctx img{width:90px}}
+
+/* ---- dil anahtarı ------------------------------------------------- */
+.lang{display:inline-flex;align-items:center;gap:6px;font-size:12px;letter-spacing:.14em;font-weight:600;color:var(--muted)}
+.lang a{color:var(--muted);padding:4px 2px}.lang a.on{color:var(--ink);border-bottom:2px solid var(--red)}
+.lang--nav{margin:0 6px 0 4px}
+.lang--footer{margin-left:auto}.lang--footer a{color:#C9CDD2}.lang--footer a.on{color:#fff}
+@media (max-width:1024px){.lang--nav{padding:10px 11px}}

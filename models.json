@@ -4444,7 +4444,7 @@
      "code": "Q792.C2",
      "attrs": {
       "frame_color": "Yeşil",
-      "tip_color": "Şeﬀaf",
+      "tip_color": "Şeffaf",
       "temple_color": "Yeşil"
      },
      "images": {
@@ -4456,7 +4456,7 @@
      "code": "Q792.C3",
      "attrs": {
       "frame_color": "Bej",
-      "tip_color": "Şeﬀaf",
+      "tip_color": "Şeffaf",
       "temple_color": "Koyu Gri"
      },
      "images": {
@@ -5951,7 +5951,7 @@
      "attrs": {
       "frame_color": "Koyu Gun",
       "temple_color": "Koyu Gun",
-      "tip_color": "Mat Mav"
+      "tip_color": "Mat Mavi"
      },
      "images": {
       "front": "8499-C4-on.jpg",
@@ -6089,7 +6089,7 @@
      "attrs": {
       "frame_color": "Koyu Gun",
       "temple_color": "Siyah",
-      "tip_color": "Mat Lac vert"
+      "tip_color": "Mat Lacivert"
      },
      "images": {
       "front": "8859-C3-on.jpg",
@@ -6164,7 +6164,7 @@
      "attrs": {
       "frame_color": "Koyu Gun",
       "temple_color": "Siyah",
-      "tip_color": "Mat Lac vert"
+      "tip_color": "Mat Lacivert"
      },
      "images": {
       "front": "8860-C3-on.jpg",
@@ -6288,7 +6288,7 @@
     {
      "code": "9081.C3",
      "attrs": {
-      "frame_color": "Koyu Kahvereng",
+      "frame_color": "Koyu Kahverengi",
       "temple_color": "Siyah / Gümüş",
       "tip_color": "Siyah"
      },
@@ -6402,8 +6402,8 @@
     {
      "code": "9202.C1",
      "attrs": {
-      "frame_color": "Koyu Lac vert / Koyu Gun",
-      "temple_color": "Koyu Lac vert / Koyu Gun",
+      "frame_color": "Koyu Lacivert / Koyu Gun",
+      "temple_color": "Koyu Lacivert / Koyu Gun",
       "tip_color": "Kristal Koyu Lacivert"
      },
      "images": {
@@ -6465,9 +6465,9 @@
     {
      "code": "9221.C1",
      "attrs": {
-      "frame_color": "Kr stal Gr",
+      "frame_color": "Kristal Gri",
       "temple_color": "Siyah",
-      "tip_color": "Kr stal Gr"
+      "tip_color": "Kristal Gri"
      },
      "images": {
       "front": "9221-C1-on.jpg",
@@ -6477,9 +6477,9 @@
     {
      "code": "9221.C2",
      "attrs": {
-      "frame_color": "Kr stal Bej",
+      "frame_color": "Kristal Bej",
       "temple_color": "Altın",
-      "tip_color": "Kr stal Bej"
+      "tip_color": "Kristal Bej"
      },
      "images": {
       "front": "9221-C2-on.jpg",
@@ -6489,9 +6489,9 @@
     {
      "code": "9221.C3",
      "attrs": {
-      "frame_color": "Kr stal Kahvereng",
+      "frame_color": "Kristal Kahverengi",
       "temple_color": "Gun",
-      "tip_color": "Kr stal Kahvereng"
+      "tip_color": "Kristal Kahverengi"
      },
      "images": {
       "front": "9221-C3-on.jpg",
@@ -6552,7 +6552,7 @@
     {
      "code": "9293.C2",
      "attrs": {
-      "frame_color": "Koyu Lac vert",
+      "frame_color": "Koyu Lacivert",
       "temple_color": "Siyah / Gümüş",
       "tip_color": "Siyah"
      },
@@ -6615,9 +6615,9 @@
     {
      "code": "9348.C3",
      "attrs": {
-      "frame_color": "Kr stal Gr",
-      "temple_color": "Kr stal Gr",
-      "tip_color": "Kr stal Gr"
+      "frame_color": "Kristal Gri",
+      "temple_color": "Kristal Gri",
+      "tip_color": "Kristal Gri"
      },
      "images": {
       "front": "9348-C3-on.jpg",
@@ -6627,9 +6627,9 @@
     {
      "code": "9348.C5",
      "attrs": {
-      "frame_color": "Kr stal Koyu Lac vert",
-      "temple_color": "Kr stal Koyu Lac vert",
-      "tip_color": "Kr stal Koyu Lac vert"
+      "frame_color": "Kristal Koyu Lacivert",
+      "temple_color": "Kristal Koyu Lacivert",
+      "tip_color": "Kristal Koyu Lacivert"
      },
      "images": {
       "front": "9348-C5-on.jpg",
@@ -6690,7 +6690,7 @@
     {
      "code": "9349.C3",
      "attrs": {
-      "frame_color": "Kr stal Koyu Pembe",
+      "frame_color": "Kristal Koyu Pembe",
       "temple_color": "Koyu Gun",
       "tip_color": "Kristal Koyu Pembe / Kristal Bej"
      },
@@ -6702,9 +6702,9 @@
     {
      "code": "9349.C4",
      "attrs": {
-      "frame_color": "Kr stal Bordo",
+      "frame_color": "Kristal Bordo",
       "temple_color": "Koyu Gun",
-      "tip_color": "Kr stal Bordo / Şeffaf"
+      "tip_color": "Kristal Bordo / Şeffaf"
      },
      "images": {
       "front": "9349-C4-on.jpg",
@@ -6714,9 +6714,9 @@
     {
      "code": "9349.C5",
      "attrs": {
-      "frame_color": "Kr stal Yeş l",
+      "frame_color": "Kristal Yeşil",
       "temple_color": "Siyah",
-      "tip_color": "Kr stal Yeş l / Şeffaf"
+      "tip_color": "Kristal Yeşil / Şeffaf"
      },
      "images": {
       "front": "9349-C5-on.jpg",
@@ -6754,8 +6754,8 @@
      "code": "9539.C1",
      "attrs": {
       "frame_color": "Siyah",
-      "temple_color": "Siyah / Koyu Yeş l",
-      "tip_color": "Koyu Yeş l"
+      "temple_color": "Siyah / Koyu Yeşil",
+      "tip_color": "Koyu Yeşil"
      },
      "images": {
       "front": "9539-C1-on.jpg",
@@ -6790,8 +6790,8 @@
      "code": "9539.C4",
      "attrs": {
       "frame_color": "Koyu Gun",
-      "temple_color": "Koyu Gun / Koyu Lac vert",
-      "tip_color": "Koyu Lac vert"
+      "temple_color": "Koyu Gun / Koyu Lacivert",
+      "tip_color": "Koyu Lacivert"
      },
      "images": {
       "front": "9539-C4-on.jpg",
@@ -6841,8 +6841,8 @@
      "code": "9543.C2",
      "attrs": {
       "frame_color": "Açık Gri",
-      "temple_color": "Gümüş / Koyu Yeş l",
-      "tip_color": "Koyu Yeş l"
+      "temple_color": "Gümüş / Koyu Yeşil",
+      "tip_color": "Koyu Yeşil"
      },
      "images": {
       "front": "9543-C2-on.jpg",
@@ -6852,7 +6852,7 @@
     {
      "code": "9543.C3",
      "attrs": {
-      "frame_color": "Grad ent Kahvereng",
+      "frame_color": "Gradient Kahverengi",
       "temple_color": "Siyah / Kahverengi",
       "tip_color": "Kahverengi"
      },
@@ -6903,9 +6903,9 @@
     {
      "code": "9555.C2",
      "attrs": {
-      "frame_color": "Kr stal Koyu Gr",
+      "frame_color": "Kristal Koyu Gri",
       "temple_color": "Gun",
-      "tip_color": "Kr stal Koyu Gr"
+      "tip_color": "Kristal Koyu Gri"
      },
      "images": {
       "front": "9555-C2-on.jpg",
@@ -6915,9 +6915,9 @@
     {
      "code": "9555.C3",
      "attrs": {
-      "frame_color": "Kr stal Koyu Açık",
+      "frame_color": "Kristal Koyu Açık",
       "temple_color": "Gun",
-      "tip_color": "Kr stal Koyu Açık"
+      "tip_color": "Kristal Koyu Açık"
      },
      "images": {
       "front": "9555-C3-on.jpg",
@@ -6954,9 +6954,9 @@
     {
      "code": "9588.C1",
      "attrs": {
-      "frame_color": "Kr stal Gr",
-      "temple_color": "Kr stal Gr",
-      "tip_color": "Kr stal Gr"
+      "frame_color": "Kristal Gri",
+      "temple_color": "Kristal Gri",
+      "tip_color": "Kristal Gri"
      },
      "images": {
       "front": "9588-C1-on.jpg",
@@ -6978,9 +6978,9 @@
     {
      "code": "9588.C3",
      "attrs": {
-      "frame_color": "Kr stal Grad ent Pembe",
-      "temple_color": "Kr stal Grad ent Pembe",
-      "tip_color": "Kr stal Grad ent Pembe"
+      "frame_color": "Kristal Gradient Pembe",
+      "temple_color": "Kristal Gradient Pembe",
+      "tip_color": "Kristal Gradient Pembe"
      },
      "images": {
       "front": "9588-C3-on.jpg",
@@ -7029,9 +7029,9 @@
     {
      "code": "9589.C2",
      "attrs": {
-      "frame_color": "Kr stal Gr",
-      "temple_color": "Kr stal Gr",
-      "tip_color": "Kr stal Gr"
+      "frame_color": "Kristal Gri",
+      "temple_color": "Kristal Gri",
+      "tip_color": "Kristal Gri"
      },
      "images": {
       "front": "9589-C2-on.jpg",
@@ -7041,9 +7041,9 @@
     {
      "code": "9589.C3",
      "attrs": {
-      "frame_color": "Kr stal Pembe",
-      "temple_color": "Kr stal Pembe",
-      "tip_color": "Kr stal Pembe"
+      "frame_color": "Kristal Pembe",
+      "temple_color": "Kristal Pembe",
+      "tip_color": "Kristal Pembe"
      },
      "images": {
       "front": "9589-C3-on.jpg",
@@ -7104,9 +7104,9 @@
     {
      "code": "9590.C3",
      "attrs": {
-      "frame_color": "Kr stal Mav",
-      "temple_color": "Kr stal Mav",
-      "tip_color": "Kr stal Mav"
+      "frame_color": "Kristal Mavi",
+      "temple_color": "Kristal Mavi",
+      "tip_color": "Kristal Mavi"
      },
      "images": {
       "front": "9590-C3-on.jpg",
@@ -7145,7 +7145,7 @@
      "attrs": {
       "frame_color": "Siyah",
       "temple_color": "Siyah",
-      "tip_color": "Mat Siyah / Mat Açık Gr"
+      "tip_color": "Mat Siyah / Mat Açık Gri"
      },
      "images": {
       "front": "9596-C1-on.jpg",
@@ -7169,7 +7169,7 @@
      "attrs": {
       "frame_color": "Koyu Gun",
       "temple_color": "Koyu Gun",
-      "tip_color": "Mat Siyah / Mat Yeş l"
+      "tip_color": "Mat Siyah / Mat Yeşil"
      },
      "images": {
       "front": "9596-C3-on.jpg",
@@ -7208,7 +7208,7 @@
      "attrs": {
       "frame_color": "Siyah",
       "temple_color": "Siyah",
-      "tip_color": "Mat Siyah / Mat Yeş l"
+      "tip_color": "Mat Siyah / Mat Yeşil"
      },
      "images": {
       "front": "9597-C1-on.jpg",
@@ -7232,7 +7232,7 @@
      "attrs": {
       "frame_color": "Koyu Gun",
       "temple_color": "Koyu Gun",
-      "tip_color": "Mat Mav / Mat Açık Gr"
+      "tip_color": "Mat Mavi / Mat Açık Gri"
      },
      "images": {
       "front": "9597-C3-on.jpg",
@@ -7271,7 +7271,7 @@
      "attrs": {
       "frame_color": "Koyu Gun",
       "temple_color": "Koyu Gun",
-      "tip_color": "Mat Siyah / Mat Yeş l"
+      "tip_color": "Mat Siyah / Mat Yeşil"
      },
      "images": {
       "front": "9598-C1-on.jpg",
@@ -7283,7 +7283,7 @@
      "attrs": {
       "frame_color": "Koyu Gun",
       "temple_color": "Koyu Gun",
-      "tip_color": "Mat Mav / Mat Açık Gr"
+      "tip_color": "Mat Mavi / Mat Açık Gri"
      },
      "images": {
       "front": "9598-C2-on.jpg",
@@ -7334,7 +7334,7 @@
      "attrs": {
       "frame_color": "Siyah",
       "temple_color": "Koyu Gun",
-      "tip_color": "Mat Siyah / Mat Yeş l"
+      "tip_color": "Mat Siyah / Mat Yeşil"
      },
      "images": {
       "front": "9600-C1-on.jpg",
@@ -7346,7 +7346,7 @@
      "attrs": {
       "frame_color": "Şeffaf",
       "temple_color": "Koyu Gun",
-      "tip_color": "Mat Siyah / Mat Açık Gr"
+      "tip_color": "Mat Siyah / Mat Açık Gri"
      },
      "images": {
       "front": "9600-C2-on.jpg",
@@ -7409,7 +7409,7 @@
      "attrs": {
       "frame_color": "Siyah",
       "temple_color": "Siyah",
-      "tip_color": "Mat Yeş l"
+      "tip_color": "Mat Yeşil"
      },
      "images": {
       "front": "9601-C2-on.jpg",
@@ -7433,7 +7433,7 @@
      "attrs": {
       "frame_color": "Gun",
       "temple_color": "Gun",
-      "tip_color": "Mat Lac vert"
+      "tip_color": "Mat Lacivert"
      },
      "images": {
       "front": "9601-C4-on.jpg",
@@ -7482,9 +7482,9 @@
     {
      "code": "9602.C2",
      "attrs": {
-      "frame_color": "Kr stal Lac vert",
-      "temple_color": "Koyu Lac vert",
-      "tip_color": "Mat Mav"
+      "frame_color": "Kristal Lacivert",
+      "temple_color": "Koyu Lacivert",
+      "tip_color": "Mat Mavi"
      },
      "images": {
       "front": "9602-C2-on.jpg",
@@ -7494,9 +7494,9 @@
     {
      "code": "9602.C3",
      "attrs": {
-      "frame_color": "Kr stal Koyu Gr",
+      "frame_color": "Kristal Koyu Gri",
       "temple_color": "Gun",
-      "tip_color": "Mat Açık Gr"
+      "tip_color": "Mat Açık Gri"
      },
      "images": {
       "front": "9602-C3-on.jpg",
@@ -7545,7 +7545,7 @@
     {
      "code": "9603.C2",
      "attrs": {
-      "frame_color": "Kr stal Koyu Gr",
+      "frame_color": "Kristal Koyu Gri",
       "temple_color": "Siyah",
       "tip_color": "Mat Kırmızı"
      },
@@ -7557,9 +7557,9 @@
     {
      "code": "9603.C3",
      "attrs": {
-      "frame_color": "Kr stal Lac vert",
+      "frame_color": "Kristal Lacivert",
       "temple_color": "Gun",
-      "tip_color": "Mat Lac vert"
+      "tip_color": "Mat Lacivert"
      },
      "images": {
       "front": "9603-C3-on.jpg",
@@ -7620,9 +7620,9 @@
     {
      "code": "9608.C3",
      "attrs": {
-      "frame_color": "Gun / Koyu Lac vert",
+      "frame_color": "Gun / Koyu Lacivert",
       "temple_color": "Gun",
-      "tip_color": "Koyu Lac vert"
+      "tip_color": "Koyu Lacivert"
      },
      "images": {
       "front": "9608-C3-on.jpg",
@@ -7860,9 +7860,9 @@
     {
      "code": "9612.C2",
      "attrs": {
-      "frame_color": "Koyu Lac vert / Koyu Gun",
+      "frame_color": "Koyu Lacivert / Koyu Gun",
       "temple_color": "Koyu Gun",
-      "tip_color": "Koyu Lac vert / Kırmızı"
+      "tip_color": "Koyu Lacivert / Kırmızı"
      },
      "images": {
       "front": "9612-C2-on.jpg",
@@ -7936,8 +7936,8 @@
      "code": "9613.C3",
      "attrs": {
       "frame_color": "Siyah",
-      "temple_color": "Mat Mav / Gümüş",
-      "tip_color": "Mat Mav"
+      "temple_color": "Mat Mavi / Gümüş",
+      "tip_color": "Mat Mavi"
      },
      "images": {
       "front": "9613-C3-on.jpg",
@@ -7999,8 +7999,8 @@
      "code": "9614.C3",
      "attrs": {
       "frame_color": "Siyah",
-      "temple_color": "Mat Mav / Koyu Lac vert",
-      "tip_color": "Mat Mav"
+      "temple_color": "Mat Mavi / Koyu Lacivert",
+      "tip_color": "Mat Mavi"
      },
      "images": {
       "front": "9614-C3-on.jpg",
@@ -8252,7 +8252,7 @@
      "attrs": {
       "frame_color": "Koyu Gun",
       "temple_color": "Koyu Gun",
-      "tip_color": "Koyu Mav"
+      "tip_color": "Koyu Mavi"
      },
      "images": {
       "front": "9619-C2-on.jpg",
@@ -8364,9 +8364,9 @@
     {
      "code": "9652.C1",
      "attrs": {
-      "frame_color": "Kr stal Açık Gr",
+      "frame_color": "Kristal Açık Gri",
       "temple_color": "Gun",
-      "tip_color": "Kr stal Açık Gr"
+      "tip_color": "Kristal Açık Gri"
      },
      "images": {
       "front": "9652-C1-on.jpg",
@@ -8376,9 +8376,9 @@
     {
      "code": "9652.C2",
      "attrs": {
-      "frame_color": "Kr stal Açık Bej",
+      "frame_color": "Kristal Açık Bej",
       "temple_color": "Altın",
-      "tip_color": "Kr stal Açık Bej"
+      "tip_color": "Kristal Açık Bej"
      },
      "images": {
       "front": "9652-C2-on.jpg",
@@ -8400,9 +8400,9 @@
     {
      "code": "9652.C4",
      "attrs": {
-      "frame_color": "Kr stal Açık Kahve",
+      "frame_color": "Kristal Açık Kahve",
       "temple_color": "Altın",
-      "tip_color": "Kr stal Açık Kahve"
+      "tip_color": "Kristal Açık Kahve"
      },
      "images": {
       "front": "9652-C4-on.jpg",
@@ -9275,10 +9275,10 @@
     {
      "code": "9064.C2",
      "attrs": {
-      "frame_color": "Koyu Lac vert",
+      "frame_color": "Koyu Lacivert",
       "temple_color": "Gümüş",
-      "tip_color": "Mat Koyu Lac vert",
-      "clip_frame_color": "Mat Koyu Lac vert",
+      "tip_color": "Mat Koyu Lacivert",
+      "clip_frame_color": "Mat Koyu Lacivert",
       "clip_lens_color": "Füme"
      },
      "images": {
@@ -9294,7 +9294,7 @@
       "temple_color": "Siyah",
       "tip_color": "Mat Siyah",
       "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Grad ent Füme"
+      "clip_lens_color": "Gradient Füme"
      },
      "images": {
       "front": "9064-C3-on.jpg",
@@ -9307,7 +9307,7 @@
      "attrs": {
       "frame_color": "Koyu Gun",
       "temple_color": "Yeşil",
-      "tip_color": "Mat Koyu Yeş l",
+      "tip_color": "Mat Koyu Yeşil",
       "clip_frame_color": "Mat Siyah",
       "clip_lens_color": "Yeşil"
      },
@@ -9436,9 +9436,9 @@
     {
      "code": "9146.C6",
      "attrs": {
-      "frame_color": "Mat Koyu Lac vert",
-      "temple_color": "Mat Koyu Lac vert",
-      "tip_color": "Mat Koyu Lac vert",
+      "frame_color": "Mat Koyu Lacivert",
+      "temple_color": "Mat Koyu Lacivert",
+      "tip_color": "Mat Koyu Lacivert",
       "clip_frame_color": "",
       "clip_lens_color": "Füme"
      },
@@ -9509,11 +9509,11 @@
     {
      "code": "9392.C1",
      "attrs": {
-      "frame_color": "Mat Kahvereng / Şeffaf",
-      "temple_color": "Mat Kahvereng / Şeffaf",
-      "tip_color": "Mat Kahvereng / Şeffaf",
-      "clip_frame_color": "Mat Kahvereng / Şeffaf",
-      "clip_lens_color": "Grad ent Füme"
+      "frame_color": "Mat Kahverengi / Şeffaf",
+      "temple_color": "Mat Kahverengi / Şeffaf",
+      "tip_color": "Mat Kahverengi / Şeffaf",
+      "clip_frame_color": "Mat Kahverengi / Şeffaf",
+      "clip_lens_color": "Gradient Füme"
      },
      "images": {
       "front": "9392-C1-on.jpg",
@@ -9583,8 +9583,8 @@
      "code": "9542.C2",
      "attrs": {
       "frame_color": "Siyah",
-      "temple_color": "Siyah / Mat Yeş l",
-      "tip_color": "Mat Yeş l",
+      "temple_color": "Siyah / Mat Yeşil",
+      "tip_color": "Mat Yeşil",
       "clip_frame_color": "Siyah",
       "clip_lens_color": "Yeşil"
      },
@@ -9598,8 +9598,8 @@
      "code": "9542.C3",
      "attrs": {
       "frame_color": "Koyu Gun",
-      "temple_color": "Koyu Gun / Koyu Lac vert",
-      "tip_color": "Koyu Lac vert",
+      "temple_color": "Koyu Gun / Koyu Lacivert",
+      "tip_color": "Koyu Lacivert",
       "clip_frame_color": "Siyah",
       "clip_lens_color": "Füme"
      },
@@ -9671,8 +9671,8 @@
      "code": "9604.C2",
      "attrs": {
       "frame_color": "Koyu Gun",
-      "temple_color": "Kr stal Lac vert",
-      "tip_color": "Kr stal Lac vert",
+      "temple_color": "Kristal Lacivert",
+      "tip_color": "Kristal Lacivert",
       "clip_frame_color": "Siyah",
       "clip_lens_color": "Füme"
      },
@@ -9728,7 +9728,7 @@
     {
      "code": "9618.C1",
      "attrs": {
-      "frame_color": "Kr stal S yah",
+      "frame_color": "Kristal Siyah",
       "temple_color": "Siyah",
       "tip_color": "Mat Siyah",
       "clip_frame_color": "Mat Siyah",
@@ -9743,7 +9743,7 @@
     {
      "code": "9618.C2",
      "attrs": {
-      "frame_color": "Kr stal Yeş l",
+      "frame_color": "Kristal Yeşil",
       "temple_color": "Siyah",
       "tip_color": "Mat Siyah",
       "clip_frame_color": "Mat Siyah",
@@ -9758,7 +9758,7 @@
     {
      "code": "9618.C3",
      "attrs": {
-      "frame_color": "Kr stal Kahvereng",
+      "frame_color": "Kristal Kahverengi",
       "temple_color": "Siyah",
       "tip_color": "Mat Siyah",
       "clip_frame_color": "Mat Siyah",
@@ -9773,9 +9773,9 @@
     {
      "code": "9618.C4",
      "attrs": {
-      "frame_color": "Kr stal Lac vert",
-      "temple_color": "Kr stal Lac vert",
-      "tip_color": "Mat Lac vert",
+      "frame_color": "Kristal Lacivert",
+      "temple_color": "Kristal Lacivert",
+      "tip_color": "Mat Lacivert",
       "clip_frame_color": "Mat Siyah",
       "clip_lens_color": "Füme"
      },
@@ -9817,7 +9817,7 @@
      "code": "9636.C1",
      "attrs": {
       "frame_color": "Mat Siyah",
-      "temple_color": "Mat Koyu Gr",
+      "temple_color": "Mat Koyu Gri",
       "tip_color": "Mat Siyah",
       "clip_frame_color": "Mat Siyah",
       "clip_lens_color": "Yeşil"
@@ -9831,8 +9831,8 @@
     {
      "code": "9636.C2",
      "attrs": {
-      "frame_color": "Mat Kr stal Koyu Gr",
-      "temple_color": "Mat Kr stal Koyu Gr",
+      "frame_color": "Mat Kristal Koyu Gri",
+      "temple_color": "Mat Kristal Koyu Gri",
       "tip_color": "Mat Siyah",
       "clip_frame_color": "Mat Siyah",
       "clip_lens_color": "Füme"
@@ -9846,10 +9846,10 @@
     {
      "code": "9636.C3",
      "attrs": {
-      "frame_color": "Mat Kr stal Lac vert",
-      "temple_color": "Mat Kr stal Lac vert",
-      "tip_color": "Mat Lac vert",
-      "clip_frame_color": "Mat Kr stal Lac vert",
+      "frame_color": "Mat Kristal Lacivert",
+      "temple_color": "Mat Kristal Lacivert",
+      "tip_color": "Mat Lacivert",
+      "clip_frame_color": "Mat Kristal Lacivert",
       "clip_lens_color": "Füme"
      },
      "images": {
@@ -9904,9 +9904,9 @@
     {
      "code": "9637.C2",
      "attrs": {
-      "frame_color": "Mat Kr stal Koyu Gr",
-      "temple_color": "Mat Koyu Gr",
-      "tip_color": "Mat Koyu Gr",
+      "frame_color": "Mat Kristal Koyu Gri",
+      "temple_color": "Mat Koyu Gri",
+      "tip_color": "Mat Koyu Gri",
       "clip_frame_color": "Mat Siyah",
       "clip_lens_color": "Füme"
      },
@@ -9919,10 +9919,10 @@
     {
      "code": "9637.C3",
      "attrs": {
-      "frame_color": "Mat Lac vert / Mat Kırmızı",
-      "temple_color": "Mat Lac vert",
-      "tip_color": "Mat Lac vert / Mat Kırmızı",
-      "clip_frame_color": "Mat Lac vert",
+      "frame_color": "Mat Lacivert / Mat Kırmızı",
+      "temple_color": "Mat Lacivert",
+      "tip_color": "Mat Lacivert / Mat Kırmızı",
+      "clip_frame_color": "Mat Lacivert",
       "clip_lens_color": "Füme"
      },
      "images": {
@@ -9977,7 +9977,7 @@
     {
      "code": "9641.C2",
      "attrs": {
-      "frame_color": "Kr stal Koyu Gr",
+      "frame_color": "Kristal Koyu Gri",
       "temple_color": "Gümüş / Mat Siyah",
       "tip_color": "Mat Gri",
       "clip_frame_color": "Mat Siyah",
@@ -9992,10 +9992,10 @@
     {
      "code": "9641.C3",
      "attrs": {
-      "frame_color": "Mat Lac vert / Mat Kırmızı",
-      "temple_color": "Gümüş / Mat Lac vert",
-      "tip_color": "Mat Lac vert / Mat Kırmızı",
-      "clip_frame_color": "Mat Lac vert",
+      "frame_color": "Mat Lacivert / Mat Kırmızı",
+      "temple_color": "Gümüş / Mat Lacivert",
+      "tip_color": "Mat Lacivert / Mat Kırmızı",
+      "clip_frame_color": "Mat Lacivert",
       "clip_lens_color": "Füme"
      },
      "images": {
@@ -10065,9 +10065,9 @@
     {
      "code": "9646.C2",
      "attrs": {
-      "frame_color": "Kr stal Açık Yeş l",
+      "frame_color": "Kristal Açık Yeşil",
       "temple_color": "Altın / Kahverengi",
-      "tip_color": "Kr stal Kahvereng",
+      "tip_color": "Kristal Kahverengi",
       "clip_frame_color": "",
       "clip_lens_color": "Yeşil"
      },
@@ -10080,9 +10080,9 @@
     {
      "code": "9646.C3",
      "attrs": {
-      "frame_color": "Kr stal Lac vert",
-      "temple_color": "Koyu Gun / Koyu Lac vert",
-      "tip_color": "Kr stal Lac vert",
+      "frame_color": "Kristal Lacivert",
+      "temple_color": "Koyu Gun / Koyu Lacivert",
+      "tip_color": "Kristal Lacivert",
       "clip_frame_color": "",
       "clip_lens_color": "Füme"
      },
@@ -10095,8 +10095,8 @@
     {
      "code": "9646.C4",
      "attrs": {
-      "frame_color": "Kr stal Kahvereng",
-      "temple_color": "Koyu Gun / Koyu Yeş l",
+      "frame_color": "Kristal Kahverengi",
+      "temple_color": "Koyu Gun / Koyu Yeşil",
       "tip_color": "Siyah",
       "clip_frame_color": "",
       "clip_lens_color": "Kahverengi"
@@ -10153,9 +10153,9 @@
     {
      "code": "9647.C2",
      "attrs": {
-      "frame_color": "Kr stal Lac vert",
-      "temple_color": "Koyu Gun / Koyu Lac vert",
-      "tip_color": "Kr stal Lac vert",
+      "frame_color": "Kristal Lacivert",
+      "temple_color": "Koyu Gun / Koyu Lacivert",
+      "tip_color": "Kristal Lacivert",
       "clip_frame_color": "",
       "clip_lens_color": "Füme"
      },
@@ -10168,8 +10168,8 @@
     {
      "code": "9647.C3",
      "attrs": {
-      "frame_color": "Kr stal Kahvereng",
-      "temple_color": "Koyu Gun / Koyu Yeş l",
+      "frame_color": "Kristal Kahverengi",
+      "temple_color": "Koyu Gun / Koyu Yeşil",
       "tip_color": "Siyah",
       "clip_frame_color": "",
       "clip_lens_color": "Kahverengi"
@@ -10226,9 +10226,9 @@
     {
      "code": "9649.C2",
      "attrs": {
-      "frame_color": "Kr stal Açık Yeş l",
+      "frame_color": "Kristal Açık Yeşil",
       "temple_color": "Altın / Kahverengi",
-      "tip_color": "Kr stal Kahvereng",
+      "tip_color": "Kristal Kahverengi",
       "clip_frame_color": "",
       "clip_lens_color": "Yeşil"
      },
@@ -10241,9 +10241,9 @@
     {
      "code": "9649.C3",
      "attrs": {
-      "frame_color": "Kr stal Kahvereng",
+      "frame_color": "Kristal Kahverengi",
       "temple_color": "Koyu Bakır / Kahverengi",
-      "tip_color": "Kr stal Kahvereng",
+      "tip_color": "Kristal Kahverengi",
       "clip_frame_color": "",
       "clip_lens_color": "Füme"
      },
@@ -10299,9 +10299,9 @@
     {
      "code": "9650.C2",
      "attrs": {
-      "frame_color": "Kr stal Açık Yeş l",
+      "frame_color": "Kristal Açık Yeşil",
       "temple_color": "Altın / Kahverengi",
-      "tip_color": "Kr stal Kahvereng",
+      "tip_color": "Kristal Kahverengi",
       "clip_frame_color": "",
       "clip_lens_color": "Yeşil"
      },
@@ -10314,9 +10314,9 @@
     {
      "code": "9650.C3",
      "attrs": {
-      "frame_color": "Kr stal Kahvereng",
+      "frame_color": "Kristal Kahverengi",
       "temple_color": "Koyu Bakır / Kahverengi",
-      "tip_color": "Kr stal Kahvereng",
+      "tip_color": "Kristal Kahverengi",
       "clip_frame_color": "",
       "clip_lens_color": "Füme"
      },
@@ -10505,7 +10505,7 @@
      "code": "B5704.C2",
      "attrs": {
       "frame_color": "Altın",
-      "tip_color": "Şeﬀaf",
+      "tip_color": "Şeffaf",
       "temple_color": "Koyu Bej"
      },
      "images": {
@@ -10544,7 +10544,7 @@
      "code": "B5705.C1",
      "attrs": {
       "frame_color": "Pembe / Altın",
-      "tip_color": "Şeﬀaf",
+      "tip_color": "Şeffaf",
       "temple_color": "Pembe / Altın"
      },
      "images": {
@@ -10568,7 +10568,7 @@
      "code": "B5705.C3",
      "attrs": {
       "frame_color": "Altın",
-      "tip_color": "Bej / Şeﬀaf",
+      "tip_color": "Bej / Şeffaf",
       "temple_color": "Altın / Bej"
      },
      "images": {
@@ -10733,7 +10733,7 @@
      "code": "B5809.C1",
      "attrs": {
       "frame_color": "Açık Bej / Altın",
-      "tip_color": "Şeﬀaf",
+      "tip_color": "Şeffaf",
       "temple_color": "Açık Bej / Altın"
      },
      "images": {

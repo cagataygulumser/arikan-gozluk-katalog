@@ -23,6 +23,9 @@ def fix(v):
     if v is None:
         return v
     v = v.strip().strip('-').strip()
+    # Slazenger PDF'inde 'i' harfi düşmüş kelimeler
+    for a, b in [(r'Kr stal', 'Kristal'), (r'Lac vert', 'Lacivert'), (r'\bKahvereng\b', 'Kahverengi'), (r'\bMav\b', 'Mavi'), (r'Yeş l', 'Yeşil'), (r'S yah', 'Siyah'), (r'\bGr\b', 'Gri'), (r'Grad ent', 'Gradient'), (r'Alüm nyum', 'Alüminyum'), (r'\bAnt k\b', 'Antik'), (r'\bBe\b', 'Bej'), (r'Şeﬀaf', 'Şeffaf')]:
+        v = re.sub(a, b, v)
     toks = v.split(' ')
     toks = [TOKEN_FIX.get(t, t) for t in toks]
     toks = [t for t in toks if t != '']
