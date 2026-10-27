@@ -11,14 +11,18 @@
 
 Veri kapsamı: **161 model, 517 renk varyantı** — Lee Cooper 53 (32 optik + 21 clip-on), Slazenger 66 (41 + 25), Quantum 30 (26 + 4), Belmond 12 (9 + 3).
 
+## Durum (27 Ekim 2026)
+
+Site **deneme-site-v3.blogspot.com** adresinde kuruldu ve çalışıyor: tema yüklü, 161 yazı + 5 sayfa içe aktarıldı, blog başlığı "Arıkan Optik" yapıldı, Arıkan logosu (cdn.arikantime.com) header ve footer'da. Aşağıdaki adımlar başka bir bloga taşımak istersen geçerlidir.
+
+**Blogger'a özgü iki tuzak (çözüldü, temada hazır):** (1) Blogger'ın zorunlu "Kötüye Kullanım Bildir" (ReportAbuse1) widget'ı temada yoksa ve (2) bölümlerde `showaddelement='no'` (v3'te `false` olmalı) / `preferred='yes'` bölüm eksikse Blogger hiçbir widget'ı basmaz; sayfalar boş çıkar. Tema bunları içeriyor; silmeyin.
+
 ## Kurulum (sırayla)
 
 1. **Blog oluştur** — blogger.com > Yeni blog. Dil: Türkçe. (Adres örn. `arikanoptik.blogspot.com`; sonradan özel alan adı bağlanabilir.)
 2. **Temayı yükle** — Tema > sağ üstteki ok > *Geri yükle* > `arikan-optik-tema.xml` seç. (Ya da *HTML'i düzenle* > tümünü sil > dosya içeriğini yapıştır > Kaydet.)
 3. **İçeriği içe aktar** — Ayarlar > *İçeriği yönet* > *İçeriği içe aktar* > `arikan-optik-icerik-import.xml`. "İçe aktarılan yazıları otomatik yayınla" işaretli olsun. İşlem birkaç dakika sürebilir; yazılar 1 Ekim 2026 tarihli görünür (sıralama için kasıtlı).
-4. **Sayfa adreslerini doğrula** — Sayfalar bölümünde 5 sayfa olmalı. Tema şu adresleri bekler:
-   - `/p/ekartman-rehberi.html`, `/p/sik-sorulan-sorular.html`, `/p/yetkili-satis-noktalari.html`, `/p/hakkimizda.html`, `/p/iletisim.html`
-   Blogger farklı bir adres verdiyse: Tema > HTML'i düzenle'de ilgili `/p/...html` ifadelerini bul-değiştir ile düzelt (menü, footer ve model sayfalarındaki "Ölçü rehberi" bağlantıları).
+4. **Sayfa adresleri** — Blogger sayfalara kendi adresini verir (örn. `/p/ekartman-rehberi_3.html`); tema bu adresleri sayfa başlığından otomatik bulur (menü, footer ve model sayfalarındaki bağlantılar). Sayfa başlıklarını değiştirmeyin: Ekartman Rehberi, Sık Sorulan Sorular, Yetkili Satış Noktaları, Hakkımızda, İletişim.
 5. **Ayarlar**
    - Ayarlar > Temel > Başlık: `Arıkan Optik` (header ve footer'da bu başlık görünür).
    - Ayarlar > Yazılar > Ana sayfada gösterilecek yazı sayısı: 20 (sadece arama botları için; ziyaretçi JS ile tüm listeyi görür).
@@ -43,6 +47,9 @@ Veri kapsamı: **161 model, 517 renk varyantı** — Lee Cooper 53 (32 optik + 2
 - 2027 kataloğu geldiğinde: aynı PDF'ler `parse_catalog.py` ile işlenir, `merge.py` + `gen_content.py` ile yeni import XML'i üretilir. Betikler depodaki `tema/` klasöründe.
 
 ## Bilinmesi gerekenler
+
+- İlk içe aktarma iki kez tetiklendiği için kopyalar çöp kutusuna taşındı; bu yüzden yazı adreslerinde `_4`, `_5` gibi ekler var (örn. `/2026/10/slazenger-9599_4.html`). İşleve etkisi yok. Temiz adres istersen: Yayınlar > Çöp kutusu'nu boşalt, tüm yazı ve sayfaları sil, `arikan-optik-icerik-import.xml` dosyasını bir kez daha içe aktar.
+- Logo şu an doğrudan Arıkan'ın CDN'inden (cdn.arikantime.com/BranchImages/logo.png) geliyor. Kalıcı olsun istersen Düzen > Başlık'tan aynı logoyu yükle; yüklenen görsel otomatik olarak CDN bağlantısının yerine geçer.
 
 - Görsel çözünürlüğü kataloğa bağlı: kapak (ilk renk) görselleri ~1100 px, renk varyantı görselleri ~440 px genişliğinde. Varyant görselleri kartlarda ve küçük resimlerde kullanılır; büyütmede yumuşak görünebilir.
 - Lee Cooper kataloğu sıkıştırılmış (metinsiz) olduğu için veriler OCR ile okundu ve örneklemle doğrulandı; bir hata görürsen ilgili yazıyı Blogger'da düzelt ve `models.json`'daki kaydı güncelle.
