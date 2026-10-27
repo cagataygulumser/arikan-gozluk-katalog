@@ -171,7 +171,7 @@
   }
 
   /* ---------- sabit sayfa bağlantıları (Blogger'ın verdiği gerçek adreslere çevir) ---------- */
-  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/clip-on-demo.html': 'Clip-On Demo', '/p/qr-etiketler.html': 'QR Etiketler' };
+  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/clip-on-demo.html': 'Clip-On Demo', '/p/qr-etiketler.html': 'QR Etiketler', '/p/bayi-talep-formu.html': 'Bayi Talep Formu' };
   function fixPageLinks() {
     var apply = function (map) {
       $$('a[href^="/p/"]').forEach(function (a) {
@@ -621,6 +621,8 @@
     }).catch(function () { root.innerHTML = '<div class="empty"><b>Etiket aracı yüklenemedi</b>Sayfayı yenileyip tekrar deneyin.</div>'; });
   }
 
+/* {{ORDER}} */
+
 /* {{ASSISTANT}} */
 
   /* ---------- başlat ---------- */
@@ -628,11 +630,12 @@
     initHeader();
     initCompare();
     initAssistant();
+    orderBadge();
     if (VIEW === 'home') initHome();
     else if (VIEW === 'collection') initCollection();
-    else if (VIEW === 'post') { initModel(); initArticle(); }
+    else if (VIEW === 'post') { initModel(); initArticle(); initOrderButton(); }
     else if (VIEW === 'error') initCollection();
-    else if (VIEW === 'page') { initDealers(); initQr(); }
+    else if (VIEW === 'page') { initDealers(); initQr(); initOrder(); }
   });
   window.AO = { search: function (q) { return searchModels(q).map(function (m) { return m.code; }); }, parse: parseQuery, last: function () { return lastSearch; }, ready: ready };
 })();

@@ -50,6 +50,11 @@ window.AO_CONFIG = {
   cdn: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/',
   whatsapp: '905074904824',            /* WhatsApp numarası: ülke koduyla, boşluksuz */
   ga: 'G-9C4CG896VN',                  /* Google Analytics 4 ölçüm kimliği (boş bırakılırsa ölçüm yapılmaz) */
+  order: {                             /* Bayi talep formu: Google Form gönderim adresi ve alan kimlikleri (boşsa sadece WhatsApp) */
+    form: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSex-7ctuVdDt8rAuke36lmMsrPsPgRVQuqb7NtrXq7jVAQ5EQ/formResponse',
+    fields: { magaza: 'entry.1442610736', yetkili: 'entry.1056310039', telefon: 'entry.2114199193', il: 'entry.267049084', liste: 'entry.477747281', not: 'entry.2044472977', site: 'entry.1101972266' },
+    whatsapp: ''                       /* boşsa yukarıdaki numara kullanılır */
+  },
   brands: {
     'lee-cooper': { name: 'Lee Cooper', logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/lee-cooper.png', hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p001.jpg', desc: '1908\'den bu yana İngiliz denim mirası. Genç, cesur ve renkli: asetat, metal ve TR90 çerçeveler; clip-on seçenekleri.' },
     'quantum':    { name: 'Quantum',    logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/quantum.png',    hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p001.jpg',    desc: 'Çağdaş çizgiler, titanyum ve asetat. Hafiflik ve erişilebilir lüks anlayışını birleştiren optik ve clip-on modeller.' },
@@ -422,6 +427,7 @@ window.AO_CONFIG = {
       <a href='/p/hakkimizda.html'>Hakkımızda</a>
       <a href='/p/iletisim.html'>İletişim</a>
       <a href='/p/qr-etiketler.html'>Bayiler için QR etiketler</a>
+      <a href='/p/bayi-talep-formu.html'>Bayi talep formu <span class='order-badge' data-order-count='1'></span></a>
       <a href='https://arikantime.com/tr/' rel='noopener' target='_blank'>arikantime.com</a>
     </div>
   </div>

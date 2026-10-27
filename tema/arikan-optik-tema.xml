@@ -647,6 +647,37 @@ body.ast-open{overflow:hidden}
 .search-suggest__chips small{display:block;color:var(--muted-2);font-size:11px;margin-top:2px}
 .search-suggest__all{display:block!important;text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--red);border-top:1px solid var(--line-2);margin-top:4px;padding:10px!important}
 
+/* ---- bayi talep formu --------------------------------------------- */
+.order-badge{display:inline-block;background:var(--red);color:#fff;font-size:10px;font-weight:600;border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:middle}
+.order-add{position:relative}.order-add.done{background:#166534}
+.order-note{font-size:13px;color:var(--ink-2);margin-top:10px}.order-note a{color:var(--red);text-decoration:underline}
+.order__sec{border:1px solid var(--line);border-radius:6px;padding:22px 24px;margin:0 0 18px}
+.order__sec h3{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--red);font-weight:600;margin:0 0 12px}
+.order__hint{font-size:13px;color:var(--muted-2);margin:0 0 12px}
+.order__search{position:relative;max-width:520px;margin-bottom:16px}
+.order__search input{width:100%;border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;font:inherit;font-size:14px}
+.order__suggest{position:absolute;top:100%;left:0;right:0;z-index:20;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius);display:flex;flex-direction:column}
+.order__suggest:empty{display:none}
+.order__suggest button{display:flex;align-items:center;gap:12px;border:0;background:#fff;padding:8px 12px;text-align:left;font:inherit;color:var(--ink)}
+.order__suggest button:hover{background:var(--bg-soft)}
+.order__suggest img{width:64px;height:auto}.order__suggest b{display:block;font-size:14px}.order__suggest small{color:var(--muted-2);font-size:12px}.order__suggest em{margin-left:auto;font-style:normal;color:var(--red);font-size:12px;font-weight:600;letter-spacing:.1em}
+.order__table{width:100%;border-collapse:collapse;font-size:14px}
+.order__table th{text-align:left;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500;padding:0 10px 8px 0;border-bottom:1px solid var(--line)}
+.order__table td{padding:10px 10px 10px 0;border-bottom:1px solid var(--line-2);vertical-align:middle}
+.order__table img{width:84px;height:auto}.order__table b{display:block}.order__table small{color:var(--muted-2);font-size:12px}
+.order__table select,.order__table input{border:1px solid var(--line);border-radius:var(--radius);padding:8px 10px;font:inherit;font-size:13px;max-width:260px}
+.order__table input[type=number]{width:74px}
+.order__rm{border:0;background:transparent;color:var(--muted);font-size:14px;padding:6px}.order__rm:hover{color:var(--red)}
+.order__total{margin:12px 0 0;font-size:14px;color:var(--ink-2)}
+.order__form{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px}
+.order__form label{display:flex;flex-direction:column;gap:6px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);font-weight:500}
+.order__form input,.order__form textarea{border:1px solid var(--line);border-radius:var(--radius);padding:11px 12px;font:inherit;font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink)}
+.order__wide{grid-column:1/-1}
+.order__btns{display:flex;gap:10px;flex-wrap:wrap}
+.order__msg{margin:14px 0 0;font-size:14px;min-height:1em}.order__msg.ok{color:#166534}.order__msg.err{color:var(--red)}
+.order__foot{font-size:12px;color:var(--muted-2);margin-top:18px}
+@media (max-width:700px){.order__form{grid-template-columns:1fr}.order__table th:first-child,.order__table td:first-child{display:none}.order__table select{max-width:150px}}
+
 ]]></b:skin>
 <script type='text/javascript'>
 //<![CDATA[
@@ -655,6 +686,11 @@ window.AO_CONFIG = {
   cdn: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/',
   whatsapp: '905074904824',            /* WhatsApp numarası: ülke koduyla, boşluksuz */
   ga: 'G-9C4CG896VN',                  /* Google Analytics 4 ölçüm kimliği (boş bırakılırsa ölçüm yapılmaz) */
+  order: {                             /* Bayi talep formu: Google Form gönderim adresi ve alan kimlikleri (boşsa sadece WhatsApp) */
+    form: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSex-7ctuVdDt8rAuke36lmMsrPsPgRVQuqb7NtrXq7jVAQ5EQ/formResponse',
+    fields: { magaza: 'entry.1442610736', yetkili: 'entry.1056310039', telefon: 'entry.2114199193', il: 'entry.267049084', liste: 'entry.477747281', not: 'entry.2044472977', site: 'entry.1101972266' },
+    whatsapp: ''                       /* boşsa yukarıdaki numara kullanılır */
+  },
   brands: {
     'lee-cooper': { name: 'Lee Cooper', logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/lee-cooper.png', hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p001.jpg', desc: '1908\'den bu yana İngiliz denim mirası. Genç, cesur ve renkli: asetat, metal ve TR90 çerçeveler; clip-on seçenekleri.' },
     'quantum':    { name: 'Quantum',    logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/quantum.png',    hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p001.jpg',    desc: 'Çağdaş çizgiler, titanyum ve asetat. Hafiflik ve erişilebilir lüks anlayışını birleştiren optik ve clip-on modeller.' },
@@ -1027,6 +1063,7 @@ window.AO_CONFIG = {
       <a href='/p/hakkimizda.html'>Hakkımızda</a>
       <a href='/p/iletisim.html'>İletişim</a>
       <a href='/p/qr-etiketler.html'>Bayiler için QR etiketler</a>
+      <a href='/p/bayi-talep-formu.html'>Bayi talep formu <span class='order-badge' data-order-count='1'></span></a>
       <a href='https://arikantime.com/tr/' rel='noopener' target='_blank'>arikantime.com</a>
     </div>
   </div>
@@ -1323,7 +1360,7 @@ window.AO_CONFIG = {
   }
 
   /* ---------- sabit sayfa bağlantıları (Blogger'ın verdiği gerçek adreslere çevir) ---------- */
-  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/clip-on-demo.html': 'Clip-On Demo', '/p/qr-etiketler.html': 'QR Etiketler' };
+  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/clip-on-demo.html': 'Clip-On Demo', '/p/qr-etiketler.html': 'QR Etiketler', '/p/bayi-talep-formu.html': 'Bayi Talep Formu' };
   function fixPageLinks() {
     var apply = function (map) {
       $$('a[href^="/p/"]').forEach(function (a) {
@@ -1773,6 +1810,109 @@ window.AO_CONFIG = {
     }).catch(function () { root.innerHTML = '<div class="empty"><b>Etiket aracı yüklenemedi</b>Sayfayı yenileyip tekrar deneyin.</div>'; });
   }
 
+  /* ---------- bayi talep listesi / formu ---------- */
+  var ORDER_KEY = 'ao_order_v1';
+  function orderGet() { try { return JSON.parse(localStorage.getItem(ORDER_KEY) || '[]'); } catch (e) { return []; } }
+  function orderSet(list) { try { localStorage.setItem(ORDER_KEY, JSON.stringify(list)); } catch (e) { } orderBadge(); }
+  function orderAdd(code, variant, qty) {
+    var list = orderGet(), hit = list.filter(function (x) { return x.code === code && x.variant === variant; })[0];
+    if (hit) hit.qty += (qty || 1); else list.push({ code: code, variant: variant || '', qty: qty || 1 });
+    orderSet(list); track('talep_ekle', { model: code, renk: variant || '' });
+    return list;
+  }
+  function orderBadge() { var n = orderGet().reduce(function (a, x) { return a + x.qty; }, 0); $$('[data-order-count]').forEach(function (el) { el.textContent = n ? n : ''; el.style.display = n ? '' : 'none'; }); }
+  function orderPageUrl() { var a = $('a[href*="bayi-talep"]'); return a ? a.getAttribute('href') : '/p/bayi-talep-formu.html'; }
+  // model sayfasına "Talep listesine ekle" düğmesi
+  function initOrderButton() {
+    var art = $('.model'), cta = $('.model .cta'); if (!art || !cta) return;
+    var code = art.getAttribute('data-code');
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'btn btn--dark order-add'; b.innerHTML = '<span>Talep listesine ekle</span>';
+    cta.appendChild(b);
+    var note = document.createElement('div'); note.className = 'order-note'; cta.parentNode.insertBefore(note, cta.nextSibling);
+    b.addEventListener('click', function () {
+      var act = $('.color-btn.active'); var v = act ? (act.getAttribute('data-code') || '') : '';
+      var list = orderAdd(code, v, 1); var n = list.reduce(function (a, x) { return a + x.qty; }, 0);
+      note.innerHTML = '<b>' + esc(code + (v ? ' · ' + v : '')) + '</b> listeye eklendi. Listede ' + n + ' adet var · <a href="' + esc(orderPageUrl()) + '">Talep formuna git</a>';
+      b.classList.add('done'); setTimeout(function () { b.classList.remove('done'); }, 1200);
+    });
+  }
+  function initOrder() {
+    var root = $('#order-tool'); if (!root) return;
+    root.innerHTML = '<div class="skeleton">Yükleniyor</div>';
+    var OC = CFG.order || {};
+    Promise.all([ready(), fetchJSON(CDN + 'tr-map.json').catch(function () { return { cities: [] }; })]).then(function (r) {
+      root.classList.remove('skeleton');
+      var cities = (r[1].cities || []).map(function (c) { return c.n; }).sort(function (a, b) { return a.localeCompare(b, 'tr'); });
+      var info = {}; try { info = JSON.parse(localStorage.getItem('ao_dealer_info') || '{}'); } catch (e) { }
+      function variantsOf(m) { return m.variants.map(function (v) { return v.code; }); }
+      function lineText(x) { var m = modelByCode(x.code); if (!m) return x.code; var v = m.variants.filter(function (vv) { return vv.code === x.variant; })[0]; var col = v && v.attrs && v.attrs.frame_color ? ' ' + v.attrs.frame_color : ''; return brandInfo(m).name + ' ' + m.code + (x.variant ? ' · ' + x.variant + col : ' · renk seçilmedi') + ' · ' + x.qty + ' adet'; }
+      function message() {
+        var list = orderGet();
+        var head = 'ARIKAN OPTİK · BAYİ TALEBİ\n' + (info.magaza || '-') + ' / ' + (info.yetkili || '-') + ' / ' + (info.telefon || '-') + ' / ' + (info.il || '-') + '\n\n';
+        return head + list.map(function (x, i) { return (i + 1) + ') ' + lineText(x); }).join('\n') + (info.not ? '\n\nNot: ' + info.not : '');
+      }
+      function render() {
+        var list = orderGet(), total = list.reduce(function (a, x) { return a + x.qty; }, 0);
+        root.innerHTML = '<div class="order">' +
+          '<section class="order__sec"><h3>1 · Modeller</h3><p class="order__hint">Model kodu ya da ifade yazıp listeye ekleyin; model sayfalarındaki "Talep listesine ekle" düğmesi de buraya düşer.</p>' +
+          '<div class="order__search"><input id="order-q" type="search" placeholder="Model kodu ya da &quot;mavi clip-on&quot;" autocomplete="off"><div class="order__suggest" id="order-suggest"></div></div>' +
+          (list.length ? '<table class="order__table"><thead><tr><th></th><th>Model</th><th>Renk</th><th>Adet</th><th></th></tr></thead><tbody>' + list.map(function (x, i) {
+            var m = modelByCode(x.code); if (!m) return '';
+            return '<tr data-i="' + i + '"><td><img src="' + esc(frontOf(m)) + '" alt=""></td><td><b>' + esc(brandInfo(m).name) + ' ' + esc(m.code) + '</b><small>' + esc(catLabel(m)) + ' · ' + esc(dimStr(m)) + '</small></td>' +
+              '<td><select data-k="variant"><option value="">Renk seçin</option>' + m.variants.map(function (v) { return '<option value="' + esc(v.code) + '"' + (v.code === x.variant ? ' selected' : '') + '>' + esc(v.code + (v.attrs.frame_color ? ' · ' + v.attrs.frame_color : '')) + '</option>'; }).join('') + '</select></td>' +
+              '<td><input data-k="qty" type="number" min="1" max="999" value="' + x.qty + '"></td><td><button class="order__rm" data-rm="' + i + '" aria-label="Kaldır">&#10005;</button></td></tr>';
+          }).join('') + '</tbody></table><p class="order__total">Toplam <b>' + total + '</b> adet · ' + list.length + ' kalem</p>' : '<div class="empty"><b>Liste boş</b>Yukarıdan model ekleyin.</div>') + '</section>' +
+          '<section class="order__sec"><h3>2 · Bayi bilgileri</h3><div class="order__form">' +
+          '<label>Mağaza adı<input data-f="magaza" value="' + esc(info.magaza || '') + '" required></label>' +
+          '<label>Yetkili kişi<input data-f="yetkili" value="' + esc(info.yetkili || '') + '"></label>' +
+          '<label>Telefon<input data-f="telefon" type="tel" value="' + esc(info.telefon || '') + '" required></label>' +
+          '<label>İl<input data-f="il" list="order-cities" value="' + esc(info.il || '') + '"><datalist id="order-cities">' + cities.map(function (c) { return '<option value="' + esc(c) + '">'; }).join('') + '</datalist></label>' +
+          '<label class="order__wide">Not<textarea data-f="not" rows="2">' + esc(info.not || '') + '</textarea></label></div></section>' +
+          '<section class="order__sec order__send"><h3>3 · Gönder</h3><div class="order__btns"><a class="btn btn--dark" id="order-wa" href="#" rel="noopener" target="_blank">WhatsApp ile gönder</a>' + (OC.form ? '<button class="btn btn--red" id="order-send" type="button">Talebi gönder</button>' : '') + '<button class="btn btn--ghost" id="order-clear" type="button">Listeyi temizle</button></div><p class="order__msg" id="order-msg"></p></section></div>';
+        // etkileşimler
+        var inp = $('#order-q', root), sug = $('#order-suggest', root);
+        inp.addEventListener('input', function () {
+          var q = inp.value.trim(); if (q.length < 2) { sug.innerHTML = ''; return; }
+          var res = searchModels(q).slice(0, 6);
+          sug.innerHTML = res.map(function (m) { return '<button type="button" data-add="' + esc(m.code) + '"><img src="' + esc(frontOf(m)) + '" alt=""><span><b>' + esc(m.code) + '</b><small>' + esc(brandInfo(m).name + ' · ' + catLabel(m)) + '</small></span><em>+ Ekle</em></button>'; }).join('');
+          $$('[data-add]', sug).forEach(function (b) { b.addEventListener('click', function () { orderAdd(b.getAttribute('data-add'), '', 1); render(); $('#order-q', root).focus(); }); });
+        });
+        inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); var m = findExact(inp.value.trim()); if (m) { orderAdd(m.code, variantHash(inp.value.trim(), m).replace('#', '').replace('-', '.'), 1); render(); } else { var f = $('[data-add]', sug); if (f) f.click(); } } });
+        $$('tr[data-i]', root).forEach(function (tr) {
+          var i = +tr.getAttribute('data-i');
+          $('[data-k=variant]', tr).addEventListener('change', function (e) { var l = orderGet(); l[i].variant = e.target.value; orderSet(l); });
+          $('[data-k=qty]', tr).addEventListener('change', function (e) { var l = orderGet(); l[i].qty = Math.max(1, parseInt(e.target.value, 10) || 1); orderSet(l); render(); });
+        });
+        $$('[data-rm]', root).forEach(function (b) { b.addEventListener('click', function () { var l = orderGet(); l.splice(+b.getAttribute('data-rm'), 1); orderSet(l); render(); }); });
+        $$('[data-f]', root).forEach(function (el) { el.addEventListener('input', function () { info[el.getAttribute('data-f')] = el.value; try { localStorage.setItem('ao_dealer_info', JSON.stringify(info)); } catch (e) { } }); });
+        var wa = $('#order-wa', root);
+        wa.addEventListener('click', function (e) {
+          if (!orderGet().length) { e.preventDefault(); msg('Önce listeye model ekleyin.', true); return; }
+          wa.href = 'https://wa.me/' + (OC.whatsapp || CFG.whatsapp) + '?text=' + encodeURIComponent(message());
+          track('talep_gonder', { kanal: 'whatsapp', kalem: orderGet().length, il: info.il || '' });
+        });
+        $('#order-clear', root).addEventListener('click', function () { if (confirm('Liste temizlensin mi?')) { orderSet([]); render(); } });
+        var send = $('#order-send', root);
+        if (send) send.addEventListener('click', function () {
+          var list = orderGet();
+          if (!list.length) { msg('Önce listeye model ekleyin.', true); return; }
+          if (!info.magaza || !info.telefon) { msg('Mağaza adı ve telefon zorunlu.', true); return; }
+          send.disabled = true; send.textContent = 'Gönderiliyor…';
+          var fd = new FormData(), F = OC.fields || {};
+          var vals = { magaza: info.magaza, yetkili: info.yetkili || '', telefon: info.telefon, il: info.il || '', liste: list.map(lineText).join('\n'), not: info.not || '', site: location.host };
+          Object.keys(F).forEach(function (k) { if (vals[k] != null) fd.append(F[k], vals[k]); });
+          fetch(OC.form, { method: 'POST', mode: 'no-cors', body: fd }).then(function () {
+            track('talep_gonder', { kanal: 'form', kalem: list.length, adet: list.reduce(function (a, x) { return a + x.qty; }, 0), il: info.il || '' });
+            orderSet([]); render(); msg('Talebiniz iletildi. Teşekkürler — en kısa sürede sizinle iletişime geçilecek.', false);
+          }).catch(function () { send.disabled = false; send.textContent = 'Talebi gönder'; msg('Gönderilemedi. Lütfen WhatsApp ile gönderin.', true); });
+        });
+      }
+      function msg(t, err) { var el = $('#order-msg', root); if (el) { el.textContent = t; el.className = 'order__msg' + (err ? ' err' : ' ok'); } }
+      render();
+    });
+  }
+
+
   /* ---------- Gözlük Asistanı (adım adım model önerisi) ---------- */
   var AST = {
     shapes: [['round', 'Yuvarlak'], ['square', 'Köşeli'], ['oval', 'Oval'], ['cateye', 'Cat-Eye'], ['geo', 'Geometrik']],
@@ -2027,11 +2167,12 @@ window.AO_CONFIG = {
     initHeader();
     initCompare();
     initAssistant();
+    orderBadge();
     if (VIEW === 'home') initHome();
     else if (VIEW === 'collection') initCollection();
-    else if (VIEW === 'post') { initModel(); initArticle(); }
+    else if (VIEW === 'post') { initModel(); initArticle(); initOrderButton(); }
     else if (VIEW === 'error') initCollection();
-    else if (VIEW === 'page') { initDealers(); initQr(); }
+    else if (VIEW === 'page') { initDealers(); initQr(); initOrder(); }
   });
   window.AO = { search: function (q) { return searchModels(q).map(function (m) { return m.code; }); }, parse: parseQuery, last: function () { return lastSearch; }, ready: ready };
 })();

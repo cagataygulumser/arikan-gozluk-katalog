@@ -240,6 +240,12 @@ PAGES['QR Etiketler'] = '''
 <p>Etiketler A4 sayfaya 50 × 30 mm ölçüsünde, kesim çizgileriyle dizilir (sayfada 36 etiket). Yazdırma penceresinde ölçek <b>%100</b> ve kenar boşlukları <b>yok</b> seçilmelidir; PDF olarak kaydedip etiket basım firmasına da verilebilir. QR kodlar bu sitenin adresine yönlenir; site adresi değişirse etiketleri yeniden yazdırmanız yeterlidir.</p>
 '''
 
+PAGES['Bayi Talep Formu'] = '''
+<p class="lead">Yetkili satış noktaları için sipariş talep formu. Modelleri ve renkleri seçin, adetleri girin; talebinizi WhatsApp ile ya da doğrudan form üzerinden Arıkan Optik'e iletin. Liste tarayıcınızda saklanır; model sayfalarındaki "Talep listesine ekle" düğmesiyle de doldurabilirsiniz.</p>
+<div id="order-tool"></div>
+<p class="order__foot">Bu form bağlayıcı sipariş değildir; Arıkan Optik satış ekibi talebinizi aldıktan sonra stok ve teslimat bilgisiyle size döner.</p>
+'''
+
 PAGES['Hakkımızda'] = '''
 <p>Arıkan Group, saat, gözlük ve aksesuar markalarının Türkiye distribütörlüğünü yürütür. Gözlük tarafında <b>Lee Cooper</b>, <b>Quantum</b>, <b>Slazenger</b> ve <b>Belmond</b> markalarının optik ve clip-on koleksiyonlarını yetkili optik mağazalarıyla buluşturur.</p>
 <h2>Bu site ne için?</h2>

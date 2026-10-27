@@ -7,6 +7,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 css = open(f'{ROOT}/theme/skin.css', encoding='utf-8').read()
 js = open(f'{ROOT}/theme/app.js', encoding='utf-8').read()
 js = js.replace('/* {{SEARCH}} */', open(f'{ROOT}/theme/search.js', encoding='utf-8').read())
+js = js.replace('/* {{ORDER}} */', open(f'{ROOT}/theme/order.js', encoding='utf-8').read())
 js = js.replace('/* {{ASSISTANT}} */', open(f'{ROOT}/theme/assistant.js', encoding='utf-8').read())
 tpl = open(f'{ROOT}/theme/template.xml', encoding='utf-8').read()
 assert ']]>' not in css and ']]>' not in js
