@@ -594,6 +594,50 @@ body.ast-open{overflow:hidden}
 }
 @media (max-width:480px){.ast-grid--sw{grid-template-columns:repeat(3,1fr)}.ast__title{font-size:20px}.ast-launch{width:170px}.ast-launch__img span{font-size:14px}}
 
+/* ---- QR etiket üretici ----------------------------------------------- */
+.qr-bar{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;border:1px solid var(--line);border-radius:var(--radius);padding:14px 18px;margin:0 0 14px}
+.qr-bar__g{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.qr-bar__g>span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.qr-bar__act{margin-left:auto}.qr-bar__act .btn{padding:10px 16px}
+.qr-n{display:inline-block;background:#fff;color:var(--red);border-radius:999px;padding:0 7px;margin-left:6px;font-size:11px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:500;color:var(--ink-2)}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.qr-hint{font-size:13px;color:var(--muted-2);margin:0 0 18px}
+.qr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.qrl{position:relative;display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:4px;padding:10px 12px 14px;background:#fff;cursor:pointer;transition:.15s}
+.qrl:hover{border-color:var(--ink)}
+.qrl.on{border-color:var(--red);box-shadow:0 0 0 2px var(--red) inset}
+.qrl__check{position:absolute;top:8px;right:8px;width:18px;height:18px;border:1.5px solid var(--line);border-radius:50%;background:#fff}
+.qrl.on .qrl__check{background:var(--red);border-color:var(--red)}
+.qrl.on .qrl__check:after{content:"";position:absolute;left:6px;top:3px;width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.qrl__l{min-width:0}
+.qrl__l img{height:16px;width:auto;margin-bottom:8px}
+.qrl__l b{display:block;font-size:20px;font-weight:600;letter-spacing:.02em;line-height:1}
+.qrl__l small{display:block;font-size:10px;color:var(--muted-2);margin-top:5px}
+.qrl__l em{display:block;font-style:normal;font-size:9px;color:var(--ink-2);margin-top:6px;letter-spacing:.04em}
+.qrl__q{width:76px;height:76px}.qrl__q svg{width:100%;height:100%;display:block}
+.qrl__site{position:absolute;left:12px;bottom:4px;font-size:8px;color:var(--muted);letter-spacing:.06em}
+.qr-print{display:none}
+@media print{
+  body>*:not(#qr-print){display:none!important}
+  body{background:#fff}
+  @page{size:A4;margin:0}
+  .qr-print{display:block}
+  .qr-page{width:210mm;height:297mm;box-sizing:border-box;padding:13.5mm 5mm;display:grid;grid-template-columns:repeat(4,50mm);grid-auto-rows:30mm;page-break-after:always;break-after:page}
+  .qr-print--l .qr-page{padding:22.5mm 0 0 0;grid-template-columns:repeat(3,70mm);grid-auto-rows:42mm}
+  .qr-print .qrl{border:.2mm dashed #bbb;border-radius:0;padding:2mm 2.5mm 4mm;gap:1.5mm;box-shadow:none;cursor:default;break-inside:avoid;grid-template-columns:1fr auto;align-items:center;overflow:hidden}
+  .qr-print .qrl__l small,.qr-print .qrl__l em{white-space:nowrap;overflow:hidden}
+  .qr-print .qrl__l img{height:3.6mm;margin-bottom:1.6mm}
+  .qr-print .qrl__l b{font-size:5mm}
+  .qr-print .qrl__l small{font-size:2.2mm;margin-top:1.2mm}
+  .qr-print .qrl__l em{font-size:1.8mm;margin-top:1.6mm}
+  .qr-print .qrl__q{width:20mm;height:20mm}
+  .qr-print .qrl__site{left:2.5mm;bottom:.8mm;font-size:1.9mm}
+  .qr-print--l .qrl{padding:3mm 3.5mm 3.5mm}
+  .qr-print--l .qrl__l img{height:5mm}.qr-print--l .qrl__l b{font-size:7mm}.qr-print--l .qrl__l small{font-size:3mm}.qr-print--l .qrl__l em{font-size:2.6mm}
+  .qr-print--l .qrl__q{width:30mm;height:30mm}.qr-print--l .qrl__site{font-size:2.4mm}
+}
+
 ]]></b:skin>
 <script type='text/javascript'>
 //<![CDATA[
@@ -657,6 +701,7 @@ window.AO_CONFIG = {
       <a href='/search/label/Blog'>Blog</a>
       <a href='/p/yetkili-satis-noktalari.html'>Satış Noktaları</a>
       <a href='/p/iletisim.html'>İletişim</a>
+      <a href='/p/qr-etiketler.html'>Bayiler için QR etiketler</a>
       <div class='search-wrap'>
         <form action='/search' class='search' method='get' role='search'>
           <input aria-label='Model kodu ara' autocomplete='off' name='q' placeholder='Model kodu (örn. LC1408)' type='search'/>
@@ -965,6 +1010,7 @@ window.AO_CONFIG = {
       <h4>Kurumsal</h4>
       <a href='/p/hakkimizda.html'>Hakkımızda</a>
       <a href='/p/iletisim.html'>İletişim</a>
+      <a href='/p/qr-etiketler.html'>Bayiler için QR etiketler</a>
       <a href='https://arikantime.com/tr/' rel='noopener' target='_blank'>arikantime.com</a>
     </div>
   </div>
@@ -1163,7 +1209,7 @@ window.AO_CONFIG = {
   }
 
   /* ---------- sabit sayfa bağlantıları (Blogger'ın verdiği gerçek adreslere çevir) ---------- */
-  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/clip-on-demo.html': 'Clip-On Demo' };
+  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/clip-on-demo.html': 'Clip-On Demo', '/p/qr-etiketler.html': 'QR Etiketler' };
   function fixPageLinks() {
     var apply = function (map) {
       $$('a[href^="/p/"]').forEach(function (a) {
@@ -1549,6 +1595,56 @@ window.AO_CONFIG = {
     });
   }
 
+
+  /* ---------- QR etiket üretici (bayiler için) ---------- */
+  function loadScript(src) { return new Promise(function (res, rej) { var sc = document.createElement('script'); sc.src = src; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); }); }
+  function initQr() {
+    var root = $('#qr-tool'); if (!root) return;
+    root.innerHTML = '<div class="skeleton">Yükleniyor</div>';
+    Promise.all([ready(), loadScript('https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js')]).then(function () {
+      root.classList.remove('skeleton');
+      var sel = {}, f = { brand: 'all', cat: 'all' }, size = 'm';
+      var origin = location.origin;
+      function qrSvg(url) { var q = window.qrcode(0, 'M'); q.addData(url); q.make(); return q.createSvgTag({ cellSize: 2, margin: 0, scalable: true }); }
+      function label(m, forPrint) {
+        var b = brandInfo(m), url = origin + '/search?q=' + encodeURIComponent(m.code);
+        return '<div class="qrl' + (!forPrint && sel[m.code] ? ' on' : '') + '" data-code="' + esc(m.code) + '">' +
+          (!forPrint ? '<span class="qrl__check"></span>' : '') +
+          '<div class="qrl__l"><img src="' + esc(b.logo) + '" alt="' + esc(b.name) + '"><b>' + esc(m.code) + '</b><small>' + esc(m.category === 'Clip-On' ? 'Clip-On' : 'Optik') + ' · ' + esc(dimStr(m)) + '</small><em>Tüm renkler için okutun</em></div>' +
+          '<div class="qrl__q">' + qrSvg(url) + '</div><span class="qrl__site">' + esc(location.host) + '</span></div>';
+      }
+      function list() { return state.models.filter(function (m) { return (f.brand === 'all' || m.brand_slug === f.brand) && (f.cat === 'all' || m.category === f.cat); }); }
+      function count() { return Object.keys(sel).filter(function (k) { return sel[k]; }).length; }
+      function render() {
+        var ms = list();
+        root.innerHTML = '<div class="qr-bar">' +
+          '<div class="qr-bar__g"><span>Marka</span>' + [['all', 'Tümü']].concat(BRAND_ORDER.map(function (b) { return [b, (BRANDS[b] || {}).name || b]; })).map(function (x) { return '<button class="chip' + (f.brand === x[0] ? ' on' : '') + '" data-k="brand" data-v="' + x[0] + '">' + esc(x[1]) + '</button>'; }).join('') + '</div>' +
+          '<div class="qr-bar__g"><span>Tür</span>' + [['all', 'Tümü'], ['Optik', 'Optik'], ['Clip-On', 'Clip-On']].map(function (x) { return '<button class="chip' + (f.cat === x[0] ? ' on' : '') + '" data-k="cat" data-v="' + x[0] + '">' + x[1] + '</button>'; }).join('') + '</div>' +
+          '<div class="qr-bar__g"><span>Boyut</span><button class="chip' + (size === 'm' ? ' on' : '') + '" data-k="size" data-v="m">50 × 30 mm</button><button class="chip' + (size === 'l' ? ' on' : '') + '" data-k="size" data-v="l">70 × 42 mm</button></div>' +
+          '<div class="qr-bar__g qr-bar__act"><button class="btn btn--ghost" data-act="all">Listedekileri seç</button><button class="btn btn--ghost" data-act="none">Temizle</button><button class="btn btn--red" data-act="print">Yazdır <b class="qr-n">' + count() + '</b></button></div></div>' +
+          '<p class="qr-hint">' + ms.length + ' model listeleniyor · ' + count() + ' etiket seçili. Etikete tıklayarak seçin.</p>' +
+          '<div class="qr-grid">' + ms.map(function (m) { return label(m, false); }).join('') + '</div>';
+        $$('.chip', root).forEach(function (c) { c.addEventListener('click', function () { var k = c.getAttribute('data-k'), v = c.getAttribute('data-v'); if (k === 'size') size = v; else f[k] = v; render(); }); });
+        $$('.qrl', root).forEach(function (l) { l.addEventListener('click', function () { var c = l.getAttribute('data-code'); sel[c] = !sel[c]; l.classList.toggle('on', sel[c]); $('.qr-n', root).textContent = count(); $('.qr-hint', root).textContent = ms.length + ' model listeleniyor · ' + count() + ' etiket seçili. Etikete tıklayarak seçin.'; }); });
+        $('[data-act=all]', root).addEventListener('click', function () { ms.forEach(function (m) { sel[m.code] = true; }); render(); });
+        $('[data-act=none]', root).addEventListener('click', function () { sel = {}; render(); });
+        $('[data-act=print]', root).addEventListener('click', doPrint);
+      }
+      function doPrint() {
+        var chosen = state.models.filter(function (m) { return sel[m.code]; });
+        if (!chosen.length) { alert('Önce yazdırılacak etiketleri seçin.'); return; }
+        var old = $('#qr-print'); if (old) old.parentNode.removeChild(old);
+        var pr = document.createElement('div'); pr.id = 'qr-print'; pr.className = 'qr-print qr-print--' + size;
+        var per = size === 'l' ? 12 : 36, pages = [];
+        for (var i = 0; i < chosen.length; i += per) pages.push(chosen.slice(i, i + per));
+        pr.innerHTML = pages.map(function (pg) { return '<div class="qr-page">' + pg.map(function (m) { return label(m, true); }).join('') + '</div>'; }).join('');
+        document.body.appendChild(pr);
+        setTimeout(function () { window.print(); }, 300);
+      }
+      render();
+    }).catch(function () { root.innerHTML = '<div class="empty"><b>Etiket aracı yüklenemedi</b>Sayfayı yenileyip tekrar deneyin.</div>'; });
+  }
+
   /* ---------- Gözlük Asistanı (adım adım model önerisi) ---------- */
   var AST = {
     shapes: [['round', 'Yuvarlak'], ['square', 'Köşeli'], ['oval', 'Oval'], ['cateye', 'Cat-Eye'], ['geo', 'Geometrik']],
@@ -1805,7 +1901,7 @@ window.AO_CONFIG = {
     else if (VIEW === 'collection') initCollection();
     else if (VIEW === 'post') { initModel(); initArticle(); }
     else if (VIEW === 'error') initCollection();
-    else if (VIEW === 'page') initDealers();
+    else if (VIEW === 'page') { initDealers(); initQr(); }
   });
 })();
 

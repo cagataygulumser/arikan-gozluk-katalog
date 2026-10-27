@@ -178,7 +178,7 @@
   }
 
   /* ---------- sabit sayfa bağlantıları (Blogger'ın verdiği gerçek adreslere çevir) ---------- */
-  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/clip-on-demo.html': 'Clip-On Demo' };
+  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/clip-on-demo.html': 'Clip-On Demo', '/p/qr-etiketler.html': 'QR Etiketler' };
   function fixPageLinks() {
     var apply = function (map) {
       $$('a[href^="/p/"]').forEach(function (a) {
@@ -564,6 +564,56 @@
     });
   }
 
+
+  /* ---------- QR etiket üretici (bayiler için) ---------- */
+  function loadScript(src) { return new Promise(function (res, rej) { var sc = document.createElement('script'); sc.src = src; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); }); }
+  function initQr() {
+    var root = $('#qr-tool'); if (!root) return;
+    root.innerHTML = '<div class="skeleton">Yükleniyor</div>';
+    Promise.all([ready(), loadScript('https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js')]).then(function () {
+      root.classList.remove('skeleton');
+      var sel = {}, f = { brand: 'all', cat: 'all' }, size = 'm';
+      var origin = location.origin;
+      function qrSvg(url) { var q = window.qrcode(0, 'M'); q.addData(url); q.make(); return q.createSvgTag({ cellSize: 2, margin: 0, scalable: true }); }
+      function label(m, forPrint) {
+        var b = brandInfo(m), url = origin + '/search?q=' + encodeURIComponent(m.code);
+        return '<div class="qrl' + (!forPrint && sel[m.code] ? ' on' : '') + '" data-code="' + esc(m.code) + '">' +
+          (!forPrint ? '<span class="qrl__check"></span>' : '') +
+          '<div class="qrl__l"><img src="' + esc(b.logo) + '" alt="' + esc(b.name) + '"><b>' + esc(m.code) + '</b><small>' + esc(m.category === 'Clip-On' ? 'Clip-On' : 'Optik') + ' · ' + esc(dimStr(m)) + '</small><em>Tüm renkler için okutun</em></div>' +
+          '<div class="qrl__q">' + qrSvg(url) + '</div><span class="qrl__site">' + esc(location.host) + '</span></div>';
+      }
+      function list() { return state.models.filter(function (m) { return (f.brand === 'all' || m.brand_slug === f.brand) && (f.cat === 'all' || m.category === f.cat); }); }
+      function count() { return Object.keys(sel).filter(function (k) { return sel[k]; }).length; }
+      function render() {
+        var ms = list();
+        root.innerHTML = '<div class="qr-bar">' +
+          '<div class="qr-bar__g"><span>Marka</span>' + [['all', 'Tümü']].concat(BRAND_ORDER.map(function (b) { return [b, (BRANDS[b] || {}).name || b]; })).map(function (x) { return '<button class="chip' + (f.brand === x[0] ? ' on' : '') + '" data-k="brand" data-v="' + x[0] + '">' + esc(x[1]) + '</button>'; }).join('') + '</div>' +
+          '<div class="qr-bar__g"><span>Tür</span>' + [['all', 'Tümü'], ['Optik', 'Optik'], ['Clip-On', 'Clip-On']].map(function (x) { return '<button class="chip' + (f.cat === x[0] ? ' on' : '') + '" data-k="cat" data-v="' + x[0] + '">' + x[1] + '</button>'; }).join('') + '</div>' +
+          '<div class="qr-bar__g"><span>Boyut</span><button class="chip' + (size === 'm' ? ' on' : '') + '" data-k="size" data-v="m">50 × 30 mm</button><button class="chip' + (size === 'l' ? ' on' : '') + '" data-k="size" data-v="l">70 × 42 mm</button></div>' +
+          '<div class="qr-bar__g qr-bar__act"><button class="btn btn--ghost" data-act="all">Listedekileri seç</button><button class="btn btn--ghost" data-act="none">Temizle</button><button class="btn btn--red" data-act="print">Yazdır <b class="qr-n">' + count() + '</b></button></div></div>' +
+          '<p class="qr-hint">' + ms.length + ' model listeleniyor · ' + count() + ' etiket seçili. Etikete tıklayarak seçin.</p>' +
+          '<div class="qr-grid">' + ms.map(function (m) { return label(m, false); }).join('') + '</div>';
+        $$('.chip', root).forEach(function (c) { c.addEventListener('click', function () { var k = c.getAttribute('data-k'), v = c.getAttribute('data-v'); if (k === 'size') size = v; else f[k] = v; render(); }); });
+        $$('.qrl', root).forEach(function (l) { l.addEventListener('click', function () { var c = l.getAttribute('data-code'); sel[c] = !sel[c]; l.classList.toggle('on', sel[c]); $('.qr-n', root).textContent = count(); $('.qr-hint', root).textContent = ms.length + ' model listeleniyor · ' + count() + ' etiket seçili. Etikete tıklayarak seçin.'; }); });
+        $('[data-act=all]', root).addEventListener('click', function () { ms.forEach(function (m) { sel[m.code] = true; }); render(); });
+        $('[data-act=none]', root).addEventListener('click', function () { sel = {}; render(); });
+        $('[data-act=print]', root).addEventListener('click', doPrint);
+      }
+      function doPrint() {
+        var chosen = state.models.filter(function (m) { return sel[m.code]; });
+        if (!chosen.length) { alert('Önce yazdırılacak etiketleri seçin.'); return; }
+        var old = $('#qr-print'); if (old) old.parentNode.removeChild(old);
+        var pr = document.createElement('div'); pr.id = 'qr-print'; pr.className = 'qr-print qr-print--' + size;
+        var per = size === 'l' ? 12 : 36, pages = [];
+        for (var i = 0; i < chosen.length; i += per) pages.push(chosen.slice(i, i + per));
+        pr.innerHTML = pages.map(function (pg) { return '<div class="qr-page">' + pg.map(function (m) { return label(m, true); }).join('') + '</div>'; }).join('');
+        document.body.appendChild(pr);
+        setTimeout(function () { window.print(); }, 300);
+      }
+      render();
+    }).catch(function () { root.innerHTML = '<div class="empty"><b>Etiket aracı yüklenemedi</b>Sayfayı yenileyip tekrar deneyin.</div>'; });
+  }
+
 /* {{ASSISTANT}} */
 
   /* ---------- başlat ---------- */
@@ -575,6 +625,6 @@
     else if (VIEW === 'collection') initCollection();
     else if (VIEW === 'post') { initModel(); initArticle(); }
     else if (VIEW === 'error') initCollection();
-    else if (VIEW === 'page') initDealers();
+    else if (VIEW === 'page') { initDealers(); initQr(); }
   });
 })();

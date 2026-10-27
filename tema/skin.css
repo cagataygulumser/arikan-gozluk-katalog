@@ -550,3 +550,47 @@ body.ast-open{overflow:hidden}
   .ast-launch{width:200px;left:12px;bottom:12px}.ast-launch__img{height:96px}
 }
 @media (max-width:480px){.ast-grid--sw{grid-template-columns:repeat(3,1fr)}.ast__title{font-size:20px}.ast-launch{width:170px}.ast-launch__img span{font-size:14px}}
+
+/* ---- QR etiket üretici ----------------------------------------------- */
+.qr-bar{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;border:1px solid var(--line);border-radius:var(--radius);padding:14px 18px;margin:0 0 14px}
+.qr-bar__g{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.qr-bar__g>span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.qr-bar__act{margin-left:auto}.qr-bar__act .btn{padding:10px 16px}
+.qr-n{display:inline-block;background:#fff;color:var(--red);border-radius:999px;padding:0 7px;margin-left:6px;font-size:11px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:500;color:var(--ink-2)}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.qr-hint{font-size:13px;color:var(--muted-2);margin:0 0 18px}
+.qr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.qrl{position:relative;display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:4px;padding:10px 12px 14px;background:#fff;cursor:pointer;transition:.15s}
+.qrl:hover{border-color:var(--ink)}
+.qrl.on{border-color:var(--red);box-shadow:0 0 0 2px var(--red) inset}
+.qrl__check{position:absolute;top:8px;right:8px;width:18px;height:18px;border:1.5px solid var(--line);border-radius:50%;background:#fff}
+.qrl.on .qrl__check{background:var(--red);border-color:var(--red)}
+.qrl.on .qrl__check:after{content:"";position:absolute;left:6px;top:3px;width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.qrl__l{min-width:0}
+.qrl__l img{height:16px;width:auto;margin-bottom:8px}
+.qrl__l b{display:block;font-size:20px;font-weight:600;letter-spacing:.02em;line-height:1}
+.qrl__l small{display:block;font-size:10px;color:var(--muted-2);margin-top:5px}
+.qrl__l em{display:block;font-style:normal;font-size:9px;color:var(--ink-2);margin-top:6px;letter-spacing:.04em}
+.qrl__q{width:76px;height:76px}.qrl__q svg{width:100%;height:100%;display:block}
+.qrl__site{position:absolute;left:12px;bottom:4px;font-size:8px;color:var(--muted);letter-spacing:.06em}
+.qr-print{display:none}
+@media print{
+  body>*:not(#qr-print){display:none!important}
+  body{background:#fff}
+  @page{size:A4;margin:0}
+  .qr-print{display:block}
+  .qr-page{width:210mm;height:297mm;box-sizing:border-box;padding:13.5mm 5mm;display:grid;grid-template-columns:repeat(4,50mm);grid-auto-rows:30mm;page-break-after:always;break-after:page}
+  .qr-print--l .qr-page{padding:22.5mm 0 0 0;grid-template-columns:repeat(3,70mm);grid-auto-rows:42mm}
+  .qr-print .qrl{border:.2mm dashed #bbb;border-radius:0;padding:2mm 2.5mm 4mm;gap:1.5mm;box-shadow:none;cursor:default;break-inside:avoid;grid-template-columns:1fr auto;align-items:center;overflow:hidden}
+  .qr-print .qrl__l small,.qr-print .qrl__l em{white-space:nowrap;overflow:hidden}
+  .qr-print .qrl__l img{height:3.6mm;margin-bottom:1.6mm}
+  .qr-print .qrl__l b{font-size:5mm}
+  .qr-print .qrl__l small{font-size:2.2mm;margin-top:1.2mm}
+  .qr-print .qrl__l em{font-size:1.8mm;margin-top:1.6mm}
+  .qr-print .qrl__q{width:20mm;height:20mm}
+  .qr-print .qrl__site{left:2.5mm;bottom:.8mm;font-size:1.9mm}
+  .qr-print--l .qrl{padding:3mm 3.5mm 3.5mm}
+  .qr-print--l .qrl__l img{height:5mm}.qr-print--l .qrl__l b{font-size:7mm}.qr-print--l .qrl__l small{font-size:3mm}.qr-print--l .qrl__l em{font-size:2.6mm}
+  .qr-print--l .qrl__q{width:30mm;height:30mm}.qr-print--l .qrl__site{font-size:2.4mm}
+}

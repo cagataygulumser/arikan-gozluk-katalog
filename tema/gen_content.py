@@ -233,6 +233,13 @@ PAGES['Clip-On Demo'] = f'''
 <h2>Nasıl çalışır?</h2>
 <p>Çubuğu sağa sola sürükleyin: solda numaralı optik çerçeve, sağda aynı çerçevenin önüne mıknatısla takılan polarize güneş camı. Clip, çerçevenin köprü ve uç noktalarındaki gizli mıknatıslarla tek hareketle tutunur; camı çizmez, oynamaz.</p>
 '''
+PAGES['QR Etiketler'] = '''
+<p class="lead">Bayi rafları ve vitrin için model etiketleri. Her etikette marka, model kodu ve müşteriyi doğrudan modelin sayfasına (tüm renkler, ölçüler, görseller) götüren bir QR kod bulunur. Marka ve türü seçin, istediğiniz modelleri işaretleyin, yazdırın.</p>
+<div id="qr-tool"></div>
+<h2>Nasıl kullanılır?</h2>
+<p>Etiketler A4 sayfaya 50 × 30 mm ölçüsünde, kesim çizgileriyle dizilir (sayfada 36 etiket). Yazdırma penceresinde ölçek <b>%100</b> ve kenar boşlukları <b>yok</b> seçilmelidir; PDF olarak kaydedip etiket basım firmasına da verilebilir. QR kodlar bu sitenin adresine yönlenir; site adresi değişirse etiketleri yeniden yazdırmanız yeterlidir.</p>
+'''
+
 PAGES['Hakkımızda'] = '''
 <p>Arıkan Group, saat, gözlük ve aksesuar markalarının Türkiye distribütörlüğünü yürütür. Gözlük tarafında <b>Lee Cooper</b>, <b>Quantum</b>, <b>Slazenger</b> ve <b>Belmond</b> markalarının optik ve clip-on koleksiyonlarını yetkili optik mağazalarıyla buluşturur.</p>
 <h2>Bu site ne için?</h2>
@@ -298,5 +305,22 @@ def main():
     json.dump({k: v for k, v in PAGES.items()}, open('out/pages.json', 'w', encoding='utf-8'), ensure_ascii=False)
     print(f'{n} yazı + {len(PAGES)} sayfa -> out/arikan-optik-icerik-import.xml ({os.path.getsize("out/arikan-optik-icerik-import.xml")//1024} KB)')
 
+def page_import(titles, out):
+    entries = [atom_entry('page', 1100 + j, t, PAGES[t].strip(), ()) for j, t in enumerate(titles)]
+    feed = f'''<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' xmlns:blogger='http://schemas.google.com/blogger/2008' xmlns:georss='http://www.georss.org/georss' xmlns:gd='http://schemas.google.com/g/2005' xmlns:thr='http://purl.org/syndication/thread/1.0'>
+<id>tag:blogger.com,1999:blog-0</id>
+<updated>2026-10-27T12:00:00.000+03:00</updated>
+<title type='text'>Arıkan Optik · 2026 Gözlük Kataloğu</title>
+<generator version='7.00' uri='http://www.blogger.com'>Blogger</generator>
+{''.join(entries)}</feed>
+'''
+    open(out, 'w', encoding='utf-8').write(feed)
+    print(out)
+
 if __name__ == '__main__':
-    main()
+    import sys
+    if len(sys.argv) > 2 and sys.argv[1] == '--pages':
+        page_import(sys.argv[2].split(','), sys.argv[3] if len(sys.argv) > 3 else 'out/arikan-optik-sayfa-import.xml')
+    else:
+        main()

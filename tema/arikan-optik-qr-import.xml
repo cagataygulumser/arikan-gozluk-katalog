@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' xmlns:blogger='http://schemas.google.com/blogger/2008' xmlns:georss='http://www.georss.org/georss' xmlns:gd='http://schemas.google.com/g/2005' xmlns:thr='http://purl.org/syndication/thread/1.0'>
+<id>tag:blogger.com,1999:blog-0</id>
+<updated>2026-10-27T12:00:00.000+03:00</updated>
+<title type='text'>Arıkan Optik · 2026 Gözlük Kataloğu</title>
+<generator version='7.00' uri='http://www.blogger.com'>Blogger</generator>
+<entry>
+<id>tag:blogger.com,1999:blog-0.page-1100</id>
+<published>2026-10-02T03:20:00.000+03:00</published><updated>2026-10-02T03:20:00.000+03:00</updated>
+<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/blogger/2008/kind#page'/>
+
+<title type='text'>QR Etiketler</title>
+<content type='html'>&lt;p class="lead"&gt;Bayi rafları ve vitrin için model etiketleri. Her etikette marka, model kodu ve müşteriyi doğrudan modelin sayfasına (tüm renkler, ölçüler, görseller) götüren bir QR kod bulunur. Marka ve türü seçin, istediğiniz modelleri işaretleyin, yazdırın.&lt;/p&gt;
+&lt;div id="qr-tool"&gt;&lt;/div&gt;
+&lt;h2&gt;Nasıl kullanılır?&lt;/h2&gt;
+&lt;p&gt;Etiketler A4 sayfaya 50 × 30 mm ölçüsünde, kesim çizgileriyle dizilir (sayfada 36 etiket). Yazdırma penceresinde ölçek &lt;b&gt;%100&lt;/b&gt; ve kenar boşlukları &lt;b&gt;yok&lt;/b&gt; seçilmelidir; PDF olarak kaydedip etiket basım firmasına da verilebilir. QR kodlar bu sitenin adresine yönlenir; site adresi değişirse etiketleri yeniden yazdırmanız yeterlidir.&lt;/p&gt;</content>
+<author><name>Arıkan Optik</name></author>
+<app:control xmlns:app='http://purl.org/atom/app#'><app:draft>no</app:draft></app:control>
+</entry>
+</feed>
