@@ -678,6 +678,24 @@ body.ast-open{overflow:hidden}
 .order__foot{font-size:12px;color:var(--muted-2);margin-top:18px}
 @media (max-width:700px){.order__form{grid-template-columns:1fr}.order__table th:first-child,.order__table td:first-child{display:none}.order__table select{max-width:150px}}
 
+/* ---- satış noktaları: harita, yol tarifi, yakınımdakiler ---------- */
+.dealers-ctx{display:flex;align-items:center;gap:18px;border:1px solid var(--line);border-radius:6px;padding:12px 18px;margin:0 0 22px;background:#FAFAFA}
+.dealers-ctx img{width:120px;height:auto}.dealers-ctx .eyebrow{margin:0 0 4px}.dealers-ctx b{display:block;font-size:17px}.dealers-ctx small{color:var(--muted-2);font-size:12px}.dealers-ctx a{color:var(--red);text-decoration:underline}
+.dealers-search .btn--ghost{padding:12px 16px;gap:8px}
+.dealers-districts{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.dealers-body--map{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+.dealers-body--map .dealer-grid{grid-template-columns:1fr 1fr}
+.dealers-frame{position:sticky;top:90px}
+.dealers-frame__in{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--bg-soft)}
+.dealers-frame iframe{display:block;width:100%;height:440px;border:0}
+.dealers-frame__label{margin:0;padding:10px 14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);font-weight:600;border-top:1px solid var(--line)}
+.dealer.active{border-color:var(--red);box-shadow:0 0 0 2px var(--red) inset}
+.dealer__dist{float:right;font-size:12px;font-weight:600;color:var(--red);background:#FEE2E2;padding:3px 9px;border-radius:999px}
+.dealers-demo{font-size:12px;color:var(--muted-2);margin-top:22px}
+.dealers-demo:empty{display:none}
+@media (max-width:1000px){.dealers-body--map{grid-template-columns:1fr}.dealers-frame{position:static}.dealers-frame iframe{height:320px}.dealers-body--map .dealer-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.dealers-body--map .dealer-grid{grid-template-columns:1fr}.dealers-ctx img{width:90px}}
+
 ]]></b:skin>
 <script type='text/javascript'>
 //<![CDATA[
@@ -1364,9 +1382,9 @@ window.AO_CONFIG = {
   function fixPageLinks() {
     var apply = function (map) {
       $$('a[href^="/p/"]').forEach(function (a) {
-        var key = a.getAttribute('href').split('#')[0];
-        var t = PAGE_TITLES[key];
-        if (t && map[t]) a.setAttribute('href', map[t]);
+        var href = a.getAttribute('href'), m = href.match(/^([^?#]+)(\?[^#]*)?(#.*)?$/);
+        var t = m && PAGE_TITLES[m[1]];
+        if (t && map[t]) a.setAttribute('href', map[t] + (m[2] || '') + (m[3] || ''));
       });
     };
     try { var c = sessionStorage.getItem('ao_pages_v1'); if (c) { apply(JSON.parse(c)); return; } } catch (e) { }
@@ -1596,6 +1614,7 @@ window.AO_CONFIG = {
     // ilgili modeller + breadcrumb
     ready().then(function () {
       var me = state.models.filter(function (m) { return m.code === code; })[0];
+      $$('.model .cta a[href*="yetkili-satis-noktalari"]').forEach(function (a) { a.href = a.getAttribute('href').split('?')[0] + '?model=' + encodeURIComponent(code); });
       if (me) { track('model_goruntule', modelParams(me)); if (/[?&]qr=1/.test(location.search) || /[?&]qr=1/.test(document.referrer)) track('qr_okutma', modelParams(me)); }
       // clip-on modellerde optik / clip-on karşılaştırma kaydırıcısı
       var cmpSec = $('#model-cmp');
@@ -1662,17 +1681,21 @@ window.AO_CONFIG = {
   function initDealers() {
     var h1 = $('.page h1'); var pageIn = $('.page__in');
     if (!h1 || !pageIn || trNorm(h1.textContent).indexOf('satis noktalar') < 0) return;
+    var qs = {}; location.search.replace(/^\?/, '').split('&').forEach(function (kv) { var i = kv.indexOf('='); if (i > 0) qs[kv.slice(0, i)] = decodeURIComponent(kv.slice(i + 1)); });
+    var modelCtx = (qs.model || '').toUpperCase();
     var app = document.createElement('div'); app.className = 'dealers-app';
-    app.innerHTML = '<p class="lead">Lee Cooper, Quantum, Slazenger ve Belmond gözlükleri yetkili optik mağazalarında satılır. Haritadan ilinizi seçin ya da il adını yazın.</p>' +
-      '<div class="dealers-search"><input id="dealer-q" type="search" placeholder="İl ara: Tekirdağ, İstanbul, İzmir…" autocomplete="off" aria-label="İl ara"><button class="btn btn--red" id="dealer-go" type="button">Ara</button><div class="dealers-suggest" id="dealer-suggest"></div></div>' +
+    app.innerHTML = (modelCtx ? '<div class="dealers-ctx" id="dealer-ctx"></div>' : '') +
+      '<p class="lead">Lee Cooper, Quantum, Slazenger ve Belmond gözlükleri yetkili optik mağazalarında satılır. Haritadan ilinizi seçin, il adını yazın ya da konumunuzu kullanın.</p>' +
+      '<div class="dealers-search"><input id="dealer-q" type="search" placeholder="İl ara: Tekirdağ, İstanbul, İzmir…" autocomplete="off" aria-label="İl ara"><button class="btn btn--red" id="dealer-go" type="button">Ara</button><button class="btn btn--ghost" id="dealer-near" type="button"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="8"/></svg> Yakınımdakiler</button><div class="dealers-suggest" id="dealer-suggest"></div></div>' +
       '<div class="dealers-map" id="dealer-map"><div class="skeleton">Harita yükleniyor</div></div>' +
       '<div class="dealers-legend"><span><i class="sw" style="background:#DC2626"></i> Yetkili satış noktası olan iller</span><span><i class="sw" style="background:#E5E7EB"></i> Henüz eklenmedi</span></div>' +
-      '<div class="dealers-result" id="dealer-result"></div>';
-    // h1 dışındaki eski içeriği kaldır
+      '<div class="dealers-result" id="dealer-result"></div><p class="dealers-demo" id="dealer-demo"></p>';
     Array.prototype.slice.call(pageIn.children).forEach(function (el) { if (el !== h1) pageIn.removeChild(el); });
     pageIn.appendChild(app);
+    if (modelCtx) ready().then(function () { var m = modelByCode(modelCtx), box = $('#dealer-ctx'); if (m && box) { box.innerHTML = '<img src="' + esc(frontOf(m)) + '" alt=""><div><p class="eyebrow">Aradığınız model</p><b>' + esc(brandInfo(m).name + ' ' + m.code) + '</b><small>' + esc(catLabel(m)) + ' · ' + esc(dimStr(m)) + ' mm · ' + m.variants.length + ' renk · <a href="' + esc(postUrl(m)) + '">modele dön</a></small></div>'; } else if (box) box.style.display = 'none'; });
     Promise.all([fetchJSON(CDN + 'tr-map.json'), fetchJSON(CDN + 'dealers.json')]).then(function (r) {
       var cities = r[0].cities, dealers = (r[1] && r[1].dealers) || {};
+      if (r[1] && r[1].demo && r[1].demo_note) $('#dealer-demo').textContent = r[1].demo_note;
       var byNorm = {}; cities.forEach(function (c) { byNorm[trNorm(c.n)] = c; });
       var has = function (c) { return (dealers[c.n] || []).length > 0; };
       var mapEl = $('#dealer-map');
@@ -1685,31 +1708,70 @@ window.AO_CONFIG = {
         pth.addEventListener('mousemove', function (e) { var c = byId[pth.getAttribute('data-id')]; tip.textContent = c.n + (has(c) ? ' · ' + dealers[c.n].length + ' satış noktası' : ''); var b = mapEl.getBoundingClientRect(); tip.style.left = (e.clientX - b.left + 14) + 'px'; tip.style.top = (e.clientY - b.top - 10) + 'px'; tip.style.display = 'block'; });
         pth.addEventListener('mouseleave', function () { tip.style.display = 'none'; });
       });
-      function show(c) {
-        if (!c) return; track('bayi_il', { il: c.n });
+      function dist(a, b, c, d) { var R = 6371, dLat = (c - a) * Math.PI / 180, dLon = (d - b) * Math.PI / 180, x = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(a * Math.PI / 180) * Math.cos(c * Math.PI / 180) * Math.sin(dLon / 2) * Math.sin(dLon / 2); return 2 * R * Math.asin(Math.sqrt(x)); }
+      function embed(d) { return 'https://maps.google.com/maps?q=' + d.lat + ',' + d.lng + '&z=15&hl=tr&output=embed'; }
+      function card(d, c, i, extra) {
+        var q = encodeURIComponent(d.name + ' ' + (d.district || '') + ' ' + c.n);
+        var dir = d.lat ? 'https://www.google.com/maps/dir/?api=1&destination=' + d.lat + ',' + d.lng + (d.place_id ? '&destination_place_id=' + d.place_id : '') : null;
+        var waText = modelCtx ? '?text=' + encodeURIComponent('Merhaba, ' + modelCtx + ' modeli mağazanızda var mı?') : '';
+        return '<div class="dealer' + (d.lat ? ' dealer--geo' : '') + '" data-i="' + i + '"><div class="dealer__name">' + esc(d.name) + (extra ? '<span class="dealer__dist">' + extra + '</span>' : '') + '</div><div class="dealer__district">' + esc(d.district || '') + ' · ' + esc(c.n) + '</div>' +
+          '<div class="dealer__row">' + esc(d.address || '') + '</div>' +
+          (d.hours ? '<div class="dealer__row dealer__hours">' + esc(d.hours) + '</div>' : '') +
+          (d.brands ? '<div class="dealer__brands">' + d.brands.map(function (b) { return '<span class="badge badge--line">' + esc(b) + '</span>'; }).join('') + '</div>' : '') +
+          '<div class="dealer__actions">' + (d.phone ? '<a class="btn btn--dark" href="tel:' + esc(d.phone.replace(/\s/g, '')) + '">Ara</a>' : '') +
+          (d.whatsapp ? '<a class="btn btn--ghost" href="https://wa.me/' + esc(d.whatsapp) + waText + '" target="_blank" rel="noopener">WhatsApp</a>' : '') +
+          (dir ? '<a class="btn btn--ghost" href="' + dir + '" target="_blank" rel="noopener">Yol tarifi</a>' : '<a class="btn btn--ghost" href="' + (d.maps || 'https://www.google.com/maps/search/?api=1&query=' + q) + '" target="_blank" rel="noopener">Haritada aç</a>') +
+          (d.lat ? '<button class="btn btn--ghost dealer__show" type="button" data-show="' + i + '">Haritada göster</button>' : '') + '</div></div>';
+      }
+      function bindCards(res, list, c) {
+        var frame = $('#dealer-frame', res), label = $('#dealer-frame-label', res);
+        function pickMap(i) { var d = list[i]; if (!d || !d.lat || !frame) return; frame.src = embed(d); if (label) label.textContent = d.name + ' · ' + (d.district || c.n); $$('.dealer', res).forEach(function (x) { x.classList.toggle('active', +x.getAttribute('data-i') === i); }); }
+        $$('[data-show]', res).forEach(function (b) { b.addEventListener('click', function () { pickMap(+b.getAttribute('data-show')); track('bayi_harita', { il: c.n, bayi: list[+b.getAttribute('data-show')].name }); if (window.innerWidth < 900 && frame) frame.scrollIntoView({ behavior: 'smooth', block: 'center' }); }); });
+        $$('a[href^="tel:"]', res).forEach(function (a) { a.addEventListener('click', function () { track('bayi_ara', { il: c.n, bayi: a.closest('.dealer').querySelector('.dealer__name').textContent }); }); });
+        var first = list.map(function (d, i) { return d.lat ? i : -1; }).filter(function (i) { return i >= 0; })[0]; if (first != null) pickMap(first);
+      }
+      function show(c, opts) {
+        if (!c) return; opts = opts || {}; track('bayi_il', { il: c.n });
         $$('path.prov.active', mapEl).forEach(function (x) { x.classList.remove('active'); });
         var pth = $('path.prov[data-id="' + c.id + '"]', mapEl); if (pth) { pth.classList.add('active'); pth.parentNode.appendChild(pth); }
-        var list = dealers[c.n] || [];
+        var all = dealers[c.n] || [], districts = [];
+        all.forEach(function (d) { if (d.district && districts.indexOf(d.district) < 0) districts.push(d.district); });
+        var dsel = opts.district || '';
+        var list = dsel ? all.filter(function (d) { return d.district === dsel; }) : all;
         var res = $('#dealer-result');
-        var html = '<div class="dealers-head"><p class="eyebrow">' + esc(c.p) + ' · Yetkili satış noktaları</p><h2 class="title-2">' + esc(c.n) + '</h2><p class="lead">' + (list.length ? list.length + ' yetkili satış noktası' : 'Bu ilde henüz listelenmiş yetkili satış noktası yok.') + '</p></div>';
+        var html = '<div class="dealers-head"><p class="eyebrow">' + esc(c.p) + ' · Yetkili satış noktaları</p><h2 class="title-2">' + esc(c.n) + '</h2><p class="lead">' + (all.length ? all.length + ' satış noktası' + (modelCtx ? ' · ' + esc(modelCtx) + ' için mağazayı arayıp stok sorabilirsiniz' : '') : 'Bu ilde henüz listelenmiş yetkili satış noktası yok.') + '</p>' +
+          (districts.length > 1 ? '<div class="dealers-districts"><button class="chip' + (!dsel ? ' on' : '') + '" data-d="">Tümü (' + all.length + ')</button>' + districts.map(function (x) { return '<button class="chip' + (dsel === x ? ' on' : '') + '" data-d="' + esc(x) + '">' + esc(x) + ' (' + all.filter(function (d) { return d.district === x; }).length + ')</button>'; }).join('') + '</div>' : '') + '</div>';
+        var geo = list.some(function (d) { return d.lat; });
         if (list.length) {
-          html += '<div class="dealer-grid">' + list.map(function (d) {
-            var q = encodeURIComponent(d.name + ' ' + (d.district || '') + ' ' + c.n);
-            return '<div class="dealer"><div class="dealer__name">' + esc(d.name) + '</div><div class="dealer__district">' + esc(d.district || '') + ' · ' + esc(c.n) + '</div>' +
-              '<div class="dealer__row">' + esc(d.address || '') + '</div>' +
-              (d.hours ? '<div class="dealer__row dealer__hours">' + esc(d.hours) + '</div>' : '') +
-              (d.brands ? '<div class="dealer__brands">' + d.brands.map(function (b) { return '<span class="badge badge--line">' + esc(b) + '</span>'; }).join('') + '</div>' : '') +
-              '<div class="dealer__actions">' + (d.phone ? '<a class="btn btn--dark" href="tel:' + esc(d.phone.replace(/\s/g, '')) + '">' + esc(d.phone) + '</a>' : '') +
-              (d.whatsapp ? '<a class="btn btn--ghost" href="https://wa.me/' + esc(d.whatsapp) + '" target="_blank" rel="noopener">WhatsApp</a>' : '') +
-              '<a class="btn btn--ghost" href="' + (d.maps || 'https://www.google.com/maps/search/?api=1&query=' + q) + '" target="_blank" rel="noopener">Haritada aç</a></div></div>';
-          }).join('') + '</div>';
+          html += '<div class="dealers-body' + (geo ? ' dealers-body--map' : '') + '"><div class="dealer-grid">' + list.map(function (d, i) { return card(d, c, i); }).join('') + '</div>' +
+            (geo ? '<div class="dealers-frame"><div class="dealers-frame__in"><iframe id="dealer-frame" title="Harita" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><p class="dealers-frame__label" id="dealer-frame-label"></p></div></div>' : '') + '</div>';
         } else {
           html += '<p class="dealer-empty">Size en yakın satış noktasını öğrenmek için <a href="https://wa.me/' + esc(CFG.whatsapp || '') + '" target="_blank" rel="noopener">WhatsApp\'tan yazın</a>.</p>';
         }
         res.innerHTML = html;
-        res.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.replaceState(null, '', '#' + c.id);
+        $$('.dealers-districts .chip', res).forEach(function (b) { b.addEventListener('click', function () { show(c, { district: b.getAttribute('data-d'), keep: true }); }); });
+        bindCards(res, list, c);
+        if (!opts.keep) { res.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.replaceState(null, '', location.pathname + location.search + '#' + c.id); }
       }
+      // yakınımdakiler
+      $('#dealer-near').addEventListener('click', function () {
+        var btn = this; if (!navigator.geolocation) { alert('Tarayıcınız konum desteklemiyor.'); return; }
+        btn.disabled = true; btn.textContent = 'Konum alınıyor…';
+        navigator.geolocation.getCurrentPosition(function (pos) {
+          btn.disabled = false; btn.innerHTML = 'Yakınımdakiler';
+          var la = pos.coords.latitude, ln = pos.coords.longitude, found = [];
+          Object.keys(dealers).forEach(function (cn) { dealers[cn].forEach(function (d) { if (d.lat) found.push({ d: d, cn: cn, km: dist(la, ln, d.lat, d.lng) }); }); });
+          found.sort(function (a, b) { return a.km - b.km; }); found = found.slice(0, 6);
+          track('bayi_yakin', { il: found[0] ? found[0].cn : '' });
+          var res = $('#dealer-result');
+          if (!found.length) { res.innerHTML = '<p class="dealer-empty">Konum bilgisi olan satış noktası bulunamadı.</p>'; return; }
+          var c = byNorm[trNorm(found[0].cn)];
+          res.innerHTML = '<div class="dealers-head"><p class="eyebrow">Konumunuza göre</p><h2 class="title-2">En yakın satış noktaları</h2><p class="lead">Mesafeler kuş uçuşudur.</p></div><div class="dealers-body dealers-body--map"><div class="dealer-grid">' +
+            found.map(function (f, i) { return card(f.d, byNorm[trNorm(f.cn)] || { n: f.cn, p: '' }, i, (f.km < 10 ? f.km.toFixed(1) : Math.round(f.km)) + ' km'); }).join('') + '</div><div class="dealers-frame"><div class="dealers-frame__in"><iframe id="dealer-frame" title="Harita" loading="lazy" allowfullscreen></iframe><p class="dealers-frame__label" id="dealer-frame-label"></p></div></div></div>';
+          bindCards(res, found.map(function (f) { return f.d; }), c || { n: found[0].cn });
+          res.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, function () { btn.disabled = false; btn.innerHTML = 'Yakınımdakiler'; alert('Konum alınamadı. İl adını yazarak arayabilirsiniz.'); }, { timeout: 8000 });
+      });
       // arama
       var q = $('#dealer-q'), sug = $('#dealer-suggest');
       function find(v) { var n = trNorm(v).trim(); if (!n) return null; return byNorm[n] || cities.filter(function (c) { return trNorm(c.n).indexOf(n) === 0; })[0] || cities.filter(function (c) { return trNorm(c.n).indexOf(n) >= 0; })[0]; }
@@ -1725,9 +1787,8 @@ window.AO_CONFIG = {
       $('#dealer-go').addEventListener('click', go);
       q.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); go(); } });
       document.addEventListener('click', function (e) { if (!sug.parentNode.contains(e.target)) sug.classList.remove('open'); });
-      // başlangıç: hash ya da ilk bayisi olan il
       var start = byId[location.hash.replace('#', '')] || cities.filter(has)[0];
-      if (start) { var y = window.scrollY; show(start); window.scrollTo(0, y); }
+      if (start) { show(start, { keep: true }); }
     }).catch(function () { $('#dealer-map').innerHTML = '<div class="empty">Harita yüklenemedi.</div>'; });
   }
 

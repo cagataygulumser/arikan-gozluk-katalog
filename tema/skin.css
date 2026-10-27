@@ -634,3 +634,21 @@ body.ast-open{overflow:hidden}
 .order__msg{margin:14px 0 0;font-size:14px;min-height:1em}.order__msg.ok{color:#166534}.order__msg.err{color:var(--red)}
 .order__foot{font-size:12px;color:var(--muted-2);margin-top:18px}
 @media (max-width:700px){.order__form{grid-template-columns:1fr}.order__table th:first-child,.order__table td:first-child{display:none}.order__table select{max-width:150px}}
+
+/* ---- satış noktaları: harita, yol tarifi, yakınımdakiler ---------- */
+.dealers-ctx{display:flex;align-items:center;gap:18px;border:1px solid var(--line);border-radius:6px;padding:12px 18px;margin:0 0 22px;background:#FAFAFA}
+.dealers-ctx img{width:120px;height:auto}.dealers-ctx .eyebrow{margin:0 0 4px}.dealers-ctx b{display:block;font-size:17px}.dealers-ctx small{color:var(--muted-2);font-size:12px}.dealers-ctx a{color:var(--red);text-decoration:underline}
+.dealers-search .btn--ghost{padding:12px 16px;gap:8px}
+.dealers-districts{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.dealers-body--map{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+.dealers-body--map .dealer-grid{grid-template-columns:1fr 1fr}
+.dealers-frame{position:sticky;top:90px}
+.dealers-frame__in{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--bg-soft)}
+.dealers-frame iframe{display:block;width:100%;height:440px;border:0}
+.dealers-frame__label{margin:0;padding:10px 14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);font-weight:600;border-top:1px solid var(--line)}
+.dealer.active{border-color:var(--red);box-shadow:0 0 0 2px var(--red) inset}
+.dealer__dist{float:right;font-size:12px;font-weight:600;color:var(--red);background:#FEE2E2;padding:3px 9px;border-radius:999px}
+.dealers-demo{font-size:12px;color:var(--muted-2);margin-top:22px}
+.dealers-demo:empty{display:none}
+@media (max-width:1000px){.dealers-body--map{grid-template-columns:1fr}.dealers-frame{position:static}.dealers-frame iframe{height:320px}.dealers-body--map .dealer-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.dealers-body--map .dealer-grid{grid-template-columns:1fr}.dealers-ctx img{width:90px}}

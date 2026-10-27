@@ -1,15 +1,130 @@
 {
-  "updated": "2026-10-27",
-  "note": "İl adı anahtar; her kayıt: name, district, address, phone, whatsapp (opsiyonel), hours (opsiyonel), maps (opsiyonel Google Maps bağlantısı), brands (opsiyonel liste).",
-  "dealers": {
-    "Tekirdağ": [
-      {"name": "Ahmet Optik", "district": "Süleymanpaşa", "address": "Hükümet Cad. No:12/A, Ertuğrul Mah.", "phone": "0282 261 10 01", "whatsapp": "905320000001", "hours": "Hafta içi 09:00–19:00 · Cumartesi 09:00–17:00", "brands": ["Lee Cooper", "Quantum", "Slazenger", "Belmond"]},
-      {"name": "Mehmet Optik", "district": "Çorlu", "address": "Omurtak Cad. No:45, Reşadiye Mah.", "phone": "0282 651 20 02", "whatsapp": "905320000002", "hours": "Her gün 09:00–20:00", "brands": ["Lee Cooper", "Slazenger"]},
-      {"name": "Marmara Optik", "district": "Süleymanpaşa", "address": "Çarşı Cad. No:7, Ortacami Mah.", "phone": "0282 263 30 03", "hours": "Hafta içi 09:00–19:00", "brands": ["Quantum", "Belmond"]},
-      {"name": "Trakya Optik", "district": "Çerkezköy", "address": "Atatürk Cad. No:88, Gazi Mustafa Kemal Paşa Mah.", "phone": "0282 726 40 04", "whatsapp": "905320000004", "hours": "Hafta içi 09:00–19:00 · Cumartesi 09:30–18:00", "brands": ["Lee Cooper", "Quantum", "Slazenger"]},
-      {"name": "Gözde Optik", "district": "Çorlu", "address": "Salih Omurtak Cad. No:121/B, Kemalettin Mah.", "phone": "0282 652 50 05", "hours": "Her gün 09:30–20:30", "brands": ["Slazenger", "Belmond"]},
-      {"name": "Saray Optik", "district": "Saray", "address": "Cumhuriyet Cad. No:19, Ayaspaşa Mah.", "phone": "0282 768 60 06", "whatsapp": "905320000006", "hours": "Hafta içi 09:00–18:30", "brands": ["Lee Cooper"]},
-      {"name": "Lider Optik", "district": "Malkara", "address": "İstiklal Cad. No:33, Camiatik Mah.", "phone": "0282 427 70 07", "hours": "Hafta içi 09:00–19:00 · Cumartesi 09:00–16:00", "brands": ["Quantum", "Slazenger", "Belmond"]}
-    ]
-  }
+ "updated": "2026-10-27",
+ "note": "İl adı anahtar; her kayıt: name, district, address, phone, whatsapp (ops.), hours (ops.), lat/lng (ops. — harita ve yol tarifi için), place_id/maps (ops.), brands (ops.). demo:true iken sayfada 'örnek liste' notu görünür.",
+ "dealers": {
+  "Tekirdağ": [
+   {
+    "name": "Vitrin Optik",
+    "district": "Süleymanpaşa",
+    "address": "Hürriyet Mah. Tepebaşı Cad. Rodosto Konakları No:19/2A",
+    "phone": "+90 541 599 22 59",
+    "hours": "Her gün 08:00–21:00",
+    "lat": 40.9874154,
+    "lng": 27.5650729,
+    "place_id": "ChIJL6pFrVT1tBQR1aCpLtowVPg",
+    "maps": "https://www.google.com/maps/place/?q=place_id:ChIJL6pFrVT1tBQR1aCpLtowVPg"
+   },
+   {
+    "name": "Uğurlu Optik",
+    "district": "Süleymanpaşa",
+    "address": "Ertuğrul Mah. Hükümet Cad. No:37",
+    "phone": "+90 282 262 45 45",
+    "hours": "Pzt–Cmt 09:00–19:00",
+    "lat": 40.9779768,
+    "lng": 27.5130611,
+    "place_id": "ChIJw-ukQYOKtBQR4cFu3ryTkmk",
+    "maps": "https://www.google.com/maps/place/?q=place_id:ChIJw-ukQYOKtBQR4cFu3ryTkmk"
+   },
+   {
+    "name": "Güneş Optik",
+    "district": "Süleymanpaşa",
+    "address": "Ortacami Mah. Hükümet Cad. No:56/A",
+    "hours": "Pzt–Cmt 08:00–19:00",
+    "lat": 40.9781895,
+    "lng": 27.5118652,
+    "place_id": "ChIJQc_hbIOKtBQRLKLarta9C8E",
+    "maps": "https://www.google.com/maps/place/?q=place_id:ChIJQc_hbIOKtBQRLKLarta9C8E"
+   },
+   {
+    "name": "Pupil Optik",
+    "district": "Süleymanpaşa",
+    "address": "Hürriyet Mah. Şht. Rüştü Ökeler Cad. No:17/A",
+    "phone": "+90 538 667 97 15",
+    "hours": "Pzt–Cmt 09:00–19:00",
+    "lat": 40.981613,
+    "lng": 27.549286,
+    "place_id": "ChIJY08wzVyLtBQRUY46WSlGlIk",
+    "maps": "https://www.google.com/maps/place/?q=place_id:ChIJY08wzVyLtBQRUY46WSlGlIk"
+   },
+   {
+    "name": "99 Optik",
+    "district": "Süleymanpaşa",
+    "address": "Ortacami Mah. Kolordu Cad. No:9",
+    "phone": "+90 552 215 25 12",
+    "hours": "Pzt–Cmt 09:30–19:00",
+    "lat": 40.9784303,
+    "lng": 27.5132933,
+    "place_id": "ChIJ8d4DEh2LtBQRR-xLIDtC1xs",
+    "maps": "https://www.google.com/maps/place/?q=place_id:ChIJ8d4DEh2LtBQRR-xLIDtC1xs"
+   },
+   {
+    "name": "Saydam Optik",
+    "district": "Süleymanpaşa",
+    "address": "Hürriyet Mah. Şht. Şaban Öztürk Sok. No:11/3A",
+    "phone": "+90 282 262 02 02",
+    "hours": "Pzt–Cmt 09:00–19:00",
+    "lat": 40.9829592,
+    "lng": 27.5494924,
+    "place_id": "ChIJUcZJCG31tBQRuS5izy9L5P4",
+    "maps": "https://www.google.com/maps/place/?q=place_id:ChIJUcZJCG31tBQRuS5izy9L5P4"
+   },
+   {
+    "name": "Ojo Optik",
+    "district": "Süleymanpaşa",
+    "address": "Cumhuriyet Mah. Büşra Sok. No:26 (Yaşam Hastanesi yanı)",
+    "phone": "+90 282 293 26 56",
+    "hours": "Pzt–Cmt 08:30–19:30",
+    "lat": 40.9835353,
+    "lng": 27.5706248,
+    "place_id": "ChIJt5Azzj31tBQRUFfzUZ0xTE8",
+    "maps": "https://www.google.com/maps/place/?q=place_id:ChIJt5Azzj31tBQRUFfzUZ0xTE8"
+   },
+   {
+    "name": "Diva Optik 59",
+    "district": "Süleymanpaşa",
+    "address": "Altınova Mah. Gazi Hasan Paşa Cad. No:100/B",
+    "phone": "+90 282 264 35 75",
+    "hours": "Her gün 09:00–21:00",
+    "lat": 40.9439283,
+    "lng": 27.4875613,
+    "place_id": "ChIJs77hsU1htBQR6zYHAO7ne5Y",
+    "maps": "https://www.google.com/maps/place/?q=place_id:ChIJs77hsU1htBQR6zYHAO7ne5Y"
+   },
+   {
+    "name": "City Optik",
+    "district": "Çorlu",
+    "address": "Muhittin Mah. Salih Omurtak Cad. No:31/2",
+    "phone": "+90 282 653 99 77",
+    "hours": "Pzt–Cmt 09:00–20:00",
+    "lat": 41.1541888,
+    "lng": 27.8214718,
+    "place_id": "ChIJW4FattfmtBQRWGhAQsGd2XA",
+    "maps": "https://www.google.com/maps/place/?q=place_id:ChIJW4FattfmtBQRWGhAQsGd2XA"
+   },
+   {
+    "name": "Bizim Optik",
+    "district": "Çorlu",
+    "address": "Hürriyet Mah. Çamlıbel Cad. No:27/1A",
+    "phone": "+90 530 973 86 91",
+    "hours": "Pzt–Cmt 09:00–20:00 · Paz 12:00–19:00",
+    "lat": 41.1575823,
+    "lng": 27.8454032,
+    "place_id": "ChIJ6fW5qivhtBQRegoZvTw8Mzs",
+    "maps": "https://www.google.com/maps/place/?q=place_id:ChIJ6fW5qivhtBQRegoZvTw8Mzs"
+   },
+   {
+    "name": "Gözlüx Optik",
+    "district": "Çorlu",
+    "address": "Kazımiye Mah. Salih Omurtak Cad. No:128",
+    "phone": "+90 554 915 83 23",
+    "hours": "Pzt–Cmt 09:00–19:00 · Paz 10:30–18:00",
+    "lat": 41.1571279,
+    "lng": 27.8102703,
+    "place_id": "ChIJrQc6IjzntBQRp19c4LEiQHU",
+    "maps": "https://www.google.com/maps/place/?q=place_id:ChIJrQc6IjzntBQRp19c4LEiQHU"
+   }
+  ]
+ },
+ "demo": true,
+ "demo_note": "Örnek liste: Tekirdağ kayıtları Google Haritalar'daki herkese açık işletme bilgileridir; resmî yetkili bayi listesi değildir."
 }

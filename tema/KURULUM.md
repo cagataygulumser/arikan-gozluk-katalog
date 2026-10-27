@@ -42,7 +42,7 @@ Site **deneme-site-v3.blogspot.com** adresinde kuruldu ve çalışıyor: tema y�
 
 ## Ek bileşenler
 
-- **Yetkili satış noktaları haritası:** `dealers.json` (GitHub) → il adı anahtar, mağaza listesi. Sayfa haritadan ve il aramasından beslenir.
+- **Yetkili satış noktaları:** `dealers.json` (GitHub) → il adı anahtar, mağaza listesi (lat/lng verilirse kartta "Haritada göster" + Google Haritalar gömülü harita + "Yol tarifi"; `place_id` yol tarifini doğrudan işletmeye bağlar). Sayfada il haritası, il arama, ilçe filtresi, "Yakınımdakiler" (tarayıcı konumu, kuş uçuşu mesafe) var. Model sayfasındaki "Yetkili satış noktası bul" düğmesi `?model=KOD` ile gelir; sayfa üstünde model kartı görünür. `demo: true` iken "örnek liste" notu basılır — Tekirdağ kayıtları Google Haritalar'daki herkese açık işletmelerdir, gerçek bayi listesi gelince değiştirilir.
 - **Blog:** Blogger'da yazıya **Blog** etiketi ver; tema makale olarak basar, listeye (/search/label/Blog) ve ana sayfaya düşer. Kapak = yazının ilk görseli.
 - **Clip-on karşılaştırma kaydırıcısı:** 53 clip-on modelin sayfasında otomatik ("Tek çerçeve, iki kullanım" bölümü). Çiftler `gen_cmp.py` ile üretilir: sol = ilk rengin clip'siz ön görseli, sağ = katalogdaki clip takılı ana görsel; ikisi gözlük sınır kutusuna göre hizalanır (`img/cmp/KOD-optik.jpg`, `KOD-clipon.jpg`). Herhangi bir sayfaya elle de eklenebilir: `<div class="cmp" data-left="OPTİK_GÖRSEL" data-right="CLIPON_GÖRSEL"></div>`. Demo: /p/clip-on-demo.html.
 - **QR etiketler (bayiler için):** /p/qr-etiketler.html — marka/tür seç, etiketleri işaretle, Yazdır (A4, 50×30 veya 70×42 mm). QR `site/search?q=KOD` adresine gider; alan adı değişince etiketleri yeniden yazdırmak yeterli.
