@@ -256,6 +256,44 @@ PAGES['İletişim'] = '''
 </ul>
 '''
 
+PAGES['Gizlilik ve KVKK'] = '''
+<p class="lead-sm">Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında, bu katalog sitesini ziyaret eden ve sitedeki araçları kullanan kişilerin hangi verilerinin, hangi amaçla ve nasıl işlendiğini açıklar. Son güncelleme: Ekim 2026.</p>
+<h2>1. Veri sorumlusu</h2>
+<p>Bu site, <b>Arıkan Optik</b> (Arıkan Group) tarafından yetkili satış noktaları ve son tüketiciler için hazırlanmış bir ürün kataloğudur. Veri sorumlusu Arıkan Optik'tir; iletişim bilgileri <a href="/p/iletisim.html">İletişim</a> sayfasında yer alır.</p>
+<h2>2. Sitede üyelik ve satış yoktur</h2>
+<p>Siteyi kullanmak için hesap açmanız gerekmez; sitede ödeme alınmaz, sipariş oluşturulmaz. Beğendiğiniz modeller için yetkili satış noktalarına yönlendirilirsiniz.</p>
+<h2>3. Hangi veriler, hangi amaçla işlenir?</h2>
+<table class="specs specs--3">
+<tbody>
+<tr><th>Araç</th><th>İşlenen veri</th><th>Amaç ve hukuki sebep</th></tr>
+<tr><td>Site ziyareti ve kullanım ölçümü</td><td>Anonimleştirilmiş IP, cihaz ve tarayıcı bilgisi, görüntülenen sayfalar, aranan ifadeler, seçilen filtreler, asistan cevapları, il seçimi (Google Analytics)</td><td>Hangi modellerin, renklerin ve bölgelerin ilgi gördüğünü ölçmek; kataloğu ve stok planını iyileştirmek. Hukuki sebep: meşru menfaat (KVKK m. 5/2-f); çerezler için açık rıza.</td></tr>
+<tr><td>Bayi talep formu</td><td>Mağaza adı, yetkili adı, telefon, il, talep edilen modeller ve not</td><td>Yetkili satış noktasının talebini kaydetmek ve temsilciye iletmek. Hukuki sebep: sözleşmenin kurulması/ifası (m. 5/2-c).</td></tr>
+<tr><td>WhatsApp bağlantıları</td><td>WhatsApp üzerinden sizin ilettiğiniz bilgiler</td><td>Sorularınızı yanıtlamak. Mesajlaşma WhatsApp (Meta) altyapısında gerçekleşir; Meta'nın kendi gizlilik politikası geçerlidir.</td></tr>
+<tr><td>Sanal deneme</td><td>Kamera görüntüsü ya da yüklediğiniz fotoğraf</td><td>Çerçeveyi yüzünüzde göstermek. Görüntü <b>yalnızca cihazınızda</b> işlenir; hiçbir sunucuya gönderilmez, kaydedilmez. "Fotoğraf çek" ile oluşan görseli yalnızca siz paylaşırsınız.</td></tr>
+<tr><td>"Yakınımdakiler"</td><td>Tarayıcınızın verdiği yaklaşık konum</td><td>En yakın satış noktalarını sıralamak. Konum yalnızca o an, cihazınızda kullanılır; saklanmaz, iletilmez.</td></tr>
+<tr><td>Favoriler, talep listesi, dil tercihi</td><td>Seçtiğiniz model kodları ve tercihler</td><td>Tarayıcınızın yerel deposunda tutulur; bize iletilmez. Paylaş bağlantısı oluşturduğunuzda yalnızca model kodları bağlantıya yazılır.</td></tr>
+</tbody>
+</table>
+<h2>4. Çerezler ve benzeri teknolojiler</h2>
+<p>Site, kullanımı ölçmek için Google Analytics çerezlerini (<code>_ga</code>, <code>_ga_*</code>; 2 yıla kadar) kullanır. Ayrıca sitenin çalışması için tarayıcınızın yerel deposunda favoriler (<code>ao_fav_v1</code>), talep listesi (<code>ao_order_v1</code>, <code>ao_dealer_info</code>), dil tercihi (<code>ao_lang</code>) ve katalog verisinin kısa süreli kopyası tutulur; bunlar kişisel veri içermez ve bize iletilmez. Çerezleri tarayıcı ayarlarınızdan silebilir ya da engelleyebilirsiniz; bu durumda site çalışmaya devam eder.</p>
+<h2>5. Verilerin aktarıldığı taraflar</h2>
+<ul>
+<li><b>Google</b> (site altyapısı, Analytics, Formlar/E-Tablolar, Fonts, Haritalar): sunucular yurt dışında bulunabilir; aktarım KVKK m. 9 kapsamında açık rızanız ya da ilgili yasal dayanakla yapılır.</li>
+<li><b>Meta / WhatsApp</b>: yalnızca siz bir WhatsApp bağlantısına tıkladığınızda.</li>
+<li><b>jsDelivr</b> (içerik dağıtım ağı): görseller ve katalog verisi buradan yüklenir; kişisel veri paylaşılmaz.</li>
+<li>Bayi talepleri yalnızca Arıkan Optik'in ilgili satış ekibiyle paylaşılır; üçüncü kişilere satılmaz.</li>
+</ul>
+<h2>6. Saklama süresi</h2>
+<p>Bayi talep kayıtları, talebin sonuçlanmasından itibaren ticari ilişkinin gerektirdiği süre ve yasal zamanaşımı süreleri boyunca saklanır. Analitik veriler Google Analytics'te en fazla 14 ay tutulur. Cihazınızdaki yerel veriler siz silene kadar tarayıcınızda kalır.</p>
+<h2>7. Haklarınız (KVKK m. 11)</h2>
+<p>Kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, amacına uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı üçüncü kişileri bilme, eksik/yanlış işlenmişse düzeltilmesini isteme, silinmesini veya yok edilmesini isteme, bu işlemlerin aktarılan taraflara bildirilmesini isteme, otomatik sistemlerle analiz sonucu aleyhinize bir sonuca itiraz etme ve zarara uğramanız hâlinde tazminat talep etme haklarına sahipsiniz.</p>
+<p>Başvurularınızı Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'e uygun olarak, kimliğinizi doğrulayan bilgilerle birlikte <a href="/p/iletisim.html">İletişim</a> sayfasındaki adrese yazılı olarak ya da e-posta ile iletebilirsiniz. Başvurular en geç 30 gün içinde yanıtlanır.</p>
+<h2>8. Çocuklar</h2>
+<p>Site 18 yaşından küçüklere yönelik değildir; bayi talep formu yalnızca yetkili satış noktaları içindir.</p>
+<h2>9. Değişiklikler</h2>
+<p>Bu metin gerektiğinde güncellenir; güncel sürüm her zaman bu sayfada yayımlanır.</p>
+'''
+
 # ---------------------------------------------------------------- import XML
 def atom_entry(kind, idx, title, content, labels=(), published=None):
     published = published or datetime.datetime(2026, 10, 1, 9, 0, 0) + datetime.timedelta(minutes=idx)

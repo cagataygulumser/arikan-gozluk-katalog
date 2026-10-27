@@ -260,6 +260,9 @@ p{margin:0 0 1em}
 .dims__str{grid-column:1/-1;font-size:12px;color:var(--muted-2);margin:0}
 .dims__str b{color:var(--ink);font-weight:600;letter-spacing:.1em}
 .specs{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.specs--3 th,.specs--3 td{width:auto;padding:10px 14px 10px 0;vertical-align:top;font-size:13px;line-height:1.5;border-bottom:1px solid var(--line-2)}
+.specs--3 td:first-child{font-weight:600}.specs--3 th:nth-child(1){width:20%}.specs--3 th:nth-child(2){width:36%}.specs--3 th:nth-child(3){width:44%}
+@media (max-width:640px){.specs--3,.specs--3 tbody,.specs--3 tr,.specs--3 td{display:block;width:100%}.specs--3 tr:first-child{display:none}.specs--3 td{border:0;padding:4px 0}.specs--3 td:first-child{padding-top:16px;white-space:normal;color:var(--red)}.specs--3 tr{border-bottom:1px solid var(--line-2);padding-bottom:12px}}
 .specs th{text-align:left;font-weight:500;color:var(--muted-2);padding:10px 0;border-bottom:1px solid var(--line-2);width:42%;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
 .specs td{padding:10px 0;border-bottom:1px solid var(--line-2);font-weight:500}.specs td small{display:block;font-size:12px;margin-top:2px}
 .colors h3{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);margin:0 0 12px;font-weight:600}
@@ -627,6 +630,7 @@ body.ast-open{overflow:hidden}
 /* ---- bayi talep formu --------------------------------------------- */
 .order-badge{display:inline-block;background:var(--red);color:#fff;font-size:10px;font-weight:600;border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:middle}
 .order-add{position:relative}.order-add.done{background:#166534}
+.order__legal{font-size:12px;color:var(--muted-2);margin-top:12px}.order__legal a{text-decoration:underline}
 .order-note{font-size:13px;color:var(--ink-2);margin-top:10px}.order-note a{color:var(--red);text-decoration:underline}
 .order__sec{border:1px solid var(--line);border-radius:6px;padding:22px 24px;margin:0 0 18px}
 .order__sec h3{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--red);font-weight:600;margin:0 0 12px}

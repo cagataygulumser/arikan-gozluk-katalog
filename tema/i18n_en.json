@@ -536,5 +536,9 @@
 "Bu tarayıcı kamerayı desteklemiyor — \"Fotoğraf yükle\" ile deneyebilirsiniz.": "This browser does not support the camera — try \"Upload photo\".",
 "Kamera izni verilmedi — tarayıcı ayarlarından izin verin ya da \"Fotoğraf yükle\" kullanın.": "Camera permission denied — allow it in browser settings or use \"Upload photo\".",
 "Kamera görüntüsü alınamadı — \"Fotoğraf yükle\" ile deneyebilirsiniz.": "No camera image received — try \"Upload photo\".",
-"Yüz tanıma bu bağlantıda yüklenemedi; lütfen tekrar deneyin ya da \"Fotoğraf yükle\" kullanın.": "Face tracking could not load on this connection; please retry or use \"Upload photo\"."
+"Yüz tanıma bu bağlantıda yüklenemedi; lütfen tekrar deneyin ya da \"Fotoğraf yükle\" kullanın.": "Face tracking could not load on this connection; please retry or use \"Upload photo\".",
+"Gizlilik ve KVKK": "Privacy & Data Protection",
+"@Gizlilik ve KVKK": "Privacy & Data Protection",
+"@@Gizlilik ve KVKK · Arıkan Optik": "Privacy & Data Protection · Arıkan Optik",
+"Göndererek Gizlilik ve KVKK metnini kabul etmiş olursunuz.": "By sending you accept the Privacy & Data Protection notice."
 }

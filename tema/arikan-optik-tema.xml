@@ -303,6 +303,9 @@ p{margin:0 0 1em}
 .dims__str{grid-column:1/-1;font-size:12px;color:var(--muted-2);margin:0}
 .dims__str b{color:var(--ink);font-weight:600;letter-spacing:.1em}
 .specs{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.specs--3 th,.specs--3 td{width:auto;padding:10px 14px 10px 0;vertical-align:top;font-size:13px;line-height:1.5;border-bottom:1px solid var(--line-2)}
+.specs--3 td:first-child{font-weight:600}.specs--3 th:nth-child(1){width:20%}.specs--3 th:nth-child(2){width:36%}.specs--3 th:nth-child(3){width:44%}
+@media (max-width:640px){.specs--3,.specs--3 tbody,.specs--3 tr,.specs--3 td{display:block;width:100%}.specs--3 tr:first-child{display:none}.specs--3 td{border:0;padding:4px 0}.specs--3 td:first-child{padding-top:16px;white-space:normal;color:var(--red)}.specs--3 tr{border-bottom:1px solid var(--line-2);padding-bottom:12px}}
 .specs th{text-align:left;font-weight:500;color:var(--muted-2);padding:10px 0;border-bottom:1px solid var(--line-2);width:42%;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
 .specs td{padding:10px 0;border-bottom:1px solid var(--line-2);font-weight:500}.specs td small{display:block;font-size:12px;margin-top:2px}
 .colors h3{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);margin:0 0 12px;font-weight:600}
@@ -670,6 +673,7 @@ body.ast-open{overflow:hidden}
 /* ---- bayi talep formu --------------------------------------------- */
 .order-badge{display:inline-block;background:var(--red);color:#fff;font-size:10px;font-weight:600;border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:middle}
 .order-add{position:relative}.order-add.done{background:#166534}
+.order__legal{font-size:12px;color:var(--muted-2);margin-top:12px}.order__legal a{text-decoration:underline}
 .order-note{font-size:13px;color:var(--ink-2);margin-top:10px}.order-note a{color:var(--red);text-decoration:underline}
 .order__sec{border:1px solid var(--line);border-radius:6px;padding:22px 24px;margin:0 0 18px}
 .order__sec h3{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--red);font-weight:600;margin:0 0 12px}
@@ -1207,6 +1211,7 @@ window.AO_CONFIG = {
       <a href='/p/iletisim.html'>İletişim</a>
       <a href='/p/qr-etiketler.html'>Bayiler için QR etiketler</a>
       <a href='/p/bayi-talep-formu.html'>Bayi talep formu <span class='order-badge' data-order-count='1'></span></a>
+      <a href='/p/gizlilik-ve-kvkk.html'>Gizlilik ve KVKK</a>
       <a href='https://arikantime.com/tr/' rel='noopener' target='_blank'>arikantime.com</a>
     </div>
   </div>
@@ -1234,7 +1239,7 @@ window.AO_CONFIG = {
   var CFG = window.AO_CONFIG || {};
   var CDN = CFG.cdn || 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/';
   var BRANDS = CFG.brands || {};
-  var DATA_V = '202610272327'; // veri dosyaları için önbellek kırıcı (build.py doldurur)
+  var DATA_V = '202610272334'; // veri dosyaları için önbellek kırıcı (build.py doldurur)
   function dataUrl(name) { return CDN + name + '?v=' + DATA_V; }
   var BRAND_ORDER = ['lee-cooper', 'quantum', 'slazenger', 'belmond'];
   var FEED_URL = (CFG.feed || '/feeds/posts/summary?alt=json&max-results=500');
@@ -1667,7 +1672,7 @@ window.AO_CONFIG = {
   }
 
   /* ---------- sabit sayfa bağlantıları (Blogger'ın verdiği gerçek adreslere çevir) ---------- */
-  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/qr-etiketler.html': 'QR Etiketler', '/p/bayi-talep-formu.html': 'Bayi Talep Formu' };
+  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/qr-etiketler.html': 'QR Etiketler', '/p/bayi-talep-formu.html': 'Bayi Talep Formu', '/p/gizlilik-ve-kvkk.html': 'Gizlilik ve KVKK' };
   function fixPageLinks() {
     var apply = function (map) {
       $$('a[href^="/p/"]').forEach(function (a) {
@@ -2456,7 +2461,7 @@ window.AO_CONFIG = {
           '<label>Telefon<input data-f="telefon" type="tel" value="' + esc(info.telefon || '') + '" required></label>' +
           '<label>İl<input data-f="il" list="order-cities" value="' + esc(info.il || '') + '"><datalist id="order-cities">' + cities.map(function (c) { return '<option value="' + esc(c) + '">'; }).join('') + '</datalist></label>' +
           '<label class="order__wide">Not<textarea data-f="not" rows="2">' + esc(info.not || '') + '</textarea></label></div></section>' +
-          '<section class="order__sec order__send"><h3>3 · Gönder</h3><div class="order__btns"><a class="btn btn--dark" id="order-wa" href="#" rel="noopener" target="_blank">WhatsApp ile gönder</a>' + (OC.form ? '<button class="btn btn--red" id="order-send" type="button">Talebi gönder</button>' : '') + '<button class="btn btn--ghost" id="order-clear" type="button">Listeyi temizle</button></div><p class="order__msg" id="order-msg"></p></section></div>';
+          '<section class="order__sec order__send"><h3>3 · Gönder</h3><div class="order__btns"><a class="btn btn--dark" id="order-wa" href="#" rel="noopener" target="_blank">WhatsApp ile gönder</a>' + (OC.form ? '<button class="btn btn--red" id="order-send" type="button">Talebi gönder</button>' : '') + '<button class="btn btn--ghost" id="order-clear" type="button">Listeyi temizle</button></div><p class="order__msg" id="order-msg"></p><p class="order__legal">Göndererek <a href="/p/gizlilik-ve-kvkk.html">Gizlilik ve KVKK metnini</a> kabul etmiş olursunuz.</p></section></div>';
         // etkileşimler
         var inp = $('#order-q', root), sug = $('#order-suggest', root);
         inp.addEventListener('input', function () {

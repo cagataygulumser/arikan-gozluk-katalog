@@ -56,7 +56,7 @@
           '<label>Telefon<input data-f="telefon" type="tel" value="' + esc(info.telefon || '') + '" required></label>' +
           '<label>İl<input data-f="il" list="order-cities" value="' + esc(info.il || '') + '"><datalist id="order-cities">' + cities.map(function (c) { return '<option value="' + esc(c) + '">'; }).join('') + '</datalist></label>' +
           '<label class="order__wide">Not<textarea data-f="not" rows="2">' + esc(info.not || '') + '</textarea></label></div></section>' +
-          '<section class="order__sec order__send"><h3>3 · Gönder</h3><div class="order__btns"><a class="btn btn--dark" id="order-wa" href="#" rel="noopener" target="_blank">WhatsApp ile gönder</a>' + (OC.form ? '<button class="btn btn--red" id="order-send" type="button">Talebi gönder</button>' : '') + '<button class="btn btn--ghost" id="order-clear" type="button">Listeyi temizle</button></div><p class="order__msg" id="order-msg"></p></section></div>';
+          '<section class="order__sec order__send"><h3>3 · Gönder</h3><div class="order__btns"><a class="btn btn--dark" id="order-wa" href="#" rel="noopener" target="_blank">WhatsApp ile gönder</a>' + (OC.form ? '<button class="btn btn--red" id="order-send" type="button">Talebi gönder</button>' : '') + '<button class="btn btn--ghost" id="order-clear" type="button">Listeyi temizle</button></div><p class="order__msg" id="order-msg"></p><p class="order__legal">Göndererek <a href="/p/gizlilik-ve-kvkk.html">Gizlilik ve KVKK metnini</a> kabul etmiş olursunuz.</p></section></div>';
         // etkileşimler
         var inp = $('#order-q', root), sug = $('#order-suggest', root);
         inp.addEventListener('input', function () {
