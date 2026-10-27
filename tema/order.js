@@ -28,7 +28,7 @@
     var root = $('#order-tool'); if (!root) return;
     root.innerHTML = '<div class="skeleton">Yükleniyor</div>';
     var OC = CFG.order || {};
-    Promise.all([ready(), fetchJSON(CDN + 'tr-map.json').catch(function () { return { cities: [] }; })]).then(function (r) {
+    Promise.all([ready(), fetchJSON(dataUrl('tr-map.json')).catch(function () { return { cities: [] }; })]).then(function (r) {
       root.classList.remove('skeleton');
       var cities = (r[1].cities || []).map(function (c) { return c.n; }).sort(function (a, b) { return a.localeCompare(b, 'tr'); });
       var info = {}; try { info = JSON.parse(localStorage.getItem('ao_dealer_info') || '{}'); } catch (e) { }

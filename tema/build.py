@@ -11,6 +11,8 @@ js = js.replace('/* {{ORDER}} */', open(f'{ROOT}/theme/order.js', encoding='utf-
 js = js.replace('/* {{ASSISTANT}} */', open(f'{ROOT}/theme/assistant.js', encoding='utf-8').read())
 tpl = open(f'{ROOT}/theme/template.xml', encoding='utf-8').read()
 assert ']]>' not in css and ']]>' not in js
+import time
+js = js.replace('{{STAMP}}', time.strftime('%Y%m%d%H%M'))
 theme = tpl.replace('{{CSS}}', css).replace('{{JS}}', js)
 os.makedirs(f'{ROOT}/out', exist_ok=True)
 open(f'{ROOT}/out/arikan-optik-tema.xml', 'w', encoding='utf-8').write(theme)

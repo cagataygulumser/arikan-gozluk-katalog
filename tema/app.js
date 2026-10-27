@@ -7,6 +7,8 @@
   var CFG = window.AO_CONFIG || {};
   var CDN = CFG.cdn || 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/';
   var BRANDS = CFG.brands || {};
+  var DATA_V = '{{STAMP}}'; // veri dosyaları için önbellek kırıcı (build.py doldurur)
+  function dataUrl(name) { return CDN + name + '?v=' + DATA_V; }
   var BRAND_ORDER = ['lee-cooper', 'quantum', 'slazenger', 'belmond'];
   var FEED_URL = (CFG.feed || '/feeds/posts/summary?alt=json&max-results=500');
   var BODY = document.body;
@@ -71,9 +73,9 @@
     return fetch(url, { credentials: 'same-origin' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
   }
   function loadModels() {
-    try { var c = sessionStorage.getItem('ao_models_v2'); if (c) return Promise.resolve(JSON.parse(c)); } catch (e) { }
-    return fetchJSON(CDN + 'models.json').then(function (d) {
-      try { sessionStorage.setItem('ao_models_v2', JSON.stringify(d)); } catch (e) { }
+    try { var c = sessionStorage.getItem('ao_models_' + DATA_V); if (c) return Promise.resolve(JSON.parse(c)); } catch (e) { }
+    return fetchJSON(dataUrl('models.json')).then(function (d) {
+      try { sessionStorage.setItem('ao_models_' + DATA_V, JSON.stringify(d)); } catch (e) { }
       return d;
     });
   }
@@ -486,7 +488,7 @@
     Array.prototype.slice.call(pageIn.children).forEach(function (el) { if (el !== h1) pageIn.removeChild(el); });
     pageIn.appendChild(app);
     if (modelCtx) ready().then(function () { var m = modelByCode(modelCtx), box = $('#dealer-ctx'); if (m && box) { box.innerHTML = '<img src="' + esc(frontOf(m)) + '" alt=""><div><p class="eyebrow">Aradığınız model</p><b>' + esc(brandInfo(m).name + ' ' + m.code) + '</b><small>' + esc(catLabel(m)) + ' · ' + esc(dimStr(m)) + ' mm · ' + m.variants.length + ' renk · <a href="' + esc(postUrl(m)) + '">modele dön</a></small></div>'; } else if (box) box.style.display = 'none'; });
-    Promise.all([fetchJSON(CDN + 'tr-map.json'), fetchJSON(CDN + 'dealers.json')]).then(function (r) {
+    Promise.all([fetchJSON(dataUrl('tr-map.json')), fetchJSON(dataUrl('dealers.json'))]).then(function (r) {
       var cities = r[0].cities, dealers = (r[1] && r[1].dealers) || {};
       if (r[1] && r[1].demo && r[1].demo_note) $('#dealer-demo').textContent = r[1].demo_note;
       var byNorm = {}; cities.forEach(function (c) { byNorm[trNorm(c.n)] = c; });
