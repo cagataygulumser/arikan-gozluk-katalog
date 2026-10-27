@@ -767,7 +767,7 @@ body.ast-open{overflow:hidden}
 .ast-launch{position:fixed;right:18px;bottom:140px;width:52px;height:52px;border-radius:50%;background:var(--red);border:0;color:#fff;display:grid;place-items:center;z-index:40;box-shadow:0 6px 16px rgba(220,38,38,.35);cursor:pointer;transform:scale(.6);opacity:0;transition:.35s cubic-bezier(.2,.8,.2,1);padding:0}
 .ast-launch.in{transform:none;opacity:1}
 .ast-launch.min{transform:scale(.6);opacity:0;pointer-events:none}
-.ast-launch svg{width:30px;height:30px;fill:#fff}
+.ast-launch svg{width:30px;height:30px;fill:none;color:#fff}
 .ast-launch__tip{position:absolute;right:62px;top:50%;transform:translateY(-50%);background:var(--ink);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:8px 12px;border-radius:4px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s}
 .ast-launch:hover .ast-launch__tip{opacity:1}
 @media (max-width:640px){.ast-launch{right:18px;bottom:140px}.ast-launch__tip{display:none}body.cookie-open .ast-launch{bottom:252px}}

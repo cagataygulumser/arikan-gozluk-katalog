@@ -83,7 +83,7 @@
 
     // sağ alt yuvarlak başlatıcı (WhatsApp düğmesinin üstünde)
     var launch = document.createElement('button'); launch.className = 'ast-launch'; launch.id = 'ast-launch'; launch.type = 'button'; launch.setAttribute('aria-label', 'Gözlük asistanı');
-    launch.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12.2 4.4 6.4A2 2 0 0 1 6.3 5h1.2v2H6.6l-1.3 4h3.1c1.6 0 2.9.9 3.3 2.2h.6c.4-1.3 1.7-2.2 3.3-2.2h3.1l-1.3-4h-.9V5h1.2a2 2 0 0 1 1.9 1.4l1.9 5.8c.2.3.3.7.3 1.1v1.2c0 2.2-1.8 3.9-4 3.9h-.8c-2 0-3.7-1.5-3.9-3.5h-1.2c-.3 2-1.9 3.5-3.9 3.5h-.8c-2.2 0-4-1.7-4-3.9v-1.2c0-.4.1-.8.3-1.1zm1.7 1.3v1c0 1.1.9 2 2 2H7c1.1 0 2-.9 2-2v-1c0-.3-.3-.6-.6-.6H4.8c-.3 0-.6.3-.6.6zm10.8 0v1c0 1.1.9 2 2 2h.8c1.1 0 2-.9 2-2v-1c0-.3-.3-.6-.6-.6h-3.6c-.3 0-.6.3-.6.6z"/></svg><span class="ast-launch__tip">Gözlük asistanı</span>';
+    launch.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 13.3c0-2.2 1.8-3.8 4.2-3.8s4.2 1.6 4.2 3.8-1.8 3.8-4.2 3.8-4.2-1.6-4.2-3.8zM13.1 13.3c0-2.2 1.8-3.8 4.2-3.8s4.2 1.6 4.2 3.8-1.8 3.8-4.2 3.8-4.2-1.6-4.2-3.8z"/><path d="M10.9 12.4c.3-.8 1.9-.8 2.2 0"/><path d="M2.5 13.3 1.6 10M21.5 13.3l.9-3.3"/></svg><span class="ast-launch__tip">Gözlük asistanı</span>';
     document.body.appendChild(launch);
     function setMin(v) { launch.classList.toggle('min', v); }
     setTimeout(function () { launch.classList.add('in'); }, 600);
