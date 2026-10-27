@@ -261,9 +261,8 @@ window.AO_CONFIG = {
             <div class='wrap'>
               <nav aria-label='Konum' class='crumbs'>
                 <span><a expr:href='data:blog.homepageUrl'>Ana sayfa</a></span>
-                <b:loop index='i' values='data:post.labels' var='label'>
-                  <b:if cond='data:i &lt; 2'><span><a expr:href='data:label.url'><data:label.name/></a></span></b:if>
-                </b:loop>
+                <span><a data-crumb-brand='1' href='/search'>Modeller</a></span>
+                <span><a data-crumb-cat='1' href='/search'>Koleksiyon</a></span>
                 <span><data:post.title/></span>
               </nav>
             </div>

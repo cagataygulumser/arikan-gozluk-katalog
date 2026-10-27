@@ -332,6 +332,7 @@
     var mainImg = $('#m-front'), sideImg = $('#m-side'), clipImg = $('#m-clip');
     var thumbs = $$('.model__thumbs figure');
     var attrsBox = $('#m-attrs');
+    var initDone = false;
     var LABELS = { frame_color: 'Çerçeve rengi', temple_color: 'Sap rengi', tip_color: 'Sap ucu rengi', lens_color: 'Lens rengi', clip_frame_color: 'Clip-on çerçeve', clip_lens_color: 'Clip-on cam rengi' };
     // thumbs -> ana görsel
     thumbs.forEach(function (fg) {
@@ -354,12 +355,17 @@
           var dl = Object.keys(attrs).filter(function (k) { return attrs[k]; }).map(function (k) { return '<dt>' + esc(LABELS[k] || k) + '</dt><dd>' + swatch({ code: '', attrs: { frame_color: attrs[k] } }) + esc(attrs[k]) + '</dd>'; }).join('');
           attrsBox.innerHTML = '<div class="attrs__title"><span>Seçili renk</span><b>' + esc(btn.getAttribute('data-code')) + '</b></div><dl>' + dl + '</dl>';
         }
-        history.replaceState(null, '', '#' + btn.getAttribute('data-code').replace('.', '-'));
+        if (initDone) history.replaceState(null, '', '#' + btn.getAttribute('data-code').replace('.', '-'));
       });
     });
     var h = location.hash.replace('#', '').replace('-', '.');
     var pre = $$('.color-btn').filter(function (b) { return b.getAttribute('data-code') === h; })[0] || $('.color-btn');
-    if (pre) pre.click();
+    if (pre) { var y = window.scrollY; pre.click(); window.scrollTo(0, y); pre.blur(); }
+    initDone = true;
+    // breadcrumb: marka ve tür
+    var cb = $('[data-crumb-brand]'), cc = $('[data-crumb-cat]');
+    if (cb) { cb.textContent = art.getAttribute('data-brand'); cb.href = '/search/label/' + encodeURIComponent(art.getAttribute('data-brand')); }
+    if (cc) { cc.textContent = art.getAttribute('data-cat'); cc.href = '/search/label/' + encodeURIComponent(art.getAttribute('data-cat')); }
     // lightbox
     var lb = document.createElement('div'); lb.className = 'lightbox'; lb.innerHTML = '<img alt="">'; document.body.appendChild(lb);
     if (mainImg) { mainImg.parentNode.addEventListener('click', function () { $('img', lb).src = mainImg.src; lb.classList.add('open'); }); }
@@ -374,7 +380,6 @@
       var pool = state.models.filter(function (m) { return m.code !== me.code && m.brand_slug === me.brand_slug; });
       pool.sort(function (a, b) { var da = Math.abs((a.lens || 0) - (me.lens || 0)) + (a.category === me.category ? 0 : 3); var db = Math.abs((b.lens || 0) - (me.lens || 0)) + (b.category === me.category ? 0 : 3); return da - db; });
       renderGrid(rel, pool.slice(0, 4));
-      var ba = $('[data-crumb-brand]'); if (ba) ba.href = '/search/label/' + encodeURIComponent(me.brand);
     });
   }
 
