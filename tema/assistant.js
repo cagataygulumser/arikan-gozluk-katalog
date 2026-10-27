@@ -83,7 +83,7 @@
 
     // sol alt başlatıcı
     var launch = document.createElement('div'); launch.className = 'ast-launch'; launch.id = 'ast-launch';
-    launch.innerHTML = '<button class="ast-launch__x" aria-label="Küçült">&#10005;</button><div class="ast-launch__head">Gözlük Asistanı</div><div class="ast-launch__img" style="background-image:url(' + CDN + 'img/hero/' + AST.heroes[5] + ')"><span>Aradığın modeli<br>birlikte bulalım</span></div><button class="ast-launch__cta">Başlamak için tıkla</button>';
+    launch.innerHTML = '<button class="ast-launch__x" aria-label="Küçült">&#10005;</button><div class="ast-launch__head">Gözlük Asistanı</div><div class="ast-launch__img" style="background-image:url(' + CDN + 'img/hero/' + AST.heroes[5] + ')"><span>Aradığın modeli<br>birlikte bulalım</span></div><button class="ast-launch__cta"><span class="ast-launch__cta-l">Başlamak için tıkla</span><span class="ast-launch__cta-s">Gözlük asistanı</span></button>';
     var tab = document.createElement('button'); tab.className = 'ast-tab'; tab.innerHTML = '<span>Gözlük Asistanı</span>';
     document.body.appendChild(launch); document.body.appendChild(tab);
     var minimized = false; try { minimized = sessionStorage.getItem('ao_ast_min') === '1'; } catch (e) { }
