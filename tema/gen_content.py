@@ -58,7 +58,7 @@ def faq(m, brand):
         (f'{code} hangi renklerde var?',
          f'{code} modeli {len(m["variants"])} renk seçeneğiyle üretilir: ' + ', '.join(f'{v["code"].split(".")[1]} ({v["attrs"].get("frame_color", "")})' for v in m['variants']) + '. Her rengin ön, yan' + (' ve clip-on' if clip else '') + ' görselleri bu sayfada.'),
         ('Fiyatı nedir, nereden alabilirim?',
-         f'{brand} gözlükleri yalnızca yetkili optik mağazalarında satılır; fiyat ve stok bilgisi için size en yakın satış noktasına danışabilirsiniz. Bu site satış yapmaz, modelin tüm bilgilerini tek yerde sunar.'),
+         f'{brand} gözlükleri yalnızca yetkili optik mağazalarında satılır; fiyat ve stok bilgisi için size en yakın satış noktasına danışabilirsiniz.'),
     ]
     if clip:
         qa.append(('Clip-on nasıl çalışır?', 'Çerçevenin köprü ve uç kısımlarındaki gizli mıknatıslar, aynı formda üretilmiş güneş camını tek hareketle tutar. Camlar polarizedir: su, yol ve cam yüzeylerden gelen yansımaları keser; UV400 koruma sağlar.'))
@@ -144,7 +144,7 @@ def post_html(m):
     <div class="attrs" id="m-attrs"></div>
     <div class="cta">
       <a class="btn btn--red" href="/p/yetkili-satis-noktalari.html">Yetkili satış noktası bul</a>
-      <a class="btn btn--ghost" href="https://wa.me/905000000000?text={E('Merhaba, ' + brand + ' ' + code + ' modeli hakkında bilgi almak istiyorum.')}" rel="noopener" target="_blank">WhatsApp ile sor</a>
+      <a class="btn btn--ghost" href="https://wa.me/905074904824?text={E('Merhaba, ' + brand + ' ' + code + ' modeli hakkında bilgi almak istiyorum.')}" rel="noopener" target="_blank">WhatsApp ile sor</a>
     </div>
     <div class="share">Paylaş: <a href="#" data-share>Bağlantıyı kopyala</a> · <a href="https://wa.me/?text={E(brand + ' ' + code + ' gözlük modeli')}%20{SITE}" rel="noopener" target="_blank">WhatsApp</a></div>
   </div>
@@ -193,7 +193,7 @@ PAGES['Ekartman Rehberi'] = f'''
 <p>Kataloglarda her modelin kodu (örn. <b>Q503</b>) ve renk varyantı (<b>Q503.C2</b>) ayrı yazılır. Sitede model kodunu arayın; sayfada tüm renkleri görürsünüz. Renk kodunu (C2) aradığınızda da aynı sayfa açılır ve o renk seçili gelir.</p>
 <h2>Clip-on modeller</h2>
 <p>Clip-on modellerde ekartman optik çerçeveye aittir; mıknatıslı güneş camı aynı ölçüde üretildiği için ek bir ölçü gerekmez.</p>
-<p class="note">Ölçüler yalnızca ön eleme içindir. Nihai karar için yetkili optik mağazasında deneyin; optisyen burun pedi ve sap ayarıyla uyumu kişiselleştirir.</p>
+<p>Ölçüler ön eleme içindir; nihai karar için yetkili optik mağazasında deneyin. Optisyen burun pedi ve sap ayarıyla uyumu kişiselleştirir.</p>
 '''
 PAGES['Sık Sorulan Sorular'] = '''
 <h2>Site hakkında</h2>
@@ -222,7 +222,6 @@ PAGES['Sık Sorulan Sorular'] = '''
 '''
 PAGES['Yetkili Satış Noktaları'] = '''
 <p>Lee Cooper, Quantum, Slazenger ve Belmond gözlükleri Türkiye genelinde yetkili optik mağazalarında satılır. Beğendiğiniz modelin kodunu not edin ve en yakın satış noktasına danışın; mağazada yoksa sizin için getirtilebilir.</p>
-<p class="note">Bu listeyi Blogger'da bu sayfayı düzenleyerek güncelleyebilirsiniz. Her satış noktası için şehir, mağaza adı, adres ve telefon ekleyin.</p>
 <h2>İstanbul</h2>
 <ul class="dealers">
 <li><b>[Mağaza adı]</b>[İlçe] · [Adres]<br>[Telefon]</li>
@@ -251,12 +250,11 @@ PAGES['Hakkımızda'] = '''
 PAGES['İletişim'] = '''
 <p>Modeller, satış noktaları ve bayilik hakkında sorularınız için bize ulaşın.</p>
 <ul class="dealers">
-<li><b>WhatsApp</b><a href="https://wa.me/905000000000" rel="noopener" target="_blank">+90 500 000 00 00</a></li>
+<li><b>WhatsApp</b><a href="https://wa.me/905074904824" rel="noopener" target="_blank">0507 490 48 24</a></li>
 <li><b>E-posta</b><a href="mailto:info@example.com">info@example.com</a></li>
 <li><b>Telefon</b>+90 (212) 000 00 00</li>
 <li><b>Adres</b>[Şirket adresi]</li>
 </ul>
-<p class="note">Bu sayfadaki iletişim bilgilerini Blogger'da düzenleyin. WhatsApp numarasını tema HTML'indeki <code>AO_CONFIG.whatsapp</code> alanında da güncelleyin; model sayfalarındaki "WhatsApp ile sor" bağlantıları oradan beslenir.</p>
 '''
 
 # ---------------------------------------------------------------- import XML

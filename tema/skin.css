@@ -97,13 +97,13 @@ p{margin:0 0 1em}
 /* ---- Hero ---------------------------------------------------------- */
 .hero{background:var(--bg-soft);position:relative;overflow:hidden}
 .hero__slides{position:relative;min-height:560px}
-.hero__slide{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;opacity:0;transition:opacity .7s;pointer-events:none}
+.hero__slide{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;min-height:560px;opacity:0;transition:opacity .7s;pointer-events:none}
 .hero__slide.active{opacity:1;pointer-events:auto;position:relative}
 .hero__text{display:flex;flex-direction:column;justify-content:center;padding:64px var(--gutter) 64px max(var(--gutter),calc((100vw - var(--wrap))/2 + var(--gutter)))}
 .hero__text .display{margin-bottom:22px}
 .hero__text .lead{margin-bottom:30px}
 .hero__img{position:relative;min-height:420px}
-.hero__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 32%}
+.hero__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
 .hero__img:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg-soft) 0,rgba(243,244,246,0) 18%)}
 .hero__arrow{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;border:0;display:grid;place-items:center;z-index:5;box-shadow:0 6px 16px rgba(220,38,38,.35)}
 .hero__arrow svg{width:18px;height:18px}
@@ -116,7 +116,7 @@ p{margin:0 0 1em}
 .hero-search button{border:0;background:var(--ink);color:#fff;padding:0 20px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
 .hero-search__hint{font-size:12px;color:var(--muted);margin-top:10px}
 @media (max-width:860px){
-  .hero__slide{grid-template-columns:1fr}
+  .hero__slide{grid-template-columns:1fr;min-height:0}
   .hero__img{min-height:320px;order:-1}
   .hero__img:after{background:linear-gradient(0deg,var(--bg-soft) 0,rgba(243,244,246,0) 22%)}
   .hero__text{padding:28px var(--gutter) 56px}
@@ -351,4 +351,4 @@ p{margin:0 0 1em}
 .blogger-posts{display:none}
 .post-body-fallback{padding:40px 0}
 
-.footer-abuse{flex-basis:100%}.footer-abuse .widget{margin:0}.footer-abuse a{display:inline;font-size:11px;color:#9a9a9a;text-decoration:underline}
+.footer-abuse{display:none}.footer-abuse .widget{margin:0}.footer-abuse a{display:inline;font-size:11px;color:#9a9a9a;text-decoration:underline}

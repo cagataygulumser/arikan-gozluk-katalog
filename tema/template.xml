@@ -45,7 +45,7 @@ Design:   arikantime.com tasarım dili (Montserrat · beyaz/siyah · kırmızı 
 /* ===== SİTE AYARLARI — burayı düzenleyin ===== */
 window.AO_CONFIG = {
   cdn: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/',
-  whatsapp: '905000000000',            /* WhatsApp numarası: ülke koduyla, boşluksuz */
+  whatsapp: '905074904824',            /* WhatsApp numarası: ülke koduyla, boşluksuz */
   brands: {
     'lee-cooper': { name: 'Lee Cooper', logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/lee-cooper.png', hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p001.jpg', desc: '1908\'den bu yana İngiliz denim mirası. Genç, cesur ve renkli: asetat, metal ve TR90 çerçeveler; clip-on seçenekleri.' },
     'quantum':    { name: 'Quantum',    logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/quantum.png',    hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p001.jpg',    desc: 'Çağdaş çizgiler, titanyum ve asetat. Hafiflik ve erişilebilir lüks anlayışını birleştiren optik ve clip-on modeller.' },
@@ -76,7 +76,7 @@ window.AO_CONFIG = {
             <b:if cond='data:image'>
               <img expr:alt='data:title' expr:src='data:image'/>
             <b:else/>
-              <img alt='Arıkan' class='logo__img' src='https://cdn.arikantime.com/BranchImages/logo.png'/><span class='logo__sub'>Gözlük Kataloğu 2026</span>
+              <img alt='Arıkan' class='logo__img' src='https://cdn.arikantime.com/BranchImages/logo.png'/>
             </b:if>
           </a>
         </b:includable>
@@ -133,9 +133,8 @@ window.AO_CONFIG = {
             <input aria-label='Model kodu' autocomplete='off' name='q' placeholder='Model kodunu yazın: LC1408, Q503, 9599…' type='search'/>
             <button type='submit'>Modeli Bul</button>
           </form>
-          <p class='hero-search__hint'>Model kodu gözlüğün sap iç yüzünde yazar. Örn. <b>LC1408.C1</b> → model LC1408, renk C1.</p>
         </div>
-        <div class='hero__img'><img alt='2026 Lee Cooper optik koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p001.jpg'/></div>
+        <div class='hero__img'><img alt='2026 Lee Cooper optik koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p001-hero.jpg'/></div>
       </div>
       <div class='hero__slide'>
         <div class='hero__text'>
@@ -144,7 +143,7 @@ window.AO_CONFIG = {
           <p class='lead'>Mıknatıslı polarize güneş camı ile numaralı gözlüğünüz saniyeler içinde güneş gözlüğüne dönüşür. Slazenger'da anti-far seçeneği.</p>
           <a class='link-arrow' href='/search/label/Clip-On'>Clip-On modelleri</a>
         </div>
-        <div class='hero__img'><img alt='Quantum clip-on koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p063.jpg'/></div>
+        <div class='hero__img'><img alt='Quantum clip-on koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p063-hero.jpg' style='object-position:50% 15%'/></div>
       </div>
       <div class='hero__slide'>
         <div class='hero__text'>
@@ -153,7 +152,7 @@ window.AO_CONFIG = {
           <p class='lead'>Geniş optik koleksiyon ve koleksiyona yeni eklenen clip-on modeller.</p>
           <a class='link-arrow' href='/search/label/Slazenger'>Slazenger modelleri</a>
         </div>
-        <div class='hero__img'><img alt='Slazenger 2026 optik koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/slazenger-p001.jpg'/></div>
+        <div class='hero__img'><img alt='Slazenger 2026 optik koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/slazenger-p001-hero.jpg'/></div>
       </div>
       <div class='hero__slide'>
         <div class='hero__text'>
@@ -162,7 +161,7 @@ window.AO_CONFIG = {
           <p class='lead'>Altın, pembe altın ve kristal tonlarında feminen metal-asetat tasarımlar.</p>
           <a class='link-arrow' href='/search/label/Belmond'>Belmond modelleri</a>
         </div>
-        <div class='hero__img'><img alt='Belmond 2026 optik koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/belmond-p001.jpg'/></div>
+        <div class='hero__img'><img alt='Belmond 2026 optik koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/belmond-p001-hero.jpg' style='object-position:50% 8%'/></div>
       </div>
       <button aria-label='Önceki' class='hero__arrow hero__arrow--prev'><svg fill='none' stroke='currentColor' stroke-width='2.5' viewBox='0 0 24 24'><path d='m15 5-7 7 7 7'/></svg></button>
       <button aria-label='Sonraki' class='hero__arrow hero__arrow--next'><svg fill='none' stroke='currentColor' stroke-width='2.5' viewBox='0 0 24 24'><path d='m9 5 7 7-7 7'/></svg></button>
@@ -325,7 +324,7 @@ window.AO_CONFIG = {
   <div class='wrap site-footer__in'>
     <div>
       <a class='logo logo--footer' expr:href='data:blog.homepageUrl'><img alt='Arıkan' class='logo__img' src='https://cdn.arikantime.com/BranchImages/logo.png'/></a>
-      <p>Lee Cooper, Quantum, Slazenger ve Belmond gözlük markalarının 2026 koleksiyonları. Modeller yalnızca yetkili optik mağazalarında satılır; bu site satış yapmaz, bilgilendirir.</p>
+      <p>Lee Cooper, Quantum, Slazenger ve Belmond gözlük markalarının 2026 optik ve clip-on koleksiyonları.</p>
       <div class='social'>
         <a aria-label='Instagram' href='https://www.instagram.com/' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z'/></svg></a>
         <a aria-label='YouTube' href='https://www.youtube.com/' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z'/></svg></a>
@@ -361,8 +360,7 @@ window.AO_CONFIG = {
     </div>
   </div>
   <div class='wrap site-footer__bottom'>
-    <span>© 2026 <data:blog.title/> · Tüm hakları saklıdır. Ürün görselleri ve bilgileri 2026 marka kataloglarından alınmıştır.</span>
-    <span>Sitedeki ölçüler ve renk adları üretici kataloğuna göredir; stok ve fiyat için yetkili satış noktasına danışın.</span>
+    <span>© 2026 <data:blog.title/> · Tüm hakları saklıdır.</span>
     <b:section class='footer-abuse' id='sidebar_bottom' name='Sidebar (Bottom)' preferred='yes'>
       <b:widget id='ReportAbuse1' locked='true' title='' type='ReportAbuse' version='2' visible='true'>
         <b:includable id='main'>
@@ -373,7 +371,7 @@ window.AO_CONFIG = {
   </div>
 </footer>
 <button aria-label='Yukarı' class='to-top'><svg fill='none' stroke='currentColor' stroke-width='2.5' viewBox='0 0 24 24' width='18'><path d='m6 14 6-6 6 6'/></svg></button>
-<a aria-label='WhatsApp' class='wa-fab' href='https://wa.me/905000000000' id='wa-fab' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm0-21.6A11.8 11.8 0 0 0 2 18.2L.3 24l6-1.6A11.8 11.8 0 1 0 12 .2z'/></svg></a>
+<a aria-label='WhatsApp' class='wa-fab' href='https://wa.me/905074904824' id='wa-fab' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm0-21.6A11.8 11.8 0 0 0 2 18.2L.3 24l6-1.6A11.8 11.8 0 1 0 12 .2z'/></svg></a>
 <script type='text/javascript'>
 //<![CDATA[
 {{JS}}

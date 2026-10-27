@@ -201,6 +201,10 @@
   /* ---------- header ---------- */
   function initHeader() {
     fixPageLinks();
+    if (CFG.whatsapp) $$('a[href*="wa.me/905000000000"]').forEach(function (a) { a.href = a.href.replace('905000000000', CFG.whatsapp); if (/\+90 500/.test(a.textContent)) a.textContent = '0507 490 48 24'; });
+    // içe aktarılmış eski metinlerdeki uyarı/not satırlarını kaldır
+    $$('.page .note').forEach(function (n) { if (/Blogger/.test(n.textContent)) n.parentNode.removeChild(n); });
+    $$('.faq p').forEach(function (pp) { pp.textContent = pp.textContent.replace(/\s*Bu site satış yapmaz, modelin tüm bilgilerini tek yerde sunar\./, ''); });
     var burger = $('.burger'), nav = $('.nav');
     if (burger && nav) burger.addEventListener('click', function () { nav.classList.toggle('open'); BODY.classList.toggle('nav-open'); });
     $$('.search').forEach(bindSearch);
