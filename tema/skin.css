@@ -422,3 +422,18 @@ p{margin:0 0 1em}
 .article__body img{border-radius:var(--radius)}
 .article__tip{background:var(--bg-soft);border-left:3px solid var(--red);padding:16px 18px;border-radius:0 var(--radius) var(--radius) 0;margin:24px 0}
 .article__labels{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}
+
+/* ---- Karşılaştırma kaydırıcısı (clip-on / optik) ---- */
+.cmp{position:relative;user-select:none;-webkit-user-select:none;touch-action:none;background:#F3F4F6;border-radius:var(--radius);overflow:hidden;cursor:ew-resize}
+.cmp__stage{position:relative;width:100%}
+.cmp__stage img{display:block;width:100%;height:auto;pointer-events:none}
+.cmp__right{position:absolute;inset:0;clip-path:inset(0 0 0 50%)}
+.cmp__bar{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;transform:translateX(-1px);box-shadow:0 0 0 1px rgba(0,0,0,.06)}
+.cmp__handle{position:absolute;top:50%;left:50%;width:52px;height:52px;border-radius:50%;background:#fff;box-shadow:0 6px 18px rgba(17,24,39,.18);transform:translate(-50%,-50%);display:grid;place-items:center;color:var(--ink);font-size:18px;letter-spacing:2px;font-weight:300}
+.cmp__handle:after{content:"\2039\00a0\203A"}
+.cmp__labels{display:flex;justify-content:space-between;gap:20px;padding:22px 4px 0}
+.cmp__label{font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--ink)}
+.cmp__label small{display:block;font-size:11px;letter-spacing:.05em;text-transform:none;font-weight:400;color:var(--muted-2);margin-top:4px}
+.cmp__label--r{text-align:right}
+.cmp-wrap{max-width:900px;margin:0 auto}
+.cmp-title{text-align:center;font-weight:300;letter-spacing:.3em;text-transform:uppercase;font-size:clamp(18px,2.4vw,28px);margin-bottom:28px}

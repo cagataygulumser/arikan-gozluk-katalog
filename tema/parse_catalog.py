@@ -207,7 +207,17 @@ for pno in range(len(doc)):
         # etiket -> değer
         label_spans = [s for s in spans if s['text'].strip().upper() in LABELS]
         variants = {}
+        # katalogda aynı renk kodu birden fazla yazılmışsa (dizgi hatası) konuma göre C1, C2... olarak yeniden numarala
+        codes.sort(key=lambda c: (round(c['bbox'][1] / 60), c['bbox'][0]))
+        seen = set()
         for c in codes:
+            if c['code'] in seen:
+                base = c['code'].split('.C')[0]; n = 1
+                while f'{base}.C{n}' in seen:
+                    n += 1
+                warnings.append(f'p{pno+1}: {c["code"]} tekrar -> {base}.C{n}')
+                c['code'] = f'{base}.C{n}'
+            seen.add(c['code'])
             variants[c['code']] = {'code': c['code'], 'attrs': {}, 'images': {}}
         def owner(x, y):
             # aynı sütunda, üstte olan en yakın kod

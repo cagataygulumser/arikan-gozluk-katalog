@@ -2230,6 +2230,36 @@
     {
      "code": "LC3234.C1",
      "attrs": {
+      "frame_color": "Siyah / Altın",
+      "temple_color": "Siyah / Altın",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "LC3234-C1-on.jpg",
+      "side": "LC3234-C1-yan.jpg",
+      "clip": "LC3234-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "LC3234.C2",
+     "attrs": {
+      "frame_color": "Siyah / Gun",
+      "temple_color": "Siyah / Gun",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "LC3234-C2-on.jpg",
+      "side": "LC3234-C2-yan.jpg",
+      "clip": "LC3234-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "LC3234.C3",
+     "attrs": {
       "frame_color": "Lacivert / Gümüş",
       "temple_color": "Lacivert / Gümüş",
       "tip_color": "Lacivert",
@@ -2237,9 +2267,9 @@
       "clip_lens_color": "Füme"
      },
      "images": {
-      "front": "LC3234-C1-on.jpg",
-      "side": "LC3234-C1-yan.jpg",
-      "clip": "LC3234-C1-clip.jpg"
+      "front": "LC3234-C3-on.jpg",
+      "side": "LC3234-C3-yan.jpg",
+      "clip": "LC3234-C3-clip.jpg"
      }
     }
    ],
@@ -2270,6 +2300,36 @@
     {
      "code": "LC3235.C1",
      "attrs": {
+      "frame_color": "Siyah / Gümüş",
+      "temple_color": "Siyah / Gümüş",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "LC3235-C1-on.jpg",
+      "side": "LC3235-C1-yan.jpg",
+      "clip": "LC3235-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "LC3235.C2",
+     "attrs": {
+      "frame_color": "Siyah / Mavi",
+      "temple_color": "Siyah / Mavi",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "LC3235-C2-on.jpg",
+      "side": "LC3235-C2-yan.jpg",
+      "clip": "LC3235-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "LC3235.C3",
+     "attrs": {
       "frame_color": "Siyah / Kırmızı",
       "temple_color": "Siyah / Kırmızı",
       "tip_color": "Siyah",
@@ -2277,9 +2337,9 @@
       "clip_lens_color": "Yeşil"
      },
      "images": {
-      "front": "LC3235-C1-on.jpg",
-      "side": "LC3235-C1-yan.jpg",
-      "clip": "LC3235-C1-clip.jpg"
+      "front": "LC3235-C3-on.jpg",
+      "side": "LC3235-C3-yan.jpg",
+      "clip": "LC3235-C3-clip.jpg"
      }
     }
    ],
@@ -2310,9 +2370,9 @@
     {
      "code": "LC3284.C1",
      "attrs": {
-      "frame_color": "Koyu Gun",
-      "temple_color": "Gümüş / Koyu Gri",
-      "tip_color": "Mat Koyu Yeşil / Mat Koyu Gri",
+      "frame_color": "Siyah",
+      "temple_color": "Siyah / Gümüş",
+      "tip_color": "Siyah",
       "clip_frame_color": "Siyah",
       "clip_lens_color": "Füme"
      },
@@ -2320,6 +2380,51 @@
       "front": "LC3284-C1-on.jpg",
       "side": "LC3284-C1-yan.jpg",
       "clip": "LC3284-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "LC3284.C2",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Yeşil / / Gümüş",
+      "tip_color": "Yeşil",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "LC3284-C2-on.jpg",
+      "side": "LC3284-C2-yan.jpg",
+      "clip": "LC3284-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "LC3284.C3",
+     "attrs": {
+      "frame_color": "Koyu Gun",
+      "temple_color": "Koyu Gun / Lacivert",
+      "tip_color": "Lacivert",
+      "clip_frame_color": "Lacivert",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "LC3284-C3-on.jpg",
+      "side": "LC3284-C3-yan.jpg",
+      "clip": "LC3284-C3-clip.jpg"
+     }
+    },
+    {
+     "code": "LC3284.C4",
+     "attrs": {
+      "frame_color": "Koyu Gun",
+      "temple_color": "Gümüş / Koyu Gri",
+      "tip_color": "Mat Koyu Yeşil / Mat Koyu Gri",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "LC3284-C4-on.jpg",
+      "side": "LC3284-C4-yan.jpg",
+      "clip": "LC3284-C4-clip.jpg"
      }
     }
    ],
@@ -2350,6 +2455,36 @@
     {
      "code": "LC3285.C1",
      "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah / Gümüş",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "LC3285-C1-on.jpg",
+      "side": "LC3285-C1-yan.jpg",
+      "clip": "LC3285-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "LC3285.C2",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Gümüş / Yeşil",
+      "tip_color": "Yeşil",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "LC3285-C2-on.jpg",
+      "side": "LC3285-C2-yan.jpg",
+      "clip": "LC3285-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "LC3285.C3",
+     "attrs": {
       "frame_color": "Koyu Gun",
       "temple_color": "Koyu Gun / Lacivert",
       "tip_color": "Lacivert",
@@ -2357,9 +2492,9 @@
       "clip_lens_color": "Füme"
      },
      "images": {
-      "front": "LC3285-C1-on.jpg",
-      "side": "LC3285-C1-yan.jpg",
-      "clip": "LC3285-C1-clip.jpg"
+      "front": "LC3285-C3-on.jpg",
+      "side": "LC3285-C3-yan.jpg",
+      "clip": "LC3285-C3-clip.jpg"
      }
     }
    ],
@@ -3595,6 +3730,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q503"
   },
@@ -3655,6 +3791,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q551"
   },
@@ -3715,6 +3852,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q554"
   },
@@ -3774,6 +3912,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q742"
   },
@@ -3834,6 +3973,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q764"
   },
@@ -3894,6 +4034,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q769"
   },
@@ -3954,6 +4095,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q788"
   },
@@ -4014,6 +4156,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q789"
   },
@@ -4074,6 +4217,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q790"
   },
@@ -4134,6 +4278,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q791"
   },
@@ -4194,6 +4339,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q792"
   },
@@ -4254,6 +4400,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q793"
   },
@@ -4326,6 +4473,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1014"
   },
@@ -4386,6 +4534,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1015"
   },
@@ -4446,6 +4595,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1017"
   },
@@ -4518,6 +4668,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1018"
   },
@@ -4578,6 +4729,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1019"
   },
@@ -4638,6 +4790,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1030"
   },
@@ -4698,6 +4851,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1031"
   },
@@ -4758,6 +4912,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1032"
   },
@@ -4818,6 +4973,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1033"
   },
@@ -4878,6 +5034,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1034"
   },
@@ -4938,6 +5095,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1035"
   },
@@ -4995,6 +5153,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1036"
   },
@@ -5055,6 +5214,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1037"
   },
@@ -5115,6 +5275,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1038"
   },
@@ -5184,6 +5345,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1013"
   },
@@ -5253,6 +5415,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1023"
   },
@@ -5322,6 +5485,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1024"
   },
@@ -5391,6 +5555,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "quantum",
    "slug": "quantum-q1025"
   },
@@ -5415,18 +5580,6 @@
    },
    "variants": [
     {
-     "code": "9599.C3",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah",
-      "tip_color": "Demi"
-     },
-     "images": {
-      "front": "9599-C3-on.jpg",
-      "side": "9599-C3-yan.jpg"
-     }
-    },
-    {
      "code": "9599.C2",
      "attrs": {
       "frame_color": "Lacivert",
@@ -5436,6 +5589,18 @@
      "images": {
       "front": "9599-C2-on.jpg",
       "side": "9599-C2-yan.jpg"
+     }
+    },
+    {
+     "code": "9599.C3",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah",
+      "tip_color": "Demi"
+     },
+     "images": {
+      "front": "9599-C3-on.jpg",
+      "side": "9599-C3-yan.jpg"
      }
     }
    ],
@@ -5464,18 +5629,6 @@
    },
    "variants": [
     {
-     "code": "9635.C2",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah",
-      "tip_color": "Demi"
-     },
-     "images": {
-      "front": "9635-C2-on.jpg",
-      "side": "9635-C2-yan.jpg"
-     }
-    },
-    {
      "code": "9635.C1",
      "attrs": {
       "frame_color": "Siyah",
@@ -5485,6 +5638,18 @@
      "images": {
       "front": "9635-C1-on.jpg",
       "side": "9635-C1-yan.jpg"
+     }
+    },
+    {
+     "code": "9635.C2",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah",
+      "tip_color": "Demi"
+     },
+     "images": {
+      "front": "9635-C2-on.jpg",
+      "side": "9635-C2-yan.jpg"
      }
     },
     {
@@ -10000,6 +10165,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "belmond",
    "slug": "belmond-b5691"
   },
@@ -10048,6 +10214,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "belmond",
    "slug": "belmond-b5704"
   },
@@ -10108,6 +10275,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "belmond",
    "slug": "belmond-b5705"
   },
@@ -10168,6 +10336,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "belmond",
    "slug": "belmond-b5785"
   },
@@ -10228,6 +10397,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "belmond",
    "slug": "belmond-b5804"
   },
@@ -10288,6 +10458,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "belmond",
    "slug": "belmond-b5809"
   },
@@ -10360,6 +10531,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "belmond",
    "slug": "belmond-b5810"
   },
@@ -10420,6 +10592,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "belmond",
    "slug": "belmond-b5811"
   },
@@ -10480,6 +10653,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "belmond",
    "slug": "belmond-b5812"
   },
@@ -10549,6 +10723,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "belmond",
    "slug": "belmond-b5801"
   },
@@ -10618,6 +10793,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "belmond",
    "slug": "belmond-b5807"
   },
@@ -10687,6 +10863,7 @@
      }
     }
    ],
+   "hero_variant": null,
    "brand_slug": "belmond",
    "slug": "belmond-b5813"
   }

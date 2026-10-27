@@ -178,7 +178,7 @@
   }
 
   /* ---------- sabit sayfa bağlantıları (Blogger'ın verdiği gerçek adreslere çevir) ---------- */
-  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim' };
+  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/clip-on-demo.html': 'Clip-On Demo' };
   function fixPageLinks() {
     var apply = function (map) {
       $$('a[href^="/p/"]').forEach(function (a) {
@@ -537,9 +537,37 @@
     }).catch(function () { $('#dealer-map').innerHTML = '<div class="empty">Harita yüklenemedi.</div>'; });
   }
 
+  /* ---------- karşılaştırma kaydırıcısı ---------- */
+  function initCompare() {
+    $$('.cmp[data-left][data-right]').forEach(function (el) {
+      if (el.getAttribute('data-ready')) return; el.setAttribute('data-ready', '1');
+      var L = el.getAttribute('data-left'), R = el.getAttribute('data-right');
+      var ll = el.getAttribute('data-left-label') || 'Optik', rl = el.getAttribute('data-right-label') || 'Clip-On';
+      var ls = el.getAttribute('data-left-sub') || '', rs = el.getAttribute('data-right-sub') || '';
+      var pos = parseFloat(el.getAttribute('data-start') || '50');
+      el.innerHTML = '<div class="cmp__stage"><img src="' + esc(L) + '" alt="' + esc(ll) + '" draggable="false"><div class="cmp__right"><img src="' + esc(R) + '" alt="' + esc(rl) + '" draggable="false"></div><div class="cmp__bar"></div><div class="cmp__handle" role="slider" tabindex="0" aria-label="Karşılaştırma" aria-valuemin="0" aria-valuemax="100"></div></div>';
+      var labels = document.createElement('div'); labels.className = 'cmp__labels';
+      labels.innerHTML = '<div class="cmp__label">' + esc(ll) + (ls ? '<small>' + esc(ls) + '</small>' : '') + '</div><div class="cmp__label cmp__label--r">' + esc(rl) + (rs ? '<small>' + esc(rs) + '</small>' : '') + '</div>';
+      el.parentNode.insertBefore(labels, el.nextSibling);
+      var stage = $('.cmp__stage', el), right = $('.cmp__right', el), bar = $('.cmp__bar', el), handle = $('.cmp__handle', el);
+      function set(p) { pos = Math.max(0, Math.min(100, p)); right.style.clipPath = 'inset(0 0 0 ' + pos + '%)'; bar.style.left = pos + '%'; handle.style.left = pos + '%'; handle.setAttribute('aria-valuenow', Math.round(pos)); }
+      function fromEvent(e) { var b = stage.getBoundingClientRect(); var x = (e.touches ? e.touches[0].clientX : e.clientX) - b.left; set(x / b.width * 100); }
+      var drag = false;
+      el.addEventListener('pointerdown', function (e) { drag = true; el.setPointerCapture && el.setPointerCapture(e.pointerId); fromEvent(e); });
+      el.addEventListener('pointermove', function (e) { if (drag) fromEvent(e); });
+      ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) { el.addEventListener(t, function () { drag = false; }); });
+      handle.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') { set(pos - 3); e.preventDefault(); } if (e.key === 'ArrowRight') { set(pos + 3); e.preventDefault(); } });
+      set(pos);
+      // ilk açılışta kısa bir "göz kırpma" animasyonu
+      var t0 = null; function anim(ts) { if (!t0) t0 = ts; var k = (ts - t0) / 1400; if (k >= 1 || drag) { if (!drag) set(50); return; } set(50 + Math.sin(k * Math.PI * 2) * 14); requestAnimationFrame(anim); }
+      setTimeout(function () { requestAnimationFrame(anim); }, 600);
+    });
+  }
+
   /* ---------- başlat ---------- */
   document.addEventListener('DOMContentLoaded', function () {
     initHeader();
+    initCompare();
     if (VIEW === 'home') initHome();
     else if (VIEW === 'collection') initCollection();
     else if (VIEW === 'post') { initModel(); initArticle(); }

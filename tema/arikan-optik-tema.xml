@@ -466,6 +466,21 @@ p{margin:0 0 1em}
 .article__tip{background:var(--bg-soft);border-left:3px solid var(--red);padding:16px 18px;border-radius:0 var(--radius) var(--radius) 0;margin:24px 0}
 .article__labels{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}
 
+/* ---- Karşılaştırma kaydırıcısı (clip-on / optik) ---- */
+.cmp{position:relative;user-select:none;-webkit-user-select:none;touch-action:none;background:#F3F4F6;border-radius:var(--radius);overflow:hidden;cursor:ew-resize}
+.cmp__stage{position:relative;width:100%}
+.cmp__stage img{display:block;width:100%;height:auto;pointer-events:none}
+.cmp__right{position:absolute;inset:0;clip-path:inset(0 0 0 50%)}
+.cmp__bar{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;transform:translateX(-1px);box-shadow:0 0 0 1px rgba(0,0,0,.06)}
+.cmp__handle{position:absolute;top:50%;left:50%;width:52px;height:52px;border-radius:50%;background:#fff;box-shadow:0 6px 18px rgba(17,24,39,.18);transform:translate(-50%,-50%);display:grid;place-items:center;color:var(--ink);font-size:18px;letter-spacing:2px;font-weight:300}
+.cmp__handle:after{content:"\2039\00a0\203A"}
+.cmp__labels{display:flex;justify-content:space-between;gap:20px;padding:22px 4px 0}
+.cmp__label{font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--ink)}
+.cmp__label small{display:block;font-size:11px;letter-spacing:.05em;text-transform:none;font-weight:400;color:var(--muted-2);margin-top:4px}
+.cmp__label--r{text-align:right}
+.cmp-wrap{max-width:900px;margin:0 auto}
+.cmp-title{text-align:center;font-weight:300;letter-spacing:.3em;text-transform:uppercase;font-size:clamp(18px,2.4vw,28px);margin-bottom:28px}
+
 ]]></b:skin>
 <script type='text/javascript'>
 //<![CDATA[
@@ -808,6 +823,7 @@ window.AO_CONFIG = {
       <a href='/search'>Tüm modeller</a>
       <a href='/search/label/Optik'>Optik çerçeveler</a>
       <a href='/search/label/Clip-On'>Clip-On</a>
+      <a href='/p/clip-on-demo.html'>Clip-On demo</a>
       <a href='/search/label/Yeni'>Yeni gelenler</a>
       <a href='/search/label/Polarize'>Polarize</a>
     </div>
@@ -1020,7 +1036,7 @@ window.AO_CONFIG = {
   }
 
   /* ---------- sabit sayfa bağlantıları (Blogger'ın verdiği gerçek adreslere çevir) ---------- */
-  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim' };
+  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/clip-on-demo.html': 'Clip-On Demo' };
   function fixPageLinks() {
     var apply = function (map) {
       $$('a[href^="/p/"]').forEach(function (a) {
@@ -1379,9 +1395,37 @@ window.AO_CONFIG = {
     }).catch(function () { $('#dealer-map').innerHTML = '<div class="empty">Harita yüklenemedi.</div>'; });
   }
 
+  /* ---------- karşılaştırma kaydırıcısı ---------- */
+  function initCompare() {
+    $$('.cmp[data-left][data-right]').forEach(function (el) {
+      if (el.getAttribute('data-ready')) return; el.setAttribute('data-ready', '1');
+      var L = el.getAttribute('data-left'), R = el.getAttribute('data-right');
+      var ll = el.getAttribute('data-left-label') || 'Optik', rl = el.getAttribute('data-right-label') || 'Clip-On';
+      var ls = el.getAttribute('data-left-sub') || '', rs = el.getAttribute('data-right-sub') || '';
+      var pos = parseFloat(el.getAttribute('data-start') || '50');
+      el.innerHTML = '<div class="cmp__stage"><img src="' + esc(L) + '" alt="' + esc(ll) + '" draggable="false"><div class="cmp__right"><img src="' + esc(R) + '" alt="' + esc(rl) + '" draggable="false"></div><div class="cmp__bar"></div><div class="cmp__handle" role="slider" tabindex="0" aria-label="Karşılaştırma" aria-valuemin="0" aria-valuemax="100"></div></div>';
+      var labels = document.createElement('div'); labels.className = 'cmp__labels';
+      labels.innerHTML = '<div class="cmp__label">' + esc(ll) + (ls ? '<small>' + esc(ls) + '</small>' : '') + '</div><div class="cmp__label cmp__label--r">' + esc(rl) + (rs ? '<small>' + esc(rs) + '</small>' : '') + '</div>';
+      el.parentNode.insertBefore(labels, el.nextSibling);
+      var stage = $('.cmp__stage', el), right = $('.cmp__right', el), bar = $('.cmp__bar', el), handle = $('.cmp__handle', el);
+      function set(p) { pos = Math.max(0, Math.min(100, p)); right.style.clipPath = 'inset(0 0 0 ' + pos + '%)'; bar.style.left = pos + '%'; handle.style.left = pos + '%'; handle.setAttribute('aria-valuenow', Math.round(pos)); }
+      function fromEvent(e) { var b = stage.getBoundingClientRect(); var x = (e.touches ? e.touches[0].clientX : e.clientX) - b.left; set(x / b.width * 100); }
+      var drag = false;
+      el.addEventListener('pointerdown', function (e) { drag = true; el.setPointerCapture && el.setPointerCapture(e.pointerId); fromEvent(e); });
+      el.addEventListener('pointermove', function (e) { if (drag) fromEvent(e); });
+      ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) { el.addEventListener(t, function () { drag = false; }); });
+      handle.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') { set(pos - 3); e.preventDefault(); } if (e.key === 'ArrowRight') { set(pos + 3); e.preventDefault(); } });
+      set(pos);
+      // ilk açılışta kısa bir "göz kırpma" animasyonu
+      var t0 = null; function anim(ts) { if (!t0) t0 = ts; var k = (ts - t0) / 1400; if (k >= 1 || drag) { if (!drag) set(50); return; } set(50 + Math.sin(k * Math.PI * 2) * 14); requestAnimationFrame(anim); }
+      setTimeout(function () { requestAnimationFrame(anim); }, 600);
+    });
+  }
+
   /* ---------- başlat ---------- */
   document.addEventListener('DOMContentLoaded', function () {
     initHeader();
+    initCompare();
     if (VIEW === 'home') initHome();
     else if (VIEW === 'collection') initCollection();
     else if (VIEW === 'post') { initModel(); initArticle(); }
