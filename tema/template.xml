@@ -113,6 +113,7 @@ window.AO_CONFIG = {
       <a href='/p/yetkili-satis-noktalari.html'>Satış Noktaları</a>
       <a href='/p/sik-sorulan-sorular.html'>S.S.S.</a>
       <a href='/p/iletisim.html'>İletişim</a>
+      <a aria-label='Favorilerim' class='nav__fav' href='/search?fav=1' title='Favorilerim'><svg viewBox='0 0 24 24'><path d='M12 21s-7.5-4.6-9.5-9.2C1 8 3.5 4.5 7 4.5c2 0 3.5 1 5 2.8 1.5-1.8 3-2.8 5-2.8 3.5 0 6 3.5 4.5 7.3C19.5 16.4 12 21 12 21z'/></svg><span class='nav__favn' data-fav-count='1'></span></a>
       <div class='search-wrap'>
         <form action='/search' class='search' method='get' role='search'>
           <input aria-label='Model kodu ara' autocomplete='off' name='q' placeholder='Model kodu ya da "mavi clip-on"' type='search'/>

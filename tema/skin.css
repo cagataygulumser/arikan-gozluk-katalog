@@ -696,3 +696,16 @@ body.ast-open{overflow:hidden}
 .guide-size{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px;max-width:460px}
 .guide-size input{flex:1;min-width:180px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;border-radius:var(--radius);padding:12px 14px;font:inherit;font-size:15px}
 .guide-size input::placeholder{color:#C9CDD2}
+
+/* ---- favoriler --------------------------------------------------------- */
+.fav{position:absolute;top:10px;right:10px;z-index:3;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.92);display:grid;place-items:center;color:var(--muted-2);transition:.15s}
+.fav svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+.fav:hover{color:var(--red);border-color:var(--red)}
+.fav.on{color:var(--red);border-color:var(--red)}.fav.on svg{fill:var(--red)}
+.card__img{position:relative}
+.fav--text{position:static;width:auto;height:auto;border-radius:var(--radius);display:inline-flex;gap:10px;padding:14px 26px}
+.fav--text svg{width:16px;height:16px}
+.nav__fav{display:inline-flex;align-items:center;gap:4px;padding:10px 8px!important;position:relative;color:var(--ink)}
+.nav__fav svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+.nav__favn{font-size:10px;font-weight:600;background:var(--red);color:#fff;border-radius:999px;padding:1px 6px;line-height:1.4}
+.fav-share,.fav-wa{color:var(--red);text-decoration:underline}

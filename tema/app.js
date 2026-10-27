@@ -108,6 +108,19 @@
     });
   }
 
+  /* ---------- favoriler ---------- */
+  var FAV_KEY = 'ao_fav_v1';
+  function favGet() { try { return JSON.parse(localStorage.getItem(FAV_KEY) || '[]'); } catch (e) { return []; } }
+  function favHas(c) { return favGet().indexOf(c) >= 0; }
+  function favToggle(c) { var l = favGet(), i = l.indexOf(c); if (i >= 0) l.splice(i, 1); else l.push(c); try { localStorage.setItem(FAV_KEY, JSON.stringify(l)); } catch (e) { } track(i >= 0 ? 'favori_cikar' : 'favori_ekle', { model: c }); favSync(); return i < 0; }
+  function favSync() {
+    var l = favGet();
+    $$('[data-fav]').forEach(function (b) { var on = l.indexOf(b.getAttribute('data-fav')) >= 0; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); if (b.classList.contains('fav--text')) $('span', b).textContent = on ? 'Favorilerde' : 'Favorilere ekle'; });
+    $$('[data-fav-count]').forEach(function (el) { el.textContent = l.length || ''; el.style.display = l.length ? '' : 'none'; });
+  }
+  function favBtn(code, text) { return '<button class="fav' + (text ? ' fav--text btn btn--ghost' : '') + (favHas(code) ? ' on' : '') + '" type="button" data-fav="' + esc(code) + '" aria-label="Favorilere ekle" aria-pressed="' + (favHas(code) ? 'true' : 'false') + '"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.5-9.2C1 8 3.5 4.5 7 4.5c2 0 3.5 1 5 2.8 1.5-1.8 3-2.8 5-2.8 3.5 0 6 3.5 4.5 7.3C19.5 16.4 12 21 12 21z"/></svg>' + (text ? '<span>' + (favHas(code) ? 'Favorilerde' : 'Favorilere ekle') + '</span>' : '') + '</button>'; }
+  document.addEventListener('click', function (e) { var b = e.target.closest && e.target.closest('[data-fav]'); if (!b) return; e.preventDefault(); e.stopPropagation(); favToggle(b.getAttribute('data-fav')); });
+
   /* ---------- kart ---------- */
   function card(m) {
     var b = brandInfo(m);
@@ -118,7 +131,7 @@
     if (m.category === 'Clip-On') badges += '<span class="badge badge--dark">Clip-On</span>';
     if (m.antifar) badges += '<span class="badge">Anti-Far</span>';
     return '<a class="card" href="' + esc(postUrl(m)) + '" data-code="' + esc(m.code) + '">' +
-      '<div class="card__img"><div class="card__badges">' + badges + '</div>' +
+      '<div class="card__img"><div class="card__badges">' + badges + '</div>' + favBtn(m.code) +
       '<img class="front" loading="lazy" src="' + esc(front) + '" alt="' + esc(b.name + ' ' + m.code + ' gözlük önden görünüm') + '">' +
       (side ? '<img class="side" loading="lazy" src="' + esc(side) + '" alt="' + esc(b.name + ' ' + m.code + ' yandan görünüm') + '">' : '') +
       '</div><div class="card__body"><div class="card__brand">' + esc(b.name) + ' · ' + esc(catLabel(m)) + '</div>' +
@@ -330,6 +343,7 @@
     (function () { var qs = location.search.replace(/^\?/, '').split('&'); qs.forEach(function (kv) { var i = kv.indexOf('='); if (i < 0) return; var k = kv.slice(0, i), v = decodeURIComponent(kv.slice(i + 1)); if (filt[k] && v) filt[k] = v.split(',').filter(Boolean); }); })();
     var initial = (LABEL || '').trim();
     var q = (QUERY || '').trim();
+    var favParam = (location.search.match(/[?&]fav=([^&]*)/) || [])[1]; favParam = favParam ? decodeURIComponent(favParam) : ''; var favList = null;
     var head = $('#coll-title'), lead = $('#coll-lead'), logoEl = $('#coll-logo'), count = $('#coll-count');
     if (slug(initial) === 'blog') { initBlogList(); return; }
     ready().then(function () {
@@ -343,6 +357,13 @@
       else if (/yeni/i.test(initial)) { filt.feat = ['new']; head.textContent = 'Koleksiyona Yeni Eklenenler'; lead.textContent = '2026 sezonunda koleksiyona katılan en yeni modeller.'; }
       else if (/polar/i.test(initial)) { filt.feat = ['polar']; head.textContent = 'Polarize Camlı Modeller'; }
       else if (/anti/i.test(initial)) { filt.feat = ['antifar']; head.textContent = 'Anti-Far Seçenekli Modeller'; }
+      else if (favParam) {
+        var codes = favParam === '1' ? favGet() : favParam.split(',');
+        favList = codes; head.textContent = favParam === '1' ? 'Favorilerim' : 'Paylaşılan liste'; var fn = codes.length;
+        lead.innerHTML = (fn ? fn + ' model' : 'Henüz favori yok. Kartlardaki kalp simgesiyle model ekleyin.') + (fn ? ' · <a class="fav-share" href="#" data-act="share">Listeyi paylaş</a> · <a class="fav-wa" href="https://wa.me/' + esc(CFG.whatsapp || '') + '?text=' + encodeURIComponent('Merhaba, şu modeller hakkında bilgi almak istiyorum: ' + codes.join(', ')) + '" target="_blank" rel="noopener">WhatsApp\'tan sor</a>' : '');
+        var shareA = $('[data-act=share]', lead); if (shareA) shareA.addEventListener('click', function (e) { e.preventDefault(); var url = location.origin + '/search?fav=' + codes.join(','); track('favori_paylas', { adet: fn }); if (navigator.share) navigator.share({ title: 'Arıkan Optik · gözlük listem', url: url }).catch(function () { }); else if (navigator.clipboard) navigator.clipboard.writeText(url).then(function () { shareA.textContent = 'Bağlantı kopyalandı'; }); });
+        if (!fn) { buildFilters(ms); $('#coll-grid').innerHTML = ''; count.textContent = '0 model'; return; }
+      }
       else if (q) { head.textContent = '"' + q + '" için sonuçlar'; var exact = findExact(q); if (exact && state.posts[exact.code]) { location.replace(state.posts[exact.code] + variantHash(q, exact)); return; } var list0 = searchModels(q); if (lastSearch && lastSearch.chips.length) lead.innerHTML = '<span class="qlead">Anladığımız:</span> ' + chipHtml(lastSearch.chips) + (lastSearch.relaxed === 'all' ? '<br><small class="qnote">Bu ifadeyi eşleştiremedik; tüm modeller listeleniyor. Model kodu ya da "mavi clip-on", "yuvarlak titanyum" gibi bir ifade deneyin.</small>' : lastSearch.relaxed ? '<br><small class="qnote">Tüm ölçütlere uyan model yok; en yakın sonuçlar listeleniyor.</small>' : ''); else if (lastSearch && lastSearch.relaxed === 'all') lead.innerHTML = '<small class="qnote">"' + esc(q) + '" ifadesini eşleştiremedik; tüm modeller listeleniyor. Model kodu ya da "mavi clip-on", "yuvarlak titanyum" gibi bir ifade deneyin.</small>'; }
       else if (initial) { var matHit = ms.some(function (m) { return slug(frameMaterial(m)) === bslug; }); if (matHit) { filt.mat = [bslug]; head.textContent = initial + ' Çerçeveler'; } else head.textContent = initial; }
       else { head.textContent = 'Tüm Modeller'; lead.textContent = 'Lee Cooper, Quantum, Slazenger ve Belmond 2026 koleksiyonlarının tamamı.'; }
@@ -390,6 +411,7 @@
     }
     function apply() {
       var ms = state.models.filter(function (m) {
+        if (favList && favList.indexOf(m.code) < 0) return false;
         if (q && searchModels(q).indexOf(m) < 0) return false;
         if (filt.brand.length && filt.brand.indexOf(m.brand_slug) < 0) return false;
         if (filt.cat.length && filt.cat.indexOf(m.category) < 0) return false;
@@ -475,6 +497,7 @@
     lb.addEventListener('click', function () { lb.classList.remove('open'); });
     // paylaş
     $$('a[href^="https://wa.me/?text="]').forEach(function (a) { a.href = 'https://wa.me/?text=' + encodeURIComponent(document.title.split(' – ')[0] + ' ' + location.href.split('#')[0]); });
+    var ctaBox = $('.model .cta'); if (ctaBox && !$('[data-fav]', ctaBox)) { ctaBox.insertAdjacentHTML('beforeend', favBtn(code, true)); favSync(); }
     var sh = $('[data-share]'); if (sh) sh.addEventListener('click', function (e) { e.preventDefault(); if (navigator.share) navigator.share({ title: document.title, url: location.href }); else { navigator.clipboard && navigator.clipboard.writeText(location.href); sh.textContent = 'Bağlantı kopyalandı'; } });
     // ilgili modeller + breadcrumb
     ready().then(function () {
@@ -750,7 +773,7 @@
     initHeader();
     initCompare();
     initAssistant();
-    orderBadge();
+    orderBadge(); favSync();
     if (VIEW === 'home') initHome();
     else if (VIEW === 'collection') initCollection();
     else if (VIEW === 'post') { initModel(); initArticle(); initOrderButton(); }
