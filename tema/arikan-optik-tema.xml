@@ -87,6 +87,8 @@ p{margin:0 0 1em}
 .site-header__in{display:flex;align-items:center;gap:28px;height:72px}
 .logo{display:flex;align-items:center;gap:10px;font-size:26px;font-weight:300;letter-spacing:.02em;color:var(--ink);white-space:nowrap}
 .logo img{height:40px;width:auto}
+.logo__img{height:42px!important;width:auto}
+.logo--footer .logo__img{filter:brightness(0) invert(1);opacity:.9;height:36px!important}
 .logo__mark{width:34px;height:34px;flex:none}
 .logo__sub{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-left:4px;font-weight:500}
 .nav{display:flex;align-items:center;gap:4px;margin-left:auto}
@@ -120,6 +122,7 @@ p{margin:0 0 1em}
   .burger{display:block}
   .logo{font-size:22px;min-width:0}
   .logo__sub{display:none}
+  .logo__img{height:32px!important}
   .site-header__in{gap:12px}
   .nav{position:fixed;inset:72px 0 0 0;background:#fff;flex-direction:column;align-items:stretch;padding:16px var(--gutter);gap:0;display:none;overflow:auto;margin:0}
   .nav.open{display:flex}
@@ -431,8 +434,7 @@ window.AO_CONFIG = {
             <b:if cond='data:image'>
               <img expr:alt='data:title' expr:src='data:image'/>
             <b:else/>
-              <svg class='logo__mark' viewBox='0 0 40 40' aria-hidden='true'><circle cx='16' cy='20' r='12' fill='none' stroke='#DC2626' stroke-width='4'/><circle cx='26' cy='20' r='9' fill='none' stroke='#111827' stroke-width='3'/></svg>
-              <span><data:title/></span><span class='logo__sub'>2026 Katalog</span>
+              <img alt='Arıkan' class='logo__img' src='https://cdn.arikantime.com/BranchImages/logo.png'/><span class='logo__sub'>Gözlük Kataloğu 2026</span>
             </b:if>
           </a>
         </b:includable>
@@ -681,7 +683,7 @@ window.AO_CONFIG = {
 <footer class='site-footer'>
   <div class='wrap site-footer__in'>
     <div>
-      <a class='logo' expr:href='data:blog.homepageUrl'><svg class='logo__mark' viewBox='0 0 40 40' aria-hidden='true'><circle cx='16' cy='20' r='12' fill='none' stroke='#DC2626' stroke-width='4'/><circle cx='26' cy='20' r='9' fill='none' stroke='#fff' stroke-width='3'/></svg><span><data:blog.title/></span></a>
+      <a class='logo logo--footer' expr:href='data:blog.homepageUrl'><img alt='Arıkan' class='logo__img' src='https://cdn.arikantime.com/BranchImages/logo.png'/></a>
       <p>Lee Cooper, Quantum, Slazenger ve Belmond gözlük markalarının 2026 koleksiyonları. Modeller yalnızca yetkili optik mağazalarında satılır; bu site satış yapmaz, bilgilendirir.</p>
       <div class='social'>
         <a aria-label='Instagram' href='https://www.instagram.com/' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z'/></svg></a>
