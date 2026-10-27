@@ -137,6 +137,11 @@
     }
     return null;
   }
+  function variantHash(q, m) {
+    var n = slug(q).replace(/-/g, '').toUpperCase();
+    for (var j = 0; j < m.variants.length; j++) if (m.variants[j].code.replace(/\./g, '').toUpperCase() === n) return '#' + m.variants[j].code.replace('.', '-');
+    return '';
+  }
   function searchModels(q) {
     var n = slug(q).replace(/-/g, '');
     if (!n) return [];
@@ -154,7 +159,7 @@
     var input = $('input', form), box = form.parentNode.querySelector('.search-suggest');
     form.addEventListener('submit', function (e) {
       var q = input.value.trim(); if (!q) { e.preventDefault(); return; }
-      if (state.ready) { var m = findExact(q); if (m && state.posts[m.code]) { e.preventDefault(); location.href = state.posts[m.code]; } }
+      if (state.ready) { var m = findExact(q); if (m && state.posts[m.code]) { e.preventDefault(); location.href = state.posts[m.code] + variantHash(q, m); } }
     });
     if (!box) return;
     input.addEventListener('input', function () {
@@ -171,8 +176,31 @@
     document.addEventListener('click', function (e) { if (!form.parentNode.contains(e.target)) box.classList.remove('open'); });
   }
 
+  /* ---------- sabit sayfa bağlantıları (Blogger'ın verdiği gerçek adreslere çevir) ---------- */
+  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim' };
+  function fixPageLinks() {
+    var apply = function (map) {
+      $$('a[href^="/p/"]').forEach(function (a) {
+        var key = a.getAttribute('href').split('#')[0];
+        var t = PAGE_TITLES[key];
+        if (t && map[t]) a.setAttribute('href', map[t]);
+      });
+    };
+    try { var c = sessionStorage.getItem('ao_pages_v1'); if (c) { apply(JSON.parse(c)); return; } } catch (e) { }
+    fetchJSON('/feeds/pages/default?alt=json').then(function (d) {
+      var map = {};
+      ((d.feed && d.feed.entry) || []).forEach(function (e) {
+        var link = (e.link || []).filter(function (l) { return l.rel === 'alternate'; })[0];
+        if (link) map[e.title.$t] = link.href;
+      });
+      try { sessionStorage.setItem('ao_pages_v1', JSON.stringify(map)); } catch (e) { }
+      apply(map);
+    }).catch(function () { });
+  }
+
   /* ---------- header ---------- */
   function initHeader() {
+    fixPageLinks();
     var burger = $('.burger'), nav = $('.nav');
     if (burger && nav) burger.addEventListener('click', function () { nav.classList.toggle('open'); BODY.classList.toggle('nav-open'); });
     $$('.search').forEach(bindSearch);
@@ -246,7 +274,7 @@
       else if (/yeni/i.test(initial)) { filt.feat = ['new']; head.textContent = 'Koleksiyona Yeni Eklenenler'; lead.textContent = '2026 sezonunda koleksiyona katılan en yeni modeller.'; }
       else if (/polar/i.test(initial)) { filt.feat = ['polar']; head.textContent = 'Polarize Camlı Modeller'; }
       else if (/anti/i.test(initial)) { filt.feat = ['antifar']; head.textContent = 'Anti-Far Seçenekli Modeller'; }
-      else if (q) { head.textContent = '"' + q + '" için sonuçlar'; var exact = findExact(q); if (exact && state.posts[exact.code]) { location.replace(state.posts[exact.code]); return; } }
+      else if (q) { head.textContent = '"' + q + '" için sonuçlar'; var exact = findExact(q); if (exact && state.posts[exact.code]) { location.replace(state.posts[exact.code] + variantHash(q, exact)); return; } }
       else if (initial) { var matHit = ms.some(function (m) { return slug(frameMaterial(m)) === bslug; }); if (matHit) { filt.mat = [bslug]; head.textContent = initial + ' Çerçeveler'; } else head.textContent = initial; }
       else { head.textContent = 'Tüm Modeller'; lead.textContent = 'Lee Cooper, Quantum, Slazenger ve Belmond 2026 koleksiyonlarının tamamı.'; }
       buildFilters(ms);
