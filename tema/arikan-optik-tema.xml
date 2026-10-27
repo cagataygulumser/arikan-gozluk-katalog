@@ -1263,7 +1263,7 @@ window.AO_CONFIG = {
 
   /* ---------- blog ---------- */
   function blogFeed() {
-    try { var c = sessionStorage.getItem('ao_blog_v1'); if (c) return Promise.resolve(JSON.parse(c)); } catch (e) { }
+    try { var c = sessionStorage.getItem('ao_blog_v2'); if (c) return Promise.resolve(JSON.parse(c)); } catch (e) { }
     return fetchJSON('/feeds/posts/default/-/Blog?alt=json&max-results=50').then(function (d) {
       var list = ((d.feed && d.feed.entry) || []).map(function (e) {
         var link = (e.link || []).filter(function (l) { return l.rel === 'alternate'; })[0];
@@ -1276,7 +1276,7 @@ window.AO_CONFIG = {
         var d2 = new Date(e.published.$t);
         return { title: e.title.$t, url: link ? link.href : '#', img: th, date: d2.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }), sum: txt.slice(0, 160), labels: (e.category || []).map(function (c) { return c.term; }) };
       });
-      try { sessionStorage.setItem('ao_blog_v1', JSON.stringify(list)); } catch (e) { }
+      try { sessionStorage.setItem('ao_blog_v2', JSON.stringify(list)); } catch (e) { }
       return list;
     });
   }
@@ -1295,6 +1295,8 @@ window.AO_CONFIG = {
   }
   function initArticle() {
     var art = $('.article'); if (!art) return;
+    var t = $('.article__title'); if (t) document.title = t.textContent.trim() + ' · Blog · ' + document.title.split(' · ').pop();
+    var dt = $('.article__date'); if (dt) { var m = dt.textContent.trim().match(/^(\S+)\s+(\d+),\s*(\d{4})$/); if (m) dt.textContent = m[2] + ' ' + m[1].charAt(0) + m[1].slice(1).toLowerCase() + ' ' + m[3]; }
     // Blogger küçük resim kapak görselini kaldırmaz; gövdedeki kapak zaten var
     blogFeed().then(function (list) {
       var rel = $('#blog-related'); if (!rel) return;
