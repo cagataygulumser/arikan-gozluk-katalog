@@ -34,7 +34,9 @@ def slugify(s):
     return re.sub(r'[^a-z0-9]+', '-', s.lower().replace('ç', 'c').replace('ğ', 'g').replace('ı', 'i').replace('ö', 'o').replace('ş', 's').replace('ü', 'u')).strip('-')
 
 def evaluate(expr, ctx):
-    expr = expr.strip()
+    expr = html.unescape(expr.strip())
+    if expr.startswith('(') and expr.endswith(')'):
+        expr = expr[1:-1].strip()
     # birleştirme
     if ' + ' in expr:
         return ''.join(str(evaluate(p, ctx)) for p in expr.split(' + '))
@@ -42,6 +44,9 @@ def evaluate(expr, ctx):
         return expr[1:-1]
     if ' and ' in expr:
         return all(evaluate(p, ctx) for p in expr.split(' and '))
+    m = re.match(r'(data:\S+)\s+any\s*\(\s*\w+\s*=>\s*\w+\.name\s*==\s*"([^"]+)"\s*\)', expr)
+    if m:
+        return any(l.get('name') == m.group(2) for l in (evaluate(m.group(1), ctx) or []))
     m = re.match(r'(data:\S+)\s*(&lt;|<|lt)\s*(\d+)', expr)
     if m:
         return int(evaluate(m.group(1), ctx) or 0) < int(m.group(3))

@@ -319,6 +319,12 @@ window.AO_CONFIG = {
               </nav>
             </div>
             <div class='wrap'><data:post.body/></div>
+            <section class='related model-cmp' id='model-cmp' style='display:none'>
+              <div class='wrap'>
+                <div class='section__head'><p class='eyebrow'>Optik / Clip-On</p><h2 class='title-2'>Tek çerçeve, iki kullanım</h2><p class='lead' style='margin:12px auto 0'>Çubuğu sağa sola sürükleyin: solda numaralı optik çerçeve, sağda mıknatısla takılan güneş camı.</p></div>
+                <div class='cmp-wrap'><div class='cmp' data-left='' data-right='' data-left-label='Optik' data-right-label='Clip-On' data-start='50'></div></div>
+              </div>
+            </section>
             <section class='related'>
               <div class='wrap'>
                 <div class='section__head'><p class='eyebrow'>Benzer ölçülerde</p><h2 class='title-2'>İlgili Modeller</h2></div>

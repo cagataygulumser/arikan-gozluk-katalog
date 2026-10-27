@@ -411,6 +411,14 @@
     // ilgili modeller + breadcrumb
     ready().then(function () {
       var me = state.models.filter(function (m) { return m.code === code; })[0];
+      // clip-on modellerde optik / clip-on karşılaştırma kaydırıcısı
+      var cmpSec = $('#model-cmp');
+      if (cmpSec && me && me.category === 'Clip-On') {
+        var el = $('.cmp', cmpSec);
+        el.setAttribute('data-left', CDN + 'img/cmp/' + me.code + '-optik.jpg'); el.setAttribute('data-right', CDN + 'img/cmp/' + me.code + '-clipon.jpg');
+        el.setAttribute('data-left-sub', 'Numaralı cam · ' + (me.variants[0] ? me.variants[0].code : '')); el.setAttribute('data-right-sub', isPolar(me) ? 'Mıknatıslı polarize güneş camı' : 'Mıknatıslı güneş camı');
+        cmpSec.style.display = ''; initCompare();
+      }
       var rel = $('#related-grid'); if (!rel) return;
       if (!me) { rel.parentNode.style.display = 'none'; return; }
       var pool = state.models.filter(function (m) { return m.code !== me.code && m.brand_slug === me.brand_slug; });
@@ -540,8 +548,8 @@
   /* ---------- karşılaştırma kaydırıcısı ---------- */
   function initCompare() {
     $$('.cmp[data-left][data-right]').forEach(function (el) {
-      if (el.getAttribute('data-ready')) return; el.setAttribute('data-ready', '1');
       var L = el.getAttribute('data-left'), R = el.getAttribute('data-right');
+      if (!L || !R || el.getAttribute('data-ready')) return; el.setAttribute('data-ready', '1');
       var ll = el.getAttribute('data-left-label') || 'Optik', rl = el.getAttribute('data-right-label') || 'Clip-On';
       var ls = el.getAttribute('data-left-sub') || '', rs = el.getAttribute('data-right-sub') || '';
       var pos = parseFloat(el.getAttribute('data-start') || '50');
