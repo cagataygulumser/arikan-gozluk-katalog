@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:js='false' b:layoutsVersion='3' b:responsive='true' b:templateUrl='arikan-optik-katalog.xml' b:templateVersion='1.0.0' lang='tr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<b:include data='blog' name='all-head-content'/>
+<!-- ===== Başlık / SEO ===== -->
+<b:if cond='data:view.isHomepage'>
+  <title><data:blog.title/> · 2026 Gözlük Modelleri Kataloğu</title>
+  <meta content='Lee Cooper, Quantum, Slazenger ve Belmond 2026 optik ve clip-on gözlük modelleri: ölçüler, malzeme, tüm renk seçenekleri ve görseller. Model kodunu yazın, her şeyi görün.' name='description'/>
+<b:elseif cond='data:view.isPost'/>
+  <title><data:blog.pageName/> Gözlük Çerçevesi – Ölçüler, Renkler, Özellikler · <data:blog.title/></title>
+<b:elseif cond='data:view.isLabelSearch'/>
+  <title><data:view.search.label/> Gözlük Modelleri 2026 · <data:blog.title/></title>
+  <meta expr:content='data:view.search.label + " 2026 gözlük koleksiyonu: tüm modeller, ölçüler, renkler ve özellikler."' name='description'/>
+<b:elseif cond='data:view.isSearch'/>
+  <title>Model Ara · <data:blog.title/></title>
+<b:elseif cond='data:view.isPage'/>
+  <title><data:blog.pageName/> · <data:blog.title/></title>
+<b:else/>
+  <title><data:blog.pageTitle/></title>
+</b:if>
+<b:if cond='data:view.isPost'>
+  <meta expr:content='data:blog.postImageUrl' property='og:image'/>
+  <meta content='product' property='og:type'/>
+</b:if>
+<link href='https://fonts.googleapis.com' rel='preconnect'/>
+<link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+<link href='https://cdn.jsdelivr.net' rel='preconnect'/>
+<link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap' rel='stylesheet'/>
+<b:skin><![CDATA[
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Arıkan Optik · 2026 Gözlük Kataloğu
+Author:   Optisyen Çağatay Gülümser
+Version:  1.0.0
+Design:   arikantime.com tasarım dili (Montserrat · beyaz/siyah · kırmızı vurgu)
+----------------------------------------------- */
+{{CSS}}
+]]></b:skin>
+<script type='text/javascript'>
+//<![CDATA[
+/* ===== SİTE AYARLARI — burayı düzenleyin ===== */
+window.AO_CONFIG = {
+  cdn: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/',
+  whatsapp: '905000000000',            /* WhatsApp numarası: ülke koduyla, boşluksuz */
+  brands: {
+    'lee-cooper': { name: 'Lee Cooper', logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/lee-cooper.png', hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p001.jpg', desc: '1908\'den bu yana İngiliz denim mirası. Genç, cesur ve renkli: asetat, metal ve TR90 çerçeveler; clip-on seçenekleri.' },
+    'quantum':    { name: 'Quantum',    logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/quantum.png',    hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p001.jpg',    desc: 'Çağdaş çizgiler, titanyum ve asetat. Hafiflik ve erişilebilir lüks anlayışını birleştiren optik ve clip-on modeller.' },
+    'slazenger':  { name: 'Slazenger',  logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/slazenger.png',  hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/slazenger-p001.jpg',  desc: 'Sportif İngiliz klasiği. Geniş optik koleksiyon ve polarize camlı, anti-far seçenekli clip-on serisi.' },
+    'belmond':    { name: 'Belmond',    logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/belmond.png',    hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/belmond-p001.jpg',    desc: 'Zarif ve feminen: altın, pembe altın ve kristal tonlarında metal-asetat kombinasyonları.' }
+  }
+};
+//]]>
+</script>
+</head>
+<body>
+<b:if cond='data:view.isHomepage'><b:attr name='data-view' value='home'/>
+<b:elseif cond='data:view.isPost'/><b:attr name='data-view' value='post'/>
+<b:elseif cond='data:view.isPage'/><b:attr name='data-view' value='page'/>
+<b:elseif cond='data:view.isError'/><b:attr name='data-view' value='error'/>
+<b:else/><b:attr name='data-view' value='collection'/>
+</b:if>
+<b:if cond='data:view.isLabelSearch'><b:attr expr:value='data:view.search.label' name='data-label'/></b:if>
+<b:if cond='data:view.isSearch and data:view.search.query'><b:attr expr:value='data:view.search.query' name='data-query'/></b:if>
+
+<b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
+  <b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar' version='2' visible='false'>
+    <b:includable id='main'/>
+  </b:widget>
+</b:section>
+
+<!-- ================= HEADER ================= -->
+<header class='site-header'>
+  <div class='wrap site-header__in'>
+    <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
+      <b:widget id='Header1' locked='true' title='Arıkan Optik (Başlık)' type='Header' version='2' visible='true'>
+        <b:includable id='main'>
+          <a class='logo' expr:href='data:blog.homepageUrl' expr:title='data:title'>
+            <b:if cond='data:image'>
+              <img expr:alt='data:title' expr:src='data:image'/>
+            <b:else/>
+              <svg class='logo__mark' viewBox='0 0 40 40' aria-hidden='true'><circle cx='16' cy='20' r='12' fill='none' stroke='#DC2626' stroke-width='4'/><circle cx='26' cy='20' r='9' fill='none' stroke='#111827' stroke-width='3'/></svg>
+              <span><data:title/></span><span class='logo__sub'>2026 Katalog</span>
+            </b:if>
+          </a>
+        </b:includable>
+      </b:widget>
+    </b:section>
+    <button aria-label='Menü' class='burger'><span></span></button>
+    <nav class='nav'>
+      <details>
+        <summary>Markalar</summary>
+        <div class='menu'>
+          <a href='/search/label/Lee%20Cooper'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/lee-cooper.png'/>Lee Cooper <small data-brand-count='lee-cooper'></small></a>
+          <a href='/search/label/Quantum'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/quantum.png'/>Quantum <small data-brand-count='quantum'></small></a>
+          <a href='/search/label/Slazenger'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/slazenger.png'/>Slazenger <small data-brand-count='slazenger'></small></a>
+          <a href='/search/label/Belmond'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/belmond.png'/>Belmond <small data-brand-count='belmond'></small></a>
+          <div class='sep'></div>
+          <a href='/search'>Tüm modeller</a>
+        </div>
+      </details>
+      <a href='/search/label/Optik'>Optik</a>
+      <a href='/search/label/Clip-On'>Clip-On</a>
+      <a href='/search/label/Yeni'>Yeni Gelenler</a>
+      <a href='/p/ekartman-rehberi.html'>Ölçü Rehberi</a>
+      <a href='/p/yetkili-satis-noktalari.html'>Satış Noktaları</a>
+      <a href='/p/iletisim.html'>İletişim</a>
+      <div class='search-wrap'>
+        <form action='/search' class='search' method='get' role='search'>
+          <input aria-label='Model kodu ara' autocomplete='off' name='q' placeholder='Model kodu (örn. LC1408)' type='search'/>
+          <button aria-label='Ara' type='submit'><svg fill='none' stroke='currentColor' stroke-width='2.2' viewBox='0 0 24 24'><circle cx='11' cy='11' r='7'/><path d='m20 20-3.5-3.5'/></svg></button>
+        </form>
+        <div class='search-suggest'></div>
+      </div>
+    </nav>
+    <div class='search-wrap'>
+      <form action='/search' class='search' method='get' role='search'>
+        <input aria-label='Model kodu ara' autocomplete='off' name='q' placeholder='Model kodu (örn. LC1408)' type='search'/>
+        <button aria-label='Ara' type='submit'><svg fill='none' stroke='currentColor' stroke-width='2.2' viewBox='0 0 24 24'><circle cx='11' cy='11' r='7'/><path d='m20 20-3.5-3.5'/></svg></button>
+      </form>
+      <div class='search-suggest'></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ================= ANA SAYFA ================= -->
+<b:if cond='data:view.isHomepage'>
+  <section class='hero'>
+    <div class='hero__slides'>
+      <div class='hero__slide active'>
+        <div class='hero__text'>
+          <p class='eyebrow'>2026 Koleksiyonu</p>
+          <h1 class='display'>Gözlük<br/><strong>Modelleri</strong></h1>
+          <p class='lead'>Lee Cooper, Quantum, Slazenger ve Belmond'un 2026 optik ve clip-on koleksiyonları: ölçüler, malzemeler, tüm renk seçenekleri ve görseller tek sayfada.</p>
+          <form action='/search' class='hero-search' method='get' role='search'>
+            <input aria-label='Model kodu' autocomplete='off' name='q' placeholder='Model kodunu yazın: LC1408, Q503, 9599…' type='search'/>
+            <button type='submit'>Modeli Bul</button>
+          </form>
+          <p class='hero-search__hint'>Model kodu gözlüğün sap iç yüzünde yazar. Örn. <b>LC1408.C1</b> → model LC1408, renk C1.</p>
+        </div>
+        <div class='hero__img'><img alt='2026 Lee Cooper optik koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p001.jpg'/></div>
+      </div>
+      <div class='hero__slide'>
+        <div class='hero__text'>
+          <p class='eyebrow'>Clip-On Serisi</p>
+          <h2 class='display'>Tek Çerçeve<br/><strong>İki Kullanım</strong></h2>
+          <p class='lead'>Mıknatıslı polarize güneş camı ile numaralı gözlüğünüz saniyeler içinde güneş gözlüğüne dönüşür. Slazenger'da anti-far seçeneği.</p>
+          <a class='link-arrow' href='/search/label/Clip-On'>Clip-On modelleri</a>
+        </div>
+        <div class='hero__img'><img alt='Quantum clip-on koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p063.jpg'/></div>
+      </div>
+      <div class='hero__slide'>
+        <div class='hero__text'>
+          <p class='eyebrow'>Slazenger</p>
+          <h2 class='display'>Sportif<br/><strong>İngiliz Klasiği</strong></h2>
+          <p class='lead'>Geniş optik koleksiyon ve koleksiyona yeni eklenen clip-on modeller.</p>
+          <a class='link-arrow' href='/search/label/Slazenger'>Slazenger modelleri</a>
+        </div>
+        <div class='hero__img'><img alt='Slazenger 2026 optik koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/slazenger-p001.jpg'/></div>
+      </div>
+      <div class='hero__slide'>
+        <div class='hero__text'>
+          <p class='eyebrow'>Belmond</p>
+          <h2 class='display'>Zarif<br/><strong>Detaylar</strong></h2>
+          <p class='lead'>Altın, pembe altın ve kristal tonlarında feminen metal-asetat tasarımlar.</p>
+          <a class='link-arrow' href='/search/label/Belmond'>Belmond modelleri</a>
+        </div>
+        <div class='hero__img'><img alt='Belmond 2026 optik koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/belmond-p001.jpg'/></div>
+      </div>
+      <button aria-label='Önceki' class='hero__arrow hero__arrow--prev'><svg fill='none' stroke='currentColor' stroke-width='2.5' viewBox='0 0 24 24'><path d='m15 5-7 7 7 7'/></svg></button>
+      <button aria-label='Sonraki' class='hero__arrow hero__arrow--next'><svg fill='none' stroke='currentColor' stroke-width='2.5' viewBox='0 0 24 24'><path d='m9 5 7 7-7 7'/></svg></button>
+      <div class='hero__dots'></div>
+    </div>
+  </section>
+
+  <section class='logos'>
+    <div class='wrap logos__in'>
+      <a href='/search/label/Lee%20Cooper'><img alt='Lee Cooper Eyewear' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/lee-cooper.png'/></a>
+      <a href='/search/label/Quantum'><img alt='Quantum Eyewear' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/quantum.png'/></a>
+      <a href='/search/label/Slazenger'><img alt='Slazenger Eyewear' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/slazenger.png'/></a>
+      <a href='/search/label/Belmond'><img alt='Belmond Eyewear' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/belmond.png'/></a>
+    </div>
+  </section>
+
+  <section class='stats'>
+    <a class='stats__item' href='/search'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p001.jpg'/><span class='stats__num' data-stat='brands'>4</span><span class='stats__label'>Gözlük Markası</span></a>
+    <a class='stats__item' href='/search'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p002.jpg'/><span class='stats__num' data-stat='models'>161</span><span class='stats__label'>Model</span></a>
+    <a class='stats__item' href='/search'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/belmond-p019.jpg'/><span class='stats__num' data-stat='colors'>517</span><span class='stats__label'>Renk Seçeneği</span></a>
+    <a class='stats__item' href='/search/label/Clip-On'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/slazenger-clip-p002.jpg'/><span class='stats__num' data-stat='clip'>53</span><span class='stats__label'>Clip-On Model</span></a>
+  </section>
+
+  <section class='section'>
+    <div class='wrap'>
+      <div class='section__head'>
+        <p class='eyebrow'>Markalar</p>
+        <h2 class='title-2'>Gözlük Markaları</h2>
+        <p class='lead'>Her markanın 2026 koleksiyonunu, modellerini ve tüm renk seçeneklerini inceleyin.</p>
+      </div>
+      <div class='brand-grid'>
+        <a class='brand-card' href='/search/label/Lee%20Cooper'><img alt='' class='bg' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p001.jpg'/><span class='brand-card__logo'><img alt='Lee Cooper' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/lee-cooper.png'/></span><span class='brand-card__body'><span class='brand-card__name'>Lee Cooper</span><span class='brand-card__count' data-brand-count='lee-cooper'>&#160;</span></span></a>
+        <a class='brand-card' href='/search/label/Quantum'><img alt='' class='bg' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p001.jpg'/><span class='brand-card__logo'><img alt='Quantum' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/quantum.png'/></span><span class='brand-card__body'><span class='brand-card__name'>Quantum</span><span class='brand-card__count' data-brand-count='quantum'>&#160;</span></span></a>
+        <a class='brand-card' href='/search/label/Slazenger'><img alt='' class='bg' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/slazenger-clip-p001.jpg'/><span class='brand-card__logo'><img alt='Slazenger' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/slazenger.png'/></span><span class='brand-card__body'><span class='brand-card__name'>Slazenger</span><span class='brand-card__count' data-brand-count='slazenger'>&#160;</span></span></a>
+        <a class='brand-card' href='/search/label/Belmond'><img alt='' class='bg' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/belmond-p001.jpg'/><span class='brand-card__logo'><img alt='Belmond' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/belmond.png'/></span><span class='brand-card__body'><span class='brand-card__name'>Belmond</span><span class='brand-card__count' data-brand-count='belmond'>&#160;</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class='section section--soft' style='padding-top:0'>
+    <div class='wrap'>
+      <div class='split'>
+        <a class='split__item' href='/search/label/Optik'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p002.jpg'/><span class='split__body'><p class='eyebrow'>Numaralı cam için</p><h3>Optik</h3><p>Metal, asetat, titanyum ve TR90 çerçeveler. Her modelde ekartman ölçüleri ve malzeme bilgisi.</p><span class='link-arrow'>Optik çerçeveler</span></span></a>
+        <a class='split__item' href='/search/label/Clip-On'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p075.jpg'/><span class='split__body'><p class='eyebrow'>Mıknatıslı güneş camı</p><h3>Clip-On</h3><p>Polarize güneş camı takılan optik çerçeveler. Renk kombinasyonlarını ve cam renklerini görün.</p><span class='link-arrow'>Clip-On modeller</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class='section'>
+    <div class='wrap'>
+      <div class='section__head'>
+        <p class='eyebrow'>Koleksiyona yeni eklenenler</p>
+        <h2 class='title-2'>Yeni Modeller</h2>
+      </div>
+      <div class='skeleton' id='home-new'>Yükleniyor</div>
+      <p style='text-align:center;margin-top:34px'><a class='link-arrow' href='/search/label/Yeni'>Tüm yeni modeller</a></p>
+    </div>
+  </section>
+
+  <section class='section section--dark'>
+    <div class='wrap guide-banner'>
+      <div>
+        <p class='eyebrow'>Ölçü rehberi</p>
+        <h2 class='title-2'>Ekartman nasıl okunur?</h2>
+        <p class='lead'>Her modelin altında üç sayı görürsünüz: <b>çerçeve (cam) genişliği</b>, <b>köprü</b> ve <b>sap</b> uzunluğu. Mevcut gözlüğünüzün sapındaki rakamlarla karşılaştırarak size uyacak modeli seçebilirsiniz.</p>
+        <dl><div><dt>51</dt><dd>Çerçeve · mm</dd></div><div><dt>18</dt><dd>Köprü · mm</dd></div><div><dt>145</dt><dd>Sap · mm</dd></div></dl>
+        <p style='margin-top:30px'><a class='link-arrow' href='/p/ekartman-rehberi.html' style='color:#fff;border-color:#fff'>Rehberi oku</a></p>
+      </div>
+      <svg aria-hidden='true' fill='none' viewBox='0 0 520 260'>
+        <g stroke='#fff' stroke-width='3'><rect height='96' rx='34' width='170' x='40' y='70'/><rect height='96' rx='34' width='170' x='310' y='70'/><path d='M210 100c20-18 80-18 100 0'/><path d='M40 100 4 92M480 100l36-8'/></g>
+        <g stroke='#DC2626' stroke-width='2'><path d='M40 200h170M40 192v16M210 192v16'/><path d='M218 40h84M218 32v16M302 32v16'/><path d='M60 236h400M60 228v16M460 228v16'/></g>
+        <g fill='#fff' font-family='Montserrat,sans-serif' font-size='13' font-weight='500' letter-spacing='2'><text x='96' y='222'>ÇERÇEVE</text><text x='232' y='24'>KÖPRÜ</text><text x='244' y='256'>SAP</text></g>
+      </svg>
+    </div>
+  </section>
+
+  <section class='section'>
+    <div class='wrap'>
+      <div class='section__head'>
+        <p class='eyebrow'>Seçkiler</p>
+        <h2 class='title-2'>Öne Çıkan Modeller</h2>
+      </div>
+      <div class='skeleton' id='home-pick'>Yükleniyor</div>
+      <p style='text-align:center;margin-top:34px'><a class='btn btn--dark' href='/search'>Tüm modelleri gör</a></p>
+    </div>
+  </section>
+</b:if>
+
+<!-- ================= BLOG WIDGET: koleksiyon / model / sayfa ================= -->
+<b:section class='main' id='main' showaddelement='no'>
+  <b:widget id='Blog1' locked='true' title='Blog Yazıları' type='Blog' version='2' visible='true'>
+    <b:includable id='main'>
+      <b:if cond='data:view.isSingleItem'>
+        <b:loop values='data:posts' var='post'>
+          <b:if cond='data:view.isPost'>
+            <div class='wrap'>
+              <nav aria-label='Konum' class='crumbs'>
+                <span><a expr:href='data:blog.homepageUrl'>Ana sayfa</a></span>
+                <b:loop index='i' values='data:post.labels' var='label'>
+                  <b:if cond='data:i &lt; 2'><span><a expr:href='data:label.url'><data:label.name/></a></span></b:if>
+                </b:loop>
+                <span><data:post.title/></span>
+              </nav>
+            </div>
+            <div class='wrap'><data:post.body/></div>
+            <section class='related'>
+              <div class='wrap'>
+                <div class='section__head'><p class='eyebrow'>Benzer ölçülerde</p><h2 class='title-2'>İlgili Modeller</h2></div>
+                <div class='skeleton' id='related-grid'>Yükleniyor</div>
+              </div>
+            </section>
+          <b:else/>
+            <section class='page'>
+              <div class='wrap page__in'>
+                <h1><data:post.title/></h1>
+                <data:post.body/>
+              </div>
+            </section>
+          </b:if>
+        </b:loop>
+      <b:elseif cond='data:view.isHomepage'/>
+        <div class='blogger-posts'>
+          <b:loop values='data:posts' var='post'><a expr:href='data:post.url'><data:post.title/></a></b:loop>
+        </div>
+      <b:else/>
+        <section class='coll-head'>
+          <div class='wrap coll-head__in'>
+            <div>
+              <div class='coll-head__logo' id='coll-logo'></div>
+              <p class='eyebrow'>2026 Koleksiyonu</p>
+              <h1 class='display' id='coll-title' style='font-size:clamp(26px,3.4vw,40px)'>Modeller</h1>
+              <p class='lead' id='coll-lead'></p>
+            </div>
+            <div class='coll-head__count' id='coll-count'>&#160;</div>
+          </div>
+        </section>
+        <div class='wrap coll' id='collection'>
+          <aside class='filters' id='filters'></aside>
+          <div>
+            <div class='toolbar'>
+              <div class='chips' id='chips'></div>
+              <div style='display:flex;gap:10px;align-items:center'>
+                <button class='btn btn--ghost filters-toggle' type='button'>Filtrele</button>
+                <select aria-label='Sırala' id='sort'><option value='default'>Katalog sırası</option><option value='new'>Önce yeni</option><option value='code'>Model koduna göre</option><option value='size-asc'>Çerçeve genişliği ↑</option><option value='size-desc'>Çerçeve genişliği ↓</option><option value='colors'>Renk sayısı</option></select>
+              </div>
+            </div>
+            <div class='skeleton' id='coll-grid'>Yükleniyor</div>
+          </div>
+        </div>
+        <div class='blogger-posts'>
+          <b:loop values='data:posts' var='post'><a expr:href='data:post.url'><data:post.title/></a></b:loop>
+        </div>
+      </b:if>
+    </b:includable>
+  </b:widget>
+</b:section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class='site-footer'>
+  <div class='wrap site-footer__in'>
+    <div>
+      <a class='logo' expr:href='data:blog.homepageUrl'><svg class='logo__mark' viewBox='0 0 40 40' aria-hidden='true'><circle cx='16' cy='20' r='12' fill='none' stroke='#DC2626' stroke-width='4'/><circle cx='26' cy='20' r='9' fill='none' stroke='#fff' stroke-width='3'/></svg><span><data:blog.title/></span></a>
+      <p>Lee Cooper, Quantum, Slazenger ve Belmond gözlük markalarının 2026 koleksiyonları. Modeller yalnızca yetkili optik mağazalarında satılır; bu site satış yapmaz, bilgilendirir.</p>
+      <div class='social'>
+        <a aria-label='Instagram' href='https://www.instagram.com/' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z'/></svg></a>
+        <a aria-label='YouTube' href='https://www.youtube.com/' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z'/></svg></a>
+        <a aria-label='Facebook' href='https://www.facebook.com/' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.3l-.5 3.5h-2.8v8.4A12 12 0 0 0 24 12z'/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Markalar</h4>
+      <a href='/search/label/Lee%20Cooper'>Lee Cooper</a>
+      <a href='/search/label/Quantum'>Quantum</a>
+      <a href='/search/label/Slazenger'>Slazenger</a>
+      <a href='/search/label/Belmond'>Belmond</a>
+    </div>
+    <div>
+      <h4>Koleksiyon</h4>
+      <a href='/search'>Tüm modeller</a>
+      <a href='/search/label/Optik'>Optik çerçeveler</a>
+      <a href='/search/label/Clip-On'>Clip-On</a>
+      <a href='/search/label/Yeni'>Yeni gelenler</a>
+      <a href='/search/label/Polarize'>Polarize</a>
+    </div>
+    <div>
+      <h4>Rehber</h4>
+      <a href='/p/ekartman-rehberi.html'>Ekartman nasıl okunur?</a>
+      <a href='/p/sik-sorulan-sorular.html'>Sık sorulan sorular</a>
+      <a href='/p/yetkili-satis-noktalari.html'>Yetkili satış noktaları</a>
+    </div>
+    <div>
+      <h4>Kurumsal</h4>
+      <a href='/p/hakkimizda.html'>Hakkımızda</a>
+      <a href='/p/iletisim.html'>İletişim</a>
+      <a href='https://arikantime.com/tr/' rel='noopener' target='_blank'>arikantime.com</a>
+    </div>
+  </div>
+  <div class='wrap site-footer__bottom'>
+    <span>© 2026 <data:blog.title/> · Tüm hakları saklıdır. Ürün görselleri ve bilgileri 2026 marka kataloglarından alınmıştır.</span>
+    <span>Sitedeki ölçüler ve renk adları üretici kataloğuna göredir; stok ve fiyat için yetkili satış noktasına danışın.</span>
+  </div>
+</footer>
+<button aria-label='Yukarı' class='to-top'><svg fill='none' stroke='currentColor' stroke-width='2.5' viewBox='0 0 24 24' width='18'><path d='m6 14 6-6 6 6'/></svg></button>
+<a aria-label='WhatsApp' class='wa-fab' href='https://wa.me/905000000000' id='wa-fab' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm0-21.6A11.8 11.8 0 0 0 2 18.2L.3 24l6-1.6A11.8 11.8 0 1 0 12 .2z'/></svg></a>
+<script type='text/javascript'>
+//<![CDATA[
+{{JS}}
+(function(){var w=document.getElementById('wa-fab');if(w&&window.AO_CONFIG&&window.AO_CONFIG.whatsapp)w.href='https://wa.me/'+window.AO_CONFIG.whatsapp;})();
+//]]>
+</script>
+</body>
+</html>

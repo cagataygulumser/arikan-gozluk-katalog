@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:js='false' b:layoutsVersion='3' b:responsive='true' b:templateUrl='arikan-optik-katalog.xml' b:templateVersion='1.0.0' lang='tr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<b:include data='blog' name='all-head-content'/>
+<!-- ===== Başlık / SEO ===== -->
+<b:if cond='data:view.isHomepage'>
+  <title><data:blog.title/> · 2026 Gözlük Modelleri Kataloğu</title>
+  <meta content='Lee Cooper, Quantum, Slazenger ve Belmond 2026 optik ve clip-on gözlük modelleri: ölçüler, malzeme, tüm renk seçenekleri ve görseller. Model kodunu yazın, her şeyi görün.' name='description'/>
+<b:elseif cond='data:view.isPost'/>
+  <title><data:blog.pageName/> Gözlük Çerçevesi – Ölçüler, Renkler, Özellikler · <data:blog.title/></title>
+<b:elseif cond='data:view.isLabelSearch'/>
+  <title><data:view.search.label/> Gözlük Modelleri 2026 · <data:blog.title/></title>
+  <meta expr:content='data:view.search.label + " 2026 gözlük koleksiyonu: tüm modeller, ölçüler, renkler ve özellikler."' name='description'/>
+<b:elseif cond='data:view.isSearch'/>
+  <title>Model Ara · <data:blog.title/></title>
+<b:elseif cond='data:view.isPage'/>
+  <title><data:blog.pageName/> · <data:blog.title/></title>
+<b:else/>
+  <title><data:blog.pageTitle/></title>
+</b:if>
+<b:if cond='data:view.isPost'>
+  <meta expr:content='data:blog.postImageUrl' property='og:image'/>
+  <meta content='product' property='og:type'/>
+</b:if>
+<link href='https://fonts.googleapis.com' rel='preconnect'/>
+<link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+<link href='https://cdn.jsdelivr.net' rel='preconnect'/>
+<link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap' rel='stylesheet'/>
+<b:skin><![CDATA[
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Arıkan Optik · 2026 Gözlük Kataloğu
+Author:   Optisyen Çağatay Gülümser
+Version:  1.0.0
+Design:   arikantime.com tasarım dili (Montserrat · beyaz/siyah · kırmızı vurgu)
+----------------------------------------------- */
+/* =====================================================================
+   ARIKAN OPTİK — 2026 Gözlük Kataloğu · Blogger teması
+   Tasarım dili: arikantime.com (Montserrat, beyaz/siyah bloklar, kırmızı vurgu)
+   ===================================================================== */
+:root{
+  --ink:#111827; --ink-2:#374151; --muted:#919EA7; --muted-2:#6B7280;
+  --red:#DC2626; --red-dark:#B91C1C; --line:#E5E7EB; --line-2:#F0F0F0;
+  --bg:#FFFFFF; --bg-soft:#F3F4F6; --bg-warm:#F5F3EF; --black:#000000; --footer:#575756;
+  --font:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --wrap:1280px; --gutter:24px; --radius:4px;
+  --shadow:0 10px 30px rgba(17,24,39,.08);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);font-size:15px;line-height:1.6;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+h1,h2,h3,h4{margin:0;font-weight:500;line-height:1.2}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+#navbar,#navbar-iframe,.navbar{display:none!important;height:0!important;visibility:hidden}
+
+/* ---- Tipografi öğeleri ------------------------------------------- */
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--red);font-weight:500;margin:0 0 14px}
+.eyebrow--muted{color:var(--muted)}
+.display{font-weight:300;text-transform:uppercase;letter-spacing:.12em;font-size:clamp(30px,4.6vw,56px);line-height:1.05}
+.display strong{font-weight:600}
+.title-2{font-weight:300;text-transform:uppercase;letter-spacing:.2em;font-size:clamp(20px,2.6vw,30px);color:var(--ink)}
+.title-2.red{color:var(--red)}
+.lead{color:var(--ink-2);font-weight:300;font-size:16px;max-width:60ch}
+.link-arrow{display:inline-block;color:var(--red);font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;padding-bottom:6px;border-bottom:1px solid var(--red)}
+.link-arrow:after{content:"\2192";margin-left:10px;letter-spacing:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:var(--radius);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;border:1px solid transparent;transition:.2s}
+.btn--red{background:var(--red);color:#fff}.btn--red:hover{background:var(--red-dark)}
+.btn--dark{background:var(--ink);color:#fff}.btn--dark:hover{background:#000}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--ink)}.btn--ghost:hover{background:var(--ink);color:#fff}
+.btn--light{background:#fff;color:var(--ink);border-color:#fff}
+.badge{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:5px 9px;border-radius:2px;background:var(--bg-soft);color:var(--ink-2)}
+.badge--red{background:var(--red);color:#fff}
+.badge--dark{background:var(--ink);color:#fff}
+.badge--line{background:transparent;border:1px solid var(--line);color:var(--ink-2)}
+
+/* ---- Header -------------------------------------------------------- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line-2)}
+.site-header__in{display:flex;align-items:center;gap:28px;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-size:26px;font-weight:300;letter-spacing:.02em;color:var(--ink);white-space:nowrap}
+.logo img{height:40px;width:auto}
+.logo__mark{width:34px;height:34px;flex:none}
+.logo__sub{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-left:4px;font-weight:500}
+.nav{display:flex;align-items:center;gap:4px;margin-left:auto}
+.nav a,.nav summary{display:block;padding:10px 11px;font-size:13px;font-weight:500;color:var(--ink);letter-spacing:.01em;border-radius:var(--radius);list-style:none;cursor:pointer;white-space:nowrap}
+.nav summary::-webkit-details-marker{display:none}
+.nav a:hover,.nav summary:hover{color:var(--red)}
+.nav details{position:relative}
+.nav summary:after{content:"";display:inline-block;width:5px;height:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-left:8px;position:relative;top:-3px}
+.nav .menu{position:absolute;top:100%;left:0;min-width:220px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:8px;border-radius:var(--radius);z-index:60}
+.nav .menu a{padding:10px 12px;font-weight:500;display:flex;align-items:center;gap:10px}
+.nav .menu a img{height:18px;width:auto;filter:grayscale(1);opacity:.8}
+.nav .menu a:hover img{filter:none;opacity:1}
+.nav .menu .sep{height:1px;background:var(--line);margin:6px 0}
+.search{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:4px 4px 4px 14px;gap:6px;background:#fff;min-width:230px}
+.search input{border:0;outline:0;font:inherit;font-size:13px;width:100%;background:transparent;color:var(--ink)}
+.search input::placeholder{color:var(--muted)}
+.search button{border:0;background:var(--red);color:#fff;width:32px;height:32px;border-radius:50%;display:grid;place-items:center}
+.search button svg{width:15px;height:15px}
+.search-suggest{position:absolute;top:calc(100% + 6px);right:0;width:340px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius);padding:6px;display:none;z-index:70;max-height:60vh;overflow:auto}
+.search-suggest.open{display:block}
+.search-suggest a{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:var(--radius)}
+.search-suggest a:hover{background:var(--bg-soft)}
+.search-suggest img{width:64px;height:28px;object-fit:contain}
+.search-suggest b{font-weight:600;font-size:13px}
+.search-suggest small{color:var(--muted);font-size:11px;display:block}
+.search-wrap{position:relative}
+.burger{display:none;margin-left:auto;background:none;border:0;width:40px;height:40px;position:relative;flex:none}
+.burger span,.burger span:before,.burger span:after{position:absolute;left:8px;width:24px;height:2px;background:var(--ink);content:"";transition:.2s}
+.burger span{top:19px}.burger span:before{top:-7px;left:0}.burger span:after{top:7px;left:0}
+@media (max-width:1024px){
+  .burger{display:block}
+  .logo{font-size:22px;min-width:0}
+  .logo__sub{display:none}
+  .site-header__in{gap:12px}
+  .nav{position:fixed;inset:72px 0 0 0;background:#fff;flex-direction:column;align-items:stretch;padding:16px var(--gutter);gap:0;display:none;overflow:auto;margin:0}
+  .nav.open{display:flex}
+  .nav a,.nav summary{padding:14px 0;border-bottom:1px solid var(--line-2);font-size:15px}
+  .nav .menu{position:static;box-shadow:none;border:0;padding:0 0 8px 16px}
+  .search{min-width:0;margin-top:12px}
+  .site-header__in .search-wrap{display:none}
+  .nav .search-wrap{display:block}
+}
+@media (min-width:1025px){.nav .search-wrap{display:none}}
+
+/* ---- Hero ---------------------------------------------------------- */
+.hero{background:var(--bg-soft);position:relative;overflow:hidden}
+.hero__slides{position:relative;min-height:560px}
+.hero__slide{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;opacity:0;transition:opacity .7s;pointer-events:none}
+.hero__slide.active{opacity:1;pointer-events:auto;position:relative}
+.hero__text{display:flex;flex-direction:column;justify-content:center;padding:64px var(--gutter) 64px max(var(--gutter),calc((100vw - var(--wrap))/2 + var(--gutter)))}
+.hero__text .display{margin-bottom:22px}
+.hero__text .lead{margin-bottom:30px}
+.hero__img{position:relative;min-height:420px}
+.hero__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 32%}
+.hero__img:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg-soft) 0,rgba(243,244,246,0) 18%)}
+.hero__arrow{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;border:0;display:grid;place-items:center;z-index:5;box-shadow:0 6px 16px rgba(220,38,38,.35)}
+.hero__arrow svg{width:18px;height:18px}
+.hero__arrow--prev{left:22px}.hero__arrow--next{right:22px}
+.hero__dots{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:5}
+.hero__dots button{width:9px;height:9px;border-radius:999px;border:0;background:rgba(17,24,39,.25);padding:0;transition:.2s}
+.hero__dots button.active{background:var(--red);width:26px}
+.hero-search{display:flex;max-width:460px;border:1px solid var(--ink);border-radius:var(--radius);overflow:hidden;background:#fff}
+.hero-search input{flex:1;border:0;outline:0;font:inherit;padding:14px 16px;font-size:14px;min-width:0}
+.hero-search button{border:0;background:var(--ink);color:#fff;padding:0 20px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.hero-search__hint{font-size:12px;color:var(--muted);margin-top:10px}
+@media (max-width:860px){
+  .hero__slide{grid-template-columns:1fr}
+  .hero__img{min-height:320px;order:-1}
+  .hero__img:after{background:linear-gradient(0deg,var(--bg-soft) 0,rgba(243,244,246,0) 22%)}
+  .hero__text{padding:28px var(--gutter) 56px}
+  .hero__arrow{display:none}
+  .hero__slides{min-height:0}
+}
+
+/* ---- Logo şeridi & sayaçlar --------------------------------------- */
+.logos{border-bottom:1px solid var(--line-2)}
+.logos__in{display:grid;grid-template-columns:repeat(4,1fr);align-items:center;min-height:120px}
+.logos__in a{display:grid;place-items:center;padding:22px 10px;filter:grayscale(1);opacity:.7;transition:.25s}
+.logos__in a:hover{filter:none;opacity:1}
+.logos__in img{max-height:56px;width:auto;max-width:160px}
+@media (max-width:640px){.logos__in{grid-template-columns:repeat(2,1fr)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stats__item{position:relative;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:46px;color:var(--ink);text-align:center;overflow:hidden}
+.stats__item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;z-index:0}
+.stats__item:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#fff 0,#fff 36%,rgba(255,255,255,0) 72%);z-index:1}
+.stats__item>*{position:relative;z-index:2}
+.stats__num{font-size:56px;font-weight:300;color:var(--red);line-height:1}
+.stats__label{font-size:11px;letter-spacing:.3em;text-transform:uppercase;margin-top:8px;font-weight:500}
+@media (max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}.stats__item{min-height:220px}}
+
+/* ---- Bölümler ------------------------------------------------------ */
+.section{padding:88px 0}
+.section--soft{background:var(--bg-soft)}
+.section--dark{background:var(--black);color:#fff}
+.section--dark .title-2{color:#fff}
+.section--dark .lead{color:#C9CDD2}
+.section__head{text-align:center;margin-bottom:46px}
+.section__head .lead{margin:14px auto 0}
+.brand-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.brand-card{position:relative;aspect-ratio:3/4;overflow:hidden;background:#111;border-radius:var(--radius);display:block}
+.brand-card img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform .8s}
+.brand-card:hover img.bg{transform:scale(1.05)}
+.brand-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.72) 100%)}
+.brand-card__body{position:absolute;left:0;right:0;bottom:0;padding:26px;color:#fff;z-index:2}
+.brand-card__name{font-size:22px;letter-spacing:.3em;text-transform:uppercase;font-weight:300}
+.brand-card__count{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#D1D5DB;margin-top:6px}
+.brand-card__logo{position:absolute;top:18px;left:18px;background:#fff;padding:8px 12px;border-radius:2px;z-index:2}
+.brand-card__logo img{height:26px;width:auto}
+@media (max-width:1024px){.brand-grid{grid-template-columns:repeat(2,1fr)}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.split__item{position:relative;min-height:420px;overflow:hidden;border-radius:var(--radius);display:flex;align-items:flex-end;padding:36px;color:#fff;background:#222}
+.split__item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;transition:transform .8s}
+.split__item:hover img{transform:scale(1.04)}
+.split__item:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(0,0,0,.75) 100%)}
+.split__body{position:relative;z-index:2}
+.split__body .eyebrow{color:#F3F4F6}
+.split__body h3{font-size:34px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}
+.split__body p{color:#D1D5DB;max-width:44ch;font-weight:300}
+.split__body .link-arrow{color:#fff;border-color:#fff}
+@media (max-width:860px){.split{grid-template-columns:1fr}.split__item{min-height:320px}}
+.guide-banner{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.guide-banner svg{width:100%;height:auto}
+.guide-banner dl{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0 0}
+.guide-banner dt{font-size:36px;font-weight:300;color:var(--red)}
+.guide-banner dd{margin:0;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#C9CDD2}
+@media (max-width:860px){.guide-banner{grid-template-columns:1fr;gap:30px}}
+
+/* ---- Ürün kartları ------------------------------------------------- */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){.grid{grid-template-columns:repeat(2,1fr);gap:12px}}
+.card{background:#fff;border:1px solid var(--line-2);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:.25s;position:relative}
+.card:hover{box-shadow:var(--shadow);border-color:#fff;transform:translateY(-2px)}
+.card__img{position:relative;aspect-ratio:4/3;display:grid;place-items:center;padding:14px;background:#fff}
+.card__img img{width:100%;height:100%;object-fit:contain;transition:opacity .25s}
+.card__img img.side{position:absolute;inset:14px;width:calc(100% - 28px);height:calc(100% - 28px);opacity:0}
+.card:hover .card__img img.side{opacity:1}
+.card:hover .card__img img.front{opacity:0}
+.card__badges{position:absolute;top:10px;left:10px;display:flex;gap:6px;z-index:2}
+.card__body{padding:14px 16px 16px;border-top:1px solid var(--line-2)}
+.card__brand{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.card__code{font-size:18px;font-weight:600;margin:4px 0 6px;letter-spacing:.02em}
+.card__meta{font-size:12px;color:var(--ink-2);display:flex;justify-content:space-between;align-items:center;gap:8px}
+.swatches{display:flex;gap:5px;flex-wrap:wrap}
+.sw{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.15);box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
+.sw--multi{background:conic-gradient(var(--c1) 0 50%,var(--c2) 50% 100%)}
+.card__dims{font-size:11px;color:var(--muted);letter-spacing:.06em;margin-top:8px}
+
+/* ---- Koleksiyon / filtre sayfası --------------------------------- */
+.coll-head{padding:56px 0 34px;border-bottom:1px solid var(--line-2)}
+.coll-head__in{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.coll-head__logo img{height:54px;width:auto;margin-bottom:16px}
+.coll-head .lead{margin-top:10px}
+.coll-head__count{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.coll{display:grid;grid-template-columns:260px 1fr;gap:40px;padding:36px 0 90px}
+.filters{position:sticky;top:90px;align-self:start;max-height:calc(100vh - 110px);overflow:auto;padding-right:6px}
+.filters h4{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);margin:0 0 10px;font-weight:600}
+.filters fieldset{border:0;padding:0;margin:0 0 26px}
+.filters label{display:flex;align-items:center;gap:10px;font-size:13px;padding:5px 0;color:var(--ink-2);cursor:pointer}
+.filters label span.n{margin-left:auto;color:var(--muted);font-size:11px}
+.filters input[type=checkbox]{accent-color:var(--red);width:15px;height:15px}
+.filters .sw{width:16px;height:16px}
+.filters__clear{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);background:none;border:0;padding:0;font-weight:600}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+.toolbar select{font:inherit;font-size:13px;border:1px solid var(--line);border-radius:var(--radius);padding:9px 12px;background:#fff;color:var(--ink)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:#fff;color:var(--ink-2);display:inline-flex;gap:8px;align-items:center}
+.chip b{font-weight:600;color:var(--ink)}
+.chip button{border:0;background:none;color:var(--muted);padding:0;font-size:14px;line-height:1}
+.filters-toggle{display:none}
+.empty{padding:60px 20px;text-align:center;color:var(--muted)}
+.empty b{display:block;color:var(--ink);font-size:18px;font-weight:500;margin-bottom:8px}
+@media (max-width:900px){
+  .coll{grid-template-columns:1fr;gap:20px}
+  .filters{position:fixed;inset:0;background:#fff;z-index:80;padding:24px;max-height:none;display:none}
+  .filters.open{display:block}
+  .filters-toggle{display:inline-flex}
+  .filters__close{position:absolute;top:14px;right:14px;border:0;background:var(--bg-soft);width:36px;height:36px;border-radius:50%;font-size:18px}
+}
+@media (min-width:901px){.filters__close{display:none}}
+
+/* ---- Model (yazı) sayfası ----------------------------------------- */
+.crumbs{font-size:12px;color:var(--muted);padding:18px 0 0;display:flex;gap:8px;flex-wrap:wrap}
+.crumbs a:hover{color:var(--red)}
+.crumbs span:not(:last-child):after{content:"/";margin-left:8px;color:var(--line)}
+.model{padding:22px 0 60px}
+.model__top{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+.model__gallery{position:sticky;top:92px}
+.model__main{margin:0;background:#fff;border:1px solid var(--line-2);border-radius:var(--radius);aspect-ratio:4/3;display:grid;place-items:center;padding:30px;position:relative;overflow:hidden}
+.model__main img{max-height:100%;width:100%;object-fit:contain;transition:opacity .2s}
+.model__main .zoom{position:absolute;right:12px;bottom:12px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.model__thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.model__thumbs figure{margin:0;border:1px solid var(--line-2);border-radius:var(--radius);aspect-ratio:3/2;display:grid;place-items:center;padding:12px;cursor:pointer;background:#fff;position:relative}
+.model__thumbs figure.active{border-color:var(--ink)}
+.model__thumbs figcaption{position:absolute;left:8px;top:6px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.model__thumbs img{max-height:100%;object-fit:contain}
+.model__brand{height:44px;width:auto;margin-bottom:18px}
+.model__code{font-size:clamp(34px,4vw,48px);font-weight:600;letter-spacing:.02em;line-height:1}
+.model__sub{color:var(--ink-2);margin:10px 0 14px;font-weight:300;font-size:15px}
+.model__badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:26px}
+.dims{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;background:var(--bg-soft);border-radius:var(--radius);padding:18px}
+.dims svg{width:100%;max-width:300px;height:auto}
+.dims__nums{display:grid;grid-template-columns:repeat(3,auto);gap:16px;text-align:center}
+.dims__nums b{display:block;font-size:22px;font-weight:500;color:var(--ink)}
+.dims__nums small{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.dims__str{grid-column:1/-1;font-size:12px;color:var(--muted-2);margin:0}
+.dims__str b{color:var(--ink);font-weight:600;letter-spacing:.1em}
+.specs{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.specs th{text-align:left;font-weight:500;color:var(--muted-2);padding:10px 0;border-bottom:1px solid var(--line-2);width:42%;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.specs td{padding:10px 0;border-bottom:1px solid var(--line-2);font-weight:500}.specs td small{display:block;font-size:12px;margin-top:2px}
+.colors h3{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);margin:0 0 12px;font-weight:600}
+.colors h3 span{color:var(--muted);font-weight:500;margin-left:8px;letter-spacing:.05em;text-transform:none;font-size:12px}
+.color-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+.color-btn{border:1px solid var(--line);background:#fff;border-radius:var(--radius);padding:8px;text-align:left;display:grid;gap:4px;transition:.2s}
+.color-btn img{width:100%;aspect-ratio:3/1.15;object-fit:contain}
+.color-btn b{font-size:12px;font-weight:600}
+.color-btn small{font-size:11px;color:var(--muted-2);line-height:1.3}
+.color-btn.active,.color-btn:hover{border-color:var(--ink)}
+.color-btn.active{box-shadow:inset 0 0 0 1px var(--ink)}
+.attrs{margin:22px 0 0;border:1px solid var(--line-2);border-radius:var(--radius);padding:16px 18px}
+.attrs__title{font-size:11px;letter-spacing:.25em;text-transform:uppercase;font-weight:600;margin-bottom:10px;display:flex;justify-content:space-between}
+.attrs__title b{color:var(--red)}
+.attrs dl{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+.attrs dt{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.attrs dd{margin:0;font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.share{margin-top:16px;font-size:12px;color:var(--muted);display:flex;gap:14px;align-items:center}
+.share a{color:var(--ink-2);text-decoration:underline;text-underline-offset:3px}
+.share a:hover{color:var(--red)}
+@media (max-width:960px){.model__top{grid-template-columns:1fr;gap:28px}.model__gallery{position:static}}
+@media (max-width:600px){.dims{grid-template-columns:1fr}.dims svg{max-width:260px;margin:0 auto}.dims__nums{justify-content:center}}
+.variants{padding:60px 0;border-top:1px solid var(--line-2)}
+.variants .section__head{margin-bottom:30px}
+.variant-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:1000px){.variant-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.variant-grid{grid-template-columns:1fr}}
+.variant{border:1px solid var(--line-2);border-radius:var(--radius);padding:16px;background:#fff}
+.variant__imgs{display:grid;gap:8px}
+.variant__imgs img{width:100%;aspect-ratio:3/1.1;object-fit:contain;background:#fff;border:1px solid var(--line-2);border-radius:2px;padding:6px}
+.variant__code{font-weight:600;font-size:15px;margin:12px 0 8px;display:flex;justify-content:space-between;align-items:center}
+.variant dl{margin:0;display:grid;grid-template-columns:1fr;gap:6px}
+.variant dt{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.variant dd{margin:0 0 4px;font-size:13px;font-weight:500}
+.guide-mini{background:var(--bg-soft);border-radius:var(--radius);padding:28px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;margin:0 0 50px}
+.guide-mini svg{width:220px;height:auto}
+.guide-mini h3{font-size:13px;letter-spacing:.25em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+.guide-mini p{font-size:14px;color:var(--ink-2);margin:0 0 10px}
+@media (max-width:700px){.guide-mini{grid-template-columns:1fr}.guide-mini svg{width:100%}}
+.faq details{border-bottom:1px solid var(--line-2)}
+.faq summary{list-style:none;cursor:pointer;padding:16px 0;font-weight:500;font-size:15px;display:flex;justify-content:space-between;gap:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--red);font-weight:300;font-size:22px;line-height:1}
+.faq details[open] summary:after{content:"\2212"}
+.faq p{color:var(--ink-2);font-size:14px;padding-bottom:16px;margin:0;max-width:75ch}
+.related{padding:60px 0 90px;background:var(--bg-soft)}
+.related .section__head{margin-bottom:28px}
+.lightbox{position:fixed;inset:0;background:rgba(255,255,255,.96);z-index:100;display:none;place-items:center;padding:30px;cursor:zoom-out}
+.lightbox.open{display:grid}
+.lightbox img{max-width:min(1200px,96vw);max-height:90vh;object-fit:contain}
+
+/* ---- Statik sayfalar ---------------------------------------------- */
+.page{padding:60px 0 90px}
+.page__in{max-width:820px;margin:0 auto}
+.page h1{font-weight:300;text-transform:uppercase;letter-spacing:.15em;font-size:clamp(26px,3.4vw,40px);margin-bottom:28px}
+.page h2{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--red);font-weight:600;margin:40px 0 12px}
+.page h3{font-size:17px;font-weight:600;margin:24px 0 8px}
+.page p,.page li{color:var(--ink-2);font-size:15px;line-height:1.75}
+.page ul{padding-left:20px}
+.page table{width:100%;border-collapse:collapse;font-size:14px;margin:16px 0}
+.page th,.page td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+.page th{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted-2);font-weight:600}
+.page .note{background:var(--bg-soft);border-left:3px solid var(--red);padding:16px 18px;border-radius:0 var(--radius) var(--radius) 0;margin:20px 0}
+.page figure{margin:24px 0}
+.page figure svg{width:100%;max-width:560px;height:auto}
+.page .dealers{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;list-style:none;padding:0}
+.page .dealers li{border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.page .dealers b{display:block;font-weight:600;color:var(--ink);margin-bottom:4px}
+
+/* ---- Footer -------------------------------------------------------- */
+.site-footer{background:var(--footer);color:#D9D9D9;margin-top:0}
+.site-footer__in{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:30px;padding:60px 0 40px}
+.site-footer .logo{color:#fff;margin-bottom:18px}
+.site-footer .logo__sub{color:#BDBDBD}
+.site-footer h4{color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;margin:0 0 16px}
+.site-footer a{display:block;font-size:13px;color:#C8C8C8;padding:5px 0;font-weight:300}
+.site-footer a:hover{color:#fff}
+.site-footer p{font-size:13px;font-weight:300;color:#C8C8C8;max-width:36ch}
+.social{display:flex;gap:12px;margin-top:8px}
+.social a{width:34px;height:34px;border:1px solid #7a7a79;border-radius:50%;display:grid;place-items:center;padding:0}
+.social svg{width:16px;height:16px;fill:#fff}
+.site-footer__bottom{border-top:1px solid #6b6b6a;padding:18px 0;font-size:12px;color:#BDBDBD;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:900px){.site-footer__in{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.site-footer__in{grid-template-columns:1fr}}
+.to-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;border:0;display:grid;place-items:center;z-index:40;opacity:0;pointer-events:none;transition:.3s;box-shadow:0 6px 16px rgba(220,38,38,.35)}
+.to-top.show{opacity:1;pointer-events:auto}
+.wa-fab{position:fixed;right:18px;bottom:78px;width:52px;height:52px;border-radius:50%;background:#25D366;display:grid;place-items:center;z-index:40;box-shadow:0 6px 16px rgba(0,0,0,.2)}
+.wa-fab svg{width:28px;height:28px;fill:#fff}
+.skeleton{min-height:300px;display:grid;place-items:center;color:var(--muted);font-size:12px;letter-spacing:.3em;text-transform:uppercase}
+.blogger-posts{display:none}
+.post-body-fallback{padding:40px 0}
+
+]]></b:skin>
+<script type='text/javascript'>
+//<![CDATA[
+/* ===== SİTE AYARLARI — burayı düzenleyin ===== */
+window.AO_CONFIG = {
+  cdn: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/',
+  whatsapp: '905000000000',            /* WhatsApp numarası: ülke koduyla, boşluksuz */
+  brands: {
+    'lee-cooper': { name: 'Lee Cooper', logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/lee-cooper.png', hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p001.jpg', desc: '1908\'den bu yana İngiliz denim mirası. Genç, cesur ve renkli: asetat, metal ve TR90 çerçeveler; clip-on seçenekleri.' },
+    'quantum':    { name: 'Quantum',    logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/quantum.png',    hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p001.jpg',    desc: 'Çağdaş çizgiler, titanyum ve asetat. Hafiflik ve erişilebilir lüks anlayışını birleştiren optik ve clip-on modeller.' },
+    'slazenger':  { name: 'Slazenger',  logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/slazenger.png',  hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/slazenger-p001.jpg',  desc: 'Sportif İngiliz klasiği. Geniş optik koleksiyon ve polarize camlı, anti-far seçenekli clip-on serisi.' },
+    'belmond':    { name: 'Belmond',    logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/belmond.png',    hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/belmond-p001.jpg',    desc: 'Zarif ve feminen: altın, pembe altın ve kristal tonlarında metal-asetat kombinasyonları.' }
+  }
+};
+//]]>
+</script>
+</head>
+<body>
+<b:if cond='data:view.isHomepage'><b:attr name='data-view' value='home'/>
+<b:elseif cond='data:view.isPost'/><b:attr name='data-view' value='post'/>
+<b:elseif cond='data:view.isPage'/><b:attr name='data-view' value='page'/>
+<b:elseif cond='data:view.isError'/><b:attr name='data-view' value='error'/>
+<b:else/><b:attr name='data-view' value='collection'/>
+</b:if>
+<b:if cond='data:view.isLabelSearch'><b:attr expr:value='data:view.search.label' name='data-label'/></b:if>
+<b:if cond='data:view.isSearch and data:view.search.query'><b:attr expr:value='data:view.search.query' name='data-query'/></b:if>
+
+<b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
+  <b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar' version='2' visible='false'>
+    <b:includable id='main'/>
+  </b:widget>
+</b:section>
+
+<!-- ================= HEADER ================= -->
+<header class='site-header'>
+  <div class='wrap site-header__in'>
+    <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
+      <b:widget id='Header1' locked='true' title='Arıkan Optik (Başlık)' type='Header' version='2' visible='true'>
+        <b:includable id='main'>
+          <a class='logo' expr:href='data:blog.homepageUrl' expr:title='data:title'>
+            <b:if cond='data:image'>
+              <img expr:alt='data:title' expr:src='data:image'/>
+            <b:else/>
+              <svg class='logo__mark' viewBox='0 0 40 40' aria-hidden='true'><circle cx='16' cy='20' r='12' fill='none' stroke='#DC2626' stroke-width='4'/><circle cx='26' cy='20' r='9' fill='none' stroke='#111827' stroke-width='3'/></svg>
+              <span><data:title/></span><span class='logo__sub'>2026 Katalog</span>
+            </b:if>
+          </a>
+        </b:includable>
+      </b:widget>
+    </b:section>
+    <button aria-label='Menü' class='burger'><span></span></button>
+    <nav class='nav'>
+      <details>
+        <summary>Markalar</summary>
+        <div class='menu'>
+          <a href='/search/label/Lee%20Cooper'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/lee-cooper.png'/>Lee Cooper <small data-brand-count='lee-cooper'></small></a>
+          <a href='/search/label/Quantum'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/quantum.png'/>Quantum <small data-brand-count='quantum'></small></a>
+          <a href='/search/label/Slazenger'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/slazenger.png'/>Slazenger <small data-brand-count='slazenger'></small></a>
+          <a href='/search/label/Belmond'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/belmond.png'/>Belmond <small data-brand-count='belmond'></small></a>
+          <div class='sep'></div>
+          <a href='/search'>Tüm modeller</a>
+        </div>
+      </details>
+      <a href='/search/label/Optik'>Optik</a>
+      <a href='/search/label/Clip-On'>Clip-On</a>
+      <a href='/search/label/Yeni'>Yeni Gelenler</a>
+      <a href='/p/ekartman-rehberi.html'>Ölçü Rehberi</a>
+      <a href='/p/yetkili-satis-noktalari.html'>Satış Noktaları</a>
+      <a href='/p/iletisim.html'>İletişim</a>
+      <div class='search-wrap'>
+        <form action='/search' class='search' method='get' role='search'>
+          <input aria-label='Model kodu ara' autocomplete='off' name='q' placeholder='Model kodu (örn. LC1408)' type='search'/>
+          <button aria-label='Ara' type='submit'><svg fill='none' stroke='currentColor' stroke-width='2.2' viewBox='0 0 24 24'><circle cx='11' cy='11' r='7'/><path d='m20 20-3.5-3.5'/></svg></button>
+        </form>
+        <div class='search-suggest'></div>
+      </div>
+    </nav>
+    <div class='search-wrap'>
+      <form action='/search' class='search' method='get' role='search'>
+        <input aria-label='Model kodu ara' autocomplete='off' name='q' placeholder='Model kodu (örn. LC1408)' type='search'/>
+        <button aria-label='Ara' type='submit'><svg fill='none' stroke='currentColor' stroke-width='2.2' viewBox='0 0 24 24'><circle cx='11' cy='11' r='7'/><path d='m20 20-3.5-3.5'/></svg></button>
+      </form>
+      <div class='search-suggest'></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ================= ANA SAYFA ================= -->
+<b:if cond='data:view.isHomepage'>
+  <section class='hero'>
+    <div class='hero__slides'>
+      <div class='hero__slide active'>
+        <div class='hero__text'>
+          <p class='eyebrow'>2026 Koleksiyonu</p>
+          <h1 class='display'>Gözlük<br/><strong>Modelleri</strong></h1>
+          <p class='lead'>Lee Cooper, Quantum, Slazenger ve Belmond'un 2026 optik ve clip-on koleksiyonları: ölçüler, malzemeler, tüm renk seçenekleri ve görseller tek sayfada.</p>
+          <form action='/search' class='hero-search' method='get' role='search'>
+            <input aria-label='Model kodu' autocomplete='off' name='q' placeholder='Model kodunu yazın: LC1408, Q503, 9599…' type='search'/>
+            <button type='submit'>Modeli Bul</button>
+          </form>
+          <p class='hero-search__hint'>Model kodu gözlüğün sap iç yüzünde yazar. Örn. <b>LC1408.C1</b> → model LC1408, renk C1.</p>
+        </div>
+        <div class='hero__img'><img alt='2026 Lee Cooper optik koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p001.jpg'/></div>
+      </div>
+      <div class='hero__slide'>
+        <div class='hero__text'>
+          <p class='eyebrow'>Clip-On Serisi</p>
+          <h2 class='display'>Tek Çerçeve<br/><strong>İki Kullanım</strong></h2>
+          <p class='lead'>Mıknatıslı polarize güneş camı ile numaralı gözlüğünüz saniyeler içinde güneş gözlüğüne dönüşür. Slazenger'da anti-far seçeneği.</p>
+          <a class='link-arrow' href='/search/label/Clip-On'>Clip-On modelleri</a>
+        </div>
+        <div class='hero__img'><img alt='Quantum clip-on koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p063.jpg'/></div>
+      </div>
+      <div class='hero__slide'>
+        <div class='hero__text'>
+          <p class='eyebrow'>Slazenger</p>
+          <h2 class='display'>Sportif<br/><strong>İngiliz Klasiği</strong></h2>
+          <p class='lead'>Geniş optik koleksiyon ve koleksiyona yeni eklenen clip-on modeller.</p>
+          <a class='link-arrow' href='/search/label/Slazenger'>Slazenger modelleri</a>
+        </div>
+        <div class='hero__img'><img alt='Slazenger 2026 optik koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/slazenger-p001.jpg'/></div>
+      </div>
+      <div class='hero__slide'>
+        <div class='hero__text'>
+          <p class='eyebrow'>Belmond</p>
+          <h2 class='display'>Zarif<br/><strong>Detaylar</strong></h2>
+          <p class='lead'>Altın, pembe altın ve kristal tonlarında feminen metal-asetat tasarımlar.</p>
+          <a class='link-arrow' href='/search/label/Belmond'>Belmond modelleri</a>
+        </div>
+        <div class='hero__img'><img alt='Belmond 2026 optik koleksiyonu' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/belmond-p001.jpg'/></div>
+      </div>
+      <button aria-label='Önceki' class='hero__arrow hero__arrow--prev'><svg fill='none' stroke='currentColor' stroke-width='2.5' viewBox='0 0 24 24'><path d='m15 5-7 7 7 7'/></svg></button>
+      <button aria-label='Sonraki' class='hero__arrow hero__arrow--next'><svg fill='none' stroke='currentColor' stroke-width='2.5' viewBox='0 0 24 24'><path d='m9 5 7 7-7 7'/></svg></button>
+      <div class='hero__dots'></div>
+    </div>
+  </section>
+
+  <section class='logos'>
+    <div class='wrap logos__in'>
+      <a href='/search/label/Lee%20Cooper'><img alt='Lee Cooper Eyewear' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/lee-cooper.png'/></a>
+      <a href='/search/label/Quantum'><img alt='Quantum Eyewear' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/quantum.png'/></a>
+      <a href='/search/label/Slazenger'><img alt='Slazenger Eyewear' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/slazenger.png'/></a>
+      <a href='/search/label/Belmond'><img alt='Belmond Eyewear' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/belmond.png'/></a>
+    </div>
+  </section>
+
+  <section class='stats'>
+    <a class='stats__item' href='/search'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p001.jpg'/><span class='stats__num' data-stat='brands'>4</span><span class='stats__label'>Gözlük Markası</span></a>
+    <a class='stats__item' href='/search'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p002.jpg'/><span class='stats__num' data-stat='models'>161</span><span class='stats__label'>Model</span></a>
+    <a class='stats__item' href='/search'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/belmond-p019.jpg'/><span class='stats__num' data-stat='colors'>517</span><span class='stats__label'>Renk Seçeneği</span></a>
+    <a class='stats__item' href='/search/label/Clip-On'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/slazenger-clip-p002.jpg'/><span class='stats__num' data-stat='clip'>53</span><span class='stats__label'>Clip-On Model</span></a>
+  </section>
+
+  <section class='section'>
+    <div class='wrap'>
+      <div class='section__head'>
+        <p class='eyebrow'>Markalar</p>
+        <h2 class='title-2'>Gözlük Markaları</h2>
+        <p class='lead'>Her markanın 2026 koleksiyonunu, modellerini ve tüm renk seçeneklerini inceleyin.</p>
+      </div>
+      <div class='brand-grid'>
+        <a class='brand-card' href='/search/label/Lee%20Cooper'><img alt='' class='bg' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p001.jpg'/><span class='brand-card__logo'><img alt='Lee Cooper' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/lee-cooper.png'/></span><span class='brand-card__body'><span class='brand-card__name'>Lee Cooper</span><span class='brand-card__count' data-brand-count='lee-cooper'>&#160;</span></span></a>
+        <a class='brand-card' href='/search/label/Quantum'><img alt='' class='bg' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p001.jpg'/><span class='brand-card__logo'><img alt='Quantum' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/quantum.png'/></span><span class='brand-card__body'><span class='brand-card__name'>Quantum</span><span class='brand-card__count' data-brand-count='quantum'>&#160;</span></span></a>
+        <a class='brand-card' href='/search/label/Slazenger'><img alt='' class='bg' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/slazenger-clip-p001.jpg'/><span class='brand-card__logo'><img alt='Slazenger' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/slazenger.png'/></span><span class='brand-card__body'><span class='brand-card__name'>Slazenger</span><span class='brand-card__count' data-brand-count='slazenger'>&#160;</span></span></a>
+        <a class='brand-card' href='/search/label/Belmond'><img alt='' class='bg' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/belmond-p001.jpg'/><span class='brand-card__logo'><img alt='Belmond' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/belmond.png'/></span><span class='brand-card__body'><span class='brand-card__name'>Belmond</span><span class='brand-card__count' data-brand-count='belmond'>&#160;</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class='section section--soft' style='padding-top:0'>
+    <div class='wrap'>
+      <div class='split'>
+        <a class='split__item' href='/search/label/Optik'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p002.jpg'/><span class='split__body'><p class='eyebrow'>Numaralı cam için</p><h3>Optik</h3><p>Metal, asetat, titanyum ve TR90 çerçeveler. Her modelde ekartman ölçüleri ve malzeme bilgisi.</p><span class='link-arrow'>Optik çerçeveler</span></span></a>
+        <a class='split__item' href='/search/label/Clip-On'><img alt='' src='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p075.jpg'/><span class='split__body'><p class='eyebrow'>Mıknatıslı güneş camı</p><h3>Clip-On</h3><p>Polarize güneş camı takılan optik çerçeveler. Renk kombinasyonlarını ve cam renklerini görün.</p><span class='link-arrow'>Clip-On modeller</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class='section'>
+    <div class='wrap'>
+      <div class='section__head'>
+        <p class='eyebrow'>Koleksiyona yeni eklenenler</p>
+        <h2 class='title-2'>Yeni Modeller</h2>
+      </div>
+      <div class='skeleton' id='home-new'>Yükleniyor</div>
+      <p style='text-align:center;margin-top:34px'><a class='link-arrow' href='/search/label/Yeni'>Tüm yeni modeller</a></p>
+    </div>
+  </section>
+
+  <section class='section section--dark'>
+    <div class='wrap guide-banner'>
+      <div>
+        <p class='eyebrow'>Ölçü rehberi</p>
+        <h2 class='title-2'>Ekartman nasıl okunur?</h2>
+        <p class='lead'>Her modelin altında üç sayı görürsünüz: <b>çerçeve (cam) genişliği</b>, <b>köprü</b> ve <b>sap</b> uzunluğu. Mevcut gözlüğünüzün sapındaki rakamlarla karşılaştırarak size uyacak modeli seçebilirsiniz.</p>
+        <dl><div><dt>51</dt><dd>Çerçeve · mm</dd></div><div><dt>18</dt><dd>Köprü · mm</dd></div><div><dt>145</dt><dd>Sap · mm</dd></div></dl>
+        <p style='margin-top:30px'><a class='link-arrow' href='/p/ekartman-rehberi.html' style='color:#fff;border-color:#fff'>Rehberi oku</a></p>
+      </div>
+      <svg aria-hidden='true' fill='none' viewBox='0 0 520 260'>
+        <g stroke='#fff' stroke-width='3'><rect height='96' rx='34' width='170' x='40' y='70'/><rect height='96' rx='34' width='170' x='310' y='70'/><path d='M210 100c20-18 80-18 100 0'/><path d='M40 100 4 92M480 100l36-8'/></g>
+        <g stroke='#DC2626' stroke-width='2'><path d='M40 200h170M40 192v16M210 192v16'/><path d='M218 40h84M218 32v16M302 32v16'/><path d='M60 236h400M60 228v16M460 228v16'/></g>
+        <g fill='#fff' font-family='Montserrat,sans-serif' font-size='13' font-weight='500' letter-spacing='2'><text x='96' y='222'>ÇERÇEVE</text><text x='232' y='24'>KÖPRÜ</text><text x='244' y='256'>SAP</text></g>
+      </svg>
+    </div>
+  </section>
+
+  <section class='section'>
+    <div class='wrap'>
+      <div class='section__head'>
+        <p class='eyebrow'>Seçkiler</p>
+        <h2 class='title-2'>Öne Çıkan Modeller</h2>
+      </div>
+      <div class='skeleton' id='home-pick'>Yükleniyor</div>
+      <p style='text-align:center;margin-top:34px'><a class='btn btn--dark' href='/search'>Tüm modelleri gör</a></p>
+    </div>
+  </section>
+</b:if>
+
+<!-- ================= BLOG WIDGET: koleksiyon / model / sayfa ================= -->
+<b:section class='main' id='main' showaddelement='no'>
+  <b:widget id='Blog1' locked='true' title='Blog Yazıları' type='Blog' version='2' visible='true'>
+    <b:includable id='main'>
+      <b:if cond='data:view.isSingleItem'>
+        <b:loop values='data:posts' var='post'>
+          <b:if cond='data:view.isPost'>
+            <div class='wrap'>
+              <nav aria-label='Konum' class='crumbs'>
+                <span><a expr:href='data:blog.homepageUrl'>Ana sayfa</a></span>
+                <b:loop index='i' values='data:post.labels' var='label'>
+                  <b:if cond='data:i &lt; 2'><span><a expr:href='data:label.url'><data:label.name/></a></span></b:if>
+                </b:loop>
+                <span><data:post.title/></span>
+              </nav>
+            </div>
+            <div class='wrap'><data:post.body/></div>
+            <section class='related'>
+              <div class='wrap'>
+                <div class='section__head'><p class='eyebrow'>Benzer ölçülerde</p><h2 class='title-2'>İlgili Modeller</h2></div>
+                <div class='skeleton' id='related-grid'>Yükleniyor</div>
+              </div>
+            </section>
+          <b:else/>
+            <section class='page'>
+              <div class='wrap page__in'>
+                <h1><data:post.title/></h1>
+                <data:post.body/>
+              </div>
+            </section>
+          </b:if>
+        </b:loop>
+      <b:elseif cond='data:view.isHomepage'/>
+        <div class='blogger-posts'>
+          <b:loop values='data:posts' var='post'><a expr:href='data:post.url'><data:post.title/></a></b:loop>
+        </div>
+      <b:else/>
+        <section class='coll-head'>
+          <div class='wrap coll-head__in'>
+            <div>
+              <div class='coll-head__logo' id='coll-logo'></div>
+              <p class='eyebrow'>2026 Koleksiyonu</p>
+              <h1 class='display' id='coll-title' style='font-size:clamp(26px,3.4vw,40px)'>Modeller</h1>
+              <p class='lead' id='coll-lead'></p>
+            </div>
+            <div class='coll-head__count' id='coll-count'>&#160;</div>
+          </div>
+        </section>
+        <div class='wrap coll' id='collection'>
+          <aside class='filters' id='filters'></aside>
+          <div>
+            <div class='toolbar'>
+              <div class='chips' id='chips'></div>
+              <div style='display:flex;gap:10px;align-items:center'>
+                <button class='btn btn--ghost filters-toggle' type='button'>Filtrele</button>
+                <select aria-label='Sırala' id='sort'><option value='default'>Katalog sırası</option><option value='new'>Önce yeni</option><option value='code'>Model koduna göre</option><option value='size-asc'>Çerçeve genişliği ↑</option><option value='size-desc'>Çerçeve genişliği ↓</option><option value='colors'>Renk sayısı</option></select>
+              </div>
+            </div>
+            <div class='skeleton' id='coll-grid'>Yükleniyor</div>
+          </div>
+        </div>
+        <div class='blogger-posts'>
+          <b:loop values='data:posts' var='post'><a expr:href='data:post.url'><data:post.title/></a></b:loop>
+        </div>
+      </b:if>
+    </b:includable>
+  </b:widget>
+</b:section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class='site-footer'>
+  <div class='wrap site-footer__in'>
+    <div>
+      <a class='logo' expr:href='data:blog.homepageUrl'><svg class='logo__mark' viewBox='0 0 40 40' aria-hidden='true'><circle cx='16' cy='20' r='12' fill='none' stroke='#DC2626' stroke-width='4'/><circle cx='26' cy='20' r='9' fill='none' stroke='#fff' stroke-width='3'/></svg><span><data:blog.title/></span></a>
+      <p>Lee Cooper, Quantum, Slazenger ve Belmond gözlük markalarının 2026 koleksiyonları. Modeller yalnızca yetkili optik mağazalarında satılır; bu site satış yapmaz, bilgilendirir.</p>
+      <div class='social'>
+        <a aria-label='Instagram' href='https://www.instagram.com/' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z'/></svg></a>
+        <a aria-label='YouTube' href='https://www.youtube.com/' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z'/></svg></a>
+        <a aria-label='Facebook' href='https://www.facebook.com/' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.3l-.5 3.5h-2.8v8.4A12 12 0 0 0 24 12z'/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Markalar</h4>
+      <a href='/search/label/Lee%20Cooper'>Lee Cooper</a>
+      <a href='/search/label/Quantum'>Quantum</a>
+      <a href='/search/label/Slazenger'>Slazenger</a>
+      <a href='/search/label/Belmond'>Belmond</a>
+    </div>
+    <div>
+      <h4>Koleksiyon</h4>
+      <a href='/search'>Tüm modeller</a>
+      <a href='/search/label/Optik'>Optik çerçeveler</a>
+      <a href='/search/label/Clip-On'>Clip-On</a>
+      <a href='/search/label/Yeni'>Yeni gelenler</a>
+      <a href='/search/label/Polarize'>Polarize</a>
+    </div>
+    <div>
+      <h4>Rehber</h4>
+      <a href='/p/ekartman-rehberi.html'>Ekartman nasıl okunur?</a>
+      <a href='/p/sik-sorulan-sorular.html'>Sık sorulan sorular</a>
+      <a href='/p/yetkili-satis-noktalari.html'>Yetkili satış noktaları</a>
+    </div>
+    <div>
+      <h4>Kurumsal</h4>
+      <a href='/p/hakkimizda.html'>Hakkımızda</a>
+      <a href='/p/iletisim.html'>İletişim</a>
+      <a href='https://arikantime.com/tr/' rel='noopener' target='_blank'>arikantime.com</a>
+    </div>
+  </div>
+  <div class='wrap site-footer__bottom'>
+    <span>© 2026 <data:blog.title/> · Tüm hakları saklıdır. Ürün görselleri ve bilgileri 2026 marka kataloglarından alınmıştır.</span>
+    <span>Sitedeki ölçüler ve renk adları üretici kataloğuna göredir; stok ve fiyat için yetkili satış noktasına danışın.</span>
+  </div>
+</footer>
+<button aria-label='Yukarı' class='to-top'><svg fill='none' stroke='currentColor' stroke-width='2.5' viewBox='0 0 24 24' width='18'><path d='m6 14 6-6 6 6'/></svg></button>
+<a aria-label='WhatsApp' class='wa-fab' href='https://wa.me/905000000000' id='wa-fab' rel='noopener' target='_blank'><svg viewBox='0 0 24 24'><path d='M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm0-21.6A11.8 11.8 0 0 0 2 18.2L.3 24l6-1.6A11.8 11.8 0 1 0 12 .2z'/></svg></a>
+<script type='text/javascript'>
+//<![CDATA[
+/* =====================================================================
+   ARIKAN OPTİK — Gözlük Kataloğu · tema JavaScript'i
+   Veri kaynağı: GitHub + jsDelivr CDN (models.json + görseller)
+   ===================================================================== */
+(function () {
+  'use strict';
+  var CFG = window.AO_CONFIG || {};
+  var CDN = CFG.cdn || 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/';
+  var BRANDS = CFG.brands || {};
+  var BRAND_ORDER = ['lee-cooper', 'quantum', 'slazenger', 'belmond'];
+  var FEED_URL = (CFG.feed || '/feeds/posts/summary?alt=json&max-results=500');
+  var BODY = document.body;
+  var VIEW = BODY.getAttribute('data-view') || 'home';
+  var LABEL = BODY.getAttribute('data-label') || '';
+  var QUERY = BODY.getAttribute('data-query') || '';
+  var state = { models: [], posts: {}, ready: false };
+
+  /* ---------- yardımcılar ---------- */
+  function $(s, c) { return (c || document).querySelector(s); }
+  function $$(s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (m) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]; }); }
+  function slug(s) { return String(s).toLowerCase().replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+  function img(m, name) { return CDN + 'img/' + m.brand_slug + '/' + name; }
+  function trUpper(s) { return String(s).replace(/i/g, 'İ').replace(/ı/g, 'I').toUpperCase(); }
+  function dimStr(m) { return (m.lens || '–') + ' □ ' + (m.bridge || '–') + ' – ' + (m.temple || '–'); }
+  function catLabel(m) { return m.category === 'Clip-On' ? 'Clip-On' : 'Optik Çerçeve'; }
+  function brandInfo(m) { return BRANDS[m.brand_slug] || { name: m.brand, logo: CDN + 'img/logo/' + m.brand_slug + '.png' }; }
+  function isPolar(m) { return /polar/i.test(m.materials && m.materials.Cam || ''); }
+  function frameMaterial(m) { return (m.materials && m.materials['Çerçeve']) || ''; }
+
+  /* ---------- renk eşleme ---------- */
+  var COLOR_MAP = [
+    [/şeffaf|kristal|transparan/i, '#E5E7EB'], [/siyah/i, '#111111'], [/antrasit/i, '#374151'], [/gun ?metal|gun/i, '#4B5563'],
+    [/gümüş|gumus/i, '#C9CCD1'], [/pembe altın|rose/i, '#E0B4A0'], [/altın|gold/i, '#D4AF37'], [/bakır/i, '#B87333'], [/bronz/i, '#8C6A3F'],
+    [/demi|havana|kaplumbağa/i, '#8B5A2B'], [/kahverengi/i, '#6B4423'], [/bordo/i, '#7F1D1D'], [/kırmızı|kirmizi/i, '#DC2626'],
+    [/lacivert/i, '#1E3A8A'], [/petrol/i, '#0F766E'], [/mavi/i, '#2563EB'], [/haki/i, '#6B705C'], [/yeşil|yesil/i, '#166534'],
+    [/pembe/i, '#F472B6'], [/mor|lila/i, '#7C3AED'], [/turuncu/i, '#F97316'], [/sarı|sari/i, '#FACC15'], [/bej|krem/i, '#E7D8C0'],
+    [/beyaz/i, '#FFFFFF'], [/füme|fume/i, '#4B5563'], [/gri/i, '#9CA3AF'], [/karbon/i, '#2F2F2F'], [/rubber/i, '#222222']
+  ];
+  var FAMILIES = [
+    ['Siyah', /siyah|karbon/i], ['Gri / Gun', /gri|gun|antrasit|füme/i], ['Gümüş', /gümüş/i], ['Altın / Bronz', /altın|bronz|bakır|rose/i],
+    ['Kahverengi / Demi', /kahverengi|demi|havana/i], ['Mavi / Lacivert', /mavi|lacivert|petrol/i], ['Yeşil / Haki', /yeşil|haki/i],
+    ['Kırmızı / Bordo', /kırmızı|bordo|turuncu/i], ['Pembe / Mor', /pembe|mor|lila/i], ['Şeffaf / Kristal', /şeffaf|kristal/i], ['Bej / Beyaz', /bej|beyaz|krem|sarı/i]
+  ];
+  function hexOf(name) {
+    var n = String(name || '');
+    for (var i = 0; i < COLOR_MAP.length; i++) if (COLOR_MAP[i][0].test(n)) return COLOR_MAP[i][1];
+    return '#9CA3AF';
+  }
+  function swatch(v) {
+    var fc = (v.attrs && v.attrs.frame_color) || '';
+    var parts = fc.split('/').map(function (s) { return s.trim(); }).filter(Boolean);
+    var title = esc(v.code + (fc ? ' · ' + fc : ''));
+    if (parts.length > 1) return '<i class="sw sw--multi" title="' + title + '" style="--c1:' + hexOf(parts[0]) + ';--c2:' + hexOf(parts[1]) + '"></i>';
+    return '<i class="sw" title="' + title + '" style="background:' + hexOf(parts[0] || '') + '"></i>';
+  }
+  function familiesOf(m) {
+    var out = {};
+    (m.variants || []).forEach(function (v) {
+      var fc = (v.attrs && v.attrs.frame_color) || '';
+      FAMILIES.forEach(function (f) { if (f[1].test(fc)) out[f[0]] = 1; });
+    });
+    return Object.keys(out);
+  }
+
+  /* ---------- veri yükleme ---------- */
+  function fetchJSON(url) {
+    return fetch(url, { credentials: 'same-origin' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+  }
+  function loadModels() {
+    try { var c = sessionStorage.getItem('ao_models_v1'); if (c) return Promise.resolve(JSON.parse(c)); } catch (e) { }
+    return fetchJSON(CDN + 'models.json').then(function (d) {
+      try { sessionStorage.setItem('ao_models_v1', JSON.stringify(d)); } catch (e) { }
+      return d;
+    });
+  }
+  function loadPosts() {
+    if (CFG.posts) return Promise.resolve(CFG.posts);
+    try { var c = sessionStorage.getItem('ao_posts_v1'); if (c) return Promise.resolve(JSON.parse(c)); } catch (e) { }
+    return fetchJSON(FEED_URL).then(function (d) {
+      var map = {};
+      ((d.feed && d.feed.entry) || []).forEach(function (e) {
+        var t = (e.title && e.title.$t) || '';
+        var m = t.match(/([A-Z]{0,2}\d{3,5})\s*$/);
+        var link = (e.link || []).filter(function (l) { return l.rel === 'alternate'; })[0];
+        if (m && link) map[m[1]] = link.href;
+      });
+      try { sessionStorage.setItem('ao_posts_v1', JSON.stringify(map)); } catch (e) { }
+      return map;
+    }).catch(function () { return {}; });
+  }
+  function postUrl(m) { return state.posts[m.code] || ('/search?q=' + encodeURIComponent(m.code)); }
+
+  function ready() {
+    return Promise.all([loadModels(), loadPosts()]).then(function (r) {
+      state.models = (r[0].models || []).map(function (m) {
+        m.brand_slug = m.brand_slug || slug(m.brand);
+        return m;
+      });
+      state.posts = r[1] || {};
+      state.ready = true;
+      return state;
+    });
+  }
+
+  /* ---------- kart ---------- */
+  function card(m) {
+    var b = brandInfo(m);
+    var front = m.images && m.images.front ? img(m, m.images.front) : (m.variants[0] && m.variants[0].images.front ? img(m, m.variants[0].images.front) : '');
+    var side = m.images && m.images.side ? img(m, m.images.side) : '';
+    var badges = '';
+    if (m.new) badges += '<span class="badge badge--red">Yeni</span>';
+    if (m.category === 'Clip-On') badges += '<span class="badge badge--dark">Clip-On</span>';
+    if (m.antifar) badges += '<span class="badge">Anti-Far</span>';
+    return '<a class="card" href="' + esc(postUrl(m)) + '" data-code="' + esc(m.code) + '">' +
+      '<div class="card__img"><div class="card__badges">' + badges + '</div>' +
+      '<img class="front" loading="lazy" src="' + esc(front) + '" alt="' + esc(b.name + ' ' + m.code + ' gözlük önden görünüm') + '">' +
+      (side ? '<img class="side" loading="lazy" src="' + esc(side) + '" alt="' + esc(b.name + ' ' + m.code + ' yandan görünüm') + '">' : '') +
+      '</div><div class="card__body"><div class="card__brand">' + esc(b.name) + ' · ' + esc(catLabel(m)) + '</div>' +
+      '<div class="card__code">' + esc(m.code) + '</div>' +
+      '<div class="card__meta"><span>' + m.variants.length + ' renk</span><span class="swatches">' + m.variants.slice(0, 8).map(swatch).join('') + '</span></div>' +
+      '<div class="card__dims">' + esc(dimStr(m)) + ' mm · ' + esc(frameMaterial(m)) + '</div></div></a>';
+  }
+  function renderGrid(el, list) {
+    if (!list.length) { el.innerHTML = '<div class="empty"><b>Sonuç bulunamadı</b>Filtreleri temizleyip tekrar deneyin ya da model kodunu doğrudan arayın.</div>'; return; }
+    el.innerHTML = '<div class="grid">' + list.map(card).join('') + '</div>';
+  }
+
+  /* ---------- arama ---------- */
+  function findExact(q) {
+    var n = slug(q).replace(/-/g, '').toUpperCase();
+    if (!n) return null;
+    for (var i = 0; i < state.models.length; i++) {
+      var m = state.models[i];
+      if (m.code.toUpperCase() === n) return m;
+      for (var j = 0; j < m.variants.length; j++) if (m.variants[j].code.replace(/\./g, '').toUpperCase() === n) return m;
+    }
+    return null;
+  }
+  function searchModels(q) {
+    var n = slug(q).replace(/-/g, '');
+    if (!n) return [];
+    var ql = q.toLowerCase();
+    return state.models.filter(function (m) {
+      if (slug(m.code).replace(/-/g, '').indexOf(n) >= 0) return true;
+      if (slug(m.brand).replace(/-/g, '').indexOf(n) >= 0) return true;
+      var hay = (m.category + ' ' + Object.keys(m.materials).map(function (k) { return m.materials[k]; }).join(' ') + ' ' +
+        m.variants.map(function (v) { return Object.keys(v.attrs).map(function (k) { return v.attrs[k]; }).join(' '); }).join(' ')).toLowerCase();
+      return hay.indexOf(ql) >= 0;
+    });
+  }
+  function bindSearch(form) {
+    if (!form) return;
+    var input = $('input', form), box = form.parentNode.querySelector('.search-suggest');
+    form.addEventListener('submit', function (e) {
+      var q = input.value.trim(); if (!q) { e.preventDefault(); return; }
+      if (state.ready) { var m = findExact(q); if (m && state.posts[m.code]) { e.preventDefault(); location.href = state.posts[m.code]; } }
+    });
+    if (!box) return;
+    input.addEventListener('input', function () {
+      var q = input.value.trim();
+      if (!state.ready || q.length < 2) { box.classList.remove('open'); return; }
+      var res = searchModels(q).slice(0, 8);
+      if (!res.length) { box.classList.remove('open'); return; }
+      box.innerHTML = res.map(function (m) {
+        var b = brandInfo(m);
+        return '<a href="' + esc(postUrl(m)) + '"><img src="' + esc(img(m, m.images.front || m.variants[0].images.front)) + '" alt=""><span><b>' + esc(m.code) + '</b><small>' + esc(b.name + ' · ' + catLabel(m) + ' · ' + m.variants.length + ' renk') + '</small></span></a>';
+      }).join('');
+      box.classList.add('open');
+    });
+    document.addEventListener('click', function (e) { if (!form.parentNode.contains(e.target)) box.classList.remove('open'); });
+  }
+
+  /* ---------- header ---------- */
+  function initHeader() {
+    var burger = $('.burger'), nav = $('.nav');
+    if (burger && nav) burger.addEventListener('click', function () { nav.classList.toggle('open'); BODY.classList.toggle('nav-open'); });
+    $$('.search').forEach(bindSearch);
+    var top = $('.to-top');
+    if (top) {
+      window.addEventListener('scroll', function () { top.classList.toggle('show', window.scrollY > 500); }, { passive: true });
+      top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    }
+    // Markalar menüsüne model sayıları
+    ready().then(function () {
+      $$('[data-brand-count]').forEach(function (el) {
+        var s = el.getAttribute('data-brand-count');
+        var n = state.models.filter(function (m) { return s === 'all' || m.brand_slug === s; }).length;
+        el.textContent = n + ' model';
+      });
+    });
+  }
+
+  /* ---------- ana sayfa ---------- */
+  function initHome() {
+    // hero slider
+    var slides = $$('.hero__slide'), dots = $('.hero__dots'), i = 0, timer;
+    if (slides.length) {
+      slides.forEach(function (s, k) { var d = document.createElement('button'); d.setAttribute('aria-label', 'Slayt ' + (k + 1)); d.addEventListener('click', function () { go(k); }); dots.appendChild(d); });
+      function go(k) { slides[i].classList.remove('active'); dots.children[i].classList.remove('active'); i = (k + slides.length) % slides.length; slides[i].classList.add('active'); dots.children[i].classList.add('active'); clearInterval(timer); timer = setInterval(function () { go(i + 1); }, 6500); }
+      go(0);
+      $('.hero__arrow--prev').addEventListener('click', function () { go(i - 1); });
+      $('.hero__arrow--next').addEventListener('click', function () { go(i + 1); });
+    }
+    bindSearch($('.hero-search'));
+    ready().then(function () {
+      var ms = state.models;
+      var set = function (sel, v) { var el = $(sel); if (el) el.textContent = v; };
+      set('[data-stat=brands]', Object.keys(ms.reduce(function (a, m) { a[m.brand_slug] = 1; return a; }, {})).length);
+      set('[data-stat=models]', ms.length);
+      set('[data-stat=colors]', ms.reduce(function (a, m) { return a + m.variants.length; }, 0));
+      set('[data-stat=clip]', ms.filter(function (m) { return m.category === 'Clip-On'; }).length);
+      $$('[data-brand-count]').forEach(function (el) { var s = el.getAttribute('data-brand-count'); el.textContent = ms.filter(function (m) { return m.brand_slug === s; }).length + ' model'; });
+      var newGrid = $('#home-new');
+      if (newGrid) {
+        var news = ms.filter(function (m) { return m.new; });
+        if (!news.length) news = ms.filter(function (m) { return m.category === 'Clip-On'; }).slice(0, 8);
+        renderGrid(newGrid, news.slice(0, 8));
+      }
+      var pick = $('#home-pick');
+      if (pick) {
+        // her markadan 2 model
+        var out = [];
+        BRAND_ORDER.forEach(function (b) { out = out.concat(ms.filter(function (m) { return m.brand_slug === b; }).slice(0, 2)); });
+        renderGrid(pick, out);
+      }
+    });
+  }
+
+  /* ---------- koleksiyon / etiket / arama sayfası ---------- */
+  function initCollection() {
+    var root = $('#collection'); if (!root) return;
+    var filt = { brand: [], cat: [], mat: [], fam: [], feat: [], size: [] };
+    var sort = 'default';
+    var initial = (LABEL || '').trim();
+    var q = (QUERY || '').trim();
+    var head = $('#coll-title'), lead = $('#coll-lead'), logoEl = $('#coll-logo'), count = $('#coll-count');
+    ready().then(function () {
+      var ms = state.models;
+      // etikete göre başlangıç
+      var bslug = slug(initial);
+      var brandHit = BRANDS[bslug];
+      if (brandHit) { filt.brand = [bslug]; head.textContent = brandHit.name; lead.textContent = brandHit.desc || ''; if (logoEl) logoEl.innerHTML = '<img src="' + esc(brandHit.logo) + '" alt="' + esc(brandHit.name) + '">'; }
+      else if (/clip/i.test(initial)) { filt.cat = ['Clip-On']; head.textContent = 'Clip-On Koleksiyonu'; lead.textContent = 'Mıknatıslı güneş camı ile tek çerçeve, iki kullanım: numaralı optik gözlük ve polarize güneş gözlüğü.'; }
+      else if (/optik/i.test(initial)) { filt.cat = ['Optik']; head.textContent = 'Optik Çerçeveler'; lead.textContent = 'Numaralı cam için tasarlanmış 2026 optik çerçeve koleksiyonu.'; }
+      else if (/yeni/i.test(initial)) { filt.feat = ['new']; head.textContent = 'Koleksiyona Yeni Eklenenler'; lead.textContent = '2026 sezonunda koleksiyona katılan en yeni modeller.'; }
+      else if (/polar/i.test(initial)) { filt.feat = ['polar']; head.textContent = 'Polarize Camlı Modeller'; }
+      else if (/anti/i.test(initial)) { filt.feat = ['antifar']; head.textContent = 'Anti-Far Seçenekli Modeller'; }
+      else if (q) { head.textContent = '"' + q + '" için sonuçlar'; var exact = findExact(q); if (exact && state.posts[exact.code]) { location.replace(state.posts[exact.code]); return; } }
+      else if (initial) { var matHit = ms.some(function (m) { return slug(frameMaterial(m)) === bslug; }); if (matHit) { filt.mat = [bslug]; head.textContent = initial + ' Çerçeveler'; } else head.textContent = initial; }
+      else { head.textContent = 'Tüm Modeller'; lead.textContent = 'Lee Cooper, Quantum, Slazenger ve Belmond 2026 koleksiyonlarının tamamı.'; }
+      buildFilters(ms);
+      apply();
+    });
+
+    function buildFilters(ms) {
+      var f = $('#filters');
+      var counts = function (fn) { var c = {}; ms.forEach(function (m) { var ks = fn(m); (Array.isArray(ks) ? ks : [ks]).forEach(function (k) { if (k) c[k] = (c[k] || 0) + 1; }); }); return c; };
+      var group = function (title, key, items, render) {
+        return '<fieldset><h4>' + title + '</h4>' + items.map(function (it) {
+          var checked = filt[key].indexOf(it.v) >= 0 ? ' checked' : '';
+          return '<label><input type="checkbox" data-k="' + key + '" value="' + esc(it.v) + '"' + checked + '>' + (render ? render(it) : '') + '<span>' + esc(it.l) + '</span><span class="n">' + it.n + '</span></label>';
+        }).join('') + '</fieldset>';
+      };
+      var cb = counts(function (m) { return m.brand_slug; });
+      var cc = counts(function (m) { return m.category; });
+      var cm = counts(function (m) { return slug(frameMaterial(m)); });
+      var cf = counts(familiesOf);
+      var feats = [['new', 'Yeni gelenler', ms.filter(function (m) { return m.new; }).length], ['polar', 'Polarize cam', ms.filter(isPolar).length], ['antifar', 'Anti-Far seçeneği', ms.filter(function (m) { return m.antifar; }).length], ['titan', 'Titanyum', ms.filter(function (m) { return /titan/i.test(JSON.stringify(m.materials)); }).length]].filter(function (x) { return x[2]; });
+      var sizes = [['46-49', 'Küçük · 46–49 mm'], ['50-52', 'Orta · 50–52 mm'], ['53-55', 'Büyük · 53–55 mm'], ['56-99', 'Ekstra · 56 mm +']];
+      var matLabel = {}; ms.forEach(function (m) { matLabel[slug(frameMaterial(m))] = frameMaterial(m); });
+      f.innerHTML = '<button class="filters__close" aria-label="Kapat">×</button>' +
+        '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px"><h4 style="margin:0">Filtrele</h4><button class="filters__clear" id="f-clear">Temizle</button></div>' +
+        group('Marka', 'brand', BRAND_ORDER.filter(function (b) { return cb[b]; }).map(function (b) { return { v: b, l: (BRANDS[b] || { name: b }).name, n: cb[b] }; })) +
+        group('Tür', 'cat', ['Optik', 'Clip-On'].filter(function (c) { return cc[c]; }).map(function (c) { return { v: c, l: c === 'Optik' ? 'Optik çerçeve' : 'Clip-On', n: cc[c] }; })) +
+        group('Çerçeve genişliği', 'size', sizes.map(function (s) { var r = s[0].split('-'); return { v: s[0], l: s[1], n: ms.filter(function (m) { return m.lens >= +r[0] && m.lens <= +r[1]; }).length }; }).filter(function (x) { return x.n; })) +
+        group('Çerçeve malzemesi', 'mat', Object.keys(cm).sort(function (a, b) { return cm[b] - cm[a]; }).map(function (k) { return { v: k, l: matLabel[k], n: cm[k] }; })) +
+        group('Renk', 'fam', FAMILIES.map(function (fa) { return { v: fa[0], l: fa[0], n: cf[fa[0]] || 0 }; }).filter(function (x) { return x.n; }), function (it) { return '<i class="sw" style="background:' + hexOf(it.v.split('/')[0]) + '"></i>'; }) +
+        group('Özellik', 'feat', feats.map(function (x) { return { v: x[0], l: x[1], n: x[2] }; }));
+      f.addEventListener('change', function (e) {
+        var t = e.target; if (t.type !== 'checkbox') return;
+        var k = t.getAttribute('data-k'), arr = filt[k], i = arr.indexOf(t.value);
+        if (t.checked && i < 0) arr.push(t.value); if (!t.checked && i >= 0) arr.splice(i, 1);
+        apply();
+      });
+      $('#f-clear').addEventListener('click', function () { Object.keys(filt).forEach(function (k) { filt[k] = []; }); $$('input[type=checkbox]', f).forEach(function (c) { c.checked = false; }); apply(); });
+      $('.filters__close', f).addEventListener('click', function () { f.classList.remove('open'); });
+      var tg = $('.filters-toggle'); if (tg) tg.addEventListener('click', function () { f.classList.add('open'); });
+      var so = $('#sort'); if (so) so.addEventListener('change', function () { sort = so.value; apply(); });
+    }
+    function apply() {
+      var ms = state.models.filter(function (m) {
+        if (q && searchModels(q).indexOf(m) < 0) return false;
+        if (filt.brand.length && filt.brand.indexOf(m.brand_slug) < 0) return false;
+        if (filt.cat.length && filt.cat.indexOf(m.category) < 0) return false;
+        if (filt.mat.length && filt.mat.indexOf(slug(frameMaterial(m))) < 0) return false;
+        if (filt.fam.length) { var fam = familiesOf(m); if (!filt.fam.some(function (x) { return fam.indexOf(x) >= 0; })) return false; }
+        if (filt.size.length && !filt.size.some(function (s) { var r = s.split('-'); return m.lens >= +r[0] && m.lens <= +r[1]; })) return false;
+        if (filt.feat.length) {
+          if (filt.feat.indexOf('new') >= 0 && !m.new) return false;
+          if (filt.feat.indexOf('polar') >= 0 && !isPolar(m)) return false;
+          if (filt.feat.indexOf('antifar') >= 0 && !m.antifar) return false;
+          if (filt.feat.indexOf('titan') >= 0 && !/titan/i.test(JSON.stringify(m.materials))) return false;
+        }
+        return true;
+      });
+      if (sort === 'code') ms.sort(function (a, b) { return a.code.localeCompare(b.code, 'tr', { numeric: true }); });
+      else if (sort === 'size-asc') ms.sort(function (a, b) { return (a.lens || 0) - (b.lens || 0); });
+      else if (sort === 'size-desc') ms.sort(function (a, b) { return (b.lens || 0) - (a.lens || 0); });
+      else if (sort === 'colors') ms.sort(function (a, b) { return b.variants.length - a.variants.length; });
+      else if (sort === 'new') ms.sort(function (a, b) { return (b.new ? 1 : 0) - (a.new ? 1 : 0); });
+      count.textContent = ms.length + ' model';
+      renderGrid($('#coll-grid'), ms);
+      // chips
+      var chips = $('#chips'); var html = '';
+      var labelOf = { brand: function (v) { return (BRANDS[v] || { name: v }).name; }, cat: function (v) { return v; }, mat: function (v) { return v; }, fam: function (v) { return v; }, size: function (v) { return v.replace('-99', '+').replace('-', '–') + ' mm'; }, feat: function (v) { return { new: 'Yeni', polar: 'Polarize', antifar: 'Anti-Far', titan: 'Titanyum' }[v]; } };
+      Object.keys(filt).forEach(function (k) { filt[k].forEach(function (v) { html += '<span class="chip"><b>' + esc(labelOf[k](v)) + '</b><button data-k="' + k + '" data-v="' + esc(v) + '" aria-label="Kaldır">×</button></span>'; }); });
+      chips.innerHTML = html;
+      $$('button', chips).forEach(function (b) {
+        b.addEventListener('click', function () {
+          var k = b.getAttribute('data-k'), v = b.getAttribute('data-v'); filt[k] = filt[k].filter(function (x) { return x !== v; });
+          var cbx = $('#filters input[data-k="' + k + '"][value="' + v.replace(/"/g, '\\"') + '"]'); if (cbx) cbx.checked = false; apply();
+        });
+      });
+    }
+  }
+
+  /* ---------- model sayfası ---------- */
+  function initModel() {
+    var art = $('.model'); if (!art) return;
+    var code = art.getAttribute('data-code');
+    var mainImg = $('#m-front'), sideImg = $('#m-side'), clipImg = $('#m-clip');
+    var thumbs = $$('.model__thumbs figure');
+    var attrsBox = $('#m-attrs');
+    var LABELS = { frame_color: 'Çerçeve rengi', temple_color: 'Sap rengi', tip_color: 'Sap ucu rengi', lens_color: 'Lens rengi', clip_frame_color: 'Clip-on çerçeve', clip_lens_color: 'Clip-on cam rengi' };
+    // thumbs -> ana görsel
+    thumbs.forEach(function (fg) {
+      fg.addEventListener('click', function () {
+        thumbs.forEach(function (x) { x.classList.remove('active'); }); fg.classList.add('active');
+        var im = $('img', fg); mainImg.src = im.src; mainImg.alt = im.alt;
+      });
+    });
+    // renk seçimi
+    $$('.color-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        $$('.color-btn').forEach(function (x) { x.classList.remove('active'); }); btn.classList.add('active');
+        var f = btn.getAttribute('data-front'), s = btn.getAttribute('data-side'), c = btn.getAttribute('data-clip');
+        var imgs = { front: f, side: s, clip: c };
+        thumbs.forEach(function (fg) { var k = fg.getAttribute('data-kind'); var im = $('img', fg); if (imgs[k]) { im.src = imgs[k]; fg.style.display = ''; } else if (k === 'clip') fg.style.display = 'none'; });
+        var act = thumbs.filter(function (x) { return x.classList.contains('active'); })[0] || thumbs[0];
+        if (act) mainImg.src = $('img', act).src;
+        var attrs = {}; try { attrs = JSON.parse(btn.getAttribute('data-attrs') || '{}'); } catch (e) { }
+        if (attrsBox) {
+          var dl = Object.keys(attrs).filter(function (k) { return attrs[k]; }).map(function (k) { return '<dt>' + esc(LABELS[k] || k) + '</dt><dd>' + swatch({ code: '', attrs: { frame_color: attrs[k] } }) + esc(attrs[k]) + '</dd>'; }).join('');
+          attrsBox.innerHTML = '<div class="attrs__title"><span>Seçili renk</span><b>' + esc(btn.getAttribute('data-code')) + '</b></div><dl>' + dl + '</dl>';
+        }
+        history.replaceState(null, '', '#' + btn.getAttribute('data-code').replace('.', '-'));
+      });
+    });
+    var h = location.hash.replace('#', '').replace('-', '.');
+    var pre = $$('.color-btn').filter(function (b) { return b.getAttribute('data-code') === h; })[0] || $('.color-btn');
+    if (pre) pre.click();
+    // lightbox
+    var lb = document.createElement('div'); lb.className = 'lightbox'; lb.innerHTML = '<img alt="">'; document.body.appendChild(lb);
+    if (mainImg) { mainImg.parentNode.addEventListener('click', function () { $('img', lb).src = mainImg.src; lb.classList.add('open'); }); }
+    lb.addEventListener('click', function () { lb.classList.remove('open'); });
+    // paylaş
+    var sh = $('[data-share]'); if (sh) sh.addEventListener('click', function (e) { e.preventDefault(); if (navigator.share) navigator.share({ title: document.title, url: location.href }); else { navigator.clipboard && navigator.clipboard.writeText(location.href); sh.textContent = 'Bağlantı kopyalandı'; } });
+    // ilgili modeller + breadcrumb
+    ready().then(function () {
+      var me = state.models.filter(function (m) { return m.code === code; })[0];
+      var rel = $('#related-grid'); if (!rel) return;
+      if (!me) { rel.parentNode.style.display = 'none'; return; }
+      var pool = state.models.filter(function (m) { return m.code !== me.code && m.brand_slug === me.brand_slug; });
+      pool.sort(function (a, b) { var da = Math.abs((a.lens || 0) - (me.lens || 0)) + (a.category === me.category ? 0 : 3); var db = Math.abs((b.lens || 0) - (me.lens || 0)) + (b.category === me.category ? 0 : 3); return da - db; });
+      renderGrid(rel, pool.slice(0, 4));
+      var ba = $('[data-crumb-brand]'); if (ba) ba.href = '/search/label/' + encodeURIComponent(me.brand);
+    });
+  }
+
+  /* ---------- başlat ---------- */
+  document.addEventListener('DOMContentLoaded', function () {
+    initHeader();
+    if (VIEW === 'home') initHome();
+    else if (VIEW === 'collection') initCollection();
+    else if (VIEW === 'post') initModel();
+    else if (VIEW === 'error') initCollection();
+  });
+})();
+
+(function(){var w=document.getElementById('wa-fab');if(w&&window.AO_CONFIG&&window.AO_CONFIG.whatsapp)w.href='https://wa.me/'+window.AO_CONFIG.whatsapp;})();
+//]]>
+</script>
+</body>
+</html>

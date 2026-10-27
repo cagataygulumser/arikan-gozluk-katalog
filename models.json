@@ -3,753 +3,6 @@
  "season": "2026",
  "models": [
   {
-   "brand": "Belmond",
-   "category": "Optik",
-   "code": "B5691",
-   "page": 3,
-   "lens": 52,
-   "bridge": 17,
-   "temple": 143,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "B5691-on.jpg",
-    "side": "B5691-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "B5691.C1",
-     "attrs": {
-      "frame_color": "Pembe",
-      "tip_color": "Kristal Pembe",
-      "temple_color": "Pembe"
-     },
-     "images": {
-      "front": "B5691-C1-on.jpg",
-      "side": "B5691-C1-yan.jpg"
-     }
-    },
-    {
-     "code": "B5691.C2",
-     "attrs": {
-      "frame_color": "Altın",
-      "tip_color": "Kahverengi",
-      "temple_color": "Altın"
-     },
-     "images": {
-      "front": "B5691-C2-on.jpg",
-      "side": "B5691-C2-yan.jpg"
-     }
-    },
-    {
-     "code": "B5691.C3",
-     "attrs": {
-      "frame_color": "Altın",
-      "tip_color": "Kristal Bej",
-      "temple_color": "Altın"
-     },
-     "images": {
-      "front": "B5691-C3-on.jpg",
-      "side": "B5691-C3-yan.jpg"
-     }
-    }
-   ],
-   "brand_slug": "belmond",
-   "slug": "belmond-b5691"
-  },
-  {
-   "brand": "Belmond",
-   "category": "Optik",
-   "code": "B5704",
-   "page": 5,
-   "lens": 52,
-   "bridge": 16,
-   "temple": 145,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "B5704-on.jpg",
-    "side": "B5704-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "B5704.C1",
-     "attrs": {
-      "frame_color": "Altın",
-      "tip_color": "Kristal Koyu Gri",
-      "temple_color": "Siyah"
-     },
-     "images": {
-      "front": "B5704-C1-on.jpg",
-      "side": "B5704-C1-yan.jpg"
-     }
-    },
-    {
-     "code": "B5704.C2",
-     "attrs": {
-      "frame_color": "Altın",
-      "tip_color": "Şeﬀaf",
-      "temple_color": "Koyu Bej"
-     },
-     "images": {
-      "front": "B5704-C2-on.jpg",
-      "side": "B5704-C2-yan.jpg"
-     }
-    }
-   ],
-   "brand_slug": "belmond",
-   "slug": "belmond-b5704"
-  },
-  {
-   "brand": "Belmond",
-   "category": "Optik",
-   "code": "B5705",
-   "page": 7,
-   "lens": 53,
-   "bridge": 16,
-   "temple": 143,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "B5705-on.jpg",
-    "side": "B5705-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "B5705.C1",
-     "attrs": {
-      "frame_color": "Pembe / Altın",
-      "tip_color": "Şeﬀaf",
-      "temple_color": "Pembe / Altın"
-     },
-     "images": {
-      "front": "B5705-C1-on.jpg",
-      "side": "B5705-C1-yan.jpg"
-     }
-    },
-    {
-     "code": "B5705.C2",
-     "attrs": {
-      "frame_color": "Kırmızı / Altın",
-      "tip_color": "Koyu Bordo",
-      "temple_color": "Kırmızı / Altın"
-     },
-     "images": {
-      "front": "B5705-C2-on.jpg",
-      "side": "B5705-C2-yan.jpg"
-     }
-    },
-    {
-     "code": "B5705.C3",
-     "attrs": {
-      "frame_color": "Altın",
-      "tip_color": "Bej / Şeﬀaf",
-      "temple_color": "Altın / Bej"
-     },
-     "images": {
-      "front": "B5705-C3-on.jpg",
-      "side": "B5705-C3-yan.jpg"
-     }
-    }
-   ],
-   "brand_slug": "belmond",
-   "slug": "belmond-b5705"
-  },
-  {
-   "brand": "Belmond",
-   "category": "Optik",
-   "code": "B5785",
-   "page": 11,
-   "lens": 55,
-   "bridge": 17,
-   "temple": 140,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "B5785-on.jpg",
-    "side": "B5785-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "B5785.C1",
-     "attrs": {
-      "frame_color": "Kahverengi / Altın",
-      "tip_color": "Siyah",
-      "temple_color": "Bej / Altın"
-     },
-     "images": {
-      "front": "B5785-C1-on.jpg",
-      "side": "B5785-C1-yan.jpg"
-     }
-    },
-    {
-     "code": "B5785.C2",
-     "attrs": {
-      "frame_color": "Açık Kahverengi / Altın",
-      "tip_color": "Kristal Koyu Kahverengi",
-      "temple_color": "Siyah / Altın"
-     },
-     "images": {
-      "front": "B5785-C2-on.jpg",
-      "side": "B5785-C2-yan.jpg"
-     }
-    },
-    {
-     "code": "B5785.C3",
-     "attrs": {
-      "frame_color": "Kahverengi / Altın",
-      "tip_color": "Siyah",
-      "temple_color": "Yeşil / Altın"
-     },
-     "images": {
-      "front": "B5785-C3-on.jpg",
-      "side": "B5785-C3-yan.jpg"
-     }
-    }
-   ],
-   "brand_slug": "belmond",
-   "slug": "belmond-b5785"
-  },
-  {
-   "brand": "Belmond",
-   "category": "Optik",
-   "code": "B5804",
-   "page": 13,
-   "lens": 51,
-   "bridge": 16,
-   "temple": 135,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Asetat",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "B5804-on.jpg",
-    "side": "B5804-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "B5804.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "tip_color": "Siyah",
-      "temple_color": "Siyah / Gümüş"
-     },
-     "images": {
-      "front": "B5804-C1-on.jpg",
-      "side": "B5804-C1-yan.jpg"
-     }
-    },
-    {
-     "code": "B5804.C2",
-     "attrs": {
-      "frame_color": "Demi",
-      "tip_color": "Demi",
-      "temple_color": "Kahverengi / Gümüş"
-     },
-     "images": {
-      "front": "B5804-C2-on.jpg",
-      "side": "B5804-C2-yan.jpg"
-     }
-    },
-    {
-     "code": "B5804.C3",
-     "attrs": {
-      "frame_color": "Kristal Koyu Yeşil",
-      "tip_color": "Kristal Koyu Yeşil",
-      "temple_color": "Bej / Gümüş"
-     },
-     "images": {
-      "front": "B5804-C3-on.jpg",
-      "side": "B5804-C3-yan.jpg"
-     }
-    }
-   ],
-   "brand_slug": "belmond",
-   "slug": "belmond-b5804"
-  },
-  {
-   "brand": "Belmond",
-   "category": "Optik",
-   "code": "B5809",
-   "page": 15,
-   "lens": 52,
-   "bridge": 16,
-   "temple": 140,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "B5809-on.jpg",
-    "side": "B5809-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "B5809.C1",
-     "attrs": {
-      "frame_color": "Açık Bej / Altın",
-      "tip_color": "Şeﬀaf",
-      "temple_color": "Açık Bej / Altın"
-     },
-     "images": {
-      "front": "B5809-C1-on.jpg",
-      "side": "B5809-C1-yan.jpg"
-     }
-    },
-    {
-     "code": "B5809.C2",
-     "attrs": {
-      "frame_color": "Bordo / Altın",
-      "tip_color": "Kristal Kırmızı",
-      "temple_color": "Bordo / Altın"
-     },
-     "images": {
-      "front": "B5809-C2-on.jpg",
-      "side": "B5809-C2-yan.jpg"
-     }
-    },
-    {
-     "code": "B5809.C3",
-     "attrs": {
-      "frame_color": "Yeşil / Altın",
-      "tip_color": "Kristal Bej",
-      "temple_color": "Yeşil / Altın"
-     },
-     "images": {
-      "front": "B5809-C3-on.jpg",
-      "side": "B5809-C3-yan.jpg"
-     }
-    }
-   ],
-   "brand_slug": "belmond",
-   "slug": "belmond-b5809"
-  },
-  {
-   "brand": "Belmond",
-   "category": "Optik",
-   "code": "B5810",
-   "page": 17,
-   "lens": 53,
-   "bridge": 17,
-   "temple": 145,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "B5810-on.jpg",
-    "side": "B5810-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "B5810.C1",
-     "attrs": {
-      "frame_color": "Yeşil / Altın",
-      "tip_color": "Kristal Yeşil",
-      "temple_color": "Yeşil / Altın"
-     },
-     "images": {
-      "front": "B5810-C1-on.jpg",
-      "side": "B5810-C1-yan.jpg"
-     }
-    },
-    {
-     "code": "B5810.C2",
-     "attrs": {
-      "frame_color": "Açık Pembe / Gümüş",
-      "tip_color": "Kristal Açık Pembe",
-      "temple_color": "Açık Pembe / Gümüş"
-     },
-     "images": {
-      "front": "B5810-C2-on.jpg",
-      "side": "B5810-C2-yan.jpg"
-     }
-    },
-    {
-     "code": "B5810.C3",
-     "attrs": {
-      "frame_color": "Beyaz / Altın",
-      "tip_color": "Kristal Açık Bej",
-      "temple_color": "Beyaz / Altın"
-     },
-     "images": {
-      "front": "B5810-C3-on.jpg",
-      "side": "B5810-C3-yan.jpg"
-     }
-    },
-    {
-     "code": "B5810.C4",
-     "attrs": {
-      "frame_color": "Kahverengi / Altın",
-      "tip_color": "Kahverengi",
-      "temple_color": "Kahverengi / Altın"
-     },
-     "images": {
-      "front": "B5810-C4-on.jpg",
-      "side": "B5810-C4-yan.jpg"
-     }
-    }
-   ],
-   "brand_slug": "belmond",
-   "slug": "belmond-b5810"
-  },
-  {
-   "brand": "Belmond",
-   "category": "Optik",
-   "code": "B5811",
-   "page": 21,
-   "lens": 53,
-   "bridge": 18,
-   "temple": 140,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "B5811-on.jpg",
-    "side": "B5811-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "B5811.C1",
-     "attrs": {
-      "frame_color": "Gümüş",
-      "tip_color": "Kristal Açık Pembe",
-      "temple_color": "Gümüş / Açık Pembe"
-     },
-     "images": {
-      "front": "B5811-C1-on.jpg",
-      "side": "B5811-C1-yan.jpg"
-     }
-    },
-    {
-     "code": "B5811.C2",
-     "attrs": {
-      "frame_color": "Altın",
-      "tip_color": "Kristal Koyu Gri",
-      "temple_color": "Altın / Gri"
-     },
-     "images": {
-      "front": "B5811-C2-on.jpg",
-      "side": "B5811-C2-yan.jpg"
-     }
-    },
-    {
-     "code": "B5811.C3",
-     "attrs": {
-      "frame_color": "Altın",
-      "tip_color": "Kristal Beyaz",
-      "temple_color": "Altın / Beyaz"
-     },
-     "images": {
-      "front": "B5811-C3-on.jpg",
-      "side": "B5811-C3-yan.jpg"
-     }
-    }
-   ],
-   "brand_slug": "belmond",
-   "slug": "belmond-b5811"
-  },
-  {
-   "brand": "Belmond",
-   "category": "Optik",
-   "code": "B5812",
-   "page": 23,
-   "lens": 55,
-   "bridge": 18,
-   "temple": 145,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "B5812-on.jpg",
-    "side": "B5812-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "B5812.C1",
-     "attrs": {
-      "frame_color": "Kahverengi / Altın",
-      "tip_color": "Kahverengi",
-      "temple_color": "Kahverengi / Altın"
-     },
-     "images": {
-      "front": "B5812-C1-on.jpg",
-      "side": "B5812-C1-yan.jpg"
-     }
-    },
-    {
-     "code": "B5812.C2",
-     "attrs": {
-      "frame_color": "Beyaz / Altın",
-      "tip_color": "Beyaz",
-      "temple_color": "Beyaz / Altın"
-     },
-     "images": {
-      "front": "B5812-C2-on.jpg",
-      "side": "B5812-C2-yan.jpg"
-     }
-    },
-    {
-     "code": "B5812.C3",
-     "attrs": {
-      "frame_color": "Koyu Gri / Altın",
-      "tip_color": "Kristal Koyu Gri",
-      "temple_color": "Koyu Gri / Altın"
-     },
-     "images": {
-      "front": "B5812-C3-on.jpg",
-      "side": "B5812-C3-yan.jpg"
-     }
-    }
-   ],
-   "brand_slug": "belmond",
-   "slug": "belmond-b5812"
-  },
-  {
-   "brand": "Belmond",
-   "category": "Clip-On",
-   "code": "B5801",
-   "page": 28,
-   "lens": 47,
-   "bridge": 19,
-   "temple": 135,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "B5801-on.jpg",
-    "side": "B5801-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "B5801.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme",
-      "temple_color": "Altın"
-     },
-     "images": {
-      "front": "B5801-C1-on.jpg",
-      "side": "B5801-C1-yan.jpg",
-      "clip": "B5801-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "B5801.C2",
-     "attrs": {
-      "frame_color": "Siyah / Koyu Gun",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme",
-      "temple_color": "Koyu Gun"
-     },
-     "images": {
-      "front": "B5801-C2-on.jpg",
-      "side": "B5801-C2-yan.jpg",
-      "clip": "B5801-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "B5801.C3",
-     "attrs": {
-      "frame_color": "Kahverengi / Altın",
-      "tip_color": "Kahverengi",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Kahverengi",
-      "temple_color": "Altın"
-     },
-     "images": {
-      "front": "B5801-C3-on.jpg",
-      "side": "B5801-C3-yan.jpg",
-      "clip": "B5801-C3-clip.jpg"
-     }
-    }
-   ],
-   "brand_slug": "belmond",
-   "slug": "belmond-b5801"
-  },
-  {
-   "brand": "Belmond",
-   "category": "Clip-On",
-   "code": "B5807",
-   "page": 30,
-   "lens": 54,
-   "bridge": 17,
-   "temple": 140,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Ultem",
-    "Sap": "Metal",
-    "Sap Ucu": "Ultem"
-   },
-   "images": {
-    "front": "B5807-on.jpg",
-    "side": "B5807-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "B5807.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme",
-      "temple_color": "Siyah / Altın"
-     },
-     "images": {
-      "front": "B5807-C1-on.jpg",
-      "side": "B5807-C1-yan.jpg",
-      "clip": "B5807-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "B5807.C2",
-     "attrs": {
-      "frame_color": "Kahverengi",
-      "tip_color": "Kahverengi",
-      "clip_frame_color": "Kahverengi",
-      "clip_lens_color": "Kahverengi",
-      "temple_color": "Kahverengi / Altın"
-     },
-     "images": {
-      "front": "B5807-C2-on.jpg",
-      "side": "B5807-C2-yan.jpg",
-      "clip": "B5807-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "B5807.C3",
-     "attrs": {
-      "frame_color": "Koyu Gri",
-      "tip_color": "Kristal Koyu Gri",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme",
-      "temple_color": "Siyah / Gümüş"
-     },
-     "images": {
-      "front": "B5807-C3-on.jpg",
-      "side": "B5807-C3-yan.jpg",
-      "clip": "B5807-C3-clip.jpg"
-     }
-    }
-   ],
-   "brand_slug": "belmond",
-   "slug": "belmond-b5807"
-  },
-  {
-   "brand": "Belmond",
-   "category": "Clip-On",
-   "code": "B5813",
-   "page": 34,
-   "lens": 46,
-   "bridge": 23,
-   "temple": 145,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "B5813-on.jpg",
-    "side": "B5813-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "B5813.C1",
-     "attrs": {
-      "frame_color": "Siyah / Altın",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme",
-      "temple_color": "Altın"
-     },
-     "images": {
-      "front": "B5813-C1-on.jpg",
-      "side": "B5813-C1-yan.jpg",
-      "clip": "B5813-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "B5813.C2",
-     "attrs": {
-      "frame_color": "Kahverengi",
-      "tip_color": "Demi",
-      "clip_frame_color": "Demi",
-      "clip_lens_color": "Kahverengi",
-      "temple_color": "Altın"
-     },
-     "images": {
-      "front": "B5813-C2-on.jpg",
-      "side": "B5813-C2-yan.jpg",
-      "clip": "B5813-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "B5813.C3",
-     "attrs": {
-      "frame_color": "Siyah / Koyu Gun",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme",
-      "temple_color": "Koyu Gun"
-     },
-     "images": {
-      "front": "B5813-C3-on.jpg",
-      "side": "B5813-C3-yan.jpg",
-      "clip": "B5813-C3-clip.jpg"
-     }
-    }
-   ],
-   "brand_slug": "belmond",
-   "slug": "belmond-b5813"
-  },
-  {
    "brand": "Lee Cooper",
    "category": "Optik",
    "code": "LC1408",
@@ -6143,1946 +5396,6 @@
   },
   {
    "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9486",
-   "page": 3,
-   "lens": 53,
-   "bridge": 18,
-   "temple": 142,
-   "new": true,
-   "antifar": true,
-   "materials": {
-    "Çerçeve": "Ultem",
-    "Cam": "Polarize",
-    "Sap": "Ultem",
-    "Sap Ucu": "Ultem"
-   },
-   "images": {
-    "front": "9486-on.jpg",
-    "side": "9486-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9486.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9486-C1-on.jpg",
-      "side": "9486-C1-yan.jpg",
-      "clip": "9486-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9486.C2",
-     "attrs": {
-      "frame_color": "Gri",
-      "temple_color": "Gri",
-      "tip_color": "Gri",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9486-C2-on.jpg",
-      "side": "9486-C2-yan.jpg",
-      "clip": "9486-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9486.C3",
-     "attrs": {
-      "frame_color": "Lacivert",
-      "temple_color": "Lacivert",
-      "tip_color": "Lacivert / Mavi",
-      "clip_frame_color": "Lacivert",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9486-C3-on.jpg",
-      "side": "9486-C3-yan.jpg",
-      "clip": "9486-C3-clip.jpg"
-     }
-    },
-    {
-     "code": "9486.C4",
-     "attrs": {
-      "frame_color": "Yeşil",
-      "temple_color": "Yeşil",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9486-C4-on.jpg",
-      "side": "9486-C4-yan.jpg",
-      "clip": "9486-C4-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9486"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9627",
-   "page": 5,
-   "lens": 54,
-   "bridge": 18,
-   "temple": 140,
-   "new": true,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Cam": "Polarize",
-    "Sap": "TR90",
-    "Sap Ucu": "TR90"
-   },
-   "images": {
-    "front": "9627-on.jpg",
-    "side": "9627-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9627.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah / Gümüş",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9627-C1-on.jpg",
-      "side": "9627-C1-yan.jpg",
-      "clip": "9627-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9627.C2",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Yeşil / Gümüş",
-      "tip_color": "Yeşil",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9627-C2-on.jpg",
-      "side": "9627-C2-yan.jpg",
-      "clip": "9627-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9627.C3",
-     "attrs": {
-      "frame_color": "Gun",
-      "temple_color": "Lacivert / Gümüş",
-      "tip_color": "Lacivert",
-      "clip_frame_color": "Lacivert",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9627-C3-on.jpg",
-      "side": "9627-C3-yan.jpg",
-      "clip": "9627-C3-clip.jpg"
-     }
-    },
-    {
-     "code": "9627.C4",
-     "attrs": {
-      "frame_color": "Gun",
-      "temple_color": "Siyah / Gümüş",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9627-C4-on.jpg",
-      "side": "9627-C4-yan.jpg",
-      "clip": "9627-C4-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9627"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9628",
-   "page": 8,
-   "lens": 53,
-   "bridge": 17,
-   "temple": 142,
-   "new": true,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Cam": "Polarize",
-    "Sap": "TR90",
-    "Sap Ucu": "TR90"
-   },
-   "images": {
-    "front": "9628-on.jpg",
-    "side": "9628-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9628.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah / Gümüş",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9628-C1-on.jpg",
-      "side": "9628-C1-yan.jpg",
-      "clip": "9628-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9628.C2",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Yeşil / Gümüş",
-      "tip_color": "Yeşil",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9628-C2-on.jpg",
-      "side": "9628-C2-yan.jpg",
-      "clip": "9628-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9628.C3",
-     "attrs": {
-      "frame_color": "Gun",
-      "temple_color": "Siyah / Gümüş",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9628-C3-on.jpg",
-      "side": "9628-C3-yan.jpg",
-      "clip": "9628-C3-clip.jpg"
-     }
-    },
-    {
-     "code": "9628.C4",
-     "attrs": {
-      "frame_color": "Gun",
-      "temple_color": "Lacivert / Gümüş",
-      "tip_color": "Lacivert",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9628-C4-on.jpg",
-      "side": "9628-C4-yan.jpg",
-      "clip": "9628-C4-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9628"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9629",
-   "page": 10,
-   "lens": 50,
-   "bridge": 21,
-   "temple": 148,
-   "new": true,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Cam": "Polarize",
-    "Sap": "TR90",
-    "Sap Ucu": "TR90"
-   },
-   "images": {
-    "front": "9629-on.jpg",
-    "side": "9629-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9629.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah / Gümüş",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9629-C1-on.jpg",
-      "side": "9629-C1-yan.jpg",
-      "clip": "9629-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9629.C2",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Yeşil / Gümüş",
-      "tip_color": "Yeşil",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9629-C2-on.jpg",
-      "side": "9629-C2-yan.jpg",
-      "clip": "9629-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9629.C3",
-     "attrs": {
-      "frame_color": "Gun",
-      "temple_color": "Lacivert / Gümüş",
-      "tip_color": "Lacivert",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9629-C3-on.jpg",
-      "side": "9629-C3-yan.jpg",
-      "clip": "9629-C3-clip.jpg"
-     }
-    },
-    {
-     "code": "9629.C4",
-     "attrs": {
-      "frame_color": "Gun",
-      "temple_color": "Siyah / Gümüş",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Lacivert",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9629-C4-on.jpg",
-      "side": "9629-C4-yan.jpg",
-      "clip": "9629-C4-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9629"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9630",
-   "page": 13,
-   "lens": 50,
-   "bridge": 21,
-   "temple": 145,
-   "new": true,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Cam": "Polarize",
-    "Sap": "Asetat",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "9630-on.jpg",
-    "side": "9630-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9630.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah / Gümüş",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9630-C1-on.jpg",
-      "side": "9630-C1-yan.jpg",
-      "clip": "9630-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9630.C2",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Demi / Gümüş",
-      "tip_color": "Demi",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9630-C2-on.jpg",
-      "side": "9630-C2-yan.jpg",
-      "clip": "9630-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9630.C3",
-     "attrs": {
-      "frame_color": "Gun",
-      "temple_color": "Lacivert / Gümüş",
-      "tip_color": "Lacivert",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9630-C3-on.jpg",
-      "side": "9630-C3-yan.jpg",
-      "clip": "9630-C3-clip.jpg"
-     }
-    },
-    {
-     "code": "9630.C4",
-     "attrs": {
-      "frame_color": "Gun",
-      "temple_color": "Koyu Gri / Gümüş",
-      "tip_color": "Koyu Gri",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9630-C4-on.jpg",
-      "side": "9630-C4-yan.jpg",
-      "clip": "9630-C4-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9630"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9631",
-   "page": 15,
-   "lens": 53,
-   "bridge": 18,
-   "temple": 145,
-   "new": true,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Cam": "Polarize",
-    "Sap": "Asetat",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "9631-on.jpg",
-    "side": "9631-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9631.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah / Gümüş",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9631-C1-on.jpg",
-      "side": "9631-C1-yan.jpg",
-      "clip": "9631-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9631.C2",
-     "attrs": {
-      "frame_color": "Siyah / Altın",
-      "temple_color": "Demi / Altın",
-      "tip_color": "Demi",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9631-C2-on.jpg",
-      "side": "9631-C2-yan.jpg",
-      "clip": "9631-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9631.C3",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah / Şeffaf / Gümüş",
-      "tip_color": "Siyah / Şeffaf",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9631-C3-on.jpg",
-      "side": "9631-C3-yan.jpg",
-      "clip": "9631-C3-clip.jpg"
-     }
-    },
-    {
-     "code": "9631.C4",
-     "attrs": {
-      "frame_color": "Lacivert",
-      "temple_color": "Lacivert / Gümüş",
-      "tip_color": "Lacivert",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9631-C4-on.jpg",
-      "side": "9631-C4-yan.jpg",
-      "clip": "9631-C4-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9631"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9632",
-   "page": 18,
-   "lens": 50,
-   "bridge": 20,
-   "temple": 145,
-   "new": true,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Cam": "Polarize",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "9632-on.jpg",
-    "side": "9632-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9632.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9632-C1-on.jpg",
-      "side": "9632-C1-yan.jpg",
-      "clip": "9632-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9632.C2",
-     "attrs": {
-      "frame_color": "Gun",
-      "temple_color": "Gun",
-      "tip_color": "Yeşil",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9632-C2-on.jpg",
-      "side": "9632-C2-yan.jpg",
-      "clip": "9632-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9632.C3",
-     "attrs": {
-      "frame_color": "Lacivert",
-      "temple_color": "Lacivert",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9632-C3-on.jpg",
-      "side": "9632-C3-yan.jpg",
-      "clip": "9632-C3-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9632"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9633",
-   "page": 20,
-   "lens": 49,
-   "bridge": 22,
-   "temple": 145,
-   "new": true,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Cam": "Polarize",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "9633-on.jpg",
-    "side": "9633-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9633.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9633-C1-on.jpg",
-      "side": "9633-C1-yan.jpg",
-      "clip": "9633-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9633.C2",
-     "attrs": {
-      "frame_color": "Gun",
-      "temple_color": "Gun",
-      "tip_color": "Kırçıllı Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9633-C2-on.jpg",
-      "side": "9633-C2-yan.jpg",
-      "clip": "9633-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9633.C3",
-     "attrs": {
-      "frame_color": "Bakır",
-      "temple_color": "Bakır",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9633-C3-on.jpg",
-      "side": "9633-C3-yan.jpg",
-      "clip": "9633-C3-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9633"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9634",
-   "page": 23,
-   "lens": 52,
-   "bridge": 17,
-   "temple": 145,
-   "new": true,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Cam": "Polarize",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "9634-on.jpg",
-    "side": "9634-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9634.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9634-C1-on.jpg",
-      "side": "9634-C1-yan.jpg",
-      "clip": "9634-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9634.C2",
-     "attrs": {
-      "frame_color": "Gun",
-      "temple_color": "Gun",
-      "tip_color": "Kırçıllı Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9634-C2-on.jpg",
-      "side": "9634-C2-yan.jpg",
-      "clip": "9634-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9634.C3",
-     "attrs": {
-      "frame_color": "Bakır",
-      "temple_color": "Bakır",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9634-C3-on.jpg",
-      "side": "9634-C3-yan.jpg",
-      "clip": "9634-C3-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9634"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9639",
-   "page": 25,
-   "lens": 49,
-   "bridge": 17,
-   "temple": 130,
-   "new": true,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Cam": "Polarize",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "9639-on.jpg",
-    "side": "9639-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9639.C1",
-     "attrs": {
-      "frame_color": "Siyah / Gümüş",
-      "temple_color": "Siyah / Gümüş",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9639-C1-on.jpg",
-      "side": "9639-C1-yan.jpg",
-      "clip": "9639-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9639.C2",
-     "attrs": {
-      "frame_color": "Siyah / Altın",
-      "temple_color": "Siyah / Altın",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9639-C2-on.jpg",
-      "side": "9639-C2-yan.jpg",
-      "clip": "9639-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9639.C3",
-     "attrs": {
-      "frame_color": "Kahverengi / Altın",
-      "temple_color": "Kahverengi / Altın",
-      "tip_color": "Demi",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Kahverengi"
-     },
-     "images": {
-      "front": "9639-C3-on.jpg",
-      "side": "9639-C3-yan.jpg",
-      "clip": "9639-C3-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9639"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9064",
-   "page": 28,
-   "lens": 58,
-   "bridge": 17,
-   "temple": 140,
-   "new": false,
-   "antifar": true,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Cam": "Polarize",
-    "Sap": "Alüm nyum",
-    "Sap Ucu": "Rubber"
-   },
-   "images": {
-    "front": "9064-on.jpg",
-    "side": "9064-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9064.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Koyu Gun",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9064-C1-on.jpg",
-      "side": "9064-C1-yan.jpg",
-      "clip": "9064-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9064.C2",
-     "attrs": {
-      "frame_color": "Koyu Lac vert",
-      "temple_color": "Gümüş",
-      "tip_color": "Mat Koyu Lac vert",
-      "clip_frame_color": "Mat Koyu Lac vert",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9064-C2-on.jpg",
-      "side": "9064-C2-yan.jpg",
-      "clip": "9064-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9064.C3",
-     "attrs": {
-      "frame_color": "Koyu Gun",
-      "temple_color": "Siyah",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Grad ent Füme"
-     },
-     "images": {
-      "front": "9064-C3-on.jpg",
-      "side": "9064-C3-yan.jpg",
-      "clip": "9064-C3-clip.jpg"
-     }
-    },
-    {
-     "code": "9064.C4",
-     "attrs": {
-      "frame_color": "Koyu Gun",
-      "temple_color": "Yeşil",
-      "tip_color": "Mat Koyu Yeş l",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9064-C4-on.jpg",
-      "side": "9064-C4-yan.jpg",
-      "clip": "9064-C4-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9064"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9066",
-   "page": 30,
-   "lens": 58,
-   "bridge": 17,
-   "temple": 140,
-   "new": false,
-   "antifar": true,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Cam": "Polarize",
-    "Sap": "Alüm nyum",
-    "Sap Ucu": "Rubber"
-   },
-   "images": {
-    "front": "9066-on.jpg",
-    "side": "9066-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9066.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Koyu Gun",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9066-C1-on.jpg",
-      "side": "9066-C1-yan.jpg",
-      "clip": "9066-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9066.C2",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Gümüş",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9066-C2-on.jpg",
-      "side": "9066-C2-yan.jpg",
-      "clip": "9066-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9066.C6",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah",
-      "tip_color": "Mat Kırmızı",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9066-C6-on.jpg",
-      "side": "9066-C6-yan.jpg",
-      "clip": "9066-C6-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9066"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9146",
-   "page": 33,
-   "lens": 54,
-   "bridge": 17,
-   "temple": 140,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "TR90",
-    "Cam": "Polarize",
-    "Sap": "TR90",
-    "Sap Ucu": "TR90"
-   },
-   "images": {
-    "front": "9146-on.jpg",
-    "side": "9146-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9146.C5",
-     "attrs": {
-      "frame_color": "Mat Siyah",
-      "temple_color": "Mat Siyah",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9146-C5-on.jpg",
-      "side": "9146-C5-yan.jpg",
-      "clip": "9146-C5-clip.jpg"
-     }
-    },
-    {
-     "code": "9146.C6",
-     "attrs": {
-      "frame_color": "Mat Koyu Lac vert",
-      "temple_color": "Mat Koyu Lac vert",
-      "tip_color": "Mat Koyu Lac vert",
-      "clip_frame_color": "",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9146-C6-on.jpg",
-      "side": "9146-C6-yan.jpg",
-      "clip": "9146-C6-clip.jpg"
-     }
-    },
-    {
-     "code": "9146.C7",
-     "attrs": {
-      "frame_color": "Mat Siyah",
-      "temple_color": "Mat Siyah",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9146-C7-on.jpg",
-      "side": "9146-C7-yan.jpg",
-      "clip": "9146-C7-clip.jpg"
-     }
-    },
-    {
-     "code": "9146.C8",
-     "attrs": {
-      "frame_color": "Mat Gri",
-      "temple_color": "Mat Gri",
-      "tip_color": "Mat Gri",
-      "clip_frame_color": "",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9146-C8-on.jpg",
-      "side": "9146-C8-yan.jpg",
-      "clip": "9146-C8-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9146"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9392",
-   "page": 35,
-   "lens": 53,
-   "bridge": 16,
-   "temple": 138,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Ultem",
-    "Cam": "Polarize",
-    "Sap": "Ultem",
-    "Sap Ucu": "Ultem"
-   },
-   "images": {
-    "front": "9392-on.jpg",
-    "side": "9392-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9392.C1",
-     "attrs": {
-      "frame_color": "Mat Kahvereng / Şeffaf",
-      "temple_color": "Mat Kahvereng / Şeffaf",
-      "tip_color": "Mat Kahvereng / Şeffaf",
-      "clip_frame_color": "Mat Kahvereng / Şeffaf",
-      "clip_lens_color": "Grad ent Füme"
-     },
-     "images": {
-      "front": "9392-C1-on.jpg",
-      "side": "9392-C1-yan.jpg",
-      "clip": "9392-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9392.C2",
-     "attrs": {
-      "frame_color": "Mat Siyah",
-      "temple_color": "Mat Siyah",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9392-C2-on.jpg",
-      "side": "9392-C2-yan.jpg",
-      "clip": "9392-C2-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9392"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9542",
-   "page": 37,
-   "lens": 48,
-   "bridge": 18,
-   "temple": 145,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Cam": "Polarize",
-    "Sap": "Metal / Rubber",
-    "Sap Ucu": "Rubber"
-   },
-   "images": {
-    "front": "9542-on.jpg",
-    "side": "9542-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9542.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah / Mat Siyah",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9542-C1-on.jpg",
-      "side": "9542-C1-yan.jpg",
-      "clip": "9542-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9542.C2",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah / Mat Yeş l",
-      "tip_color": "Mat Yeş l",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9542-C2-on.jpg",
-      "side": "9542-C2-yan.jpg",
-      "clip": "9542-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9542.C3",
-     "attrs": {
-      "frame_color": "Koyu Gun",
-      "temple_color": "Koyu Gun / Koyu Lac vert",
-      "tip_color": "Koyu Lac vert",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9542-C3-on.jpg",
-      "side": "9542-C3-yan.jpg",
-      "clip": "9542-C3-clip.jpg"
-     }
-    },
-    {
-     "code": "9542.C4",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah / Mat Gri",
-      "tip_color": "Mat Gri",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9542-C4-on.jpg",
-      "side": "9542-C4-yan.jpg",
-      "clip": "9542-C4-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9542"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9604",
-   "page": 39,
-   "lens": 57,
-   "bridge": 19,
-   "temple": 145,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Metal",
-    "Cam": "Polarize",
-    "Sap": "Asetat",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "9604-on.jpg",
-    "side": "9604-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9604.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Siyah",
-      "tip_color": "Siyah",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9604-C1-on.jpg",
-      "side": "9604-C1-yan.jpg",
-      "clip": "9604-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9604.C2",
-     "attrs": {
-      "frame_color": "Koyu Gun",
-      "temple_color": "Kr stal Lac vert",
-      "tip_color": "Kr stal Lac vert",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9604-C2-on.jpg",
-      "side": "9604-C2-yan.jpg",
-      "clip": "9604-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9604.C3",
-     "attrs": {
-      "frame_color": "Koyu Gun",
-      "temple_color": "Demi",
-      "tip_color": "Demi",
-      "clip_frame_color": "Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9604-C3-on.jpg",
-      "side": "9604-C3-yan.jpg",
-      "clip": "9604-C3-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9604"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9618",
-   "page": 42,
-   "lens": 47,
-   "bridge": 19,
-   "temple": 135,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "TR90",
-    "Cam": "Polarize",
-    "Sap": "TR90",
-    "Sap Ucu": "Rubber"
-   },
-   "images": {
-    "front": "9618-on.jpg",
-    "side": "9618-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9618.C1",
-     "attrs": {
-      "frame_color": "Kr stal S yah",
-      "temple_color": "Siyah",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9618-C1-on.jpg",
-      "side": "9618-C1-yan.jpg",
-      "clip": "9618-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9618.C2",
-     "attrs": {
-      "frame_color": "Kr stal Yeş l",
-      "temple_color": "Siyah",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9618-C2-on.jpg",
-      "side": "9618-C2-yan.jpg",
-      "clip": "9618-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9618.C3",
-     "attrs": {
-      "frame_color": "Kr stal Kahvereng",
-      "temple_color": "Siyah",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9618-C3-on.jpg",
-      "side": "9618-C3-yan.jpg",
-      "clip": "9618-C3-clip.jpg"
-     }
-    },
-    {
-     "code": "9618.C4",
-     "attrs": {
-      "frame_color": "Kr stal Lac vert",
-      "temple_color": "Kr stal Lac vert",
-      "tip_color": "Mat Lac vert",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9618-C4-on.jpg",
-      "side": "9618-C4-yan.jpg",
-      "clip": "9618-C4-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9618"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9636",
-   "page": 44,
-   "lens": 55,
-   "bridge": 17,
-   "temple": 145,
-   "new": false,
-   "antifar": true,
-   "materials": {
-    "Çerçeve": "Ultem",
-    "Cam": "Polarize",
-    "Sap": "Ultem",
-    "Sap Ucu": "Rubber"
-   },
-   "images": {
-    "front": "9636-on.jpg",
-    "side": "9636-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9636.C1",
-     "attrs": {
-      "frame_color": "Mat Siyah",
-      "temple_color": "Mat Koyu Gr",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9636-C1-on.jpg",
-      "side": "9636-C1-yan.jpg",
-      "clip": "9636-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9636.C2",
-     "attrs": {
-      "frame_color": "Mat Kr stal Koyu Gr",
-      "temple_color": "Mat Kr stal Koyu Gr",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9636-C2-on.jpg",
-      "side": "9636-C2-yan.jpg",
-      "clip": "9636-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9636.C3",
-     "attrs": {
-      "frame_color": "Mat Kr stal Lac vert",
-      "temple_color": "Mat Kr stal Lac vert",
-      "tip_color": "Mat Lac vert",
-      "clip_frame_color": "Mat Kr stal Lac vert",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9636-C3-on.jpg",
-      "side": "9636-C3-yan.jpg",
-      "clip": "9636-C3-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9636"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9637",
-   "page": 46,
-   "lens": 54,
-   "bridge": 16,
-   "temple": 145,
-   "new": false,
-   "antifar": true,
-   "materials": {
-    "Çerçeve": "Ultem",
-    "Cam": "Polarize",
-    "Sap": "Ultem",
-    "Sap Ucu": "Ultem"
-   },
-   "images": {
-    "front": "9637-on.jpg",
-    "side": "9637-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9637.C1",
-     "attrs": {
-      "frame_color": "Mat Siyah",
-      "temple_color": "Mat Siyah",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9637-C1-on.jpg",
-      "side": "9637-C1-yan.jpg",
-      "clip": "9637-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9637.C2",
-     "attrs": {
-      "frame_color": "Mat Kr stal Koyu Gr",
-      "temple_color": "Mat Koyu Gr",
-      "tip_color": "Mat Koyu Gr",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9637-C2-on.jpg",
-      "side": "9637-C2-yan.jpg",
-      "clip": "9637-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9637.C3",
-     "attrs": {
-      "frame_color": "Mat Lac vert / Mat Kırmızı",
-      "temple_color": "Mat Lac vert",
-      "tip_color": "Mat Lac vert / Mat Kırmızı",
-      "clip_frame_color": "Mat Lac vert",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9637-C3-on.jpg",
-      "side": "9637-C3-yan.jpg",
-      "clip": "9637-C3-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9637"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9641",
-   "page": 48,
-   "lens": 48,
-   "bridge": 16,
-   "temple": 130,
-   "new": false,
-   "antifar": true,
-   "materials": {
-    "Çerçeve": "Ultem",
-    "Cam": "Polarize",
-    "Sap": "Ultem",
-    "Sap Ucu": "Rubber"
-   },
-   "images": {
-    "front": "9641-on.jpg",
-    "side": "9641-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9641.C1",
-     "attrs": {
-      "frame_color": "Mat Siyah",
-      "temple_color": "Gümüş / Mat Siyah",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9641-C1-on.jpg",
-      "side": "9641-C1-yan.jpg",
-      "clip": "9641-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9641.C2",
-     "attrs": {
-      "frame_color": "Kr stal Koyu Gr",
-      "temple_color": "Gümüş / Mat Siyah",
-      "tip_color": "Mat Gri",
-      "clip_frame_color": "Mat Siyah",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9641-C2-on.jpg",
-      "side": "9641-C2-yan.jpg",
-      "clip": "9641-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9641.C3",
-     "attrs": {
-      "frame_color": "Mat Lac vert / Mat Kırmızı",
-      "temple_color": "Gümüş / Mat Lac vert",
-      "tip_color": "Mat Lac vert / Mat Kırmızı",
-      "clip_frame_color": "Mat Lac vert",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9641-C3-on.jpg",
-      "side": "9641-C3-yan.jpg",
-      "clip": "9641-C3-clip.jpg"
-     }
-    },
-    {
-     "code": "9641.C4",
-     "attrs": {
-      "frame_color": "Mat Koyu Kırmızı",
-      "temple_color": "Gümüş / Mat Koyu Kırmızı",
-      "tip_color": "Mat Siyah",
-      "clip_frame_color": "Mat Koyu Kırmızı",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9641-C4-on.jpg",
-      "side": "9641-C4-yan.jpg",
-      "clip": "9641-C4-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9641"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9646",
-   "page": 51,
-   "lens": 48,
-   "bridge": 20,
-   "temple": 145,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Asetat",
-    "Cam": "Polarize",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "9646-on.jpg",
-    "side": "9646-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9646.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Gümüş / Siyah",
-      "tip_color": "Siyah",
-      "clip_frame_color": "",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9646-C1-on.jpg",
-      "side": "9646-C1-yan.jpg",
-      "clip": "9646-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9646.C2",
-     "attrs": {
-      "frame_color": "Kr stal Açık Yeş l",
-      "temple_color": "Altın / Kahverengi",
-      "tip_color": "Kr stal Kahvereng",
-      "clip_frame_color": "",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9646-C2-on.jpg",
-      "side": "9646-C2-yan.jpg",
-      "clip": "9646-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9646.C3",
-     "attrs": {
-      "frame_color": "Kr stal Lac vert",
-      "temple_color": "Koyu Gun / Koyu Lac vert",
-      "tip_color": "Kr stal Lac vert",
-      "clip_frame_color": "",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9646-C3-on.jpg",
-      "side": "9646-C3-yan.jpg",
-      "clip": "9646-C3-clip.jpg"
-     }
-    },
-    {
-     "code": "9646.C4",
-     "attrs": {
-      "frame_color": "Kr stal Kahvereng",
-      "temple_color": "Koyu Gun / Koyu Yeş l",
-      "tip_color": "Siyah",
-      "clip_frame_color": "",
-      "clip_lens_color": "Kahverengi"
-     },
-     "images": {
-      "front": "9646-C4-on.jpg",
-      "side": "9646-C4-yan.jpg",
-      "clip": "9646-C4-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9646"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9647",
-   "page": 53,
-   "lens": 55,
-   "bridge": 18,
-   "temple": 145,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Asetat",
-    "Cam": "Polarize",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "9647-on.jpg",
-    "side": "9647-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9647.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Gümüş / Siyah",
-      "tip_color": "Siyah",
-      "clip_frame_color": "",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9647-C1-on.jpg",
-      "side": "9647-C1-yan.jpg",
-      "clip": "9647-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9647.C2",
-     "attrs": {
-      "frame_color": "Kr stal Lac vert",
-      "temple_color": "Koyu Gun / Koyu Lac vert",
-      "tip_color": "Kr stal Lac vert",
-      "clip_frame_color": "",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9647-C2-on.jpg",
-      "side": "9647-C2-yan.jpg",
-      "clip": "9647-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9647.C3",
-     "attrs": {
-      "frame_color": "Kr stal Kahvereng",
-      "temple_color": "Koyu Gun / Koyu Yeş l",
-      "tip_color": "Siyah",
-      "clip_frame_color": "",
-      "clip_lens_color": "Kahverengi"
-     },
-     "images": {
-      "front": "9647-C3-on.jpg",
-      "side": "9647-C3-yan.jpg",
-      "clip": "9647-C3-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9647"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9649",
-   "page": 55,
-   "lens": 50,
-   "bridge": 18,
-   "temple": 140,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Asetat",
-    "Cam": "Polarize",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "9649-on.jpg",
-    "side": "9649-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9649.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Gümüş / Siyah",
-      "tip_color": "Siyah",
-      "clip_frame_color": "",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9649-C1-on.jpg",
-      "side": "9649-C1-yan.jpg",
-      "clip": "9649-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9649.C2",
-     "attrs": {
-      "frame_color": "Kr stal Açık Yeş l",
-      "temple_color": "Altın / Kahverengi",
-      "tip_color": "Kr stal Kahvereng",
-      "clip_frame_color": "",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9649-C2-on.jpg",
-      "side": "9649-C2-yan.jpg",
-      "clip": "9649-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9649.C3",
-     "attrs": {
-      "frame_color": "Kr stal Kahvereng",
-      "temple_color": "Koyu Bakır / Kahverengi",
-      "tip_color": "Kr stal Kahvereng",
-      "clip_frame_color": "",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9649-C3-on.jpg",
-      "side": "9649-C3-yan.jpg",
-      "clip": "9649-C3-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9649"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9650",
-   "page": 58,
-   "lens": 50,
-   "bridge": 17,
-   "temple": 140,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Asetat",
-    "Cam": "Polarize",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "9650-on.jpg",
-    "side": "9650-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9650.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Gümüş / Siyah",
-      "tip_color": "Siyah",
-      "clip_frame_color": "",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9650-C1-on.jpg",
-      "side": "9650-C1-yan.jpg",
-      "clip": "9650-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9650.C2",
-     "attrs": {
-      "frame_color": "Kr stal Açık Yeş l",
-      "temple_color": "Altın / Kahverengi",
-      "tip_color": "Kr stal Kahvereng",
-      "clip_frame_color": "",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9650-C2-on.jpg",
-      "side": "9650-C2-yan.jpg",
-      "clip": "9650-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9650.C3",
-     "attrs": {
-      "frame_color": "Kr stal Kahvereng",
-      "temple_color": "Koyu Bakır / Kahverengi",
-      "tip_color": "Kr stal Kahvereng",
-      "clip_frame_color": "",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9650-C3-on.jpg",
-      "side": "9650-C3-yan.jpg",
-      "clip": "9650-C3-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9650"
-  },
-  {
-   "brand": "Slazenger",
-   "category": "Clip-On",
-   "code": "9651",
-   "page": 60,
-   "lens": 53,
-   "bridge": 18,
-   "temple": 145,
-   "new": false,
-   "antifar": false,
-   "materials": {
-    "Çerçeve": "Asetat",
-    "Cam": "Polarize",
-    "Sap": "Metal",
-    "Sap Ucu": "Asetat"
-   },
-   "images": {
-    "front": "9651-on.jpg",
-    "side": "9651-yan.jpg"
-   },
-   "variants": [
-    {
-     "code": "9651.C1",
-     "attrs": {
-      "frame_color": "Siyah",
-      "temple_color": "Gun",
-      "tip_color": "Siyah",
-      "clip_frame_color": "",
-      "clip_lens_color": "Füme"
-     },
-     "images": {
-      "front": "9651-C1-on.jpg",
-      "side": "9651-C1-yan.jpg",
-      "clip": "9651-C1-clip.jpg"
-     }
-    },
-    {
-     "code": "9651.C2",
-     "attrs": {
-      "frame_color": "Lacivert",
-      "temple_color": "Gümüş",
-      "tip_color": "Lacivert",
-      "clip_frame_color": "",
-      "clip_lens_color": "Kahverengi"
-     },
-     "images": {
-      "front": "9651-C2-on.jpg",
-      "side": "9651-C2-yan.jpg",
-      "clip": "9651-C2-clip.jpg"
-     }
-    },
-    {
-     "code": "9651.C3",
-     "attrs": {
-      "frame_color": "Yeşil",
-      "temple_color": "Gun",
-      "tip_color": "Yeşil",
-      "clip_frame_color": "",
-      "clip_lens_color": "Yeşil"
-     },
-     "images": {
-      "front": "9651-C3-on.jpg",
-      "side": "9651-C3-yan.jpg",
-      "clip": "9651-C3-clip.jpg"
-     }
-    }
-   ],
-   "hero_variant": null,
-   "brand_slug": "slazenger",
-   "slug": "slazenger-9651"
-  },
-  {
-   "brand": "Slazenger",
    "category": "Optik",
    "code": "9599",
    "page": 3,
@@ -10689,6 +8002,2693 @@
    "hero_variant": null,
    "brand_slug": "slazenger",
    "slug": "slazenger-9652"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9486",
+   "page": 3,
+   "lens": 53,
+   "bridge": 18,
+   "temple": 142,
+   "new": true,
+   "antifar": true,
+   "materials": {
+    "Çerçeve": "Ultem",
+    "Cam": "Polarize",
+    "Sap": "Ultem",
+    "Sap Ucu": "Ultem"
+   },
+   "images": {
+    "front": "9486-on.jpg",
+    "side": "9486-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9486.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9486-C1-on.jpg",
+      "side": "9486-C1-yan.jpg",
+      "clip": "9486-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9486.C2",
+     "attrs": {
+      "frame_color": "Gri",
+      "temple_color": "Gri",
+      "tip_color": "Gri",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9486-C2-on.jpg",
+      "side": "9486-C2-yan.jpg",
+      "clip": "9486-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9486.C3",
+     "attrs": {
+      "frame_color": "Lacivert",
+      "temple_color": "Lacivert",
+      "tip_color": "Lacivert / Mavi",
+      "clip_frame_color": "Lacivert",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9486-C3-on.jpg",
+      "side": "9486-C3-yan.jpg",
+      "clip": "9486-C3-clip.jpg"
+     }
+    },
+    {
+     "code": "9486.C4",
+     "attrs": {
+      "frame_color": "Yeşil",
+      "temple_color": "Yeşil",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9486-C4-on.jpg",
+      "side": "9486-C4-yan.jpg",
+      "clip": "9486-C4-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9486"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9627",
+   "page": 5,
+   "lens": 54,
+   "bridge": 18,
+   "temple": 140,
+   "new": true,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Cam": "Polarize",
+    "Sap": "TR90",
+    "Sap Ucu": "TR90"
+   },
+   "images": {
+    "front": "9627-on.jpg",
+    "side": "9627-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9627.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah / Gümüş",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9627-C1-on.jpg",
+      "side": "9627-C1-yan.jpg",
+      "clip": "9627-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9627.C2",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Yeşil / Gümüş",
+      "tip_color": "Yeşil",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9627-C2-on.jpg",
+      "side": "9627-C2-yan.jpg",
+      "clip": "9627-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9627.C3",
+     "attrs": {
+      "frame_color": "Gun",
+      "temple_color": "Lacivert / Gümüş",
+      "tip_color": "Lacivert",
+      "clip_frame_color": "Lacivert",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9627-C3-on.jpg",
+      "side": "9627-C3-yan.jpg",
+      "clip": "9627-C3-clip.jpg"
+     }
+    },
+    {
+     "code": "9627.C4",
+     "attrs": {
+      "frame_color": "Gun",
+      "temple_color": "Siyah / Gümüş",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9627-C4-on.jpg",
+      "side": "9627-C4-yan.jpg",
+      "clip": "9627-C4-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9627"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9628",
+   "page": 8,
+   "lens": 53,
+   "bridge": 17,
+   "temple": 142,
+   "new": true,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Cam": "Polarize",
+    "Sap": "TR90",
+    "Sap Ucu": "TR90"
+   },
+   "images": {
+    "front": "9628-on.jpg",
+    "side": "9628-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9628.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah / Gümüş",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9628-C1-on.jpg",
+      "side": "9628-C1-yan.jpg",
+      "clip": "9628-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9628.C2",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Yeşil / Gümüş",
+      "tip_color": "Yeşil",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9628-C2-on.jpg",
+      "side": "9628-C2-yan.jpg",
+      "clip": "9628-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9628.C3",
+     "attrs": {
+      "frame_color": "Gun",
+      "temple_color": "Siyah / Gümüş",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9628-C3-on.jpg",
+      "side": "9628-C3-yan.jpg",
+      "clip": "9628-C3-clip.jpg"
+     }
+    },
+    {
+     "code": "9628.C4",
+     "attrs": {
+      "frame_color": "Gun",
+      "temple_color": "Lacivert / Gümüş",
+      "tip_color": "Lacivert",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9628-C4-on.jpg",
+      "side": "9628-C4-yan.jpg",
+      "clip": "9628-C4-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9628"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9629",
+   "page": 10,
+   "lens": 50,
+   "bridge": 21,
+   "temple": 148,
+   "new": true,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Cam": "Polarize",
+    "Sap": "TR90",
+    "Sap Ucu": "TR90"
+   },
+   "images": {
+    "front": "9629-on.jpg",
+    "side": "9629-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9629.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah / Gümüş",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9629-C1-on.jpg",
+      "side": "9629-C1-yan.jpg",
+      "clip": "9629-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9629.C2",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Yeşil / Gümüş",
+      "tip_color": "Yeşil",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9629-C2-on.jpg",
+      "side": "9629-C2-yan.jpg",
+      "clip": "9629-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9629.C3",
+     "attrs": {
+      "frame_color": "Gun",
+      "temple_color": "Lacivert / Gümüş",
+      "tip_color": "Lacivert",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9629-C3-on.jpg",
+      "side": "9629-C3-yan.jpg",
+      "clip": "9629-C3-clip.jpg"
+     }
+    },
+    {
+     "code": "9629.C4",
+     "attrs": {
+      "frame_color": "Gun",
+      "temple_color": "Siyah / Gümüş",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Lacivert",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9629-C4-on.jpg",
+      "side": "9629-C4-yan.jpg",
+      "clip": "9629-C4-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9629"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9630",
+   "page": 13,
+   "lens": 50,
+   "bridge": 21,
+   "temple": 145,
+   "new": true,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Cam": "Polarize",
+    "Sap": "Asetat",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "9630-on.jpg",
+    "side": "9630-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9630.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah / Gümüş",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9630-C1-on.jpg",
+      "side": "9630-C1-yan.jpg",
+      "clip": "9630-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9630.C2",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Demi / Gümüş",
+      "tip_color": "Demi",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9630-C2-on.jpg",
+      "side": "9630-C2-yan.jpg",
+      "clip": "9630-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9630.C3",
+     "attrs": {
+      "frame_color": "Gun",
+      "temple_color": "Lacivert / Gümüş",
+      "tip_color": "Lacivert",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9630-C3-on.jpg",
+      "side": "9630-C3-yan.jpg",
+      "clip": "9630-C3-clip.jpg"
+     }
+    },
+    {
+     "code": "9630.C4",
+     "attrs": {
+      "frame_color": "Gun",
+      "temple_color": "Koyu Gri / Gümüş",
+      "tip_color": "Koyu Gri",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9630-C4-on.jpg",
+      "side": "9630-C4-yan.jpg",
+      "clip": "9630-C4-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9630"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9631",
+   "page": 15,
+   "lens": 53,
+   "bridge": 18,
+   "temple": 145,
+   "new": true,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Cam": "Polarize",
+    "Sap": "Asetat",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "9631-on.jpg",
+    "side": "9631-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9631.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah / Gümüş",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9631-C1-on.jpg",
+      "side": "9631-C1-yan.jpg",
+      "clip": "9631-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9631.C2",
+     "attrs": {
+      "frame_color": "Siyah / Altın",
+      "temple_color": "Demi / Altın",
+      "tip_color": "Demi",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9631-C2-on.jpg",
+      "side": "9631-C2-yan.jpg",
+      "clip": "9631-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9631.C3",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah / Şeffaf / Gümüş",
+      "tip_color": "Siyah / Şeffaf",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9631-C3-on.jpg",
+      "side": "9631-C3-yan.jpg",
+      "clip": "9631-C3-clip.jpg"
+     }
+    },
+    {
+     "code": "9631.C4",
+     "attrs": {
+      "frame_color": "Lacivert",
+      "temple_color": "Lacivert / Gümüş",
+      "tip_color": "Lacivert",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9631-C4-on.jpg",
+      "side": "9631-C4-yan.jpg",
+      "clip": "9631-C4-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9631"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9632",
+   "page": 18,
+   "lens": 50,
+   "bridge": 20,
+   "temple": 145,
+   "new": true,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Cam": "Polarize",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "9632-on.jpg",
+    "side": "9632-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9632.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9632-C1-on.jpg",
+      "side": "9632-C1-yan.jpg",
+      "clip": "9632-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9632.C2",
+     "attrs": {
+      "frame_color": "Gun",
+      "temple_color": "Gun",
+      "tip_color": "Yeşil",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9632-C2-on.jpg",
+      "side": "9632-C2-yan.jpg",
+      "clip": "9632-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9632.C3",
+     "attrs": {
+      "frame_color": "Lacivert",
+      "temple_color": "Lacivert",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9632-C3-on.jpg",
+      "side": "9632-C3-yan.jpg",
+      "clip": "9632-C3-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9632"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9633",
+   "page": 20,
+   "lens": 49,
+   "bridge": 22,
+   "temple": 145,
+   "new": true,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Cam": "Polarize",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "9633-on.jpg",
+    "side": "9633-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9633.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9633-C1-on.jpg",
+      "side": "9633-C1-yan.jpg",
+      "clip": "9633-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9633.C2",
+     "attrs": {
+      "frame_color": "Gun",
+      "temple_color": "Gun",
+      "tip_color": "Kırçıllı Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9633-C2-on.jpg",
+      "side": "9633-C2-yan.jpg",
+      "clip": "9633-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9633.C3",
+     "attrs": {
+      "frame_color": "Bakır",
+      "temple_color": "Bakır",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9633-C3-on.jpg",
+      "side": "9633-C3-yan.jpg",
+      "clip": "9633-C3-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9633"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9634",
+   "page": 23,
+   "lens": 52,
+   "bridge": 17,
+   "temple": 145,
+   "new": true,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Cam": "Polarize",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "9634-on.jpg",
+    "side": "9634-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9634.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9634-C1-on.jpg",
+      "side": "9634-C1-yan.jpg",
+      "clip": "9634-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9634.C2",
+     "attrs": {
+      "frame_color": "Gun",
+      "temple_color": "Gun",
+      "tip_color": "Kırçıllı Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9634-C2-on.jpg",
+      "side": "9634-C2-yan.jpg",
+      "clip": "9634-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9634.C3",
+     "attrs": {
+      "frame_color": "Bakır",
+      "temple_color": "Bakır",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9634-C3-on.jpg",
+      "side": "9634-C3-yan.jpg",
+      "clip": "9634-C3-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9634"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9639",
+   "page": 25,
+   "lens": 49,
+   "bridge": 17,
+   "temple": 130,
+   "new": true,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Cam": "Polarize",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "9639-on.jpg",
+    "side": "9639-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9639.C1",
+     "attrs": {
+      "frame_color": "Siyah / Gümüş",
+      "temple_color": "Siyah / Gümüş",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9639-C1-on.jpg",
+      "side": "9639-C1-yan.jpg",
+      "clip": "9639-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9639.C2",
+     "attrs": {
+      "frame_color": "Siyah / Altın",
+      "temple_color": "Siyah / Altın",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9639-C2-on.jpg",
+      "side": "9639-C2-yan.jpg",
+      "clip": "9639-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9639.C3",
+     "attrs": {
+      "frame_color": "Kahverengi / Altın",
+      "temple_color": "Kahverengi / Altın",
+      "tip_color": "Demi",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Kahverengi"
+     },
+     "images": {
+      "front": "9639-C3-on.jpg",
+      "side": "9639-C3-yan.jpg",
+      "clip": "9639-C3-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9639"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9064",
+   "page": 28,
+   "lens": 58,
+   "bridge": 17,
+   "temple": 140,
+   "new": false,
+   "antifar": true,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Cam": "Polarize",
+    "Sap": "Alüm nyum",
+    "Sap Ucu": "Rubber"
+   },
+   "images": {
+    "front": "9064-on.jpg",
+    "side": "9064-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9064.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Koyu Gun",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9064-C1-on.jpg",
+      "side": "9064-C1-yan.jpg",
+      "clip": "9064-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9064.C2",
+     "attrs": {
+      "frame_color": "Koyu Lac vert",
+      "temple_color": "Gümüş",
+      "tip_color": "Mat Koyu Lac vert",
+      "clip_frame_color": "Mat Koyu Lac vert",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9064-C2-on.jpg",
+      "side": "9064-C2-yan.jpg",
+      "clip": "9064-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9064.C3",
+     "attrs": {
+      "frame_color": "Koyu Gun",
+      "temple_color": "Siyah",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Grad ent Füme"
+     },
+     "images": {
+      "front": "9064-C3-on.jpg",
+      "side": "9064-C3-yan.jpg",
+      "clip": "9064-C3-clip.jpg"
+     }
+    },
+    {
+     "code": "9064.C4",
+     "attrs": {
+      "frame_color": "Koyu Gun",
+      "temple_color": "Yeşil",
+      "tip_color": "Mat Koyu Yeş l",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9064-C4-on.jpg",
+      "side": "9064-C4-yan.jpg",
+      "clip": "9064-C4-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9064"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9066",
+   "page": 30,
+   "lens": 58,
+   "bridge": 17,
+   "temple": 140,
+   "new": false,
+   "antifar": true,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Cam": "Polarize",
+    "Sap": "Alüm nyum",
+    "Sap Ucu": "Rubber"
+   },
+   "images": {
+    "front": "9066-on.jpg",
+    "side": "9066-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9066.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Koyu Gun",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9066-C1-on.jpg",
+      "side": "9066-C1-yan.jpg",
+      "clip": "9066-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9066.C2",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Gümüş",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9066-C2-on.jpg",
+      "side": "9066-C2-yan.jpg",
+      "clip": "9066-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9066.C6",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah",
+      "tip_color": "Mat Kırmızı",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9066-C6-on.jpg",
+      "side": "9066-C6-yan.jpg",
+      "clip": "9066-C6-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9066"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9146",
+   "page": 33,
+   "lens": 54,
+   "bridge": 17,
+   "temple": 140,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "TR90",
+    "Cam": "Polarize",
+    "Sap": "TR90",
+    "Sap Ucu": "TR90"
+   },
+   "images": {
+    "front": "9146-on.jpg",
+    "side": "9146-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9146.C5",
+     "attrs": {
+      "frame_color": "Mat Siyah",
+      "temple_color": "Mat Siyah",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9146-C5-on.jpg",
+      "side": "9146-C5-yan.jpg",
+      "clip": "9146-C5-clip.jpg"
+     }
+    },
+    {
+     "code": "9146.C6",
+     "attrs": {
+      "frame_color": "Mat Koyu Lac vert",
+      "temple_color": "Mat Koyu Lac vert",
+      "tip_color": "Mat Koyu Lac vert",
+      "clip_frame_color": "",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9146-C6-on.jpg",
+      "side": "9146-C6-yan.jpg",
+      "clip": "9146-C6-clip.jpg"
+     }
+    },
+    {
+     "code": "9146.C7",
+     "attrs": {
+      "frame_color": "Mat Siyah",
+      "temple_color": "Mat Siyah",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9146-C7-on.jpg",
+      "side": "9146-C7-yan.jpg",
+      "clip": "9146-C7-clip.jpg"
+     }
+    },
+    {
+     "code": "9146.C8",
+     "attrs": {
+      "frame_color": "Mat Gri",
+      "temple_color": "Mat Gri",
+      "tip_color": "Mat Gri",
+      "clip_frame_color": "",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9146-C8-on.jpg",
+      "side": "9146-C8-yan.jpg",
+      "clip": "9146-C8-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9146"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9392",
+   "page": 35,
+   "lens": 53,
+   "bridge": 16,
+   "temple": 138,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Ultem",
+    "Cam": "Polarize",
+    "Sap": "Ultem",
+    "Sap Ucu": "Ultem"
+   },
+   "images": {
+    "front": "9392-on.jpg",
+    "side": "9392-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9392.C1",
+     "attrs": {
+      "frame_color": "Mat Kahvereng / Şeffaf",
+      "temple_color": "Mat Kahvereng / Şeffaf",
+      "tip_color": "Mat Kahvereng / Şeffaf",
+      "clip_frame_color": "Mat Kahvereng / Şeffaf",
+      "clip_lens_color": "Grad ent Füme"
+     },
+     "images": {
+      "front": "9392-C1-on.jpg",
+      "side": "9392-C1-yan.jpg",
+      "clip": "9392-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9392.C2",
+     "attrs": {
+      "frame_color": "Mat Siyah",
+      "temple_color": "Mat Siyah",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9392-C2-on.jpg",
+      "side": "9392-C2-yan.jpg",
+      "clip": "9392-C2-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9392"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9542",
+   "page": 37,
+   "lens": 48,
+   "bridge": 18,
+   "temple": 145,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Cam": "Polarize",
+    "Sap": "Metal / Rubber",
+    "Sap Ucu": "Rubber"
+   },
+   "images": {
+    "front": "9542-on.jpg",
+    "side": "9542-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9542.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah / Mat Siyah",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9542-C1-on.jpg",
+      "side": "9542-C1-yan.jpg",
+      "clip": "9542-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9542.C2",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah / Mat Yeş l",
+      "tip_color": "Mat Yeş l",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9542-C2-on.jpg",
+      "side": "9542-C2-yan.jpg",
+      "clip": "9542-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9542.C3",
+     "attrs": {
+      "frame_color": "Koyu Gun",
+      "temple_color": "Koyu Gun / Koyu Lac vert",
+      "tip_color": "Koyu Lac vert",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9542-C3-on.jpg",
+      "side": "9542-C3-yan.jpg",
+      "clip": "9542-C3-clip.jpg"
+     }
+    },
+    {
+     "code": "9542.C4",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah / Mat Gri",
+      "tip_color": "Mat Gri",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9542-C4-on.jpg",
+      "side": "9542-C4-yan.jpg",
+      "clip": "9542-C4-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9542"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9604",
+   "page": 39,
+   "lens": 57,
+   "bridge": 19,
+   "temple": 145,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Cam": "Polarize",
+    "Sap": "Asetat",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "9604-on.jpg",
+    "side": "9604-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9604.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Siyah",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9604-C1-on.jpg",
+      "side": "9604-C1-yan.jpg",
+      "clip": "9604-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9604.C2",
+     "attrs": {
+      "frame_color": "Koyu Gun",
+      "temple_color": "Kr stal Lac vert",
+      "tip_color": "Kr stal Lac vert",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9604-C2-on.jpg",
+      "side": "9604-C2-yan.jpg",
+      "clip": "9604-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9604.C3",
+     "attrs": {
+      "frame_color": "Koyu Gun",
+      "temple_color": "Demi",
+      "tip_color": "Demi",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9604-C3-on.jpg",
+      "side": "9604-C3-yan.jpg",
+      "clip": "9604-C3-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9604"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9618",
+   "page": 42,
+   "lens": 47,
+   "bridge": 19,
+   "temple": 135,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "TR90",
+    "Cam": "Polarize",
+    "Sap": "TR90",
+    "Sap Ucu": "Rubber"
+   },
+   "images": {
+    "front": "9618-on.jpg",
+    "side": "9618-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9618.C1",
+     "attrs": {
+      "frame_color": "Kr stal S yah",
+      "temple_color": "Siyah",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9618-C1-on.jpg",
+      "side": "9618-C1-yan.jpg",
+      "clip": "9618-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9618.C2",
+     "attrs": {
+      "frame_color": "Kr stal Yeş l",
+      "temple_color": "Siyah",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9618-C2-on.jpg",
+      "side": "9618-C2-yan.jpg",
+      "clip": "9618-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9618.C3",
+     "attrs": {
+      "frame_color": "Kr stal Kahvereng",
+      "temple_color": "Siyah",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9618-C3-on.jpg",
+      "side": "9618-C3-yan.jpg",
+      "clip": "9618-C3-clip.jpg"
+     }
+    },
+    {
+     "code": "9618.C4",
+     "attrs": {
+      "frame_color": "Kr stal Lac vert",
+      "temple_color": "Kr stal Lac vert",
+      "tip_color": "Mat Lac vert",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9618-C4-on.jpg",
+      "side": "9618-C4-yan.jpg",
+      "clip": "9618-C4-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9618"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9636",
+   "page": 44,
+   "lens": 55,
+   "bridge": 17,
+   "temple": 145,
+   "new": false,
+   "antifar": true,
+   "materials": {
+    "Çerçeve": "Ultem",
+    "Cam": "Polarize",
+    "Sap": "Ultem",
+    "Sap Ucu": "Rubber"
+   },
+   "images": {
+    "front": "9636-on.jpg",
+    "side": "9636-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9636.C1",
+     "attrs": {
+      "frame_color": "Mat Siyah",
+      "temple_color": "Mat Koyu Gr",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9636-C1-on.jpg",
+      "side": "9636-C1-yan.jpg",
+      "clip": "9636-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9636.C2",
+     "attrs": {
+      "frame_color": "Mat Kr stal Koyu Gr",
+      "temple_color": "Mat Kr stal Koyu Gr",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9636-C2-on.jpg",
+      "side": "9636-C2-yan.jpg",
+      "clip": "9636-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9636.C3",
+     "attrs": {
+      "frame_color": "Mat Kr stal Lac vert",
+      "temple_color": "Mat Kr stal Lac vert",
+      "tip_color": "Mat Lac vert",
+      "clip_frame_color": "Mat Kr stal Lac vert",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9636-C3-on.jpg",
+      "side": "9636-C3-yan.jpg",
+      "clip": "9636-C3-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9636"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9637",
+   "page": 46,
+   "lens": 54,
+   "bridge": 16,
+   "temple": 145,
+   "new": false,
+   "antifar": true,
+   "materials": {
+    "Çerçeve": "Ultem",
+    "Cam": "Polarize",
+    "Sap": "Ultem",
+    "Sap Ucu": "Ultem"
+   },
+   "images": {
+    "front": "9637-on.jpg",
+    "side": "9637-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9637.C1",
+     "attrs": {
+      "frame_color": "Mat Siyah",
+      "temple_color": "Mat Siyah",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9637-C1-on.jpg",
+      "side": "9637-C1-yan.jpg",
+      "clip": "9637-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9637.C2",
+     "attrs": {
+      "frame_color": "Mat Kr stal Koyu Gr",
+      "temple_color": "Mat Koyu Gr",
+      "tip_color": "Mat Koyu Gr",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9637-C2-on.jpg",
+      "side": "9637-C2-yan.jpg",
+      "clip": "9637-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9637.C3",
+     "attrs": {
+      "frame_color": "Mat Lac vert / Mat Kırmızı",
+      "temple_color": "Mat Lac vert",
+      "tip_color": "Mat Lac vert / Mat Kırmızı",
+      "clip_frame_color": "Mat Lac vert",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9637-C3-on.jpg",
+      "side": "9637-C3-yan.jpg",
+      "clip": "9637-C3-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9637"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9641",
+   "page": 48,
+   "lens": 48,
+   "bridge": 16,
+   "temple": 130,
+   "new": false,
+   "antifar": true,
+   "materials": {
+    "Çerçeve": "Ultem",
+    "Cam": "Polarize",
+    "Sap": "Ultem",
+    "Sap Ucu": "Rubber"
+   },
+   "images": {
+    "front": "9641-on.jpg",
+    "side": "9641-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9641.C1",
+     "attrs": {
+      "frame_color": "Mat Siyah",
+      "temple_color": "Gümüş / Mat Siyah",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9641-C1-on.jpg",
+      "side": "9641-C1-yan.jpg",
+      "clip": "9641-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9641.C2",
+     "attrs": {
+      "frame_color": "Kr stal Koyu Gr",
+      "temple_color": "Gümüş / Mat Siyah",
+      "tip_color": "Mat Gri",
+      "clip_frame_color": "Mat Siyah",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9641-C2-on.jpg",
+      "side": "9641-C2-yan.jpg",
+      "clip": "9641-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9641.C3",
+     "attrs": {
+      "frame_color": "Mat Lac vert / Mat Kırmızı",
+      "temple_color": "Gümüş / Mat Lac vert",
+      "tip_color": "Mat Lac vert / Mat Kırmızı",
+      "clip_frame_color": "Mat Lac vert",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9641-C3-on.jpg",
+      "side": "9641-C3-yan.jpg",
+      "clip": "9641-C3-clip.jpg"
+     }
+    },
+    {
+     "code": "9641.C4",
+     "attrs": {
+      "frame_color": "Mat Koyu Kırmızı",
+      "temple_color": "Gümüş / Mat Koyu Kırmızı",
+      "tip_color": "Mat Siyah",
+      "clip_frame_color": "Mat Koyu Kırmızı",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9641-C4-on.jpg",
+      "side": "9641-C4-yan.jpg",
+      "clip": "9641-C4-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9641"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9646",
+   "page": 51,
+   "lens": 48,
+   "bridge": 20,
+   "temple": 145,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Asetat",
+    "Cam": "Polarize",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "9646-on.jpg",
+    "side": "9646-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9646.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Gümüş / Siyah",
+      "tip_color": "Siyah",
+      "clip_frame_color": "",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9646-C1-on.jpg",
+      "side": "9646-C1-yan.jpg",
+      "clip": "9646-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9646.C2",
+     "attrs": {
+      "frame_color": "Kr stal Açık Yeş l",
+      "temple_color": "Altın / Kahverengi",
+      "tip_color": "Kr stal Kahvereng",
+      "clip_frame_color": "",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9646-C2-on.jpg",
+      "side": "9646-C2-yan.jpg",
+      "clip": "9646-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9646.C3",
+     "attrs": {
+      "frame_color": "Kr stal Lac vert",
+      "temple_color": "Koyu Gun / Koyu Lac vert",
+      "tip_color": "Kr stal Lac vert",
+      "clip_frame_color": "",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9646-C3-on.jpg",
+      "side": "9646-C3-yan.jpg",
+      "clip": "9646-C3-clip.jpg"
+     }
+    },
+    {
+     "code": "9646.C4",
+     "attrs": {
+      "frame_color": "Kr stal Kahvereng",
+      "temple_color": "Koyu Gun / Koyu Yeş l",
+      "tip_color": "Siyah",
+      "clip_frame_color": "",
+      "clip_lens_color": "Kahverengi"
+     },
+     "images": {
+      "front": "9646-C4-on.jpg",
+      "side": "9646-C4-yan.jpg",
+      "clip": "9646-C4-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9646"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9647",
+   "page": 53,
+   "lens": 55,
+   "bridge": 18,
+   "temple": 145,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Asetat",
+    "Cam": "Polarize",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "9647-on.jpg",
+    "side": "9647-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9647.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Gümüş / Siyah",
+      "tip_color": "Siyah",
+      "clip_frame_color": "",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9647-C1-on.jpg",
+      "side": "9647-C1-yan.jpg",
+      "clip": "9647-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9647.C2",
+     "attrs": {
+      "frame_color": "Kr stal Lac vert",
+      "temple_color": "Koyu Gun / Koyu Lac vert",
+      "tip_color": "Kr stal Lac vert",
+      "clip_frame_color": "",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9647-C2-on.jpg",
+      "side": "9647-C2-yan.jpg",
+      "clip": "9647-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9647.C3",
+     "attrs": {
+      "frame_color": "Kr stal Kahvereng",
+      "temple_color": "Koyu Gun / Koyu Yeş l",
+      "tip_color": "Siyah",
+      "clip_frame_color": "",
+      "clip_lens_color": "Kahverengi"
+     },
+     "images": {
+      "front": "9647-C3-on.jpg",
+      "side": "9647-C3-yan.jpg",
+      "clip": "9647-C3-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9647"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9649",
+   "page": 55,
+   "lens": 50,
+   "bridge": 18,
+   "temple": 140,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Asetat",
+    "Cam": "Polarize",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "9649-on.jpg",
+    "side": "9649-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9649.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Gümüş / Siyah",
+      "tip_color": "Siyah",
+      "clip_frame_color": "",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9649-C1-on.jpg",
+      "side": "9649-C1-yan.jpg",
+      "clip": "9649-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9649.C2",
+     "attrs": {
+      "frame_color": "Kr stal Açık Yeş l",
+      "temple_color": "Altın / Kahverengi",
+      "tip_color": "Kr stal Kahvereng",
+      "clip_frame_color": "",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9649-C2-on.jpg",
+      "side": "9649-C2-yan.jpg",
+      "clip": "9649-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9649.C3",
+     "attrs": {
+      "frame_color": "Kr stal Kahvereng",
+      "temple_color": "Koyu Bakır / Kahverengi",
+      "tip_color": "Kr stal Kahvereng",
+      "clip_frame_color": "",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9649-C3-on.jpg",
+      "side": "9649-C3-yan.jpg",
+      "clip": "9649-C3-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9649"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9650",
+   "page": 58,
+   "lens": 50,
+   "bridge": 17,
+   "temple": 140,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Asetat",
+    "Cam": "Polarize",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "9650-on.jpg",
+    "side": "9650-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9650.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Gümüş / Siyah",
+      "tip_color": "Siyah",
+      "clip_frame_color": "",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9650-C1-on.jpg",
+      "side": "9650-C1-yan.jpg",
+      "clip": "9650-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9650.C2",
+     "attrs": {
+      "frame_color": "Kr stal Açık Yeş l",
+      "temple_color": "Altın / Kahverengi",
+      "tip_color": "Kr stal Kahvereng",
+      "clip_frame_color": "",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9650-C2-on.jpg",
+      "side": "9650-C2-yan.jpg",
+      "clip": "9650-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9650.C3",
+     "attrs": {
+      "frame_color": "Kr stal Kahvereng",
+      "temple_color": "Koyu Bakır / Kahverengi",
+      "tip_color": "Kr stal Kahvereng",
+      "clip_frame_color": "",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9650-C3-on.jpg",
+      "side": "9650-C3-yan.jpg",
+      "clip": "9650-C3-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9650"
+  },
+  {
+   "brand": "Slazenger",
+   "category": "Clip-On",
+   "code": "9651",
+   "page": 60,
+   "lens": 53,
+   "bridge": 18,
+   "temple": 145,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Asetat",
+    "Cam": "Polarize",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "9651-on.jpg",
+    "side": "9651-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "9651.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "temple_color": "Gun",
+      "tip_color": "Siyah",
+      "clip_frame_color": "",
+      "clip_lens_color": "Füme"
+     },
+     "images": {
+      "front": "9651-C1-on.jpg",
+      "side": "9651-C1-yan.jpg",
+      "clip": "9651-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "9651.C2",
+     "attrs": {
+      "frame_color": "Lacivert",
+      "temple_color": "Gümüş",
+      "tip_color": "Lacivert",
+      "clip_frame_color": "",
+      "clip_lens_color": "Kahverengi"
+     },
+     "images": {
+      "front": "9651-C2-on.jpg",
+      "side": "9651-C2-yan.jpg",
+      "clip": "9651-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "9651.C3",
+     "attrs": {
+      "frame_color": "Yeşil",
+      "temple_color": "Gun",
+      "tip_color": "Yeşil",
+      "clip_frame_color": "",
+      "clip_lens_color": "Yeşil"
+     },
+     "images": {
+      "front": "9651-C3-on.jpg",
+      "side": "9651-C3-yan.jpg",
+      "clip": "9651-C3-clip.jpg"
+     }
+    }
+   ],
+   "hero_variant": null,
+   "brand_slug": "slazenger",
+   "slug": "slazenger-9651"
+  },
+  {
+   "brand": "Belmond",
+   "category": "Optik",
+   "code": "B5691",
+   "page": 3,
+   "lens": 52,
+   "bridge": 17,
+   "temple": 143,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "B5691-on.jpg",
+    "side": "B5691-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "B5691.C1",
+     "attrs": {
+      "frame_color": "Pembe",
+      "tip_color": "Kristal Pembe",
+      "temple_color": "Pembe"
+     },
+     "images": {
+      "front": "B5691-C1-on.jpg",
+      "side": "B5691-C1-yan.jpg"
+     }
+    },
+    {
+     "code": "B5691.C2",
+     "attrs": {
+      "frame_color": "Altın",
+      "tip_color": "Kahverengi",
+      "temple_color": "Altın"
+     },
+     "images": {
+      "front": "B5691-C2-on.jpg",
+      "side": "B5691-C2-yan.jpg"
+     }
+    },
+    {
+     "code": "B5691.C3",
+     "attrs": {
+      "frame_color": "Altın",
+      "tip_color": "Kristal Bej",
+      "temple_color": "Altın"
+     },
+     "images": {
+      "front": "B5691-C3-on.jpg",
+      "side": "B5691-C3-yan.jpg"
+     }
+    }
+   ],
+   "brand_slug": "belmond",
+   "slug": "belmond-b5691"
+  },
+  {
+   "brand": "Belmond",
+   "category": "Optik",
+   "code": "B5704",
+   "page": 5,
+   "lens": 52,
+   "bridge": 16,
+   "temple": 145,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "B5704-on.jpg",
+    "side": "B5704-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "B5704.C1",
+     "attrs": {
+      "frame_color": "Altın",
+      "tip_color": "Kristal Koyu Gri",
+      "temple_color": "Siyah"
+     },
+     "images": {
+      "front": "B5704-C1-on.jpg",
+      "side": "B5704-C1-yan.jpg"
+     }
+    },
+    {
+     "code": "B5704.C2",
+     "attrs": {
+      "frame_color": "Altın",
+      "tip_color": "Şeﬀaf",
+      "temple_color": "Koyu Bej"
+     },
+     "images": {
+      "front": "B5704-C2-on.jpg",
+      "side": "B5704-C2-yan.jpg"
+     }
+    }
+   ],
+   "brand_slug": "belmond",
+   "slug": "belmond-b5704"
+  },
+  {
+   "brand": "Belmond",
+   "category": "Optik",
+   "code": "B5705",
+   "page": 7,
+   "lens": 53,
+   "bridge": 16,
+   "temple": 143,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "B5705-on.jpg",
+    "side": "B5705-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "B5705.C1",
+     "attrs": {
+      "frame_color": "Pembe / Altın",
+      "tip_color": "Şeﬀaf",
+      "temple_color": "Pembe / Altın"
+     },
+     "images": {
+      "front": "B5705-C1-on.jpg",
+      "side": "B5705-C1-yan.jpg"
+     }
+    },
+    {
+     "code": "B5705.C2",
+     "attrs": {
+      "frame_color": "Kırmızı / Altın",
+      "tip_color": "Koyu Bordo",
+      "temple_color": "Kırmızı / Altın"
+     },
+     "images": {
+      "front": "B5705-C2-on.jpg",
+      "side": "B5705-C2-yan.jpg"
+     }
+    },
+    {
+     "code": "B5705.C3",
+     "attrs": {
+      "frame_color": "Altın",
+      "tip_color": "Bej / Şeﬀaf",
+      "temple_color": "Altın / Bej"
+     },
+     "images": {
+      "front": "B5705-C3-on.jpg",
+      "side": "B5705-C3-yan.jpg"
+     }
+    }
+   ],
+   "brand_slug": "belmond",
+   "slug": "belmond-b5705"
+  },
+  {
+   "brand": "Belmond",
+   "category": "Optik",
+   "code": "B5785",
+   "page": 11,
+   "lens": 55,
+   "bridge": 17,
+   "temple": 140,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "B5785-on.jpg",
+    "side": "B5785-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "B5785.C1",
+     "attrs": {
+      "frame_color": "Kahverengi / Altın",
+      "tip_color": "Siyah",
+      "temple_color": "Bej / Altın"
+     },
+     "images": {
+      "front": "B5785-C1-on.jpg",
+      "side": "B5785-C1-yan.jpg"
+     }
+    },
+    {
+     "code": "B5785.C2",
+     "attrs": {
+      "frame_color": "Açık Kahverengi / Altın",
+      "tip_color": "Kristal Koyu Kahverengi",
+      "temple_color": "Siyah / Altın"
+     },
+     "images": {
+      "front": "B5785-C2-on.jpg",
+      "side": "B5785-C2-yan.jpg"
+     }
+    },
+    {
+     "code": "B5785.C3",
+     "attrs": {
+      "frame_color": "Kahverengi / Altın",
+      "tip_color": "Siyah",
+      "temple_color": "Yeşil / Altın"
+     },
+     "images": {
+      "front": "B5785-C3-on.jpg",
+      "side": "B5785-C3-yan.jpg"
+     }
+    }
+   ],
+   "brand_slug": "belmond",
+   "slug": "belmond-b5785"
+  },
+  {
+   "brand": "Belmond",
+   "category": "Optik",
+   "code": "B5804",
+   "page": 13,
+   "lens": 51,
+   "bridge": 16,
+   "temple": 135,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Asetat",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "B5804-on.jpg",
+    "side": "B5804-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "B5804.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "tip_color": "Siyah",
+      "temple_color": "Siyah / Gümüş"
+     },
+     "images": {
+      "front": "B5804-C1-on.jpg",
+      "side": "B5804-C1-yan.jpg"
+     }
+    },
+    {
+     "code": "B5804.C2",
+     "attrs": {
+      "frame_color": "Demi",
+      "tip_color": "Demi",
+      "temple_color": "Kahverengi / Gümüş"
+     },
+     "images": {
+      "front": "B5804-C2-on.jpg",
+      "side": "B5804-C2-yan.jpg"
+     }
+    },
+    {
+     "code": "B5804.C3",
+     "attrs": {
+      "frame_color": "Kristal Koyu Yeşil",
+      "tip_color": "Kristal Koyu Yeşil",
+      "temple_color": "Bej / Gümüş"
+     },
+     "images": {
+      "front": "B5804-C3-on.jpg",
+      "side": "B5804-C3-yan.jpg"
+     }
+    }
+   ],
+   "brand_slug": "belmond",
+   "slug": "belmond-b5804"
+  },
+  {
+   "brand": "Belmond",
+   "category": "Optik",
+   "code": "B5809",
+   "page": 15,
+   "lens": 52,
+   "bridge": 16,
+   "temple": 140,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "B5809-on.jpg",
+    "side": "B5809-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "B5809.C1",
+     "attrs": {
+      "frame_color": "Açık Bej / Altın",
+      "tip_color": "Şeﬀaf",
+      "temple_color": "Açık Bej / Altın"
+     },
+     "images": {
+      "front": "B5809-C1-on.jpg",
+      "side": "B5809-C1-yan.jpg"
+     }
+    },
+    {
+     "code": "B5809.C2",
+     "attrs": {
+      "frame_color": "Bordo / Altın",
+      "tip_color": "Kristal Kırmızı",
+      "temple_color": "Bordo / Altın"
+     },
+     "images": {
+      "front": "B5809-C2-on.jpg",
+      "side": "B5809-C2-yan.jpg"
+     }
+    },
+    {
+     "code": "B5809.C3",
+     "attrs": {
+      "frame_color": "Yeşil / Altın",
+      "tip_color": "Kristal Bej",
+      "temple_color": "Yeşil / Altın"
+     },
+     "images": {
+      "front": "B5809-C3-on.jpg",
+      "side": "B5809-C3-yan.jpg"
+     }
+    }
+   ],
+   "brand_slug": "belmond",
+   "slug": "belmond-b5809"
+  },
+  {
+   "brand": "Belmond",
+   "category": "Optik",
+   "code": "B5810",
+   "page": 17,
+   "lens": 53,
+   "bridge": 17,
+   "temple": 145,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "B5810-on.jpg",
+    "side": "B5810-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "B5810.C1",
+     "attrs": {
+      "frame_color": "Yeşil / Altın",
+      "tip_color": "Kristal Yeşil",
+      "temple_color": "Yeşil / Altın"
+     },
+     "images": {
+      "front": "B5810-C1-on.jpg",
+      "side": "B5810-C1-yan.jpg"
+     }
+    },
+    {
+     "code": "B5810.C2",
+     "attrs": {
+      "frame_color": "Açık Pembe / Gümüş",
+      "tip_color": "Kristal Açık Pembe",
+      "temple_color": "Açık Pembe / Gümüş"
+     },
+     "images": {
+      "front": "B5810-C2-on.jpg",
+      "side": "B5810-C2-yan.jpg"
+     }
+    },
+    {
+     "code": "B5810.C3",
+     "attrs": {
+      "frame_color": "Beyaz / Altın",
+      "tip_color": "Kristal Açık Bej",
+      "temple_color": "Beyaz / Altın"
+     },
+     "images": {
+      "front": "B5810-C3-on.jpg",
+      "side": "B5810-C3-yan.jpg"
+     }
+    },
+    {
+     "code": "B5810.C4",
+     "attrs": {
+      "frame_color": "Kahverengi / Altın",
+      "tip_color": "Kahverengi",
+      "temple_color": "Kahverengi / Altın"
+     },
+     "images": {
+      "front": "B5810-C4-on.jpg",
+      "side": "B5810-C4-yan.jpg"
+     }
+    }
+   ],
+   "brand_slug": "belmond",
+   "slug": "belmond-b5810"
+  },
+  {
+   "brand": "Belmond",
+   "category": "Optik",
+   "code": "B5811",
+   "page": 21,
+   "lens": 53,
+   "bridge": 18,
+   "temple": 140,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "B5811-on.jpg",
+    "side": "B5811-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "B5811.C1",
+     "attrs": {
+      "frame_color": "Gümüş",
+      "tip_color": "Kristal Açık Pembe",
+      "temple_color": "Gümüş / Açık Pembe"
+     },
+     "images": {
+      "front": "B5811-C1-on.jpg",
+      "side": "B5811-C1-yan.jpg"
+     }
+    },
+    {
+     "code": "B5811.C2",
+     "attrs": {
+      "frame_color": "Altın",
+      "tip_color": "Kristal Koyu Gri",
+      "temple_color": "Altın / Gri"
+     },
+     "images": {
+      "front": "B5811-C2-on.jpg",
+      "side": "B5811-C2-yan.jpg"
+     }
+    },
+    {
+     "code": "B5811.C3",
+     "attrs": {
+      "frame_color": "Altın",
+      "tip_color": "Kristal Beyaz",
+      "temple_color": "Altın / Beyaz"
+     },
+     "images": {
+      "front": "B5811-C3-on.jpg",
+      "side": "B5811-C3-yan.jpg"
+     }
+    }
+   ],
+   "brand_slug": "belmond",
+   "slug": "belmond-b5811"
+  },
+  {
+   "brand": "Belmond",
+   "category": "Optik",
+   "code": "B5812",
+   "page": 23,
+   "lens": 55,
+   "bridge": 18,
+   "temple": 145,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "B5812-on.jpg",
+    "side": "B5812-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "B5812.C1",
+     "attrs": {
+      "frame_color": "Kahverengi / Altın",
+      "tip_color": "Kahverengi",
+      "temple_color": "Kahverengi / Altın"
+     },
+     "images": {
+      "front": "B5812-C1-on.jpg",
+      "side": "B5812-C1-yan.jpg"
+     }
+    },
+    {
+     "code": "B5812.C2",
+     "attrs": {
+      "frame_color": "Beyaz / Altın",
+      "tip_color": "Beyaz",
+      "temple_color": "Beyaz / Altın"
+     },
+     "images": {
+      "front": "B5812-C2-on.jpg",
+      "side": "B5812-C2-yan.jpg"
+     }
+    },
+    {
+     "code": "B5812.C3",
+     "attrs": {
+      "frame_color": "Koyu Gri / Altın",
+      "tip_color": "Kristal Koyu Gri",
+      "temple_color": "Koyu Gri / Altın"
+     },
+     "images": {
+      "front": "B5812-C3-on.jpg",
+      "side": "B5812-C3-yan.jpg"
+     }
+    }
+   ],
+   "brand_slug": "belmond",
+   "slug": "belmond-b5812"
+  },
+  {
+   "brand": "Belmond",
+   "category": "Clip-On",
+   "code": "B5801",
+   "page": 28,
+   "lens": 47,
+   "bridge": 19,
+   "temple": 135,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "B5801-on.jpg",
+    "side": "B5801-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "B5801.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme",
+      "temple_color": "Altın"
+     },
+     "images": {
+      "front": "B5801-C1-on.jpg",
+      "side": "B5801-C1-yan.jpg",
+      "clip": "B5801-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "B5801.C2",
+     "attrs": {
+      "frame_color": "Siyah / Koyu Gun",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme",
+      "temple_color": "Koyu Gun"
+     },
+     "images": {
+      "front": "B5801-C2-on.jpg",
+      "side": "B5801-C2-yan.jpg",
+      "clip": "B5801-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "B5801.C3",
+     "attrs": {
+      "frame_color": "Kahverengi / Altın",
+      "tip_color": "Kahverengi",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Kahverengi",
+      "temple_color": "Altın"
+     },
+     "images": {
+      "front": "B5801-C3-on.jpg",
+      "side": "B5801-C3-yan.jpg",
+      "clip": "B5801-C3-clip.jpg"
+     }
+    }
+   ],
+   "brand_slug": "belmond",
+   "slug": "belmond-b5801"
+  },
+  {
+   "brand": "Belmond",
+   "category": "Clip-On",
+   "code": "B5807",
+   "page": 30,
+   "lens": 54,
+   "bridge": 17,
+   "temple": 140,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Ultem",
+    "Sap": "Metal",
+    "Sap Ucu": "Ultem"
+   },
+   "images": {
+    "front": "B5807-on.jpg",
+    "side": "B5807-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "B5807.C1",
+     "attrs": {
+      "frame_color": "Siyah",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme",
+      "temple_color": "Siyah / Altın"
+     },
+     "images": {
+      "front": "B5807-C1-on.jpg",
+      "side": "B5807-C1-yan.jpg",
+      "clip": "B5807-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "B5807.C2",
+     "attrs": {
+      "frame_color": "Kahverengi",
+      "tip_color": "Kahverengi",
+      "clip_frame_color": "Kahverengi",
+      "clip_lens_color": "Kahverengi",
+      "temple_color": "Kahverengi / Altın"
+     },
+     "images": {
+      "front": "B5807-C2-on.jpg",
+      "side": "B5807-C2-yan.jpg",
+      "clip": "B5807-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "B5807.C3",
+     "attrs": {
+      "frame_color": "Koyu Gri",
+      "tip_color": "Kristal Koyu Gri",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme",
+      "temple_color": "Siyah / Gümüş"
+     },
+     "images": {
+      "front": "B5807-C3-on.jpg",
+      "side": "B5807-C3-yan.jpg",
+      "clip": "B5807-C3-clip.jpg"
+     }
+    }
+   ],
+   "brand_slug": "belmond",
+   "slug": "belmond-b5807"
+  },
+  {
+   "brand": "Belmond",
+   "category": "Clip-On",
+   "code": "B5813",
+   "page": 34,
+   "lens": 46,
+   "bridge": 23,
+   "temple": 145,
+   "new": false,
+   "antifar": false,
+   "materials": {
+    "Çerçeve": "Metal",
+    "Sap": "Metal",
+    "Sap Ucu": "Asetat"
+   },
+   "images": {
+    "front": "B5813-on.jpg",
+    "side": "B5813-yan.jpg"
+   },
+   "variants": [
+    {
+     "code": "B5813.C1",
+     "attrs": {
+      "frame_color": "Siyah / Altın",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme",
+      "temple_color": "Altın"
+     },
+     "images": {
+      "front": "B5813-C1-on.jpg",
+      "side": "B5813-C1-yan.jpg",
+      "clip": "B5813-C1-clip.jpg"
+     }
+    },
+    {
+     "code": "B5813.C2",
+     "attrs": {
+      "frame_color": "Kahverengi",
+      "tip_color": "Demi",
+      "clip_frame_color": "Demi",
+      "clip_lens_color": "Kahverengi",
+      "temple_color": "Altın"
+     },
+     "images": {
+      "front": "B5813-C2-on.jpg",
+      "side": "B5813-C2-yan.jpg",
+      "clip": "B5813-C2-clip.jpg"
+     }
+    },
+    {
+     "code": "B5813.C3",
+     "attrs": {
+      "frame_color": "Siyah / Koyu Gun",
+      "tip_color": "Siyah",
+      "clip_frame_color": "Siyah",
+      "clip_lens_color": "Füme",
+      "temple_color": "Koyu Gun"
+     },
+     "images": {
+      "front": "B5813-C3-on.jpg",
+      "side": "B5813-C3-yan.jpg",
+      "clip": "B5813-C3-clip.jpg"
+     }
+    }
+   ],
+   "brand_slug": "belmond",
+   "slug": "belmond-b5813"
   }
  ]
 }
