@@ -105,7 +105,6 @@ window.AO_CONFIG = {
       <a href='/search/label/Blog'>Blog</a>
       <a href='/p/yetkili-satis-noktalari.html'>Satış Noktaları</a>
       <a href='/p/iletisim.html'>İletişim</a>
-      <a href='/p/qr-etiketler.html'>Bayiler için QR etiketler</a>
       <div class='search-wrap'>
         <form action='/search' class='search' method='get' role='search'>
           <input aria-label='Model kodu ara' autocomplete='off' name='q' placeholder='Model kodu (örn. LC1408)' type='search'/>
