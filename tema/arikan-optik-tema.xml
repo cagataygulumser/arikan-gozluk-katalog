@@ -1179,7 +1179,6 @@ window.AO_CONFIG = {
       <a href='/search'>Tüm modeller</a>
       <a href='/search/label/Optik'>Optik çerçeveler</a>
       <a href='/search/label/Clip-On'>Clip-On</a>
-      <a href='/p/clip-on-demo.html'>Clip-On demo</a>
       <a data-asistan='1' href='#asistan'>Gözlük asistanı</a>
       <a href='/search/label/Yeni'>Yeni gelenler</a>
       <a href='/search/label/Polarize'>Polarize</a>
@@ -1224,7 +1223,7 @@ window.AO_CONFIG = {
   var CFG = window.AO_CONFIG || {};
   var CDN = CFG.cdn || 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/';
   var BRANDS = CFG.brands || {};
-  var DATA_V = '202610272051'; // veri dosyaları için önbellek kırıcı (build.py doldurur)
+  var DATA_V = '202610272055'; // veri dosyaları için önbellek kırıcı (build.py doldurur)
   function dataUrl(name) { return CDN + name + '?v=' + DATA_V; }
   var BRAND_ORDER = ['lee-cooper', 'quantum', 'slazenger', 'belmond'];
   var FEED_URL = (CFG.feed || '/feeds/posts/summary?alt=json&max-results=500');
@@ -1657,7 +1656,7 @@ window.AO_CONFIG = {
   }
 
   /* ---------- sabit sayfa bağlantıları (Blogger'ın verdiği gerçek adreslere çevir) ---------- */
-  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/clip-on-demo.html': 'Clip-On Demo', '/p/qr-etiketler.html': 'QR Etiketler', '/p/bayi-talep-formu.html': 'Bayi Talep Formu' };
+  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/qr-etiketler.html': 'QR Etiketler', '/p/bayi-talep-formu.html': 'Bayi Talep Formu' };
   function fixPageLinks() {
     var apply = function (map) {
       $$('a[href^="/p/"]').forEach(function (a) {

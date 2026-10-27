@@ -224,15 +224,6 @@ PAGES['Yetkili Satış Noktaları'] = '''
 <p>Lee Cooper, Quantum, Slazenger ve Belmond gözlükleri yetkili optik mağazalarında satılır. Haritadan ilinizi seçin ya da il adını yazın; satış noktaları, adresleri ve telefonları listelenir.</p>
 <p>Satış noktaları listesi tema tarafından <code>dealers.json</code> dosyasından okunur.</p>
 '''
-PAGES['Clip-On Demo'] = f'''
-<p class="cmp-title">Çubuğu sağa sola sürükleyin</p>
-<div class="cmp-wrap">
-<div class="cmp" data-left="{CDN}img/demo/LC3284-optik.jpg" data-right="{CDN}img/demo/LC3284-clipon.jpg" data-left-label="Optik" data-left-sub="Numaralı cam · günlük kullanım" data-right-label="Clip-On" data-right-sub="Mıknatıslı polarize güneş camı" data-start="50"></div>
-</div>
-<p style="text-align:center;margin-top:34px"><a class="link-arrow" href="/search?q=LC3284">Lee Cooper LC3284 · Modeli gör</a></p>
-<h2>Nasıl çalışır?</h2>
-<p>Çubuğu sağa sola sürükleyin: solda numaralı optik çerçeve, sağda aynı çerçevenin önüne mıknatısla takılan polarize güneş camı. Clip, çerçevenin köprü ve uç noktalarındaki gizli mıknatıslarla tek hareketle tutunur; camı çizmez, oynamaz.</p>
-'''
 PAGES['QR Etiketler'] = '''
 <p class="lead">Bayi rafları ve vitrin için model etiketleri. Her etikette marka, model kodu ve müşteriyi doğrudan modelin sayfasına (tüm renkler, ölçüler, görseller) götüren bir QR kod bulunur. Marka ve türü seçin, istediğiniz modelleri işaretleyin, yazdırın.</p>
 <div id="qr-tool"></div>

@@ -188,7 +188,7 @@
   }
 
   /* ---------- sabit sayfa bağlantıları (Blogger'ın verdiği gerçek adreslere çevir) ---------- */
-  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/clip-on-demo.html': 'Clip-On Demo', '/p/qr-etiketler.html': 'QR Etiketler', '/p/bayi-talep-formu.html': 'Bayi Talep Formu' };
+  var PAGE_TITLES = { '/p/ekartman-rehberi.html': 'Ekartman Rehberi', '/p/sik-sorulan-sorular.html': 'Sık Sorulan Sorular', '/p/yetkili-satis-noktalari.html': 'Yetkili Satış Noktaları', '/p/hakkimizda.html': 'Hakkımızda', '/p/iletisim.html': 'İletişim', '/p/qr-etiketler.html': 'QR Etiketler', '/p/bayi-talep-formu.html': 'Bayi Talep Formu' };
   function fixPageLinks() {
     var apply = function (map) {
       $$('a[href^="/p/"]').forEach(function (a) {
