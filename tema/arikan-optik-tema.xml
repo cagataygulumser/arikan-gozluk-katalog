@@ -1614,7 +1614,7 @@ window.AO_CONFIG = {
     // ilgili modeller + breadcrumb
     ready().then(function () {
       var me = state.models.filter(function (m) { return m.code === code; })[0];
-      $$('.model .cta a[href*="yetkili-satis-noktalari"]').forEach(function (a) { a.href = a.getAttribute('href').split('?')[0] + '?model=' + encodeURIComponent(code); });
+      $$('.model .cta a[href*="noktalar"]').forEach(function (a) { a.href = a.getAttribute('href').split('?')[0] + '?model=' + encodeURIComponent(code); });
       if (me) { track('model_goruntule', modelParams(me)); if (/[?&]qr=1/.test(location.search) || /[?&]qr=1/.test(document.referrer)) track('qr_okutma', modelParams(me)); }
       // clip-on modellerde optik / clip-on karşılaştırma kaydırıcısı
       var cmpSec = $('#model-cmp');
