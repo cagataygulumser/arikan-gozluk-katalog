@@ -109,7 +109,7 @@ window.AO_CONFIG = {
       <a href='/p/iletisim.html'>İletişim</a>
       <div class='search-wrap'>
         <form action='/search' class='search' method='get' role='search'>
-          <input aria-label='Model kodu ara' autocomplete='off' name='q' placeholder='Model kodu (örn. LC1408)' type='search'/>
+          <input aria-label='Model kodu ara' autocomplete='off' name='q' placeholder='Model kodu ya da "mavi clip-on"' type='search'/>
           <button aria-label='Ara' type='submit'><svg fill='none' stroke='currentColor' stroke-width='2.2' viewBox='0 0 24 24'><circle cx='11' cy='11' r='7'/><path d='m20 20-3.5-3.5'/></svg></button>
         </form>
         <div class='search-suggest'></div>
@@ -117,7 +117,7 @@ window.AO_CONFIG = {
     </nav>
     <div class='search-wrap'>
       <form action='/search' class='search' method='get' role='search'>
-        <input aria-label='Model kodu ara' autocomplete='off' name='q' placeholder='Model kodu (örn. LC1408)' type='search'/>
+        <input aria-label='Model kodu ara' autocomplete='off' name='q' placeholder='Model kodu ya da "mavi clip-on"' type='search'/>
         <button aria-label='Ara' type='submit'><svg fill='none' stroke='currentColor' stroke-width='2.2' viewBox='0 0 24 24'><circle cx='11' cy='11' r='7'/><path d='m20 20-3.5-3.5'/></svg></button>
       </form>
       <div class='search-suggest'></div>
@@ -136,7 +136,7 @@ window.AO_CONFIG = {
           <h1 class='display'>Gözlük<br/><strong>Modelleri</strong></h1>
           <p class='lead'>Lee Cooper, Quantum, Slazenger ve Belmond'un 2026 optik ve clip-on koleksiyonları: ölçüler, malzemeler, tüm renk seçenekleri ve görseller tek sayfada.</p>
           <form action='/search' class='hero-search' method='get' role='search'>
-            <input aria-label='Model kodu' autocomplete='off' name='q' placeholder='Model kodunu yazın: LC1408, Q503, 9599…' type='search'/>
+            <input aria-label='Model kodu' autocomplete='off' name='q' placeholder='Model kodu ya da ifade: LC1408, "yuvarlak titanyum", "mavi clip-on"' type='search'/>
             <button type='submit'>Modeli Bul</button>
           </form>
         </div>

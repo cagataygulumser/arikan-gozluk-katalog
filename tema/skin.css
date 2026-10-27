@@ -594,3 +594,12 @@ body.ast-open{overflow:hidden}
   .qr-print--l .qrl__l img{height:5mm}.qr-print--l .qrl__l b{font-size:7mm}.qr-print--l .qrl__l small{font-size:3mm}.qr-print--l .qrl__l em{font-size:2.6mm}
   .qr-print--l .qrl__q{width:30mm;height:30mm}.qr-print--l .qrl__site{font-size:2.4mm}
 }
+
+/* ---- akıllı arama ---------------------------------------------------- */
+.qchip{display:inline-block;background:var(--ink);color:#fff;font-size:11px;letter-spacing:.08em;font-weight:600;padding:4px 10px;border-radius:999px;margin:0 6px 6px 0;vertical-align:middle}
+.qchip--x{background:transparent;color:var(--muted);border:1px dashed var(--line);text-decoration:line-through;font-weight:500}
+.qlead{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-right:8px;vertical-align:middle}
+.qnote{color:var(--muted-2);font-size:13px}
+.search-suggest__chips{padding:8px 10px 4px;border-bottom:1px solid var(--line-2);margin-bottom:4px}
+.search-suggest__chips small{display:block;color:var(--muted-2);font-size:11px;margin-top:2px}
+.search-suggest__all{display:block!important;text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--red);border-top:1px solid var(--line-2);margin-top:4px;padding:10px!important}

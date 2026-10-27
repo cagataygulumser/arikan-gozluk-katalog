@@ -146,18 +146,7 @@
     for (var j = 0; j < m.variants.length; j++) if (m.variants[j].code.replace(/\./g, '').toUpperCase() === n) return '#' + m.variants[j].code.replace('.', '-');
     return '';
   }
-  function searchModels(q) {
-    var n = slug(q).replace(/-/g, '');
-    if (!n) return [];
-    var ql = q.toLowerCase();
-    return state.models.filter(function (m) {
-      if (slug(m.code).replace(/-/g, '').indexOf(n) >= 0) return true;
-      if (slug(m.brand).replace(/-/g, '').indexOf(n) >= 0) return true;
-      var hay = (m.category + ' ' + Object.keys(m.materials).map(function (k) { return m.materials[k]; }).join(' ') + ' ' +
-        m.variants.map(function (v) { return Object.keys(v.attrs).map(function (k) { return v.attrs[k]; }).join(' '); }).join(' ')).toLowerCase();
-      return hay.indexOf(ql) >= 0;
-    });
-  }
+/* {{SEARCH}} */
   function bindSearch(form) {
     if (!form) return;
     var input = $('input', form), box = form.parentNode.querySelector('.search-suggest');
@@ -170,11 +159,12 @@
       var q = input.value.trim();
       if (!state.ready || q.length < 2) { box.classList.remove('open'); return; }
       var res = searchModels(q).slice(0, 8);
-      if (!res.length) { box.classList.remove('open'); return; }
-      box.innerHTML = res.map(function (m) {
+      if (!res.length || (lastSearch && lastSearch.relaxed === 'all')) { box.classList.remove('open'); return; }
+      var all = searchModels(q), chips = (lastSearch && lastSearch.chips.filter(function (c) { return c.k !== 'unknown'; })) || [];
+      box.innerHTML = (chips.length ? '<div class="search-suggest__chips">' + chipHtml(chips) + (lastSearch.relaxed ? '<small>tam eşleşme yok · en yakınlar</small>' : '') + '</div>' : '') + res.map(function (m) {
         var b = brandInfo(m);
         return '<a href="' + esc(postUrl(m)) + '"><img src="' + esc(img(m, m.images.front || m.variants[0].images.front)) + '" alt=""><span><b>' + esc(m.code) + '</b><small>' + esc(b.name + ' · ' + catLabel(m) + ' · ' + m.variants.length + ' renk') + '</small></span></a>';
-      }).join('');
+      }).join('') + (all.length > res.length ? '<a class="search-suggest__all" href="/search?q=' + encodeURIComponent(q) + '">Tüm sonuçları gör (' + all.length + ')</a>' : '');
       box.classList.add('open');
     });
     document.addEventListener('click', function (e) { if (!form.parentNode.contains(e.target)) box.classList.remove('open'); });
@@ -285,7 +275,7 @@
       else if (/yeni/i.test(initial)) { filt.feat = ['new']; head.textContent = 'Koleksiyona Yeni Eklenenler'; lead.textContent = '2026 sezonunda koleksiyona katılan en yeni modeller.'; }
       else if (/polar/i.test(initial)) { filt.feat = ['polar']; head.textContent = 'Polarize Camlı Modeller'; }
       else if (/anti/i.test(initial)) { filt.feat = ['antifar']; head.textContent = 'Anti-Far Seçenekli Modeller'; }
-      else if (q) { head.textContent = '"' + q + '" için sonuçlar'; var exact = findExact(q); if (exact && state.posts[exact.code]) { location.replace(state.posts[exact.code] + variantHash(q, exact)); return; } }
+      else if (q) { head.textContent = '"' + q + '" için sonuçlar'; var exact = findExact(q); if (exact && state.posts[exact.code]) { location.replace(state.posts[exact.code] + variantHash(q, exact)); return; } var list0 = searchModels(q); if (lastSearch && lastSearch.chips.length) lead.innerHTML = '<span class="qlead">Anladığımız:</span> ' + chipHtml(lastSearch.chips) + (lastSearch.relaxed === 'all' ? '<br><small class="qnote">Bu ifadeyi eşleştiremedik; tüm modeller listeleniyor. Model kodu ya da "mavi clip-on", "yuvarlak titanyum" gibi bir ifade deneyin.</small>' : lastSearch.relaxed ? '<br><small class="qnote">Tüm ölçütlere uyan model yok; en yakın sonuçlar listeleniyor.</small>' : ''); else if (lastSearch && lastSearch.relaxed === 'all') lead.innerHTML = '<small class="qnote">"' + esc(q) + '" ifadesini eşleştiremedik; tüm modeller listeleniyor. Model kodu ya da "mavi clip-on", "yuvarlak titanyum" gibi bir ifade deneyin.</small>'; }
       else if (initial) { var matHit = ms.some(function (m) { return slug(frameMaterial(m)) === bslug; }); if (matHit) { filt.mat = [bslug]; head.textContent = initial + ' Çerçeveler'; } else head.textContent = initial; }
       else { head.textContent = 'Tüm Modeller'; lead.textContent = 'Lee Cooper, Quantum, Slazenger ve Belmond 2026 koleksiyonlarının tamamı.'; }
       buildFilters(ms);
@@ -644,4 +634,5 @@
     else if (VIEW === 'error') initCollection();
     else if (VIEW === 'page') { initDealers(); initQr(); }
   });
+  window.AO = { search: function (q) { return searchModels(q).map(function (m) { return m.code; }); }, parse: parseQuery, last: function () { return lastSearch; }, ready: ready };
 })();
