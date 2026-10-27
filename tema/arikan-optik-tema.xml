@@ -199,11 +199,11 @@ p{margin:0 0 1em}
 .brand-card:hover img.bg{transform:scale(1.05)}
 .brand-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.72) 100%)}
 .brand-card__body{position:absolute;left:0;right:0;bottom:0;padding:26px;color:#fff;z-index:2}
-.brand-card__name{font-size:22px;letter-spacing:.3em;text-transform:uppercase;font-weight:300}
-.brand-card__count{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#D1D5DB;margin-top:6px}
+.brand-card__name{display:block;font-size:22px;letter-spacing:.3em;text-transform:uppercase;font-weight:300}
+.brand-card__count{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#D1D5DB;margin-top:6px}
 .brand-card__logo{position:absolute;top:18px;left:18px;background:#fff;padding:8px 12px;border-radius:2px;z-index:2}
 .brand-card__logo img{height:26px;width:auto}
-@media (max-width:1024px){.brand-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:1024px){.brand-grid{grid-template-columns:repeat(2,1fr);gap:12px}.brand-card__body{padding:16px}.brand-card__name{font-size:15px;letter-spacing:.14em}.brand-card__count{font-size:10px;letter-spacing:.14em;margin-top:4px}.brand-card__logo{top:12px;left:12px;padding:6px 8px}.brand-card__logo img{height:20px}}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .split__item{position:relative;min-height:420px;overflow:hidden;border-radius:var(--radius);display:flex;align-items:flex-end;padding:36px;color:#fff;background:#222}
 .split__item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;transition:transform .8s}
@@ -385,7 +385,7 @@ p{margin:0 0 1em}
 
 /* ---- Footer -------------------------------------------------------- */
 .site-footer{background:var(--footer);color:#D9D9D9;margin-top:0}
-.site-footer__in{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:30px;padding:60px 0 40px}
+.site-footer__in{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:30px;padding:60px var(--gutter) 40px}
 .site-footer .logo{color:#fff;margin-bottom:18px}
 .site-footer .logo__sub{color:#BDBDBD}
 .site-footer h4{color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;margin:0 0 16px}
@@ -395,9 +395,9 @@ p{margin:0 0 1em}
 .social{display:flex;gap:12px;margin-top:8px}
 .social a{width:34px;height:34px;border:1px solid #7a7a79;border-radius:50%;display:grid;place-items:center;padding:0}
 .social svg{width:16px;height:16px;fill:#fff}
-.site-footer__bottom{border-top:1px solid #6b6b6a;padding:18px 0;font-size:12px;color:#BDBDBD;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media (max-width:900px){.site-footer__in{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.site-footer__in{grid-template-columns:1fr}}
+.site-footer__bottom{border-top:1px solid #6b6b6a;padding:18px var(--gutter);font-size:12px;color:#BDBDBD;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:900px){.site-footer__in{grid-template-columns:1fr 1fr;gap:28px 24px;padding:44px var(--gutter) 28px}.site-footer__in>div:first-child{grid-column:1/-1}}
+@media (max-width:520px){.site-footer__in{gap:26px 16px}.site-footer h4{margin-bottom:10px;font-size:11px}.site-footer a{padding:4px 0;font-size:13px}.site-footer .logo__img{height:30px!important}.site-footer__bottom{justify-content:center;text-align:center;gap:10px}}
 .to-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;border:0;display:grid;place-items:center;z-index:40;opacity:0;pointer-events:none;transition:.3s;box-shadow:0 6px 16px rgba(220,38,38,.35)}
 .to-top.show{opacity:1;pointer-events:auto}
 .wa-fab{position:fixed;right:18px;bottom:78px;width:52px;height:52px;border-radius:50%;background:#25D366;display:grid;place-items:center;z-index:40;box-shadow:0 6px 16px rgba(0,0,0,.2)}
@@ -1234,7 +1234,7 @@ window.AO_CONFIG = {
   var CFG = window.AO_CONFIG || {};
   var CDN = CFG.cdn || 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/';
   var BRANDS = CFG.brands || {};
-  var DATA_V = '202610272324'; // veri dosyaları için önbellek kırıcı (build.py doldurur)
+  var DATA_V = '202610272327'; // veri dosyaları için önbellek kırıcı (build.py doldurur)
   function dataUrl(name) { return CDN + name + '?v=' + DATA_V; }
   var BRAND_ORDER = ['lee-cooper', 'quantum', 'slazenger', 'belmond'];
   var FEED_URL = (CFG.feed || '/feeds/posts/summary?alt=json&max-results=500');
