@@ -27,6 +27,9 @@
   function brandInfo(m) { return BRANDS[m.brand_slug] || { name: m.brand, logo: CDN + 'img/logo/' + m.brand_slug + '.png' }; }
   function isPolar(m) { return /polar/i.test(m.materials && m.materials.Cam || ''); }
   function frameMaterial(m) { return (m.materials && m.materials['Çerçeve']) || ''; }
+  /* ---------- ölçüm (GA4) ---------- */
+  function track(name, params) { try { if (window.gtag && CFG.ga) window.gtag('event', name, params || {}); } catch (e) { } }
+  function modelParams(m) { return { marka: m.brand, model: m.code, tur: m.category, sekil: m.shape || '', malzeme: frameMaterial(m) }; }
 
   /* ---------- renk eşleme ---------- */
   var COLOR_MAP = [
@@ -160,7 +163,7 @@
     var input = $('input', form), box = form.parentNode.querySelector('.search-suggest');
     form.addEventListener('submit', function (e) {
       var q = input.value.trim(); if (!q) { e.preventDefault(); return; }
-      if (state.ready) { var m = findExact(q); if (m && state.posts[m.code]) { e.preventDefault(); location.href = state.posts[m.code] + variantHash(q, m); } }
+      if (state.ready) { var m = findExact(q); track('arama', { terim: q, bulundu: m ? 'evet' : 'hayir', model: m ? m.code : '' }); if (m && state.posts[m.code]) { e.preventDefault(); location.href = state.posts[m.code] + variantHash(q, m); } }
     });
     if (!box) return;
     input.addEventListener('input', function () {
@@ -206,6 +209,7 @@
     // içe aktarılmış eski metinlerdeki uyarı/not satırlarını kaldır
     $$('.page .note').forEach(function (n) { if (/Blogger/.test(n.textContent)) n.parentNode.removeChild(n); });
     $$('.faq p').forEach(function (pp) { pp.textContent = pp.textContent.replace(/\s*Bu site satış yapmaz, modelin tüm bilgilerini tek yerde sunar\./, ''); });
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="wa.me"]'); if (a) { var art = $('.model'); track('whatsapp_tikla', { konum: a.id === 'wa-fab' ? 'sabit_buton' : 'sayfa', model: art ? art.getAttribute('data-code') : '', sayfa: VIEW }); } });
     var burger = $('.burger'), nav = $('.nav');
     if (burger && nav) burger.addEventListener('click', function () { nav.classList.toggle('open'); BODY.classList.toggle('nav-open'); });
     $$('.search').forEach(bindSearch);
@@ -316,6 +320,7 @@
         var t = e.target; if (t.type !== 'checkbox') return;
         var k = t.getAttribute('data-k'), arr = filt[k], i = arr.indexOf(t.value);
         if (t.checked && i < 0) arr.push(t.value); if (!t.checked && i >= 0) arr.splice(i, 1);
+        if (t.checked) track('filtre', { grup: k, deger: t.value });
         apply();
       });
       $('#f-clear').addEventListener('click', function () { Object.keys(filt).forEach(function (k) { filt[k] = []; }); $$('input[type=checkbox]', f).forEach(function (c) { c.checked = false; }); apply(); });
@@ -380,6 +385,7 @@
     $$('.color-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
         $$('.color-btn').forEach(function (x) { x.classList.remove('active'); }); btn.classList.add('active');
+        if (initDone) track('renk_sec', { model: code, renk: btn.getAttribute('data-code') || btn.textContent.trim() });
         var f = btn.getAttribute('data-front'), s = btn.getAttribute('data-side'), c = btn.getAttribute('data-clip');
         var imgs = { front: f, side: s, clip: c };
         thumbs.forEach(function (fg) { var k = fg.getAttribute('data-kind'); var im = $('img', fg); if (imgs[k]) { im.src = imgs[k]; fg.style.display = ''; } else if (k === 'clip') fg.style.display = 'none'; });
@@ -411,6 +417,7 @@
     // ilgili modeller + breadcrumb
     ready().then(function () {
       var me = state.models.filter(function (m) { return m.code === code; })[0];
+      if (me) { track('model_goruntule', modelParams(me)); if (/[?&]qr=1/.test(location.search) || /[?&]qr=1/.test(document.referrer)) track('qr_okutma', modelParams(me)); }
       // clip-on modellerde optik / clip-on karşılaştırma kaydırıcısı
       var cmpSec = $('#model-cmp');
       if (cmpSec && me && me.category === 'Clip-On') {
@@ -500,7 +507,7 @@
         pth.addEventListener('mouseleave', function () { tip.style.display = 'none'; });
       });
       function show(c) {
-        if (!c) return;
+        if (!c) return; track('bayi_il', { il: c.n });
         $$('path.prov.active', mapEl).forEach(function (x) { x.classList.remove('active'); });
         var pth = $('path.prov[data-id="' + c.id + '"]', mapEl); if (pth) { pth.classList.add('active'); pth.parentNode.appendChild(pth); }
         var list = dealers[c.n] || [];
@@ -561,7 +568,8 @@
       function set(p) { pos = Math.max(0, Math.min(100, p)); right.style.clipPath = 'inset(0 0 0 ' + pos + '%)'; bar.style.left = pos + '%'; handle.style.left = pos + '%'; handle.setAttribute('aria-valuenow', Math.round(pos)); }
       function fromEvent(e) { var b = stage.getBoundingClientRect(); var x = (e.touches ? e.touches[0].clientX : e.clientX) - b.left; set(x / b.width * 100); }
       var drag = false;
-      el.addEventListener('pointerdown', function (e) { drag = true; el.setPointerCapture && el.setPointerCapture(e.pointerId); fromEvent(e); });
+      var used = false;
+      el.addEventListener('pointerdown', function (e) { if (!used) { used = true; var art = $('.model'); track('clipon_kaydir', { model: art ? art.getAttribute('data-code') : 'demo' }); } drag = true; el.setPointerCapture && el.setPointerCapture(e.pointerId); fromEvent(e); });
       el.addEventListener('pointermove', function (e) { if (drag) fromEvent(e); });
       ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) { el.addEventListener(t, function () { drag = false; }); });
       handle.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') { set(pos - 3); e.preventDefault(); } if (e.key === 'ArrowRight') { set(pos + 3); e.preventDefault(); } });
@@ -616,6 +624,7 @@
         for (var i = 0; i < chosen.length; i += per) pages.push(chosen.slice(i, i + per));
         pr.innerHTML = pages.map(function (pg) { return '<div class="qr-page">' + pg.map(function (m) { return label(m, true); }).join('') + '</div>'; }).join('');
         document.body.appendChild(pr);
+        track('qr_yazdir', { adet: chosen.length, boyut: size });
         setTimeout(function () { window.print(); }, 300);
       }
       render();

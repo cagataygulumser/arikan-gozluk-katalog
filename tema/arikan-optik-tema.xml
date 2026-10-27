@@ -645,6 +645,7 @@ body.ast-open{overflow:hidden}
 window.AO_CONFIG = {
   cdn: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/',
   whatsapp: '905074904824',            /* WhatsApp numarası: ülke koduyla, boşluksuz */
+  ga: 'G-9C4CG896VN',                  /* Google Analytics 4 ölçüm kimliği (boş bırakılırsa ölçüm yapılmaz) */
   brands: {
     'lee-cooper': { name: 'Lee Cooper', logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/lee-cooper.png', hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p001.jpg', desc: '1908\'den bu yana İngiliz denim mirası. Genç, cesur ve renkli: asetat, metal ve TR90 çerçeveler; clip-on seçenekleri.' },
     'quantum':    { name: 'Quantum',    logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/quantum.png',    hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/quantum-p001.jpg',    desc: 'Çağdaş çizgiler, titanyum ve asetat. Hafiflik ve erişilebilir lüks anlayışını birleştiren optik ve clip-on modeller.' },
@@ -652,6 +653,7 @@ window.AO_CONFIG = {
     'belmond':    { name: 'Belmond',    logo: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/belmond.png',    hero: 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/belmond-p001.jpg',    desc: 'Zarif ve feminen: altın, pembe altın ve kristal tonlarında metal-asetat kombinasyonları.' }
   }
 };
+(function(){var id=window.AO_CONFIG.ga;if(!id)return;window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config',id,{anonymize_ip:true});var sc=document.createElement('script');sc.async=true;sc.src='https://www.googletagmanager.com/gtag/js?id='+id;document.head.appendChild(sc);})();
 //]]>
 </script>
 </head>
@@ -1063,6 +1065,9 @@ window.AO_CONFIG = {
   function brandInfo(m) { return BRANDS[m.brand_slug] || { name: m.brand, logo: CDN + 'img/logo/' + m.brand_slug + '.png' }; }
   function isPolar(m) { return /polar/i.test(m.materials && m.materials.Cam || ''); }
   function frameMaterial(m) { return (m.materials && m.materials['Çerçeve']) || ''; }
+  /* ---------- ölçüm (GA4) ---------- */
+  function track(name, params) { try { if (window.gtag && CFG.ga) window.gtag('event', name, params || {}); } catch (e) { } }
+  function modelParams(m) { return { marka: m.brand, model: m.code, tur: m.category, sekil: m.shape || '', malzeme: frameMaterial(m) }; }
 
   /* ---------- renk eşleme ---------- */
   var COLOR_MAP = [
@@ -1196,7 +1201,7 @@ window.AO_CONFIG = {
     var input = $('input', form), box = form.parentNode.querySelector('.search-suggest');
     form.addEventListener('submit', function (e) {
       var q = input.value.trim(); if (!q) { e.preventDefault(); return; }
-      if (state.ready) { var m = findExact(q); if (m && state.posts[m.code]) { e.preventDefault(); location.href = state.posts[m.code] + variantHash(q, m); } }
+      if (state.ready) { var m = findExact(q); track('arama', { terim: q, bulundu: m ? 'evet' : 'hayir', model: m ? m.code : '' }); if (m && state.posts[m.code]) { e.preventDefault(); location.href = state.posts[m.code] + variantHash(q, m); } }
     });
     if (!box) return;
     input.addEventListener('input', function () {
@@ -1242,6 +1247,7 @@ window.AO_CONFIG = {
     // içe aktarılmış eski metinlerdeki uyarı/not satırlarını kaldır
     $$('.page .note').forEach(function (n) { if (/Blogger/.test(n.textContent)) n.parentNode.removeChild(n); });
     $$('.faq p').forEach(function (pp) { pp.textContent = pp.textContent.replace(/\s*Bu site satış yapmaz, modelin tüm bilgilerini tek yerde sunar\./, ''); });
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="wa.me"]'); if (a) { var art = $('.model'); track('whatsapp_tikla', { konum: a.id === 'wa-fab' ? 'sabit_buton' : 'sayfa', model: art ? art.getAttribute('data-code') : '', sayfa: VIEW }); } });
     var burger = $('.burger'), nav = $('.nav');
     if (burger && nav) burger.addEventListener('click', function () { nav.classList.toggle('open'); BODY.classList.toggle('nav-open'); });
     $$('.search').forEach(bindSearch);
@@ -1352,6 +1358,7 @@ window.AO_CONFIG = {
         var t = e.target; if (t.type !== 'checkbox') return;
         var k = t.getAttribute('data-k'), arr = filt[k], i = arr.indexOf(t.value);
         if (t.checked && i < 0) arr.push(t.value); if (!t.checked && i >= 0) arr.splice(i, 1);
+        if (t.checked) track('filtre', { grup: k, deger: t.value });
         apply();
       });
       $('#f-clear').addEventListener('click', function () { Object.keys(filt).forEach(function (k) { filt[k] = []; }); $$('input[type=checkbox]', f).forEach(function (c) { c.checked = false; }); apply(); });
@@ -1416,6 +1423,7 @@ window.AO_CONFIG = {
     $$('.color-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
         $$('.color-btn').forEach(function (x) { x.classList.remove('active'); }); btn.classList.add('active');
+        if (initDone) track('renk_sec', { model: code, renk: btn.getAttribute('data-code') || btn.textContent.trim() });
         var f = btn.getAttribute('data-front'), s = btn.getAttribute('data-side'), c = btn.getAttribute('data-clip');
         var imgs = { front: f, side: s, clip: c };
         thumbs.forEach(function (fg) { var k = fg.getAttribute('data-kind'); var im = $('img', fg); if (imgs[k]) { im.src = imgs[k]; fg.style.display = ''; } else if (k === 'clip') fg.style.display = 'none'; });
@@ -1447,6 +1455,7 @@ window.AO_CONFIG = {
     // ilgili modeller + breadcrumb
     ready().then(function () {
       var me = state.models.filter(function (m) { return m.code === code; })[0];
+      if (me) { track('model_goruntule', modelParams(me)); if (/[?&]qr=1/.test(location.search) || /[?&]qr=1/.test(document.referrer)) track('qr_okutma', modelParams(me)); }
       // clip-on modellerde optik / clip-on karşılaştırma kaydırıcısı
       var cmpSec = $('#model-cmp');
       if (cmpSec && me && me.category === 'Clip-On') {
@@ -1536,7 +1545,7 @@ window.AO_CONFIG = {
         pth.addEventListener('mouseleave', function () { tip.style.display = 'none'; });
       });
       function show(c) {
-        if (!c) return;
+        if (!c) return; track('bayi_il', { il: c.n });
         $$('path.prov.active', mapEl).forEach(function (x) { x.classList.remove('active'); });
         var pth = $('path.prov[data-id="' + c.id + '"]', mapEl); if (pth) { pth.classList.add('active'); pth.parentNode.appendChild(pth); }
         var list = dealers[c.n] || [];
@@ -1597,7 +1606,8 @@ window.AO_CONFIG = {
       function set(p) { pos = Math.max(0, Math.min(100, p)); right.style.clipPath = 'inset(0 0 0 ' + pos + '%)'; bar.style.left = pos + '%'; handle.style.left = pos + '%'; handle.setAttribute('aria-valuenow', Math.round(pos)); }
       function fromEvent(e) { var b = stage.getBoundingClientRect(); var x = (e.touches ? e.touches[0].clientX : e.clientX) - b.left; set(x / b.width * 100); }
       var drag = false;
-      el.addEventListener('pointerdown', function (e) { drag = true; el.setPointerCapture && el.setPointerCapture(e.pointerId); fromEvent(e); });
+      var used = false;
+      el.addEventListener('pointerdown', function (e) { if (!used) { used = true; var art = $('.model'); track('clipon_kaydir', { model: art ? art.getAttribute('data-code') : 'demo' }); } drag = true; el.setPointerCapture && el.setPointerCapture(e.pointerId); fromEvent(e); });
       el.addEventListener('pointermove', function (e) { if (drag) fromEvent(e); });
       ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) { el.addEventListener(t, function () { drag = false; }); });
       handle.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') { set(pos - 3); e.preventDefault(); } if (e.key === 'ArrowRight') { set(pos + 3); e.preventDefault(); } });
@@ -1652,6 +1662,7 @@ window.AO_CONFIG = {
         for (var i = 0; i < chosen.length; i += per) pages.push(chosen.slice(i, i + per));
         pr.innerHTML = pages.map(function (pg) { return '<div class="qr-page">' + pg.map(function (m) { return label(m, true); }).join('') + '</div>'; }).join('');
         document.body.appendChild(pr);
+        track('qr_yazdir', { adet: chosen.length, boyut: size });
         setTimeout(function () { window.print(); }, 300);
       }
       render();
@@ -1758,7 +1769,7 @@ window.AO_CONFIG = {
     function open(pre) {
       answers = pre || { type: 'any', face: 'any', shape: 'any', mat: 'any', colors: [], feat: 'any' };
       hist = []; mode = 'quiz'; idx = 0;
-      root.classList.add('open'); root.setAttribute('aria-hidden', 'false'); BODY.classList.add('ast-open');
+      root.classList.add('open'); root.setAttribute('aria-hidden', 'false'); BODY.classList.add('ast-open'); track('asistan_ac', { kaynak: pre ? 'paylasim' : 'buton' });
       setMin(true);
       ready().then(function () { if (pre) finish(); else go('type'); });
     }
@@ -1778,7 +1789,7 @@ window.AO_CONFIG = {
         '<div class="ast__foot">' + (hist.length ? '<button class="ast__back">&#8630; Geri Al</button>' : '<span></span>') + '<div class="ast__prog"><i style="width:' + progress(step) + '%"></i></div></div>';
       var back = $('.ast__back', panel); if (back) back.addEventListener('click', function () { var prev = hist.pop(); if (prev) go(prev, true); });
     }
-    function pick(s, v) { if (s === 'colors') answers.colors = v; else answers[s] = v; hist.push(s); var list = stepsFor(), i = list.indexOf(s); if (i + 1 < list.length) go(list[i + 1]); else finish(); }
+    function pick(s, v) { if (s === 'colors') answers.colors = v; else answers[s] = v; hist.push(s); track('asistan_adim', { adim: s, cevap: s === 'colors' ? (v.length ? v.join('|') : 'any') : v }); var list = stepsFor(), i = list.indexOf(s); if (i + 1 < list.length) go(list[i + 1]); else finish(); }
     function bindSingle(s) { $$('.ast-opt', panel).forEach(function (b) { b.addEventListener('click', function () { pick(s, b.getAttribute('data-v')); }); }); }
 
     function go(s, back) {
@@ -1838,6 +1849,7 @@ window.AO_CONFIG = {
 
     function finish() {
       results = astRank(answers); idx = 0; mode = 'quiz';
+      track('asistan_sonuc', { tur: answers.type, yuz: answers.face, sekil: answers.shape, malzeme: answers.mat, renk: answers.colors.join('|') || 'any', ozellik: answers.feat, ilk_model: results[0] ? results[0].m.code : '', uyum: results[0] ? results[0].pct : 0 });
       hero(0); root.classList.remove('wide');
       panel.innerHTML = '<div class="ast__loading"><p>Kişiselleştirilmiş sonuçlarınızı hazırlıyoruz…</p><div class="ast__prog ast__prog--big"><i></i></div></div>';
       var bar = $('.ast__prog i', panel); requestAnimationFrame(function () { bar.style.width = '100%'; });
@@ -1858,6 +1870,7 @@ window.AO_CONFIG = {
         '<div class="ast__why"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.6L19 9l-5.2 1.6L12 16l-1.8-5.4L5 9l5.2-1.4zM5 15l.9 2.6L8.5 18l-2.6.9L5 21l-.9-2.1L1.5 18l2.6-.4zM19 14l.8 2.2 2.2.8-2.2.8L19 20l-.8-2.2-2.2-.8 2.2-.8z"/></svg><p>' + esc(astSentence(r)) + '</p></div>' +
         '<ul class="ast__chips">' + r.crit.map(function (c) { return '<li class="' + (c.ok ? 'ok' : 'no') + '"><i></i>' + esc(c.label) + ': <b>' + esc(c.val) + '</b></li>'; }).join('') + '<li class="ok"><i></i>Renkler: <b>' + esc(familiesOf(m).slice(0, 3).join(', ') || '–') + '</b></li></ul></div>' +
         '<div class="ast__tools"><button data-act="restart">&#8634; Başa Dön</button><button data-act="compare">&#8646; Karşılaştır</button><button data-act="share">&#8599; Paylaş</button></div>';
+      var cta = $('.ast__cta', panel); if (cta) cta.addEventListener('click', function () { track('asistan_model_tikla', { model: m.code, sira: idx + 1, uyum: r.pct }); });
       $$('.ast__arrow', panel).forEach(function (bt) { bt.addEventListener('click', function () { idx = Math.max(0, Math.min(results.length - 1, idx + parseInt(bt.getAttribute('data-d'), 10))); renderResult(); }); });
       bindTools();
       panel.scrollTop = 0;
@@ -1886,10 +1899,10 @@ window.AO_CONFIG = {
         bt.addEventListener('click', function () {
           var act = bt.getAttribute('data-act');
           if (act === 'restart') open();
-          else if (act === 'compare') renderCompare();
+          else if (act === 'compare') { track('asistan_karsilastir', {}); renderCompare(); }
           else if (act === 'results') renderResult();
           else if (act === 'share') {
-            var url = location.origin + '/#asistan=' + astEncode(answers);
+            var url = location.origin + '/#asistan=' + astEncode(answers); track('asistan_paylas', {});
             var done = function () { bt.textContent = '✓ Bağlantı kopyalandı'; setTimeout(function () { bt.innerHTML = '&#8599; Paylaş'; }, 2200); };
             if (navigator.share) navigator.share({ title: 'Arıkan Optik · Gözlük Asistanı önerilerim', url: url }).catch(function () { });
             else if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt('Bağlantıyı kopyalayın:', url); });

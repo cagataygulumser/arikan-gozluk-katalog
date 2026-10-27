@@ -98,7 +98,7 @@
     function open(pre) {
       answers = pre || { type: 'any', face: 'any', shape: 'any', mat: 'any', colors: [], feat: 'any' };
       hist = []; mode = 'quiz'; idx = 0;
-      root.classList.add('open'); root.setAttribute('aria-hidden', 'false'); BODY.classList.add('ast-open');
+      root.classList.add('open'); root.setAttribute('aria-hidden', 'false'); BODY.classList.add('ast-open'); track('asistan_ac', { kaynak: pre ? 'paylasim' : 'buton' });
       setMin(true);
       ready().then(function () { if (pre) finish(); else go('type'); });
     }
@@ -118,7 +118,7 @@
         '<div class="ast__foot">' + (hist.length ? '<button class="ast__back">&#8630; Geri Al</button>' : '<span></span>') + '<div class="ast__prog"><i style="width:' + progress(step) + '%"></i></div></div>';
       var back = $('.ast__back', panel); if (back) back.addEventListener('click', function () { var prev = hist.pop(); if (prev) go(prev, true); });
     }
-    function pick(s, v) { if (s === 'colors') answers.colors = v; else answers[s] = v; hist.push(s); var list = stepsFor(), i = list.indexOf(s); if (i + 1 < list.length) go(list[i + 1]); else finish(); }
+    function pick(s, v) { if (s === 'colors') answers.colors = v; else answers[s] = v; hist.push(s); track('asistan_adim', { adim: s, cevap: s === 'colors' ? (v.length ? v.join('|') : 'any') : v }); var list = stepsFor(), i = list.indexOf(s); if (i + 1 < list.length) go(list[i + 1]); else finish(); }
     function bindSingle(s) { $$('.ast-opt', panel).forEach(function (b) { b.addEventListener('click', function () { pick(s, b.getAttribute('data-v')); }); }); }
 
     function go(s, back) {
@@ -178,6 +178,7 @@
 
     function finish() {
       results = astRank(answers); idx = 0; mode = 'quiz';
+      track('asistan_sonuc', { tur: answers.type, yuz: answers.face, sekil: answers.shape, malzeme: answers.mat, renk: answers.colors.join('|') || 'any', ozellik: answers.feat, ilk_model: results[0] ? results[0].m.code : '', uyum: results[0] ? results[0].pct : 0 });
       hero(0); root.classList.remove('wide');
       panel.innerHTML = '<div class="ast__loading"><p>Kişiselleştirilmiş sonuçlarınızı hazırlıyoruz…</p><div class="ast__prog ast__prog--big"><i></i></div></div>';
       var bar = $('.ast__prog i', panel); requestAnimationFrame(function () { bar.style.width = '100%'; });
@@ -198,6 +199,7 @@
         '<div class="ast__why"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.6L19 9l-5.2 1.6L12 16l-1.8-5.4L5 9l5.2-1.4zM5 15l.9 2.6L8.5 18l-2.6.9L5 21l-.9-2.1L1.5 18l2.6-.4zM19 14l.8 2.2 2.2.8-2.2.8L19 20l-.8-2.2-2.2-.8 2.2-.8z"/></svg><p>' + esc(astSentence(r)) + '</p></div>' +
         '<ul class="ast__chips">' + r.crit.map(function (c) { return '<li class="' + (c.ok ? 'ok' : 'no') + '"><i></i>' + esc(c.label) + ': <b>' + esc(c.val) + '</b></li>'; }).join('') + '<li class="ok"><i></i>Renkler: <b>' + esc(familiesOf(m).slice(0, 3).join(', ') || '–') + '</b></li></ul></div>' +
         '<div class="ast__tools"><button data-act="restart">&#8634; Başa Dön</button><button data-act="compare">&#8646; Karşılaştır</button><button data-act="share">&#8599; Paylaş</button></div>';
+      var cta = $('.ast__cta', panel); if (cta) cta.addEventListener('click', function () { track('asistan_model_tikla', { model: m.code, sira: idx + 1, uyum: r.pct }); });
       $$('.ast__arrow', panel).forEach(function (bt) { bt.addEventListener('click', function () { idx = Math.max(0, Math.min(results.length - 1, idx + parseInt(bt.getAttribute('data-d'), 10))); renderResult(); }); });
       bindTools();
       panel.scrollTop = 0;
@@ -226,10 +228,10 @@
         bt.addEventListener('click', function () {
           var act = bt.getAttribute('data-act');
           if (act === 'restart') open();
-          else if (act === 'compare') renderCompare();
+          else if (act === 'compare') { track('asistan_karsilastir', {}); renderCompare(); }
           else if (act === 'results') renderResult();
           else if (act === 'share') {
-            var url = location.origin + '/#asistan=' + astEncode(answers);
+            var url = location.origin + '/#asistan=' + astEncode(answers); track('asistan_paylas', {});
             var done = function () { bt.textContent = '✓ Bağlantı kopyalandı'; setTimeout(function () { bt.innerHTML = '&#8599; Paylaş'; }, 2200); };
             if (navigator.share) navigator.share({ title: 'Arıkan Optik · Gözlük Asistanı önerilerim', url: url }).catch(function () { });
             else if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt('Bağlantıyı kopyalayın:', url); });
