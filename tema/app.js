@@ -763,6 +763,8 @@
     }).catch(function () { root.innerHTML = '<div class="empty"><b>Etiket aracı yüklenemedi</b>Sayfayı yenileyip tekrar deneyin.</div>'; });
   }
 
+/* {{TRYON}} */
+
 /* {{ORDER}} */
 
 /* {{ASSISTANT}} */
@@ -776,9 +778,9 @@
     orderBadge(); favSync();
     if (VIEW === 'home') initHome();
     else if (VIEW === 'collection') initCollection();
-    else if (VIEW === 'post') { initModel(); initArticle(); initOrderButton(); }
+    else if (VIEW === 'post') { initModel(); initArticle(); initOrderButton(); initTryOn(); }
     else if (VIEW === 'error') initCollection();
     else if (VIEW === 'page') { initDealers(); initQr(); initOrder(); initSizeTool(); }
   });
-  window.AO = { search: function (q) { return searchModels(q).map(function (m) { return m.code; }); }, parse: parseQuery, last: function () { return lastSearch; }, ready: ready };
+  window.AO = { tryon: TRYON, search: function (q) { return searchModels(q).map(function (m) { return m.code; }); }, parse: parseQuery, last: function () { return lastSearch; }, ready: ready };
 })();

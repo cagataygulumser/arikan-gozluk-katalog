@@ -59,6 +59,11 @@ Site **deneme-site-v3.blogspot.com** adresinde kuruldu ve çalışıyor: tema y�
 - **Instagram bandı (ana sayfa):** `instagram.json` (GitHub) → son 6 gönderi: `url`, `image` (`img/instagram/` altındaki kare görsel), `caption`, `video`. Şimdilik elle güncellenir (gönderi görseli `instagram.com/p/KOD/media/?size=l` adresinden alınabilir); Arıkan Meta hesabını bağlarsa Instagram Graph API ile otomatikleştirilebilir.
 - **Logo:** `img/logo/arikan.png` (depoda; arikantime CDN'ine bağımlılık kalktı). Menü: Markalar (Optik/Clip-On bağlantıları bu menünün altında), Yeni Gelenler, Ölçü Rehberi, Blog, Satış Noktaları, S.S.S., İletişim, TR|EN.
 
+- **Yüz şekli rehberi / şekil filtreleri:** ana sayfada "Yüzünüze göre çerçeve" (Oval/Yuvarlak/Kare/Kalp → önerilen şekiller + örnek modeller + `/search?shape=…`); koleksiyon filtrelerinde Çerçeve şekli ve Çerçeve yapısı.
+- **Ölçü aracı:** Ekartman Rehberi sayfasının üstünde (`#olcu=52-18-140` ile doğrudan sonuç); ana sayfadaki ölçü bandından da gönderilir. ±2 mm cam / ±1 mm köprü.
+- **Favoriler:** kart ve model sayfasındaki kalp; `/search?fav=1` kişisel liste (tarayıcıda), `/search?fav=KOD,KOD` paylaşılan liste; WhatsApp'tan sor.
+- **Sanal deneme:** model sayfasında "Sanal deneme" düğmesi (`?tryon` ile otomatik açılır). Tarayıcıda MediaPipe Face Landmarker (jsDelivr'dan yüklenir, Google model dosyası) ile yüz noktaları bulunur; çerçeve, göz bebeği mesafesi 63 mm kabul edilerek **gerçek ölçekte** çizilir (2×cam+köprü+10 mm). Kamera yoksa fotoğraf yüklenir; "Fotoğraf çek" paylaşır/indirir. Çerçeve PNG'leri `img/tryon/KOD.png` (ön görsellerden arka plan kaldırılmış, 256 renk) — `gen_tryon.py` ile üretilir; görüntü cihazdan çıkmaz.
+
 ## Veri ve görseller nasıl güncellenir?
 
 - Tema, `https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/models.json` dosyasını okur; görseller aynı depodaki `img/` klasöründen gelir. Depoya push edilen değişiklik CDN'e en geç 24 saatte yansır (anında yansıması için `@main` yerine bir sürüm etiketi, örn. `@v2`, kullanılabilir).
