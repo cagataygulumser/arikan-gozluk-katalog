@@ -249,6 +249,7 @@
         if (!news.length) news = ms.filter(function (m) { return m.category === 'Clip-On'; }).slice(0, 8);
         renderGrid(newGrid, news.slice(0, 8));
       }
+      var hb = $('#home-blog'); if (hb) blogFeed().then(function (list) { renderBlog(hb, list.slice(0, 3)); }).catch(function () { hb.parentNode.parentNode.style.display = 'none'; });
       var pick = $('#home-pick');
       if (pick) {
         // her markadan 2 model
@@ -267,6 +268,7 @@
     var initial = (LABEL || '').trim();
     var q = (QUERY || '').trim();
     var head = $('#coll-title'), lead = $('#coll-lead'), logoEl = $('#coll-logo'), count = $('#coll-count');
+    if (slug(initial) === 'blog') { initBlogList(); return; }
     ready().then(function () {
       var ms = state.models;
       // etikete göre başlangıç
@@ -416,6 +418,41 @@
     });
   }
 
+  /* ---------- blog ---------- */
+  function blogFeed() {
+    try { var c = sessionStorage.getItem('ao_blog_v1'); if (c) return Promise.resolve(JSON.parse(c)); } catch (e) { }
+    return fetchJSON('/feeds/posts/summary/-/Blog?alt=json&max-results=50').then(function (d) {
+      var list = ((d.feed && d.feed.entry) || []).map(function (e) {
+        var link = (e.link || []).filter(function (l) { return l.rel === 'alternate'; })[0];
+        var th = e.media$thumbnail ? e.media$thumbnail.url.replace(/\/s72-c\//, '/s800/').replace(/=s72-c/, '=s800') : '';
+        var d2 = new Date(e.published.$t);
+        return { title: e.title.$t, url: link ? link.href : '#', img: th, date: d2.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }), sum: (e.summary && e.summary.$t || '').replace(/\s+/g, ' ').trim().slice(0, 160), labels: (e.category || []).map(function (c) { return c.term; }) };
+      });
+      try { sessionStorage.setItem('ao_blog_v1', JSON.stringify(list)); } catch (e) { }
+      return list;
+    });
+  }
+  function bcard(p) {
+    return '<a class="bcard" href="' + esc(p.url) + '">' + (p.img ? '<div class="bcard__img"><img loading="lazy" src="' + esc(p.img) + '" alt=""></div>' : '') +
+      '<div class="bcard__body"><div class="bcard__date">' + esc(p.date) + '</div><div class="bcard__title">' + esc(p.title) + '</div><div class="bcard__sum">' + esc(p.sum) + (p.sum.length >= 160 ? '…' : '') + '</div></div></a>';
+  }
+  function renderBlog(el, list) { el.innerHTML = list.length ? '<div class="blog-grid">' + list.map(bcard).join('') + '</div>' : '<div class="empty"><b>Henüz yazı yok</b></div>'; }
+  function initBlogList() {
+    var head = $('#coll-title'); if (head) head.textContent = 'Blog';
+    var lead = $('#coll-lead'); if (lead) lead.textContent = 'Gözlük seçimi, cam teknolojileri ve bakım üzerine optisyen gözüyle yazılar.';
+    $('#collection').style.display = 'none'; $('#blog-list').style.display = '';
+    blogFeed().then(function (list) { var c = $('#coll-count'); if (c) c.textContent = list.length + ' yazı'; renderBlog($('#blog-grid'), list); }).catch(function () { renderBlog($('#blog-grid'), []); });
+  }
+  function initArticle() {
+    var art = $('.article'); if (!art) return;
+    // Blogger küçük resim kapak görselini kaldırmaz; gövdedeki kapak zaten var
+    blogFeed().then(function (list) {
+      var rel = $('#blog-related'); if (!rel) return;
+      var cur = location.pathname;
+      renderBlog(rel, list.filter(function (p) { return p.url.indexOf(cur) < 0; }).slice(0, 3));
+    });
+  }
+
   /* ---------- yetkili satış noktaları: Türkiye haritası ---------- */
   function trNorm(s) { return String(s || '').replace(/İ/g, 'i').replace(/I/g, 'ı').toLowerCase().replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u').replace(/â/g, 'a'); }
   function initDealers() {
@@ -495,7 +532,7 @@
     initHeader();
     if (VIEW === 'home') initHome();
     else if (VIEW === 'collection') initCollection();
-    else if (VIEW === 'post') initModel();
+    else if (VIEW === 'post') { initModel(); initArticle(); }
     else if (VIEW === 'error') initCollection();
     else if (VIEW === 'page') initDealers();
   });

@@ -25,6 +25,9 @@
   <meta expr:content='data:blog.postImageUrl' property='og:image'/>
   <meta content='product' property='og:type'/>
 </b:if>
+<link href='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/favicon-32.png' rel='icon' sizes='32x32' type='image/png'/>
+<link href='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/favicon-256.png' rel='icon' sizes='256x256' type='image/png'/>
+<link href='https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/logo/favicon-180.png' rel='apple-touch-icon' sizes='180x180'/>
 <link href='https://fonts.googleapis.com' rel='preconnect'/>
 <link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
 <link href='https://cdn.jsdelivr.net' rel='preconnect'/>
@@ -99,6 +102,7 @@ window.AO_CONFIG = {
       <a href='/search/label/Clip-On'>Clip-On</a>
       <a href='/search/label/Yeni'>Yeni Gelenler</a>
       <a href='/p/ekartman-rehberi.html'>Ölçü Rehberi</a>
+      <a href='/search/label/Blog'>Blog</a>
       <a href='/p/yetkili-satis-noktalari.html'>Satış Noktaları</a>
       <a href='/p/iletisim.html'>İletişim</a>
       <div class='search-wrap'>
@@ -238,6 +242,18 @@ window.AO_CONFIG = {
     </div>
   </section>
 
+  <section class='section section--soft'>
+    <div class='wrap'>
+      <div class='section__head'>
+        <p class='eyebrow'>Blog</p>
+        <h2 class='title-2'>Gözlük Rehberi</h2>
+        <p class='lead'>Doğru gözlüğü seçmek için optisyen gözüyle yazılar.</p>
+      </div>
+      <div class='skeleton' id='home-blog'>Yükleniyor</div>
+      <p style='text-align:center;margin-top:34px'><a class='link-arrow' href='/search/label/Blog'>Tüm yazılar</a></p>
+    </div>
+  </section>
+
   <section class='section'>
     <div class='wrap'>
       <div class='section__head'>
@@ -256,7 +272,31 @@ window.AO_CONFIG = {
     <b:includable id='main'>
       <b:if cond='data:view.isSingleItem'>
         <b:loop values='data:posts' var='post'>
-          <b:if cond='data:view.isPost'>
+          <b:if cond='data:view.isPost and (data:post.labels any (l =&gt; l.name == &quot;Blog&quot;))'>
+            <article class='article'>
+              <div class='wrap article__in'>
+                <nav aria-label='Konum' class='crumbs'>
+                  <span><a expr:href='data:blog.homepageUrl'>Ana sayfa</a></span>
+                  <span><a href='/search/label/Blog'>Blog</a></span>
+                  <span><data:post.title/></span>
+                </nav>
+                <p class='eyebrow article__date'><data:post.date/></p>
+                <h1 class='article__title'><data:post.title/></h1>
+                <div class='article__body'><data:post.body/></div>
+                <div class='article__labels'>
+                  <b:loop values='data:post.labels' var='label'>
+                    <b:if cond='data:label.name != &quot;Blog&quot;'><a class='badge badge--line' expr:href='data:label.url'><data:label.name/></a></b:if>
+                  </b:loop>
+                </div>
+              </div>
+            </article>
+            <section class='related'>
+              <div class='wrap'>
+                <div class='section__head'><p class='eyebrow'>Blog</p><h2 class='title-2'>Diğer Yazılar</h2></div>
+                <div class='skeleton' id='blog-related'>Yükleniyor</div>
+              </div>
+            </section>
+          <b:elseif cond='data:view.isPost'/>
             <div class='wrap'>
               <nav aria-label='Konum' class='crumbs'>
                 <span><a expr:href='data:blog.homepageUrl'>Ana sayfa</a></span>
@@ -297,6 +337,7 @@ window.AO_CONFIG = {
             <div class='coll-head__count' id='coll-count'>&#160;</div>
           </div>
         </section>
+        <div class='wrap blog-list' id='blog-list' style='display:none'><div class='skeleton' id='blog-grid'>Yükleniyor</div></div>
         <div class='wrap coll' id='collection'>
           <aside class='filters' id='filters'></aside>
           <div>
@@ -348,6 +389,7 @@ window.AO_CONFIG = {
     </div>
     <div>
       <h4>Rehber</h4>
+      <a href='/search/label/Blog'>Blog</a>
       <a href='/p/ekartman-rehberi.html'>Ekartman nasıl okunur?</a>
       <a href='/p/sik-sorulan-sorular.html'>Sık sorulan sorular</a>
       <a href='/p/yetkili-satis-noktalari.html'>Yetkili satış noktaları</a>
