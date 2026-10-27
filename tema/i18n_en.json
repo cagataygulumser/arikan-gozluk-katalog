@@ -530,5 +530,11 @@
 "Fotoğraf çek": "Take photo",
 "Fotoğraf yükle": "Upload photo",
 "Kamerayı aç": "Open camera",
-"Görüntü cihazınızda kalır, hiçbir yere gönderilmez. Çerçeve gerçek ölçeğinde çizilir: göz bebeği mesafeniz (ortalama # mm) referans alınır.": "The image stays on your device and is never uploaded. The frame is drawn at true scale, using your pupillary distance (average # mm) as the reference."
+"Görüntü cihazınızda kalır, hiçbir yere gönderilmez. Çerçeve gerçek ölçeğinde çizilir: göz bebeği mesafeniz (ortalama # mm) referans alınır.": "The image stays on your device and is never uploaded. The frame is drawn at true scale, using your pupillary distance (average # mm) as the reference.",
+"Kamera izni bekleniyor…": "Waiting for camera permission…",
+"Başlamak için \"Kamerayı aç\" düğmesine dokunun": "Tap \"Open camera\" to start",
+"Bu tarayıcı kamerayı desteklemiyor — \"Fotoğraf yükle\" ile deneyebilirsiniz.": "This browser does not support the camera — try \"Upload photo\".",
+"Kamera izni verilmedi — tarayıcı ayarlarından izin verin ya da \"Fotoğraf yükle\" kullanın.": "Camera permission denied — allow it in browser settings or use \"Upload photo\".",
+"Kamera görüntüsü alınamadı — \"Fotoğraf yükle\" ile deneyebilirsiniz.": "No camera image received — try \"Upload photo\".",
+"Yüz tanıma bu bağlantıda yüklenemedi; lütfen tekrar deneyin ya da \"Fotoğraf yükle\" kullanın.": "Face tracking could not load on this connection; please retry or use \"Upload photo\"."
 }

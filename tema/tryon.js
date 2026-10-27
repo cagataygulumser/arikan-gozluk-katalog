@@ -1,15 +1,22 @@
   /* ---------- sanal deneme: kamera / fotoğraf üzerine çerçeve ---------- */
   var TRYON = { vision: null, lm: null, mode: null, img: new Image(), ready: false, raf: 0, stream: null, scaleAdj: 1, code: '', model: null, lastLm: null };
   var MP_VER = '0.10.14';
+  var UA = navigator.userAgent || '';
+  var IS_IOS = /iP(hone|ad|od)/.test(UA) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var IS_SAFARI = /Safari/.test(UA) && !/Chrome|CriOS|FxiOS|EdgiOS|Android/.test(UA);
+  function withTimeout(p, ms, msg) { return new Promise(function (res, rej) { var t = setTimeout(function () { rej(new Error(msg)); }, ms); p.then(function (v) { clearTimeout(t); res(v); }, function (e) { clearTimeout(t); rej(e); }); }); }
   function tryonLoad() {
     if (TRYON.lm) return Promise.resolve(TRYON.lm);
     if (TRYON.loading) return TRYON.loading;
-    TRYON.loading = import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@' + MP_VER + '/vision_bundle.mjs').then(function (v) {
+    var load = import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@' + MP_VER + '/vision_bundle.mjs').then(function (v) {
       return v.FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@' + MP_VER + '/wasm').then(function (fs) {
         var opts = function (d) { return { baseOptions: { modelAssetPath: 'https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task', delegate: d }, runningMode: 'VIDEO', numFaces: 1 }; };
-        return v.FaceLandmarker.createFromOptions(fs, opts('GPU')).catch(function () { return v.FaceLandmarker.createFromOptions(fs, opts('CPU')); });
+        // Safari / iOS: GPU delegesi güvenilir değil, doğrudan CPU
+        var first = (IS_IOS || IS_SAFARI) ? 'CPU' : 'GPU', second = first === 'GPU' ? 'CPU' : 'GPU';
+        return v.FaceLandmarker.createFromOptions(fs, opts(first)).catch(function () { return v.FaceLandmarker.createFromOptions(fs, opts(second)); });
       }).then(function (lm) { TRYON.lm = lm; TRYON.vision = v; return lm; });
     });
+    TRYON.loading = withTimeout(load, 45000, 'Yüz tanıma bu bağlantıda yüklenemedi; lütfen tekrar deneyin ya da "Fotoğraf yükle" kullanın.').catch(function (e) { TRYON.loading = null; throw e; });
     return TRYON.loading;
   }
   function initTryOn() {
@@ -20,9 +27,9 @@
     b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h3l2-3h6l2 3h3v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>Sanal deneme</span>';
     thumbs.parentNode.insertBefore(b, thumbs.nextSibling);
     b.addEventListener('click', function () { tryonOpen(code); });
-    if (/[?&#]tryon/.test(location.search + location.hash)) tryonOpen(code);
+    if (/[?&#]tryon/.test(location.search + location.hash)) tryonOpen(code, true);
   }
-  function tryonOpen(code) {
+  function tryonOpen(code, auto) {
     TRYON.code = code; TRYON.scaleAdj = 1;
     var root = $('#tryon');
     if (!root) {
@@ -52,33 +59,50 @@
       $('#tryon-colors').innerHTML = vs.map(function (v, i) { return '<button type="button" class="tryon__color' + (i === 0 ? ' on' : '') + '" data-code="' + esc(v.code) + '" title="' + esc(v.fc) + '">' + (v.fc ? swatch({ code: v.code, attrs: { frame_color: v.fc } }) : '') + '<span>' + esc(v.label) + '</span></button>'; }).join('');
       $$('.tryon__color').forEach(function (bt) { bt.addEventListener('click', function () { $$('.tryon__color').forEach(function (x) { x.classList.remove('on'); }); bt.classList.add('on'); tryonSetImage(bt.getAttribute('data-code')); }); });
       tryonSetImage(m.code);
-      tryonCamera();
     });
+    // kamera isteği dokunma hareketi içinde hemen yapılmalı (iOS Safari); adres ile otomatik açılışta iOS'ta dokunma beklenir
+    if (auto && (IS_IOS || IS_SAFARI)) tryonStatus('Başlamak için "Kamerayı aç" düğmesine dokunun'); else tryonCamera();
   }
   function tryonSetImage(c) { TRYON.ready = false; var im = new Image(); im.crossOrigin = 'anonymous'; im.onload = function () { TRYON.img = im; TRYON.ready = true; if (TRYON.mode === 'image') tryonDrawImage(); }; im.src = CDN + 'img/tryon/' + c + '.png?v=' + DATA_V; }
   function tryonStatus(t) { var s = $('#tryon-status'); if (s) { s.textContent = t; s.style.display = t ? '' : 'none'; } }
   function tryonCamera() {
-    tryonStop(); TRYON.mode = 'video'; var video = $('#tryon-video'), canvas = $('#tryon-canvas'); video.style.display = ''; tryonStatus('Yüz tanıma yükleniyor…');
-    tryonLoad().then(function (lm) {
-      lm.setOptions({ runningMode: 'VIDEO' });
-      tryonStatus('Kamera açılıyor…');
-      return navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user', width: { ideal: 1280 }, height: { ideal: 960 } }, audio: false });
-    }).then(function (stream) {
-      TRYON.stream = stream; video.srcObject = stream;
-      return new Promise(function (res) { video.onloadedmetadata = function () { video.play(); res(); }; });
+    tryonStop(); TRYON.mode = 'video'; var video = $('#tryon-video'), canvas = $('#tryon-canvas'); video.style.display = ''; tryonStatus('Kamera izni bekleniyor…');
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { tryonStatus('Bu tarayıcı kamerayı desteklemiyor — "Fotoğraf yükle" ile deneyebilirsiniz.'); return; }
+    // 1) kamera izni hemen (kullanıcı dokunuşu içinde) — 2) yüz tanıma modeli paralel yüklenir
+    var camP = navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user', width: { ideal: 1280 }, height: { ideal: 960 } }, audio: false })
+      .catch(function (e) { if (/OverconstrainedError|NotReadable/.test(String(e && e.name))) return navigator.mediaDevices.getUserMedia({ video: true, audio: false }); throw e; });
+    camP.then(function () { tryonStatus('Yüz tanıma yükleniyor…'); }, function () { });
+    Promise.all([camP, tryonLoad()]).then(function (res) {
+      var stream = res[0], lm = res[1]; lm.setOptions({ runningMode: 'VIDEO' }); tryonStatus('Kamera açılıyor…');
+      if (TRYON.mode !== 'video') { stream.getTracks().forEach(function (t) { t.stop(); }); throw new Error('iptal'); }
+      TRYON.stream = stream; video.srcObject = stream; video.setAttribute('playsinline', ''); video.muted = true;
+      return new Promise(function (res, rej) {
+        var done = false, fin = function () { if (!done && video.videoWidth > 0) { done = true; res(); } };
+        video.onloadedmetadata = function () { var p = video.play(); if (p && p.catch) p.catch(function () { }); fin(); };
+        video.onloadeddata = fin; video.onplaying = fin; video.onresize = fin;
+        setTimeout(function () { if (!done) { if (video.videoWidth > 0) fin(); else rej(new Error('Kamera görüntüsü alınamadı — "Fotoğraf yükle" ile deneyebilirsiniz.')); } }, 12000);
+      });
     }).then(function () {
       canvas.width = video.videoWidth; canvas.height = video.videoHeight; tryonStatus('Yüzünüzü kameraya çevirin');
-      var last = -1;
+      // tanıma için kare kopyası (Safari'de video dokusu sorunlarına karşı), küçük boyut = hızlı
+      var fw = Math.min(640, video.videoWidth), fh = Math.round(video.videoHeight * fw / video.videoWidth);
+      var frame = document.createElement('canvas'); frame.width = fw; frame.height = fh; var fctx = frame.getContext('2d', { willReadFrequently: true });
+      var last = -1, lastTs = 0;
       function loop() {
         if (TRYON.mode !== 'video') return;
-        var now = performance.now();
-        if (video.currentTime !== last) { last = video.currentTime; var r = TRYON.lm.detectForVideo(video, now); var lms = r.faceLandmarks && r.faceLandmarks[0]; TRYON.lastLm = lms || null; tryonDraw(canvas, video, lms, true); }
+        var now = performance.now(); if (now <= lastTs) now = lastTs + 1;
+        if (video.currentTime !== last && video.readyState >= 2) {
+          last = video.currentTime; lastTs = now; var lms = null;
+          try { fctx.drawImage(video, 0, 0, fw, fh); var r = TRYON.lm.detectForVideo(frame, now); lms = (r.faceLandmarks && r.faceLandmarks[0]) || null; } catch (e) { }
+          TRYON.lastLm = lms; tryonDraw(canvas, video, lms, true);
+        }
         TRYON.raf = requestAnimationFrame(loop);
       }
       loop();
     }).catch(function (e) {
-      tryonStatus(/NotAllowed|Permission|NotFound|NotReadable/.test(String(e && e.name)) ? 'Kamera açılamadı — "Fotoğraf yükle" ile deneyebilirsiniz.' : 'Yüklenemedi: ' + (e && e.message ? e.message : e));
-      track('sanal_deneme_hata', { hata: String(e && e.name || e).slice(0, 60) });
+      var n = String(e && e.name || ''); if (String(e && e.message) === 'iptal') return;
+      tryonStatus(/NotAllowed|Permission|Security/.test(n) ? 'Kamera izni verilmedi — tarayıcı ayarlarından izin verin ya da "Fotoğraf yükle" kullanın.' : /NotFound|NotReadable|Overconstrained|Abort/.test(n) ? 'Kamera açılamadı — "Fotoğraf yükle" ile deneyebilirsiniz.' : 'Yüklenemedi: ' + (e && e.message ? e.message : e));
+      track('sanal_deneme_hata', { hata: (n || String(e && e.message || e)).slice(0, 60) });
     });
   }
   function tryonStop() { if (TRYON.raf) cancelAnimationFrame(TRYON.raf); TRYON.raf = 0; if (TRYON.stream) { TRYON.stream.getTracks().forEach(function (t) { t.stop(); }); TRYON.stream = null; } }
