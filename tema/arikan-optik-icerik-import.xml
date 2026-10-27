@@ -7638,22 +7638,8 @@
 <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/blogger/2008/kind#page'/>
 
 <title type='text'>Yetkili Satış Noktaları</title>
-<content type='html'>&lt;p&gt;Lee Cooper, Quantum, Slazenger ve Belmond gözlükleri Türkiye genelinde yetkili optik mağazalarında satılır. Beğendiğiniz modelin kodunu not edin ve en yakın satış noktasına danışın; mağazada yoksa sizin için getirtilebilir.&lt;/p&gt;
-&lt;h2&gt;İstanbul&lt;/h2&gt;
-&lt;ul class="dealers"&gt;
-&lt;li&gt;&lt;b&gt;[Mağaza adı]&lt;/b&gt;[İlçe] · [Adres]&lt;br&gt;[Telefon]&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;[Mağaza adı]&lt;/b&gt;[İlçe] · [Adres]&lt;br&gt;[Telefon]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Ankara&lt;/h2&gt;
-&lt;ul class="dealers"&gt;
-&lt;li&gt;&lt;b&gt;[Mağaza adı]&lt;/b&gt;[İlçe] · [Adres]&lt;br&gt;[Telefon]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;İzmir&lt;/h2&gt;
-&lt;ul class="dealers"&gt;
-&lt;li&gt;&lt;b&gt;[Mağaza adı]&lt;/b&gt;[İlçe] · [Adres]&lt;br&gt;[Telefon]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Bayi olmak ister misiniz?&lt;/h2&gt;
-&lt;p&gt;Perakende ve distribütörlük başvuruları için &lt;a href="https://arikantime.com/tr/be-our-partner" rel="noopener" target="_blank"&gt;arikantime.com&lt;/a&gt; üzerinden iletişime geçebilirsiniz.&lt;/p&gt;</content>
+<content type='html'>&lt;p&gt;Lee Cooper, Quantum, Slazenger ve Belmond gözlükleri yetkili optik mağazalarında satılır. Haritadan ilinizi seçin ya da il adını yazın; satış noktaları, adresleri ve telefonları listelenir.&lt;/p&gt;
+&lt;p&gt;Satış noktaları listesi tema tarafından &lt;code&gt;dealers.json&lt;/code&gt; dosyasından okunur.&lt;/p&gt;</content>
 <author><name>Arıkan Optik</name></author>
 <app:control xmlns:app='http://purl.org/atom/app#'><app:draft>no</app:draft></app:control>
 </entry>

@@ -1,0 +1,15 @@
+{
+  "updated": "2026-10-27",
+  "note": "İl adı anahtar; her kayıt: name, district, address, phone, whatsapp (opsiyonel), hours (opsiyonel), maps (opsiyonel Google Maps bağlantısı), brands (opsiyonel liste).",
+  "dealers": {
+    "Tekirdağ": [
+      {"name": "Ahmet Optik", "district": "Süleymanpaşa", "address": "Hükümet Cad. No:12/A, Ertuğrul Mah.", "phone": "0282 261 10 01", "whatsapp": "905320000001", "hours": "Hafta içi 09:00–19:00 · Cumartesi 09:00–17:00", "brands": ["Lee Cooper", "Quantum", "Slazenger", "Belmond"]},
+      {"name": "Mehmet Optik", "district": "Çorlu", "address": "Omurtak Cad. No:45, Reşadiye Mah.", "phone": "0282 651 20 02", "whatsapp": "905320000002", "hours": "Her gün 09:00–20:00", "brands": ["Lee Cooper", "Slazenger"]},
+      {"name": "Marmara Optik", "district": "Süleymanpaşa", "address": "Çarşı Cad. No:7, Ortacami Mah.", "phone": "0282 263 30 03", "hours": "Hafta içi 09:00–19:00", "brands": ["Quantum", "Belmond"]},
+      {"name": "Trakya Optik", "district": "Çerkezköy", "address": "Atatürk Cad. No:88, Gazi Mustafa Kemal Paşa Mah.", "phone": "0282 726 40 04", "whatsapp": "905320000004", "hours": "Hafta içi 09:00–19:00 · Cumartesi 09:30–18:00", "brands": ["Lee Cooper", "Quantum", "Slazenger"]},
+      {"name": "Gözde Optik", "district": "Çorlu", "address": "Salih Omurtak Cad. No:121/B, Kemalettin Mah.", "phone": "0282 652 50 05", "hours": "Her gün 09:30–20:30", "brands": ["Slazenger", "Belmond"]},
+      {"name": "Saray Optik", "district": "Saray", "address": "Cumhuriyet Cad. No:19, Ayaspaşa Mah.", "phone": "0282 768 60 06", "whatsapp": "905320000006", "hours": "Hafta içi 09:00–18:30", "brands": ["Lee Cooper"]},
+      {"name": "Lider Optik", "district": "Malkara", "address": "İstiklal Cad. No:33, Camiatik Mah.", "phone": "0282 427 70 07", "hours": "Hafta içi 09:00–19:00 · Cumartesi 09:00–16:00", "brands": ["Quantum", "Slazenger", "Belmond"]}
+    ]
+  }
+}

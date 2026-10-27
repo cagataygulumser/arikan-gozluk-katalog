@@ -221,22 +221,8 @@ PAGES['Sık Sorulan Sorular'] = '''
 <p>Her model sayfasındaki ekartman bilgisini mevcut gözlüğünüzle karşılaştırın. Ayrıntı için <a href="/p/ekartman-rehberi.html">ölçü rehberine</a> bakın.</p>
 '''
 PAGES['Yetkili Satış Noktaları'] = '''
-<p>Lee Cooper, Quantum, Slazenger ve Belmond gözlükleri Türkiye genelinde yetkili optik mağazalarında satılır. Beğendiğiniz modelin kodunu not edin ve en yakın satış noktasına danışın; mağazada yoksa sizin için getirtilebilir.</p>
-<h2>İstanbul</h2>
-<ul class="dealers">
-<li><b>[Mağaza adı]</b>[İlçe] · [Adres]<br>[Telefon]</li>
-<li><b>[Mağaza adı]</b>[İlçe] · [Adres]<br>[Telefon]</li>
-</ul>
-<h2>Ankara</h2>
-<ul class="dealers">
-<li><b>[Mağaza adı]</b>[İlçe] · [Adres]<br>[Telefon]</li>
-</ul>
-<h2>İzmir</h2>
-<ul class="dealers">
-<li><b>[Mağaza adı]</b>[İlçe] · [Adres]<br>[Telefon]</li>
-</ul>
-<h2>Bayi olmak ister misiniz?</h2>
-<p>Perakende ve distribütörlük başvuruları için <a href="https://arikantime.com/tr/be-our-partner" rel="noopener" target="_blank">arikantime.com</a> üzerinden iletişime geçebilirsiniz.</p>
+<p>Lee Cooper, Quantum, Slazenger ve Belmond gözlükleri yetkili optik mağazalarında satılır. Haritadan ilinizi seçin ya da il adını yazın; satış noktaları, adresleri ve telefonları listelenir.</p>
+<p>Satış noktaları listesi tema tarafından <code>dealers.json</code> dosyasından okunur.</p>
 '''
 PAGES['Hakkımızda'] = '''
 <p>Arıkan Group, saat, gözlük ve aksesuar markalarının Türkiye distribütörlüğünü yürütür. Gözlük tarafında <b>Lee Cooper</b>, <b>Quantum</b>, <b>Slazenger</b> ve <b>Belmond</b> markalarının optik ve clip-on koleksiyonlarını yetkili optik mağazalarıyla buluşturur.</p>
