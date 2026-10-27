@@ -225,6 +225,19 @@ window.AO_CONFIG = {
     </div>
   </section>
 
+  <section class='section'>
+    <div class='wrap ast-band'>
+      <div class='ast-band__img' style='background-image:url(https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/img/hero/lee-cooper-p076.jpg)'></div>
+      <div>
+        <p class='eyebrow'>Gözlük Asistanı</p>
+        <h2 class='title-2'>Aradığınız modeli birlikte bulalım</h2>
+        <p class='lead'>Birkaç soruyla yüz ölçünüze, çerçeve şekline, malzeme ve renk tercihinize en uygun modelleri sıralıyoruz. Bir dakikadan kısa sürer.</p>
+        <ul class='ast-band__steps'><li>Tür</li><li>Yüz ölçüsü</li><li>Çerçeve şekli</li><li>Malzeme</li><li>Renk</li></ul>
+        <a class='btn btn--red' data-asistan='1' href='#asistan'>Asistanı başlat</a>
+      </div>
+    </div>
+  </section>
+
   <section class='section section--dark'>
     <div class='wrap guide-banner'>
       <div>
@@ -385,6 +398,7 @@ window.AO_CONFIG = {
       <a href='/search/label/Optik'>Optik çerçeveler</a>
       <a href='/search/label/Clip-On'>Clip-On</a>
       <a href='/p/clip-on-demo.html'>Clip-On demo</a>
+      <a data-asistan='1' href='#asistan'>Gözlük asistanı</a>
       <a href='/search/label/Yeni'>Yeni gelenler</a>
       <a href='/search/label/Polarize'>Polarize</a>
     </div>

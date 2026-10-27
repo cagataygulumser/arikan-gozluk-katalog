@@ -9,7 +9,7 @@
 | `models.json` | Tüm model verisi (GitHub'da; tema buradan beslenir). |
 | GitHub deposu `cagataygulumser/arikan-gozluk-katalog` | 1.530 ürün görseli, 16 hero fotoğrafı, 4 logo, `models.json`. jsDelivr CDN ile servis edilir. |
 
-Veri kapsamı: **161 model, 517 renk varyantı** — Lee Cooper 53 (32 optik + 21 clip-on), Slazenger 66 (41 + 25), Quantum 30 (26 + 4), Belmond 12 (9 + 3).
+Veri kapsamı: **161 model, 526 renk varyantı** — Lee Cooper 53 (32 optik + 21 clip-on), Slazenger 66 (41 + 25), Quantum 30 (26 + 4), Belmond 12 (9 + 3).
 
 ## Durum (27 Ekim 2026)
 
@@ -46,6 +46,8 @@ Site **deneme-site-v3.blogspot.com** adresinde kuruldu ve çalışıyor: tema y�
 - **Blog:** Blogger'da yazıya **Blog** etiketi ver; tema makale olarak basar, listeye (/search/label/Blog) ve ana sayfaya düşer. Kapak = yazının ilk görseli.
 - **Clip-on karşılaştırma kaydırıcısı:** herhangi bir sayfa/yazıya `<div class="cmp" data-left="OPTİK_GÖRSEL" data-right="CLIPON_GÖRSEL" data-left-label="Optik" data-right-label="Clip-On"></div>` ekle. Demo: /p/clip-on-demo.html (LC3284). Clip-on takılı görsel, katalogdaki clip görselinin çerçeve üzerine bindirilmesiyle üretildi (`img/demo/`).
 - **Favicon:** `img/logo/favicon-*.png` (tema head'inde).
+- **Gözlük Asistanı:** sol alttaki kart (kapatılınca dikey sekmeye dönüşür), ana sayfadaki "Asistanı başlat" bandı ve footer bağlantısı aynı pencereyi açar. Sorular: tür → yüz ölçüsü (ekartman) → çerçeve şekli → malzeme → renk → (clip-on: polarize / optik: çerçeve yapısı). Puanlama tamamen tarayıcıda, `models.json` üzerinden çalışır; dış servis yok. Sonuç ekranında %uyum, eşleşen özellikler, Karşılaştır (yan yana tablo) ve Paylaş (cevapları `#asistan=...` bağlantısına gömer; bağlantı açılınca aynı sonuçlar gelir). Herhangi bir sayfadan `<a href="#asistan">` ile açılabilir.
+- **Çerçeve şekli / yapısı verisi:** kataloglarda yok; 161 modelin ön fotoğrafından etiketlendi (`tema/shapes.json`: shape = round/square/oval/cateye/geo, rim = full/half/rimless). Bir modelin şeklini düzeltmek için bu dosyayı değiştirip `merge.py` çalıştırın ve `models.json`'u güncelleyin.
 
 ## Veri ve görseller nasıl güncellenir?
 

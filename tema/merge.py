@@ -6,7 +6,13 @@ TOKEN_FIX = {
     'at': 'Mat', 'avi': 'Mavi', 'oyu': 'Koyu', 'ristal': 'Kristal', 'Yesi': 'Yeşil', 'Yeşi': 'Yeşil', 'IrmıZzI': 'Kırmızı',
     'Irmızı': 'Kırmızı', 'TR9O': 'TR90', 'TRIO': 'TR90', 'etal': 'Metal', 'Gumus': 'Gümüş', 'Siya': 'Siyah', 'Gumuş': 'Gümüş',
     'Aluminyum': 'Alüminyum', 'Altin': 'Altın', 'Gumüş': 'Gümüş', 'Kahverengl': 'Kahverengi', 'Lacıvert': 'Lacivert',
+    'Alüm': 'Alüminyum', 'nyum': '', 'Ruuber': 'Rubber',
 }
+SHAPES = {'shape': {}, 'rim': {}}  # data/shapes.json — ön fotoğraflardan görsel etiketleme
+try:
+    SHAPES = json.load(open('data/shapes.json', encoding='utf-8'))
+except FileNotFoundError:
+    pass
 MANUAL = {}  # (variant_code, key) -> value ; görsel kontrol sonrası elle düzeltmeler
 try:
     MANUAL = {tuple(k.split('|')): v for k, v in json.load(open('data/manual_fix.json', encoding='utf-8')).items()}
@@ -19,6 +25,7 @@ def fix(v):
     v = v.strip().strip('-').strip()
     toks = v.split(' ')
     toks = [TOKEN_FIX.get(t, t) for t in toks]
+    toks = [t for t in toks if t != '']
     v = ' '.join(toks)
     v = re.sub(r'\s*/\s*', ' / ', v)
     v = re.sub(r'\s+', ' ', v).strip()
@@ -42,6 +49,8 @@ for f in sorted(glob.glob('data/*-*.json')):
         is_clip = any('clip_frame_color' in va['attrs'] or 'clip_lens_color' in va['attrs'] for va in m['variants']) \
             or m['materials'].get('Cam', '').lower().startswith('polar') or m['category'] == 'Clip-On'
         m['category'] = 'Clip-On' if is_clip else 'Optik'
+        m['shape'] = SHAPES['shape'].get(m['code'])
+        m['rim'] = SHAPES['rim'].get(m['code'], 'full')
         m['brand_slug'] = m['brand'].lower().replace(' ', '-')
         m['slug'] = f"{m['brand_slug']}-{m['code'].lower()}"
         models.append(m)

@@ -68,9 +68,9 @@
     return fetch(url, { credentials: 'same-origin' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
   }
   function loadModels() {
-    try { var c = sessionStorage.getItem('ao_models_v1'); if (c) return Promise.resolve(JSON.parse(c)); } catch (e) { }
+    try { var c = sessionStorage.getItem('ao_models_v2'); if (c) return Promise.resolve(JSON.parse(c)); } catch (e) { }
     return fetchJSON(CDN + 'models.json').then(function (d) {
-      try { sessionStorage.setItem('ao_models_v1', JSON.stringify(d)); } catch (e) { }
+      try { sessionStorage.setItem('ao_models_v2', JSON.stringify(d)); } catch (e) { }
       return d;
     });
   }
@@ -564,10 +564,13 @@
     });
   }
 
+/* {{ASSISTANT}} */
+
   /* ---------- başlat ---------- */
   document.addEventListener('DOMContentLoaded', function () {
     initHeader();
     initCompare();
+    initAssistant();
     if (VIEW === 'home') initHome();
     else if (VIEW === 'collection') initCollection();
     else if (VIEW === 'post') { initModel(); initArticle(); }
