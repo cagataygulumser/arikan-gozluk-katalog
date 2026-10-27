@@ -350,3 +350,5 @@ p{margin:0 0 1em}
 .skeleton{min-height:300px;display:grid;place-items:center;color:var(--muted);font-size:12px;letter-spacing:.3em;text-transform:uppercase}
 .blogger-posts{display:none}
 .post-body-fallback{padding:40px 0}
+
+.footer-abuse{flex-basis:100%}.footer-abuse .widget{margin:0}.footer-abuse a{display:inline;font-size:11px;color:#9a9a9a;text-decoration:underline}
