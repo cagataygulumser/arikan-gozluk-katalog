@@ -64,6 +64,10 @@ Site **deneme-site-v3.blogspot.com** adresinde kuruldu ve çalışıyor: tema y�
 - **Favoriler:** kart ve model sayfasındaki kalp; `/search?fav=1` kişisel liste (tarayıcıda), `/search?fav=KOD,KOD` paylaşılan liste; WhatsApp'tan sor.
 - **Sanal deneme:** model sayfasında "Sanal deneme" düğmesi (`?tryon` ile otomatik açılır). Tarayıcıda MediaPipe Face Landmarker (jsDelivr'dan yüklenir, Google model dosyası) ile yüz noktaları bulunur; çerçeve, göz bebeği mesafesi 63 mm kabul edilerek **gerçek ölçekte** çizilir (2×cam+köprü+10 mm). Kamera yoksa fotoğraf yüklenir; "Fotoğraf çek" paylaşır/indirir. Çerçeve PNG'leri `img/tryon/KOD.png` (ön görsellerden arka plan kaldırılmış, camdan görünen katlı sap uçları silinmiş, 256 renk) — `gen_tryon.py` ile üretilir (OpenCV gerekir); görüntü cihazdan çıkmaz.
 
+- **İletişim sayfası:** gerçek adres/telefon/e-posta (arikantime.com'dan), harita (anahtarsız Google Maps gömme, koordinat 41.1024,28.9850) ve iletişim formu. Form, `AO_CONFIG.contact` ile Google Form'a (id 1sM_FWO9SmvsLsBS2tSqGFkkuKU9Y1hCnLilzGfyAPas; bağlı tablo "Arıkan Optik · İletişim Mesajları") gönderilir, yeni yanıt e-posta bildirimi açık; "WhatsApp ile gönder" aynı metni WhatsApp'a taşır. WhatsApp numarası tema HTML'indeki 0507 490 48 24 olarak kalır.
+- **Gizlilik ve KVKK:** /p/gizlilik-ve-kvkk.html (TR/EN); alt bilgi Kurumsal'da, talep ve iletişim formlarının altında onay satırı.
+- **Çerez tercihi:** ilk ziyarette küçük çubuk; GA4 rıza modu varsayılan "denied", "Kabul et" → `analytics_storage: granted` (localStorage `ao_cookie` = 1/0). Reddedenlerde Analytics çerez bırakmaz (yalnızca çerezsiz ping).
+
 ## Veri ve görseller nasıl güncellenir?
 
 - Tema, `https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/models.json` dosyasını okur; görseller aynı depodaki `img/` klasöründen gelir. Depoya push edilen değişiklik CDN'e en geç 24 saatte yansır (anında yansıması için `@main` yerine bir sürüm etiketi, örn. `@v2`, kullanılabilir).
