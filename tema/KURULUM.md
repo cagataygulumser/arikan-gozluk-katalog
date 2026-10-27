@@ -40,6 +40,13 @@ Site **deneme-site-v3.blogspot.com** adresinde kuruldu ve çalışıyor: tema y�
 - **Model sayfası**: büyük ön görsel (tıklayınca büyür), ön/yan/clip-on küçük resimler, ekartman şeması, malzeme tablosu, renk seçenekleri (tıklayınca görseller ve renk detayları değişir), tüm renklerin kartları, ölçü bilgisi, SSS, aynı markadan benzer ölçülü 4 model. Her sayfada Google için Product şeması (JSON-LD) gömülü.
 - **Etiketler**: her yazıda marka, tür (Optik / Clip-On), çerçeve malzemesi ve varsa Yeni / Polarize / Anti-Far / Titanyum.
 
+## Ek bileşenler
+
+- **Yetkili satış noktaları haritası:** `dealers.json` (GitHub) → il adı anahtar, mağaza listesi. Sayfa haritadan ve il aramasından beslenir.
+- **Blog:** Blogger'da yazıya **Blog** etiketi ver; tema makale olarak basar, listeye (/search/label/Blog) ve ana sayfaya düşer. Kapak = yazının ilk görseli.
+- **Clip-on karşılaştırma kaydırıcısı:** herhangi bir sayfa/yazıya `<div class="cmp" data-left="OPTİK_GÖRSEL" data-right="CLIPON_GÖRSEL" data-left-label="Optik" data-right-label="Clip-On"></div>` ekle. Demo: /p/clip-on-demo.html (LC3284). Clip-on takılı görsel, katalogdaki clip görselinin çerçeve üzerine bindirilmesiyle üretildi (`img/demo/`).
+- **Favicon:** `img/logo/favicon-*.png` (tema head'inde).
+
 ## Veri ve görseller nasıl güncellenir?
 
 - Tema, `https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/models.json` dosyasını okur; görseller aynı depodaki `img/` klasöründen gelir. Depoya push edilen değişiklik CDN'e en geç 24 saatte yansır (anında yansıması için `@main` yerine bir sürüm etiketi, örn. `@v2`, kullanılabilir).
