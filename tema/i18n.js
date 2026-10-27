@@ -101,7 +101,8 @@
       var h1 = $('.page h1'), pageIn = $('.page__in'); if (!h1 || !pageIn) return;
       var key = h1.textContent.trim(), en = I18N.pages[key]; if (!en) return;
       h1.textContent = en.title;
-      Array.prototype.slice.call(pageIn.children).forEach(function (el) { if (el !== h1) pageIn.removeChild(el); });
+      var keep = Array.prototype.slice.call(pageIn.children).filter(function (el) { return el !== h1 && el.classList && el.classList.contains('sizetool'); });
+      Array.prototype.slice.call(pageIn.children).forEach(function (el) { if (el !== h1 && keep.indexOf(el) < 0) pageIn.removeChild(el); });
       var wrap = document.createElement('div'); wrap.innerHTML = en.html; while (wrap.firstChild) pageIn.appendChild(wrap.firstChild);
       fixPageLinks();
     }

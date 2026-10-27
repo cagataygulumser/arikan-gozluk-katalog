@@ -222,6 +222,59 @@
     });
   }
 
+  /* ---------- ölçü aracı: "gözlüğümün ölçüsünü yaz" ---------- */
+  function parseDims(q) {
+    var m = String(q || '').match(/(\d{2})\s*[□\-x×\/\s]\s*(\d{2})(?:\s*[-–x×\/\s]\s*(\d{3}))?/);
+    return m ? { lens: +m[1], bridge: +m[2], temple: m[3] ? +m[3] : null } : null;
+  }
+  function initSizeTool() {
+    var h1 = $('.page h1'), pageIn = $('.page__in'); if (!h1 || !pageIn) return;
+    if (!/ekartman|size guide/i.test(h1.textContent)) return;
+    var box = document.createElement('section'); box.className = 'sizetool'; box.id = 'olcu';
+    box.innerHTML = '<p class="eyebrow">Ölçü aracı</p><h2>Gözlüğünüzün ölçüsünü yazın</h2><p class="sizetool__hint">Sapın iç yüzündeki üç sayıyı girin (örn. <b>52 18 140</b>); cam genişliği ±2 mm ve köprü ±1 mm aralığındaki modelleri listeleyelim.</p>' +
+      '<form class="sizetool__form"><input id="size-q" type="text" inputmode="numeric" placeholder="52 18 140" autocomplete="off" aria-label="Ekartman"><button class="btn btn--red" type="submit">Uygun modelleri bul</button></form><div class="sizetool__out" id="size-out"></div>';
+    h1.parentNode.insertBefore(box, h1.nextSibling);
+    var form = $('form', box), inp = $('#size-q', box), out = $('#size-out', box);
+    function run(q) {
+      var d = parseDims(q);
+      if (!d) { out.innerHTML = '<p class="qnote">Ölçüyü "52 18 140" biçiminde yazın (cam genişliği, köprü, sap).</p>'; return; }
+      ready().then(function () {
+        var list = state.models.filter(function (m) { return Math.abs((m.lens || 0) - d.lens) <= 2 && Math.abs((m.bridge || 0) - d.bridge) <= 1; });
+        list.sort(function (a, b) { var da = Math.abs(a.lens - d.lens) * 2 + Math.abs(a.bridge - d.bridge) * 3 + (d.temple ? Math.abs((a.temple || 0) - d.temple) / 5 : 0); var db = Math.abs(b.lens - d.lens) * 2 + Math.abs(b.bridge - d.bridge) * 3 + (d.temple ? Math.abs((b.temple || 0) - d.temple) / 5 : 0); return da - db; });
+        track('olcu_ara', { ekartman: d.lens + '-' + d.bridge + (d.temple ? '-' + d.temple : ''), sonuc: list.length });
+        var exact = list.filter(function (m) { return m.lens === d.lens && m.bridge === d.bridge; }).length;
+        out.innerHTML = '<p class="sizetool__sum"><b>' + list.length + '</b> uygun model' + (exact ? ' · ' + exact + ' tanesi birebir ' + d.lens + ' □ ' + d.bridge : '') + (d.temple ? ' · sap ' + d.temple + ' mm\'ye en yakınlar önce' : '') + '</p><div id="size-grid"></div>' + (list.length > 12 ? '<p style="text-align:center;margin-top:24px"><a class="btn btn--dark" href="/search?q=' + encodeURIComponent(d.lens + ' ' + d.bridge) + '">Tümünü koleksiyonda gör</a></p>' : '');
+        renderGrid($('#size-grid', out), list.slice(0, 12));
+      });
+    }
+    form.addEventListener('submit', function (e) { e.preventDefault(); run(inp.value); });
+    var m = location.hash.match(/#olcu=([\d\-x]+)/); if (m) { inp.value = m[1].replace(/[-x]/g, ' '); run(inp.value); }
+  }
+
+  /* ---------- yüz şekli rehberi (ana sayfa) ---------- */
+  var FACES = [
+    { k: 'oval', l: 'Oval', d: 'Alın ve çene dengeli, yüz hafif uzun. En esnek yüz tipi: hemen her form uyar; çerçeve yüzün en geniş noktasını aşmasın.', shapes: ['square', 'round', 'cateye', 'geo'], svg: '<ellipse cx="60" cy="62" rx="34" ry="46"/>' },
+    { k: 'round', l: 'Yuvarlak', d: 'Genişlik ve uzunluk birbirine yakın, hatlar yumuşak. Köşeli ve geometrik formlar yüze belirginlik katar; küçük yuvarlak çerçevelerden kaçının.', shapes: ['square', 'geo', 'cateye'], svg: '<circle cx="60" cy="62" r="42"/>' },
+    { k: 'square', l: 'Kare', d: 'Çene hattı belirgin ve köşeli. Yuvarlak ve oval formlar hatları yumuşatır; ince metal çerçeveler yüzü hafifletir.', shapes: ['round', 'oval'], svg: '<rect x="20" y="18" width="80" height="88" rx="16"/>' },
+    { k: 'heart', l: 'Kalp', t: 'Kalp şeklinde yüz', d: 'Alın geniş, çene dar. Alt kısmı dolgun formlar ve açık renkler dengeyi kurar; çok geniş üst çizgilerden kaçının.', shapes: ['oval', 'round', 'geo'], svg: '<path d="M18 40c0-14 12-24 42-24s42 10 42 24c0 28-22 56-42 68C40 96 18 68 18 40z"/>' }
+  ];
+  function initFaceGuide() {
+    var grid = $('#face-grid'), res = $('#face-result'); if (!grid) return;
+    grid.innerHTML = FACES.map(function (f) { return '<button class="face__item" data-k="' + f.k + '"><svg viewBox="0 0 120 124" fill="none" stroke="currentColor" stroke-width="3">' + f.svg + '</svg><span>' + esc(f.l) + '</span></button>'; }).join('');
+    function show(k) {
+      var f = FACES.filter(function (x) { return x.k === k; })[0]; if (!f) return;
+      $$('.face__item', grid).forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-k') === k); });
+      track('yuz_sekli', { yuz: k });
+      var models = state.models.filter(function (m) { return f.shapes.indexOf(m.shape) >= 0; });
+      var pick = []; f.shapes.forEach(function (sh) { pick = pick.concat(models.filter(function (m) { return m.shape === sh; }).slice(0, 2)); });
+      res.innerHTML = '<div class="face__box"><div class="face__text"><h3>' + esc(f.t || (f.l + ' yüz')) + '</h3><p>' + esc(f.d) + '</p><div class="face__shapes">' + f.shapes.map(function (sh) { return '<span class="face__shape">' + ico(SHAPE_ICON, sh) + '<b>' + esc(shapeLabel(sh)) + '</b></span>'; }).join('') + '</div>' +
+        '<a class="btn btn--red" href="/search?shape=' + f.shapes.join(',') + '">' + models.length + ' uygun modeli gör</a></div><div class="face__models" id="face-models"></div></div>';
+      renderGrid($('#face-models'), pick.slice(0, 4));
+      if (window.innerWidth < 900) res.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    $$('.face__item', grid).forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-k')); }); });
+  }
+
   /* ---------- ana sayfa ---------- */
   function initHome() {
     // hero slider
@@ -234,6 +287,7 @@
       $('.hero__arrow--next').addEventListener('click', function () { go(i + 1); });
     }
     bindSearch($('.hero-search'));
+    var gs = $('#guide-size'); if (gs) gs.addEventListener('submit', function (e) { e.preventDefault(); var v = $('input', gs).value.trim(); var d = parseDims(v); var a = $('a[href*="ekartman"]', gs.parentNode); var base = a ? a.getAttribute('href') : '/p/ekartman-rehberi.html'; location.href = base + (d ? '#olcu=' + d.lens + '-' + d.bridge + (d.temple ? '-' + d.temple : '') : '#olcu'); });
     ready().then(function () {
       var ms = state.models;
       var set = function (sel, v) { var el = $(sel); if (el) el.textContent = v; };
@@ -249,6 +303,7 @@
         renderGrid(newGrid, news.slice(0, 8));
       }
       var hb = $('#home-blog'); if (hb) blogFeed().then(function (list) { renderBlog(hb, list.slice(0, 3)); }).catch(function () { hb.parentNode.parentNode.style.display = 'none'; });
+      initFaceGuide();
       var ig = $('#ig-grid');
       if (ig) fetchJSON(dataUrl('instagram.json')).then(function (d) {
         var posts = (d.posts || []).slice(0, 6); ig.classList.remove('skeleton');
@@ -269,8 +324,10 @@
   /* ---------- koleksiyon / etiket / arama sayfası ---------- */
   function initCollection() {
     var root = $('#collection'); if (!root) return;
-    var filt = { brand: [], cat: [], mat: [], fam: [], feat: [], size: [] };
+    var filt = { brand: [], cat: [], mat: [], fam: [], feat: [], size: [], shape: [], rim: [] };
     var sort = 'default';
+    // URL parametreleri: ?shape=round,square&rim=full&cat=Optik (yüz şekli rehberi vb.)
+    (function () { var qs = location.search.replace(/^\?/, '').split('&'); qs.forEach(function (kv) { var i = kv.indexOf('='); if (i < 0) return; var k = kv.slice(0, i), v = decodeURIComponent(kv.slice(i + 1)); if (filt[k] && v) filt[k] = v.split(',').filter(Boolean); }); })();
     var initial = (LABEL || '').trim();
     var q = (QUERY || '').trim();
     var head = $('#coll-title'), lead = $('#coll-lead'), logoEl = $('#coll-logo'), count = $('#coll-count');
@@ -314,6 +371,8 @@
         group('Marka', 'brand', BRAND_ORDER.filter(function (b) { return cb[b]; }).map(function (b) { return { v: b, l: (BRANDS[b] || { name: b }).name, n: cb[b] }; })) +
         group('Tür', 'cat', ['Optik', 'Clip-On'].filter(function (c) { return cc[c]; }).map(function (c) { return { v: c, l: c === 'Optik' ? 'Optik çerçeve' : 'Clip-On', n: cc[c] }; })) +
         group('Çerçeve genişliği', 'size', sizes.map(function (s) { var r = s[0].split('-'); return { v: s[0], l: s[1], n: ms.filter(function (m) { return m.lens >= +r[0] && m.lens <= +r[1]; }).length }; }).filter(function (x) { return x.n; })) +
+        group('Çerçeve şekli', 'shape', AST.shapes.map(function (x) { return { v: x[0], l: x[1], n: ms.filter(function (m) { return m.shape === x[0]; }).length }; }).filter(function (x) { return x.n; }), function (it) { return '<i class="fshape">' + ico(SHAPE_ICON, it.v) + '</i>'; }) +
+        group('Çerçeve yapısı', 'rim', [['full', 'Tam çerçeve'], ['half', 'Yarım çerçeve'], ['rimless', 'Çerçevesiz']].map(function (x) { return { v: x[0], l: x[1], n: ms.filter(function (m) { return (m.rim || 'full') === x[0]; }).length }; }).filter(function (x) { return x.n; })) +
         group('Çerçeve malzemesi', 'mat', Object.keys(cm).sort(function (a, b) { return cm[b] - cm[a]; }).map(function (k) { return { v: k, l: matLabel[k], n: cm[k] }; })) +
         group('Renk', 'fam', FAMILIES.map(function (fa) { return { v: fa[0], l: fa[0], n: cf[fa[0]] || 0 }; }).filter(function (x) { return x.n; }), function (it) { return '<i class="sw" style="background:' + hexOf(it.v.split('/')[0]) + '"></i>'; }) +
         group('Özellik', 'feat', feats.map(function (x) { return { v: x[0], l: x[1], n: x[2] }; }));
@@ -337,6 +396,8 @@
         if (filt.mat.length && filt.mat.indexOf(slug(frameMaterial(m))) < 0) return false;
         if (filt.fam.length) { var fam = familiesOf(m); if (!filt.fam.some(function (x) { return fam.indexOf(x) >= 0; })) return false; }
         if (filt.size.length && !filt.size.some(function (s) { var r = s.split('-'); return m.lens >= +r[0] && m.lens <= +r[1]; })) return false;
+        if (filt.shape.length && filt.shape.indexOf(m.shape) < 0) return false;
+        if (filt.rim.length && filt.rim.indexOf(m.rim || 'full') < 0) return false;
         if (filt.feat.length) {
           if (filt.feat.indexOf('new') >= 0 && !m.new) return false;
           if (filt.feat.indexOf('polar') >= 0 && !isPolar(m)) return false;
@@ -354,7 +415,7 @@
       renderGrid($('#coll-grid'), ms);
       // chips
       var chips = $('#chips'); var html = '';
-      var labelOf = { brand: function (v) { return (BRANDS[v] || { name: v }).name; }, cat: function (v) { return v; }, mat: function (v) { return v; }, fam: function (v) { return v; }, size: function (v) { return v.replace('-99', '+').replace('-', '–') + ' mm'; }, feat: function (v) { return { new: 'Yeni', polar: 'Polarize', antifar: 'Anti-Far', titan: 'Titanyum' }[v]; } };
+      var labelOf = { brand: function (v) { return (BRANDS[v] || { name: v }).name; }, cat: function (v) { return v; }, mat: function (v) { return v; }, fam: function (v) { return v; }, size: function (v) { return v.replace('-99', '+').replace('-', '–') + ' mm'; }, shape: shapeLabel, rim: rimLabel, feat: function (v) { return { new: 'Yeni', polar: 'Polarize', antifar: 'Anti-Far', titan: 'Titanyum' }[v]; } };
       Object.keys(filt).forEach(function (k) { filt[k].forEach(function (v) { html += '<span class="chip"><b>' + esc(labelOf[k](v)) + '</b><button data-k="' + k + '" data-v="' + esc(v) + '" aria-label="Kaldır">×</button></span>'; }); });
       chips.innerHTML = html;
       $$('button', chips).forEach(function (b) {
@@ -694,7 +755,7 @@
     else if (VIEW === 'collection') initCollection();
     else if (VIEW === 'post') { initModel(); initArticle(); initOrderButton(); }
     else if (VIEW === 'error') initCollection();
-    else if (VIEW === 'page') { initDealers(); initQr(); initOrder(); }
+    else if (VIEW === 'page') { initDealers(); initQr(); initOrder(); initSizeTool(); }
   });
   window.AO = { search: function (q) { return searchModels(q).map(function (m) { return m.code; }); }, parse: parseQuery, last: function () { return lastSearch; }, ready: ready };
 })();

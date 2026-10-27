@@ -246,6 +246,18 @@ window.AO_CONFIG = {
     </div>
   </section>
 
+  <section class='section face' id='home-face'>
+    <div class='wrap'>
+      <div class='section__head'>
+        <p class='eyebrow'>Yüz şekli rehberi</p>
+        <h2 class='title-2'>Yüzünüze göre çerçeve</h2>
+        <p class='lead'>Yüz şeklinizi seçin; dengeyi kuran çerçeve formlarını ve o formdaki modelleri gösterelim.</p>
+      </div>
+      <div class='face__grid' id='face-grid'></div>
+      <div class='face__result' id='face-result'></div>
+    </div>
+  </section>
+
   <section class='section section--dark'>
     <div class='wrap guide-banner'>
       <div>
@@ -253,7 +265,8 @@ window.AO_CONFIG = {
         <h2 class='title-2'>Ekartman nasıl okunur?</h2>
         <p class='lead'>Her modelin altında üç sayı görürsünüz: <b>çerçeve (cam) genişliği</b>, <b>köprü</b> ve <b>sap</b> uzunluğu. Mevcut gözlüğünüzün sapındaki rakamlarla karşılaştırarak size uyacak modeli seçebilirsiniz.</p>
         <dl><div><dt>51</dt><dd>Çerçeve · mm</dd></div><div><dt>18</dt><dd>Köprü · mm</dd></div><div><dt>145</dt><dd>Sap · mm</dd></div></dl>
-        <p style='margin-top:30px'><a class='link-arrow' href='/p/ekartman-rehberi.html' style='color:#fff;border-color:#fff'>Rehberi oku</a></p>
+        <form action='/p/ekartman-rehberi.html' class='guide-size' id='guide-size' method='get'><input aria-label='Ekartman' autocomplete='off' inputmode='numeric' placeholder='Ölçünüzü yazın: 52 18 140' type='text'/><button class='btn btn--light' type='submit'>Uygun modelleri bul</button></form>
+        <p style='margin-top:22px'><a class='link-arrow' href='/p/ekartman-rehberi.html' style='color:#fff;border-color:#fff'>Rehberi oku</a></p>
       </div>
       <svg aria-hidden='true' fill='none' viewBox='0 0 520 260'>
         <g stroke='#fff' stroke-width='3'><rect height='96' rx='34' width='170' x='40' y='70'/><rect height='96' rx='34' width='170' x='310' y='70'/><path d='M210 100c20-18 80-18 100 0'/><path d='M40 100 4 92M480 100l36-8'/></g>
