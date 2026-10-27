@@ -55,7 +55,7 @@
       tryonCamera();
     });
   }
-  function tryonSetImage(c) { TRYON.ready = false; var im = new Image(); im.crossOrigin = 'anonymous'; im.onload = function () { TRYON.img = im; TRYON.ready = true; if (TRYON.mode === 'image') tryonDrawImage(); }; im.src = CDN + 'img/tryon/' + c + '.png'; }
+  function tryonSetImage(c) { TRYON.ready = false; var im = new Image(); im.crossOrigin = 'anonymous'; im.onload = function () { TRYON.img = im; TRYON.ready = true; if (TRYON.mode === 'image') tryonDrawImage(); }; im.src = CDN + 'img/tryon/' + c + '.png?v=' + DATA_V; }
   function tryonStatus(t) { var s = $('#tryon-status'); if (s) { s.textContent = t; s.style.display = t ? '' : 'none'; } }
   function tryonCamera() {
     tryonStop(); TRYON.mode = 'video'; var video = $('#tryon-video'), canvas = $('#tryon-canvas'); video.style.display = ''; tryonStatus('Yüz tanıma yükleniyor…');

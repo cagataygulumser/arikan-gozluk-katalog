@@ -62,7 +62,7 @@ Site **deneme-site-v3.blogspot.com** adresinde kuruldu ve çalışıyor: tema y�
 - **Yüz şekli rehberi / şekil filtreleri:** ana sayfada "Yüzünüze göre çerçeve" (Oval/Yuvarlak/Kare/Kalp → önerilen şekiller + örnek modeller + `/search?shape=…`); koleksiyon filtrelerinde Çerçeve şekli ve Çerçeve yapısı.
 - **Ölçü aracı:** Ekartman Rehberi sayfasının üstünde (`#olcu=52-18-140` ile doğrudan sonuç); ana sayfadaki ölçü bandından da gönderilir. ±2 mm cam / ±1 mm köprü.
 - **Favoriler:** kart ve model sayfasındaki kalp; `/search?fav=1` kişisel liste (tarayıcıda), `/search?fav=KOD,KOD` paylaşılan liste; WhatsApp'tan sor.
-- **Sanal deneme:** model sayfasında "Sanal deneme" düğmesi (`?tryon` ile otomatik açılır). Tarayıcıda MediaPipe Face Landmarker (jsDelivr'dan yüklenir, Google model dosyası) ile yüz noktaları bulunur; çerçeve, göz bebeği mesafesi 63 mm kabul edilerek **gerçek ölçekte** çizilir (2×cam+köprü+10 mm). Kamera yoksa fotoğraf yüklenir; "Fotoğraf çek" paylaşır/indirir. Çerçeve PNG'leri `img/tryon/KOD.png` (ön görsellerden arka plan kaldırılmış, 256 renk) — `gen_tryon.py` ile üretilir; görüntü cihazdan çıkmaz.
+- **Sanal deneme:** model sayfasında "Sanal deneme" düğmesi (`?tryon` ile otomatik açılır). Tarayıcıda MediaPipe Face Landmarker (jsDelivr'dan yüklenir, Google model dosyası) ile yüz noktaları bulunur; çerçeve, göz bebeği mesafesi 63 mm kabul edilerek **gerçek ölçekte** çizilir (2×cam+köprü+10 mm). Kamera yoksa fotoğraf yüklenir; "Fotoğraf çek" paylaşır/indirir. Çerçeve PNG'leri `img/tryon/KOD.png` (ön görsellerden arka plan kaldırılmış, camdan görünen katlı sap uçları silinmiş, 256 renk) — `gen_tryon.py` ile üretilir (OpenCV gerekir); görüntü cihazdan çıkmaz.
 
 ## Veri ve görseller nasıl güncellenir?
 
