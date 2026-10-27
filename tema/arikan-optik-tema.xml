@@ -420,17 +420,11 @@ window.AO_CONFIG = {
 <b:if cond='data:view.isLabelSearch'><b:attr expr:value='data:view.search.label' name='data-label'/></b:if>
 <b:if cond='data:view.isSearch and data:view.search.query'><b:attr expr:value='data:view.search.query' name='data-query'/></b:if>
 
-<b:section class='navbar' id='navbar' maxwidgets='1' name='Navbar' showaddelement='no'>
-  <b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar' version='2' visible='false'>
-    <b:includable id='main'/>
-  </b:widget>
-</b:section>
-
 <!-- ================= HEADER ================= -->
 <header class='site-header'>
   <div class='wrap site-header__in'>
-    <b:section class='header' id='header' maxwidgets='1' name='Başlık' showaddelement='no'>
-      <b:widget id='Header1' locked='true' title='Arıkan Optik (Başlık)' type='Header' version='2' visible='true'>
+    <b:section class='header' id='header' maxwidgets='1' name='Header' showaddelement='no'>
+      <b:widget id='Header1' locked='true' title='Arikan Optik (Header)' type='Header' version='2' visible='true'>
         <b:includable id='main'>
           <a class='logo' expr:href='data:blog.homepageUrl' expr:title='data:title'>
             <b:if cond='data:image'>
@@ -612,8 +606,8 @@ window.AO_CONFIG = {
 </b:if>
 
 <!-- ================= BLOG WIDGET: koleksiyon / model / sayfa ================= -->
-<b:section class='main' id='main' name='Ana İçerik' showaddelement='no'>
-  <b:widget id='Blog1' locked='true' title='Blog Yazıları' type='Blog' version='2' visible='true'>
+<b:section class='main' id='page_body' name='Page Body' showaddelement='no'>
+  <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
     <b:includable id='main'>
       <b:if cond='data:view.isSingleItem'>
         <b:loop values='data:posts' var='post'>
@@ -724,7 +718,7 @@ window.AO_CONFIG = {
   <div class='wrap site-footer__bottom'>
     <span>© 2026 <data:blog.title/> · Tüm hakları saklıdır. Ürün görselleri ve bilgileri 2026 marka kataloglarından alınmıştır.</span>
     <span>Sitedeki ölçüler ve renk adları üretici kataloğuna göredir; stok ve fiyat için yetkili satış noktasına danışın.</span>
-    <b:section class='footer-abuse' id='footer-abuse' maxwidgets='1' name='Kötüye Kullanım' showaddelement='no'>
+    <b:section class='footer-abuse' id='sidebar_bottom' name='Sidebar (Bottom)' showaddelement='no'>
       <b:widget id='ReportAbuse1' locked='true' title='' type='ReportAbuse' version='2' visible='true'>
         <b:includable id='main'>
           <b:include name='reportAbuse'/>
