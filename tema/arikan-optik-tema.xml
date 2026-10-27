@@ -186,6 +186,7 @@ p{margin:0 0 1em}
 
 /* ---- Bölümler ------------------------------------------------------ */
 .section{padding:88px 0}
+#page_body.section,.main.section{padding:0}
 .section--soft{background:var(--bg-soft)}
 .section--dark{background:var(--black);color:#fff}
 .section--dark .title-2{color:#fff}
@@ -609,7 +610,7 @@ body.ast-open{overflow:hidden}
   .ast-launch__head,.ast-launch__img,.ast-launch__cta-l{display:none}
   .ast-launch__cta-s{display:inline}
   .ast-launch__cta{width:auto;padding:11px 6px 11px 16px;font-size:11px;letter-spacing:.14em}
-  .ast-launch__cta-s:after{content:"›";margin-left:8px;font-size:15px;letter-spacing:0}
+  .ast-launch__cta-s:after{content:"\203A";margin-left:8px;font-size:15px;letter-spacing:0}
   .ast-launch__x{position:static;width:32px;height:32px;margin-right:4px;color:#fff;font-size:12px}
 }
 
@@ -1233,7 +1234,7 @@ window.AO_CONFIG = {
   var CFG = window.AO_CONFIG || {};
   var CDN = CFG.cdn || 'https://cdn.jsdelivr.net/gh/cagataygulumser/arikan-gozluk-katalog@main/';
   var BRANDS = CFG.brands || {};
-  var DATA_V = '202610272321'; // veri dosyaları için önbellek kırıcı (build.py doldurur)
+  var DATA_V = '202610272324'; // veri dosyaları için önbellek kırıcı (build.py doldurur)
   function dataUrl(name) { return CDN + name + '?v=' + DATA_V; }
   var BRAND_ORDER = ['lee-cooper', 'quantum', 'slazenger', 'belmond'];
   var FEED_URL = (CFG.feed || '/feeds/posts/summary?alt=json&max-results=500');
